@@ -45,6 +45,8 @@
 .
 ├── index.html
 ├── plan.html
+├── kb.html
+├── papers.html
 ├── syllabus.html
 ├── books.html
 ├── problems.html
@@ -53,12 +55,14 @@
 ├── assess.html
 ├── resources.html
 ├── method.html
+├── 404.html
 ├── .nojekyll
 └── assets
     ├── css/main.css
-    └── js
-        ├── app.js
-        └── data/*.js
+    ├── js
+    │   ├── app.js
+    │   └── data/*.js
+    └── data/kb/*.js    # 站内正文（73 篇 / 30.4 万字）与真题数据
 ```
 
 ## 数据来源
@@ -77,6 +81,14 @@ git push
 ```
 
 GitHub Pages 会自动重建，约 1 分钟后生效。
+
+**本机 Windows 注意**：`git push` / `git fetch` 若报 `schannel: ... CRYPT_E_NO_REVOCATION_CHECK`（证书吊销检查无法完成），改用 OpenSSL 后端即可：
+
+```bash
+git -c http.sslBackend=openssl -c http.schannelCheckRevoke=false push origin main
+```
+
+若网络把 git 通道整体阻断，还有完全不依赖 `git push` 的备用方案 `../build/apipush.py`（GitHub Git Data API）：它把 `git diff --name-only 51036ec HEAD` 列出的变更文件按字节创建 blob，再组装 tree / commit 并更新远端 `main`。该脚本位于本机工作区、不随仓库分发；重复使用时应把其中的基线 `51036ec` 改成当前 HEAD。
 
 ---
 
