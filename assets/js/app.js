@@ -9,14 +9,14 @@
   const NAV = [
     { h: "index.html",     t: "总览",  s: "Overview" },
     { h: "plan.html",      t: "56 周计划", s: "Plan" },
-    { h: "syllabus.html",  t: "大纲全解", s: "Syllabus" },
-    { h: "books.html",     t: "书单资料", s: "Reading" },
-    { h: "problems.html",  t: "题单训练", s: "Problems" },
-    { h: "templates.html", t: "模板库",  s: "Templates" },
-    { h: "contests.html",  t: "赛历规则", s: "Contests" },
-    { h: "assess.html",    t: "评估体系", s: "Assessment" },
-    { h: "resources.html", t: "本地资产", s: "Archive" },
-    { h: "method.html",    t: "方法论",  s: "Method" }
+    { h: "kb.html",        t: "知识库",  s: "Knowledge Base" },
+    { h: "papers.html",    t: "真题库",  s: "Papers" },
+    { h: "syllabus.html",  t: "大纲",   s: "Syllabus" },
+    { h: "problems.html",  t: "题单",   s: "Problems" },
+    { h: "templates.html", t: "模板",   s: "Templates" },
+    { h: "books.html",     t: "书单",   s: "Reading" },
+    { h: "contests.html",  t: "赛历",   s: "Contests" },
+    { h: "assess.html",    t: "评估",   s: "Assessment" }
   ];
 
   const STORE = "noi2027.progress.v1";
@@ -94,15 +94,16 @@
               <div>
                 <h5>学习路径</h5>
                 <a href="plan.html">56 周计划</a>
+                <a href="kb.html">知识库（61 篇）</a>
+                <a href="papers.html">真题库</a>
                 <a href="syllabus.html">大纲全解</a>
-                <a href="problems.html">题单训练</a>
-                <a href="templates.html">模板库</a>
               </div>
               <div>
-                <h5>资料与评估</h5>
+                <h5>训练与资料</h5>
+                <a href="problems.html">题单训练</a>
+                <a href="templates.html">模板库（56）</a>
                 <a href="books.html">书单资料</a>
                 <a href="resources.html">本地资产</a>
-                <a href="assess.html">评估体系</a>
                 <a href="method.html">方法论</a>
               </div>
               <div>
@@ -142,6 +143,12 @@
       const idx = [];
       if (window.WEEKS) WEEKS.forEach(w => idx.push({
         t: `第 ${w.w} 周 · ${w.t}`, s: w.kg, h: `plan.html#w${w.w}`, k: "计划"
+      }));
+      if (window.KB_CATALOG) KB_CATALOG.forEach(a => idx.push({
+        t: a.title, s: `${a.cat} · ${(a.chars / 1000).toFixed(1)}k 字`, h: `kb.html#${a.id}`, k: "知识库"
+      }));
+      if (window.PAPERS) PAPERS.forEach(p => idx.push({
+        t: `CSP-S ${p.year} 第一轮真题`, s: "在线作答 · 单选判分", h: "papers.html", k: "真题"
       }));
       if (window.SYLLABUS) SYLLABUS.points.forEach(p => idx.push({
         t: p[0], s: `${p[1]} · ${p[2]} 级`, h: `syllabus.html#lv${p[2]}`, k: "大纲"

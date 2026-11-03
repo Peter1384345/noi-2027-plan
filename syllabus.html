@@ -143,7 +143,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     // 变化表
     const tb = document.getElementById("changes");
-    const colorMap = { "CSP-J": "a", "CSP-S": "b", "CSP-S ".trim(): "b", "NOI 级": "c" };
     tb.innerHTML = SYLLABUS.meta.changes2025.map(c => {
       const cls = c.band === "CSP-J" ? "a" : (c.band === "CSP-S" ? "b" : "c");
       const tp = c.type === "新增" ? '<span class="tag seal">新增</span>'

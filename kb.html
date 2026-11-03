@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>知识库 · NOI 2027</title>
+<meta name="description" content="站内知识库：61 篇 CSP-S 正文（23.2 万字）、知识文集 8 章、初赛清单与真题，全部可检索、可标记已读。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+<style>
+  .kb-shell { display: grid; grid-template-columns: 268px 1fr; gap: 34px; align-items: start; }
+  @media (max-width: 960px) { .kb-shell { grid-template-columns: 1fr; } }
+  .kb-side {
+    position: sticky; top: 78px; max-height: calc(100vh - 100px); overflow-y: auto;
+    border: 1px solid var(--rule); border-radius: var(--r); background: var(--surface); padding: 12px;
+  }
+  @media (max-width: 960px) { .kb-side { position: static; max-height: 320px; } }
+  .kb-side .grp { margin-bottom: 6px; }
+  .kb-side .grp > b {
+    display: block; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-3); padding: 9px 8px 5px; font-weight: 600;
+  }
+  .kb-side a {
+    display: flex; gap: 6px; align-items: baseline; padding: 5px 8px; border-radius: 2px;
+    font-size: 12.6px; color: var(--ink-2); line-height: 1.45;
+  }
+  .kb-side a:hover { background: var(--paper-2); color: var(--ink); }
+  .kb-side a.on { background: var(--seal-t); color: var(--seal); font-weight: 600; }
+  .kb-side a .ck { color: var(--lv-j); font-size: 10px; flex-shrink: 0; }
+  .kb-side a .len { margin-left: auto; font-family: var(--mono); font-size: 10px; color: var(--ink-4); flex-shrink: 0; }
+
+  .kb-main { min-width: 0; }
+  .kb-article { max-width: 780px; }
+  .kb-article h1 { font-size: clamp(1.45rem, 2.6vw, 1.95rem); margin-bottom: 10px; }
+  .kb-meta { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-size: 12px; color: var(--ink-3); margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .kb-body p { font-size: 14.6px; line-height: 1.95; margin: 0 0 14px; color: var(--ink-2); }
+  .kb-body h2 { font-size: 1.35rem; margin: 34px 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+  .kb-body h3 { font-size: 1.12rem; margin: 26px 0 10px; }
+  .kb-body h4 { font-size: 1rem; margin: 24px 0 9px; color: var(--seal); }
+  .kb-body ul { margin: 0 0 14px; padding-left: 22px; }
+  .kb-body li { font-size: 14.4px; line-height: 1.9; margin-bottom: 5px; color: var(--ink-2); }
+  .kb-body pre {
+    background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--azure);
+    border-radius: var(--r); padding: 14px 16px; overflow-x: auto; margin: 0 0 16px;
+    font-size: 12.8px; line-height: 1.65;
+  }
+  .kb-body code { background: var(--paper-3); }
+  .kb-body mark { background: #f3d98b; color: var(--ink); padding: 0 2px; border-radius: 2px; }
+  [data-theme="dark"] .kb-body mark { background: #6b5518; color: #f5ebd0; }
+
+  .kb-nav { display: flex; justify-content: space-between; gap: 14px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--rule); }
+  .kb-nav a { font-size: 13px; max-width: 46%; }
+  .kb-nav span { display: block; font-size: 10.5px; color: var(--ink-3); letter-spacing: .1em; margin-bottom: 2px; }
+  .kb-empty { padding: 60px 20px; text-align: center; color: var(--ink-3); }
+  .hit { font-size: 13px; padding: 9px 11px; border-bottom: 1px solid var(--rule); cursor: pointer; }
+  .hit:hover { background: var(--paper-2); }
+  .hit b { color: var(--ink); }
+  .hit p { font-size: 12px; color: var(--ink-3); margin: 3px 0 0; }
+</style>
+</head>
+<body data-page="kb.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:36px;padding-bottom:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">KNOWLEDGE BASE</span>
+      <h2>站内知识库</h2>
+    </div>
+    <p class="sec-lead" style="margin-bottom:16px">
+      这里不是目录。左栏 61 篇 CSP-S 正文、8 章知识文集、初赛清单与真题全文都已装进站内，总计 <b id="kb-chars">—</b> 万字，
+      可直接阅读、全文检索、标记已读。内容提取自本地 <code>CSP-S知识库全集.docx</code>、<code>信息学竞赛知识文集.docx</code>、
+      <code>复习资料信息学.docx</code> 与 CSP-S 第一轮真题 PDF。
+    </p>
+    <div class="filters" style="margin-bottom:14px">
+      <input class="input" id="q" type="text" placeholder="全文检索，如「懒惰标记」「斜率优化」「割点」" style="min-width:320px">
+      <button class="chip" id="only-todo">只看未读</button>
+      <span class="small muted" id="stat"></span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;border-top:none">
+  <div class="wrap">
+    <div class="kb-shell">
+      <aside class="kb-side" id="side"></aside>
+      <main class="kb-main"><div class="kb-article" id="article"></div></main>
+    </div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/data/kb/catalog.js"></script>
+<script src="assets/data/kb/guide.js"></script>
+<script src="assets/data/kb/math.js"></script>
+<script src="assets/data/kb/search.js"></script>
+<script src="assets/data/kb/dp.js"></script>
+<script src="assets/data/kb/ds.js"></script>
+<script src="assets/data/kb/graph.js"></script>
+<script src="assets/data/kb/str.js"></script>
+<script src="assets/data/kb/misc.js"></script>
+<script src="assets/data/kb/essays.js"></script>
+<script src="assets/data/kb/prelim.js"></script>
+<script src="assets/data/kb/guide2.js"></script>
+<script src="assets/data/kb/paper2025.js"></script>
+<script src="assets/js/data/syllabus.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  const ORDER = ["指南", "数学基础", "搜索", "动态规划", "数据结构", "图论", "字符串", "杂项", "文集", "初赛", "真题"];
+  const LABEL = { "初赛": "初赛资料", "真题": "真题全文" };
+  const LEVEL = { "指南": [1,8], "数学基础": [6,9], "搜索": [5,7], "动态规划": [4,9],
+                  "数据结构": [6,8], "图论": [6,8], "字符串": [6,8], "杂项": [6,8],
+                  "文集": [5,8], "初赛": [1,8], "真题": [5,8] };
+  const READ_KEY = "noi2027.kbread.v1";
+
+  let read = {};
+  try { read = JSON.parse(localStorage.getItem(READ_KEY)) || {}; } catch (e) { read = {}; }
+  function saveRead() { localStorage.setItem(READ_KEY, JSON.stringify(read)); }
+
+  // 汇总：显式合并不同注册键
+  const RAW = window.KB || {};
+  const GROUP = {};
+  function put(k, arr) { if (arr && arr.length) GROUP[k] = arr; }
+  put("指南", RAW["指南"]);
+  put("数学基础", RAW["数学基础"]);
+  put("搜索", RAW["搜索"]);
+  put("动态规划", RAW["动态规划"]);
+  put("数据结构", RAW["数据结构"]);
+  put("图论", RAW["图论"]);
+  put("字符串", RAW["字符串"]);
+  put("杂项", RAW["杂项"]);
+  put("文集", RAW["文集"]);
+  put("初赛", (RAW["初赛"] || []).concat(RAW["初赛资料"] || []));
+  put("真题", RAW["真题2025"] || RAW["真题"] || []);
+
+  const ALL = [];
+  ORDER.forEach(k => (GROUP[k] || []).forEach(a => ALL.push(Object.assign({ cat: k }, a))));
+
+  const totalChars = ALL.reduce((s, a) => s + (a.chars || a.blocks.reduce((x, b) => x + b.x.length, 0)), 0);
+  document.getElementById("kb-chars").textContent = (totalChars / 10000).toFixed(1);
+
+  // ---------- 全文索引 ----------
+  const INDEX = ALL.map(function (a) {
+    return { id: a.id, cat: a.cat, title: a.title, text: a.blocks.map(b => b.x).join("\n") };
+  });
+
+  function esc(s) { return App.esc(s); }
+
+  // ---------- 侧栏 ----------
+  let onlyTodo = false;
+  function renderSide() {
+    const side = document.getElementById("side");
+    let html = "";
+    ORDER.forEach(function (k) {
+      if (!GROUP[k]) return;
+      const items = GROUP[k].filter(a => !onlyTodo || !read[a.id]);
+      if (!items.length) return;
+      html += `<div class="grp"><b>${LABEL[k] || k}<span style="float:right;font-family:var(--mono)">${items.length}</span></b>`;
+      items.forEach(function (a) {
+        const len = a.chars || a.blocks.reduce((x, b) => x + b.x.length, 0);
+        html += `<a href="#${a.id}" data-id="${a.id}" class="${cur === a.id ? "on" : ""}">
+          <span class="ck">${read[a.id] ? "✓" : ""}</span>
+          <span>${esc(a.title)}</span>
+          <span class="len">${(len / 1000).toFixed(1)}k</span>
+        </a>`;
+      });
+      html += `</div>`;
+    });
+    side.innerHTML = html;
+    side.querySelectorAll("a[data-id]").forEach(el => {
+      el.onclick = function (e) {
+        e.preventDefault();
+        location.hash = el.dataset.id;
+      };
+    });
+  }
+
+  // ---------- 正文渲染 ----------
+  let cur = null;
+  function renderArticle(a, kw) {
+    const host = document.getElementById("article");
+    if (!a) { host.innerHTML = `<div class="kb-empty">从左侧选择一篇文章</div>`; return; }
+    const lv = LEVEL[a.cat] || [5, 8];
+    const len = a.chars || a.blocks.reduce((x, b) => x + b.x.length, 0);
+
+    let body = "", listOpen = false;
+    a.blocks.forEach(function (b) {
+      if (b.k !== "li" && listOpen) { body += "</ul>"; listOpen = false; }
+      let x = esc(b.x);
+      if (kw) {
+        const re = new RegExp("(" + kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "gi");
+        x = x.replace(re, "<mark>$1</mark>");
+      }
+      if (b.k === "h") body += `<h2>${x}</h2>`;
+      else if (b.k === "h4") body += `<h4>${x}</h4>`;
+      else if (b.k === "li") { if (!listOpen) { body += "<ul>"; listOpen = true; } body += `<li>${x}</li>`; }
+      else if (b.k === "code") body += `<pre>${x}</pre>`;
+      else body += `<p>${x}</p>`;
+    });
+    if (listOpen) body += "</ul>";
+
+    const idx = ALL.findIndex(z => z.id === a.id);
+    const prev = ALL[idx - 1], next = ALL[idx + 1];
+
+    host.innerHTML = `
+      <h1>${esc(a.title)}</h1>
+      <div class="kb-meta">
+        <span class="tag azure">${a.cat}</span>
+        <span class="tag ghost">对应大纲 ${lv[0]}–${lv[1]} 级</span>
+        <span class="mono">${(len / 1000).toFixed(1)}k 字</span>
+        <span style="margin-left:auto">
+          <button class="copy-btn" id="mark-btn">${read[a.id] ? "已读 ✓" : "标记已读"}</button>
+        </span>
+      </div>
+      <div class="kb-body">${body}</div>
+      <div class="kb-nav">
+        ${prev ? `<a href="#${prev.id}"><span>← 上一篇</span>${esc(prev.title)}</a>` : "<span></span>"}
+        ${next ? `<a href="#${next.id}" style="text-align:right"><span>下一篇 →</span>${esc(next.title)}</a>` : "<span></span>"}
+      </div>`;
+
+    document.getElementById("mark-btn").onclick = function () {
+      if (read[a.id]) delete read[a.id]; else read[a.id] = 1;
+      saveRead();
+      this.textContent = read[a.id] ? "已读 ✓" : "标记已读";
+      renderSide(); updateStat();
+    };
+  }
+
+  function updateStat() {
+    const done = ALL.filter(a => read[a.id]).length;
+    document.getElementById("stat").textContent = `共 ${ALL.length} 篇 · 已读 ${done} 篇 · 总 ${(totalChars / 10000).toFixed(1)} 万字`;
+  }
+
+  // ---------- 检索 ----------
+  function search(kw) {
+    const host = document.getElementById("article");
+    if (!kw) { go(location.hash.slice(1) || ALL[0].id); return; }
+    const hits = [];
+    INDEX.forEach(function (doc) {
+      const pos = doc.text.toLowerCase().indexOf(kw.toLowerCase());
+      if (pos >= 0 || doc.title.toLowerCase().indexOf(kw.toLowerCase()) >= 0) {
+        const snippet = pos >= 0
+          ? doc.text.slice(Math.max(0, pos - 46), pos + 70).replace(/\n/g, " ")
+          : doc.text.slice(0, 90).replace(/\n/g, " ");
+        hits.push({ id: doc.id, cat: doc.cat, title: doc.title, snippet: snippet, n: (doc.text.match(new RegExp(kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi")) || []).length });
+      }
+    });
+    hits.sort((a, b) => b.n - a.n);
+    host.innerHTML = `<h1 style="margin-bottom:6px">检索「${esc(kw)}」</h1>
+      <div class="kb-meta">命中 ${hits.length} 篇（共 ${ALL.length} 篇）</div>
+      ${hits.length ? hits.map(h => `<div class="hit" data-go="${h.id}">
+        <b>${esc(h.title)}</b> <span class="tag ghost" style="font-size:10px">${h.cat} · ${h.n} 处</span>
+        <p>…${esc(h.snippet)}…</p></div>`).join("") : `<div class="kb-empty">没有匹配内容</div>`}`;
+    host.querySelectorAll("[data-go]").forEach(el => el.onclick = () => { location.hash = el.dataset.go; });
+  }
+
+  // ---------- 路由 ----------
+  function go(id) {
+    const a = ALL.find(z => z.id === id);
+    if (!a) { renderArticle(ALL[0]); return; }
+    cur = id;
+    renderArticle(a, "");
+    renderSide();
+    const side = document.getElementById("side");
+    const link = side.querySelector(`[data-id="${id}"]`);
+    if (link) link.scrollIntoView({ block: "nearest" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  window.addEventListener("hashchange", function () {
+    const id = location.hash.slice(1);
+    if (id) go(id);
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    updateStat();
+    renderSide();
+    const kw = new URLSearchParams(location.search).get("q");
+    if (kw) { document.getElementById("q").value = kw; search(kw); }
+    else go(location.hash.slice(1) || ALL[0].id);
+
+    let timer;
+    document.getElementById("q").oninput = function (e) {
+      clearTimeout(timer);
+      const v = e.target.value.trim();
+      timer = setTimeout(() => search(v), 220);
+    };
+    document.getElementById("only-todo").onclick = function () {
+      onlyTodo = !onlyTodo;
+      this.classList.toggle("on", onlyTodo);
+      renderSide();
+    };
+  });
+})();
+</script>
+</body>
+</html>

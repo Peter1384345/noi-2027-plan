@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>真题库 · NOI 2027</title>
+<meta name="description" content="CSP-S 第一轮真题站内练习：2022/2023 可作答判分，2025 全文阅读，2021/2024 原卷下载。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+<style>
+  .q-card { border: 1px solid var(--rule); border-radius: var(--r); background: var(--surface); padding: 18px 20px; margin-bottom: 12px; }
+  .q-no { font-family: var(--mono); font-size: 11px; color: var(--seal); letter-spacing: .06em; }
+  .q-stem { font-size: 14.4px; line-height: 1.9; margin: 6px 0 12px; white-space: pre-wrap; }
+  .q-stem pre { background: var(--paper-2); border: 1px solid var(--rule); padding: 12px; overflow-x: auto; font-size: 12.6px; margin: 8px 0; }
+  .opt {
+    display: flex; gap: 9px; align-items: flex-start; padding: 8px 11px; border: 1px solid var(--rule);
+    border-radius: 2px; margin-bottom: 6px; cursor: pointer; font-size: 13.6px; transition: .12s;
+  }
+  .opt:hover { border-color: var(--rule-2); background: var(--paper-2); }
+  .opt .k { font-family: var(--mono); font-weight: 700; color: var(--ink-3); flex-shrink: 0; width: 16px; }
+  .opt.sel { border-color: var(--seal); background: var(--seal-t); }
+  .opt.sel .k { color: var(--seal); }
+  .opt.right { border-color: var(--lv-j); background: var(--lv-j-t); }
+  .opt.wrong { border-color: var(--red, #c0392b); background: rgba(192,57,43,.08); }
+  .score-bar {
+    position: sticky; top: 62px; z-index: 40; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 12px 18px; background: var(--surface); border: 1px solid var(--rule-2); border-radius: var(--r);
+    box-shadow: var(--shadow-sm); margin-bottom: 20px;
+  }
+  .score-bar b { font-family: var(--mono); font-size: 1.3rem; color: var(--seal); }
+  .tab-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 22px; }
+  .tab-row button {
+    padding: 7px 15px; font-size: 13px; border: 1px solid var(--rule-2); background: var(--surface);
+    color: var(--ink-2); border-radius: 2px; cursor: pointer; font-family: var(--sans);
+  }
+  .tab-row button.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .sec-title { font-family: var(--serif); font-size: 1.2rem; margin: 30px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--rule-2); }
+</style>
+</head>
+<body data-page="papers.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:36px;padding-bottom:10px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">PAPERS</span>
+      <h2>真题库</h2>
+    </div>
+    <p class="sec-lead">
+      CSP-S 第一轮真题已装进站内。<b>2022、2023 两年可在线作答并判分</b>（单选 15 题 × 2 分 = 30 分，答案提取自官方答案 PDF）；
+      2025 为社区整理版全文；2021、2024 原卷为扫描件，提供下载。
+    </p>
+    <div class="note gold">
+      <b>使用方式：</b>第一轮真题的正确用法不是「看一遍」，而是限时 1.5 小时做完单选，再逐题回看阅读程序。
+      做完立刻提交，错题当场归因——是概念没记牢，还是代码读不懂。这两类失分的补救方式完全不同。
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;border-top:none">
+  <div class="wrap">
+    <div class="tab-row" id="tabs"></div>
+    <div id="paper"></div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/data/kb/papers.js"></script>
+<script src="assets/data/kb/paper2025.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  const STORE = "noi2027.paper.v1";
+  let store = {};
+  try { store = JSON.parse(localStorage.getItem(STORE)) || {}; } catch (e) { store = {}; }
+  function save() { localStorage.setItem(STORE, JSON.stringify(store)); }
+
+  function esc(s) { return App.esc(s); }
+
+  // 题干预处理：含换行的视为代码块
+  function stemHtml(s) {
+    if (!s) return "";
+    if (s.indexOf("\n") >= 0 && /[;{}]/.test(s)) {
+      return `<pre>${esc(s)}</pre>`;
+    }
+    return esc(s).replace(/\n/g, "<br>");
+  }
+
+  function renderPractice(p) {
+    const ans = p.answers || {};
+    const my = store["y" + p.year] || {};
+    let html = `<div class="score-bar">
+      <span class="small muted">CSP-S ${p.year} 第一轮 · 单选 15 题 × 2 分</span>
+      <span>得分 <b id="score">—</b> <span class="small muted">/ 30</span></span>
+      <button class="chip" id="submit">提交判分</button>
+      <button class="chip" id="reset">清空作答</button>
+      <span class="small muted" id="sub-note"></span>
+    </div>`;
+
+    p.sections.forEach(function (sec) {
+      html += `<div class="sec-title">${sec.label}</div>`;
+      sec.qs.forEach(function (q) {
+        const sel = my[q.no] || "";
+        const graded = store["g" + p.year] === 1;
+        const correct = ans[String(q.no)];
+        html += `<div class="q-card" data-no="${q.no}">
+          <div class="q-no">Q${q.no}</div>
+          <div class="q-stem">${stemHtml(q.stem)}</div>`;
+        if (q.opts && q.opts.length) {
+          q.opts.forEach(function (o) {
+            let cls = "opt";
+            if (sel === o.k) cls += " sel";
+            if (graded && correct) {
+              if (o.k === correct) cls += " right";
+              else if (sel === o.k) cls += " wrong";
+            }
+            html += `<div class="${cls}" data-k="${o.k}" data-no="${q.no}">
+              <span class="k">${o.k}</span><span>${esc(o.v).replace(/\n/g, "<br>")}</span></div>`;
+          });
+        }
+        if (graded && correct) {
+          html += `<div class="small" style="margin-top:6px;color:var(--ink-3)">
+            正确答案 <b class="mono" style="color:var(--lv-j)">${correct}</b>
+            ${sel ? (sel === correct ? "· 你答对了" : "· 你选了 " + sel) : "· 未作答"}</div>`;
+        }
+        html += `</div>`;
+      });
+    });
+
+    document.getElementById("paper").innerHTML = html;
+
+    // 选项点击
+    document.querySelectorAll(".opt").forEach(function (el) {
+      el.onclick = function () {
+        if (store["g" + p.year] === 1) return;
+        const no = el.dataset.no, k = el.dataset.k;
+        my[no] = k;
+        store["y" + p.year] = my;
+        save();
+        document.querySelectorAll(`.opt[data-no="${no}"]`).forEach(x => x.classList.remove("sel"));
+        el.classList.add("sel");
+      };
+    });
+
+    document.getElementById("submit").onclick = function () {
+      let right = 0, done = 0;
+      Object.keys(ans).forEach(function (no) {
+        if (my[no]) done++;
+        if (my[no] === ans[no]) right++;
+      });
+      store["g" + p.year] = 1;
+      save();
+      document.getElementById("score").textContent = right * 2;
+      document.getElementById("sub-note").textContent =
+        `答对 ${right} / 15 · 已作答 ${done} / 15`;
+      renderPractice(p);
+      document.getElementById("score").textContent = right * 2;
+      document.getElementById("sub-note").textContent = `答对 ${right} / 15 · 已作答 ${done} / 15`;
+    };
+
+    document.getElementById("reset").onclick = function () {
+      delete store["y" + p.year]; delete store["g" + p.year];
+      save(); renderPractice(p);
+    };
+
+    if (store["g" + p.year] === 1) {
+      let right = 0, done = 0;
+      Object.keys(ans).forEach(function (no) {
+        if (my[no]) done++;
+        if (my[no] === ans[no]) right++;
+      });
+      document.getElementById("score").textContent = right * 2;
+      document.getElementById("sub-note").textContent = `答对 ${right} / 15 · 已作答 ${done} / 15（已判分，可清空重做）`;
+    }
+  }
+
+  function renderReading(list, title) {
+    let html = `<div class="sec-title">${title}</div>`;
+    list.forEach(function (a) {
+      let body = "", open = false;
+      a.blocks.forEach(function (b) {
+        if (b.k !== "li" && open) { body += "</ul>"; open = false; }
+        const x = esc(b.x);
+        if (b.k === "h") body += `<h2>${x}</h2>`;
+        else if (b.k === "h4") body += `<h4 style="margin:22px 0 8px;color:var(--seal);font-size:1rem">${x}</h4>`;
+        else if (b.k === "li") { if (!open) { body += "<ul>"; open = true; } body += `<li>${x}</li>`; }
+        else if (b.k === "code") body += `<pre>${x}</pre>`;
+        else body += `<p>${x}</p>`;
+      });
+      if (open) body += "</ul>";
+      html += `<div class="card" style="margin-bottom:14px"><div class="kb-body">${body}</div></div>`;
+    });
+    document.getElementById("paper").innerHTML = html;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = [
+      { k: "2022", n: "CSP-S 2022" },
+      { k: "2023", n: "CSP-S 2023" },
+      { k: "2025", n: "CSP-S 2025" },
+      { k: "files", n: "2021 / 2024 原卷" }
+    ];
+    document.getElementById("tabs").innerHTML = tabs.map((t, i) =>
+      `<button data-k="${t.k}" class="${i === 0 ? "on" : ""}">${t.n}</button>`).join("");
+
+    function show(k) {
+      if (k === "files") {
+        document.getElementById("paper").innerHTML = `<div class="sec-title">扫描件原卷</div>
+          <div class="note">以下 PDF 为图片扫描件，无法提取文字，提供原始文件下载。建议打印后按 4 小时模拟使用。</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>材料</th><th>说明</th><th style="width:120px">操作</th></tr></thead>
+            <tbody>
+              <tr><td>CSP-S 2021 第一轮 试题及参考答案</td><td>30 页，含答案</td><td><a href="https://github.com/Peter1384345/noi-2027-plan" target="_blank" rel="noopener" class="small">见本地存档</a></td></tr>
+              <tr><td>CSP-S 2024 第一轮 试题</td><td>13 页，原文件结构损坏无法解析</td><td><span class="small muted">本地 D 盘存档</span></td></tr>
+              <tr><td>NOI 2025 全套资料</td><td>21 页扫描件，25 MB</td><td><span class="small muted">本地存档</span></td></tr>
+            </tbody></table></div>
+          <p class="small muted mt-2">说明：受 GitHub 单文件与版权限制，原卷 PDF 未上传至仓库，保留在本地 <code>D:\\桌面\\总文件夹\\资料整合\\</code> 与 <code>csp-s-site\\papers\\</code>。</p>`;
+        return;
+      }
+      if (k === "2025") {
+        renderReading(window.KB["真题2025"], "CSP-S 2025 第一轮（社区整理版）");
+        return;
+      }
+      const p = (window.PAPERS || []).find(x => x.year === k);
+      if (!p) { document.getElementById("paper").innerHTML = `<div class="note">该年份暂无可解析的文本。</div>`; return; }
+      renderPractice(p);
+    }
+
+    document.querySelectorAll("[data-k]").forEach(function (b) {
+      b.onclick = function () {
+        document.querySelectorAll("[data-k]").forEach(x => x.classList.remove("on"));
+        b.classList.add("on");
+        show(b.dataset.k);
+      };
+    });
+    show("2022");
+  });
+})();
+</script>
+</body>
+</html>
