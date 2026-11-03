@@ -23,7 +23,8 @@
 | `templates.html` | 56 个 C++ 模板，标注等级、复杂度、易错点，一键复制 |
 | `contests.html` | 七级漏斗、2026–2028 赛历、六个高频疑问直答 |
 | `assess.html` | 能力雷达、9 个里程碑阈值、周自检七问、评分表、止损线 |
-| `resources.html` | C/D/E 三盘扫描结果、14 个 GitHub 仓库、资料使用地图 |
+| `resources.html` | C/D/E 三盘扫描结论、11 类高价值资料、GitHub 仓库清单、资料使用地图 |
+| `archive.html` | 全量档案库：207,715 个文件逐条索引、877 篇正文全文检索、115 份原文件下载、15 个 GitHub 仓库 870 文件直达 |
 | `method.html` | 刻意练习闭环、对拍工程、考场时间分配、七个失败模式 |
 
 ## 核心判断
@@ -40,6 +41,7 @@
 - 数据层分离在 `assets/js/data/`：`weeks.js`、`syllabus.js`、`books.js`、`templates.js`、`contests.js`
 - 进度持久化用 `localStorage`（键 `noi2027.progress.v1`），主题偏好同样本地保存
 - 支持全站搜索（按 `/` 唤起）、深浅色切换、打印样式
+- 档案库数据由 `../build/scan_assets.py`、`scan_github.py`、`gen_archive.py` 生成，索引按盘分片、按需加载
 
 ```
 .
@@ -62,7 +64,9 @@
     ├── js
     │   ├── app.js
     │   └── data/*.js
-    └── data/kb/*.js    # 站内正文（73 篇 / 30.4 万字）与真题数据
+    ├── data/kb/*.js         # 站内正文（73 篇 / 30.4 万字）与真题数据
+    ├── data/archive/*.js    # 全量索引、正文、目录树、GitHub 清单
+    └── archive/files/*      # 115 份原文件下载副本
 ```
 
 ## 数据来源
