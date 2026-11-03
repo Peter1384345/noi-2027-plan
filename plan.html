@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>56 周计划 · NOI 2027</title>
+<meta name="description" content="逐周任务表：知识点、任务、题量、验收标准，按阶段筛选，可勾选记录进度。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="plan.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">PLAN / 56 WEEKS</span>
+      <h2>逐周作战表</h2>
+    </div>
+    <p class="sec-lead">
+      从 2026 年 11 月 2 日到 2027 年 11 月 28 日，共 56 周。每周四件事：<b>学什么（知识点）</b>、<b>做什么（任务）</b>、<b>做多少（题量）</b>、<b>怎么算过关（验收）</b>。
+      验收没过的周，不算完成——这是这份计划唯一不可协商的规则。
+    </p>
+
+    <!-- 进度总览 -->
+    <div class="grid g4 mb-3">
+      <div class="stat"><b id="s-week">0 / 56</b><span>已完成周数</span></div>
+      <div class="stat"><b id="s-pct">0%</b><span>整体完成度</span></div>
+      <div class="stat"><b id="s-current">第 1 周</b><span>当前所处周次</span></div>
+      <div class="stat"><b id="s-left">56</b><span>剩余周数</span></div>
+    </div>
+    <div class="bar mb-3"><i id="s-bar" style="width:0%"></i></div>
+
+    <!-- 筛选 -->
+    <div class="filters" id="filters"></div>
+
+    <div id="weeks"></div>
+
+    <div class="note mt-4">
+      <b>打印建议：</b>按 Ctrl/Cmd + P 可直接打印整张表，导航与筛选器会自动隐藏。建议每周一打印下一周的任务贴在桌前，勾选纸质版后在站内同步打卡。
+      <button class="copy-btn" style="margin-left:10px" onclick="App.reset()">清空进度</button>
+    </div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/data/weeks.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  let phaseFilter = "all";
+  let statusFilter = "all";
+
+  function currentWeek() {
+    const today = new Date().setHours(0, 0, 0, 0);
+    let cur = 1;
+    WEEKS.forEach(w => {
+      if (new Date(w.d + "T00:00:00").getTime() <= today) cur = w.w;
+    });
+    return cur;
+  }
+
+  function render() {
+    const list = WEEKS.filter(w => {
+      if (phaseFilter !== "all" && w.p !== phaseFilter) return false;
+      if (statusFilter === "done" && !App.weekDone(w.w)) return false;
+      if (statusFilter === "todo" && App.weekDone(w.w)) return false;
+      return true;
+    });
+
+    const host = document.getElementById("weeks");
+    if (!list.length) {
+      host.innerHTML = `<div class="note">当前筛选条件下没有周次。</div>`;
+      return;
+    }
+
+    let html = "";
+    let lastPhase = null;
+    list.forEach(w => {
+      const ph = PHASES.find(p => p.id === w.p);
+      if (w.p !== lastPhase) {
+        lastPhase = w.p;
+        html += `<div style="display:flex;align-items:center;gap:12px;margin:30px 0 14px">
+          <span class="lv-band ${ph.color}">${ph.id} ${ph.name}</span>
+          <span class="small muted">W${ph.range[0]}–W${ph.range[1]} · ${ph.goal}</span>
+        </div>`;
+      }
+      const done = App.weekDone(w.w);
+      html += `<div class="card" id="w${w.w}" style="margin-bottom:10px;padding:18px 20px${done ? ";opacity:.62" : ""}">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <div class="kp-chk" onclick="toggle(${w.w},this)" style="${done ? 'background:var(--lv-j);border-color:var(--lv-j);color:#fff' : ''}">✓</div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+              <span class="mono" style="font-size:11.5px;color:var(--seal)">W${String(w.w).padStart(2,'0')} · ${App.fmtDate(w.d)}</span>
+              <h4 style="font-size:15px;${done ? 'text-decoration:line-through;color:var(--ink-3)' : ''}">${w.t}</h4>
+            </div>
+            <div class="small" style="color:var(--ink-3);margin:5px 0 9px">${w.kg}</div>
+            <p style="font-size:13.4px;margin-bottom:9px">${w.task}</p>
+            <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:12.5px">
+              <span><span class="tag ghost">题量</span> <span style="color:var(--ink-2)">${w.q}</span></span>
+            </div>
+            <div style="margin-top:9px;padding-top:9px;border-top:1px dashed var(--rule)">
+              <span class="tag seal" style="font-size:10px">验收</span>
+              <span class="small" style="color:var(--ink-2);margin-left:6px">${w.c}</span>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    });
+    host.innerHTML = html;
+  }
+
+  window.toggle = function (w, el) {
+    const on = App.toggleWeek(w);
+    const card = document.getElementById("w" + w);
+    card.style.opacity = on ? ".62" : "1";
+    el.style.cssText = on ? "background:var(--lv-j);border-color:var(--lv-j);color:#fff" : "";
+    const h = card.querySelector("h4");
+    h.style.textDecoration = on ? "line-through" : "none";
+    h.style.color = on ? "var(--ink-3)" : "";
+    refreshStats();
+  };
+
+  function refreshStats() {
+    const s = App.stats();
+    document.getElementById("s-week").textContent = s.doneW + " / " + s.totalW;
+    document.getElementById("s-pct").textContent = s.pctW + "%";
+    document.getElementById("s-bar").style.width = s.pctW + "%";
+    document.getElementById("s-left").textContent = (s.totalW - s.doneW);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const cur = currentWeek();
+    document.getElementById("s-current").textContent = "第 " + cur + " 周";
+
+    // 筛选器
+    const chips = [{ k: "all", n: "全部阶段", c: 56 }].concat(
+      PHASES.map(p => ({ k: p.id, n: p.id + " " + p.name, c: p.range[1] - p.range[0] + 1 }))
+    );
+    document.getElementById("filters").innerHTML =
+      chips.map(c => `<button class="chip ${c.k === 'all' ? 'on' : ''}" data-k="${c.k}">${c.n}<span class="ct">${c.c}</span></button>`).join("") +
+      `<span style="width:14px"></span>` +
+      `<button class="chip on" data-s="all">全部</button>
+       <button class="chip" data-s="todo">未完成</button>
+       <button class="chip" data-s="done">已完成</button>`;
+
+    document.querySelectorAll(".chip").forEach(el => {
+      el.onclick = () => {
+        if (el.dataset.k) {
+          phaseFilter = el.dataset.k;
+          document.querySelectorAll("[data-k]").forEach(x => x.classList.remove("on"));
+          el.classList.add("on");
+        } else {
+          statusFilter = el.dataset.s;
+          document.querySelectorAll("[data-s]").forEach(x => x.classList.remove("on"));
+          el.classList.add("on");
+        }
+        render();
+      };
+    });
+
+    refreshStats();
+    render();
+
+    // 定位到当前周
+    if (location.hash) {
+      const t = document.querySelector(location.hash);
+      if (t) t.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+})();
+</script>
+</body>
+</html>

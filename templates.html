@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>模板库 · NOI 2027</title>
+<meta name="description" content="56 个竞赛 C++ 模板，标注大纲等级、复杂度与易错点，支持一键复制。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+<style>
+  .tpl-card { margin-bottom: 14px; }
+  .tpl-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .tpl-head h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; flex: 1; min-width: 180px; }
+  .tpl-meta { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tpl-note { font-size: 12.8px; color: var(--ink-2); margin-top: 8px; padding-left: 11px; border-left: 2px solid var(--rule-2); }
+  .tpl-note b { color: var(--seal); }
+  pre { max-height: 460px; }
+</style>
+</head>
+<body data-page="templates.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">TEMPLATES / 56</span>
+      <h2>代码模板库</h2>
+    </div>
+    <p class="sec-lead">
+      56 个模板，覆盖大纲 3–8 级的高频实现。每个模板都标注了等级、复杂度，以及<b>最容易写错的那一行</b>——
+      后者比代码本身更有价值，因为它对应的是你考场上的失分点。
+    </p>
+
+    <div class="note">
+      <b>模板的正确用法：</b>不是考试时抄，而是平时默写。合上书，从空白文件写出可编译通过的版本，写不出就说明没掌握。
+      计划要求 P3 阶段结束前，下列 20 个核心模板必须达到「闭卷零错误」：
+      <span class="mono small" style="display:block;margin-top:8px;line-height:1.9">
+        并查集 · 树状数组 · 线段树（区间加和）· ST 表 · 单调队列 · Dijkstra · Kruskal · 拓扑排序 ·
+        Tarjan SCC · 倍增 LCA · 01 背包 · 完全背包 · 区间 DP · 树形 DP · KMP · 字符串哈希 · 快速幂 · exgcd · 线性筛 · 矩阵快速幂
+      </span>
+    </div>
+
+    <div class="filters" id="cats"></div>
+    <div class="filters">
+      <input class="input" id="q" type="text" placeholder="搜索模板名或易错点，如「懒标记」「lowbit」">
+      <span class="small muted" id="cnt"></span>
+    </div>
+
+    <div id="list"></div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/data/templates.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  let cat = "全部", q = "";
+
+  const KW = /^(int|long|double|float|char|bool|void|const|struct|class|return|if|else|for|while|do|break|continue|using|namespace|std|static|inline|true|false|auto|template|typename|operator|new|delete|public|private|unsigned|short|signed|switch|case|default|goto|sizeof|typedef|extern|register|volatile|enum|union)$/;
+
+  function esc(s) { return App.esc(s); }
+
+  function hl(raw) {
+    return raw.split("\n").map(function (line) {
+      const ci = line.indexOf("//");
+      const code = ci >= 0 ? line.slice(0, ci) : line;
+      const cmt = ci >= 0 ? line.slice(ci) : "";
+      let out = "", last = 0;
+      const re = /("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')|\b([A-Za-z_]\w*)\b|\b(\d+(?:\.\d+)?)\b/g;
+      let m;
+      while ((m = re.exec(code))) {
+        out += esc(code.slice(last, m.index));
+        if (m[1]) out += '<span class="st">' + esc(m[1]) + '</span>';
+        else if (m[2]) out += KW.test(m[2]) ? '<span class="kw">' + m[2] + '</span>' : esc(m[2]);
+        else out += '<span class="nu">' + m[3] + '</span>';
+        last = re.lastIndex;
+      }
+      out += esc(code.slice(last));
+      if (cmt) out += '<span class="cm">' + esc(cmt) + '</span>';
+      return out;
+    }).join("\n");
+  }
+
+  function render() {
+    const list = TEMPLATES.filter(t => {
+      if (cat !== "全部" && t.c !== cat) return false;
+      if (q && (t.n + t.note + t.code).indexOf(q) === -1) return false;
+      return true;
+    });
+    document.getElementById("cnt").textContent = `命中 ${list.length} 个`;
+
+    document.getElementById("list").innerHTML = list.length ? list.map(function (t) {
+      const cls = t.lv <= 5 ? "j" : (t.lv <= 8 ? "s" : "n");
+      const id = "tpl-" + encodeURIComponent(t.n);
+      return `<div class="card tpl-card" id="${id}">
+        <div class="tpl-head">
+          <h3>${t.n}</h3>
+          <div class="tpl-meta">
+            <span class="tag ghost">${t.c}</span>
+            <span class="tag ${cls}">${t.lv} 级</span>
+            <span class="tag azure mono" style="font-size:10.5px">${t.cx}</span>
+          </div>
+        </div>
+        <div class="code-block">
+          <div class="code-head">
+            <span>C++</span>
+            <button class="copy-btn" data-i="${TEMPLATES.indexOf(t)}">复制</button>
+          </div>
+          <pre>${hl(t.code)}</pre>
+        </div>
+        <div class="tpl-note"><b>易错：</b>${t.note}</div>
+      </div>`;
+    }).join("") : `<div class="note">没有匹配的模板。</div>`;
+
+    document.querySelectorAll(".copy-btn[data-i]").forEach(b => {
+      b.onclick = () => App.copy(b, TEMPLATES[+b.dataset.i].code);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const cats = ["全部"].concat(Array.from(new Set(TEMPLATES.map(t => t.c))));
+    document.getElementById("cats").innerHTML =
+      `<span class="small muted" style="width:34px">分类</span>` +
+      cats.map(c => `<button class="chip ${c === "全部" ? "on" : ""}" data-c="${c}">${c}<span class="ct">${c === "全部" ? TEMPLATES.length : TEMPLATES.filter(t => t.c === c).length}</span></button>`).join("");
+
+    document.querySelectorAll("[data-c]").forEach(el => el.onclick = () => {
+      cat = el.dataset.c;
+      document.querySelectorAll("[data-c]").forEach(x => x.classList.remove("on"));
+      el.classList.add("on"); render();
+    });
+
+    document.getElementById("q").oninput = e => { q = e.target.value.trim(); render(); };
+    render();
+
+    if (location.hash) {
+      const t = document.querySelector(location.hash.replace(/\./g, "\\."));
+      if (t) setTimeout(() => t.scrollIntoView({ behavior: "smooth", block: "center" }), 120);
+    }
+  });
+})();
+</script>
+</body>
+</html>

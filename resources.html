@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本地资产 · NOI 2027</title>
+<meta name="description" content="C/D/E 三盘全量扫描结果：11 类本地竞赛资料、14 个 GitHub 仓库、3,085 个源文件与资料使用地图。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="resources.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">ARCHIVE / LOCAL SCAN</span>
+      <h2>本地资产盘点</h2>
+    </div>
+    <p class="sec-lead">
+      本页是 <b>C: / D: / E: 三个盘（合计 477 GB）</b>的实际扫描结果。扫描为只读，未移动、改名或删除任何文件。
+      方法：按 <code>NOI / NOIP / CSP / 信息学 / 信奥 / 算法竞赛 / 洛谷 / 题解 / 竞赛 / 知识库</code> 等关键词检索目录与文件名，
+      排除 <code>Windows</code>、<code>Program Files</code>、<code>AppData</code>、<code>node_modules</code>、回收站等系统与缓存路径。
+    </p>
+
+    <div class="grid g4 mb-3">
+      <div class="stat"><b>477 GB</b><span>扫描总量（三盘）</span></div>
+      <div class="stat"><b>11</b><span>可用的本地资料</span></div>
+      <div class="stat"><b>14</b><span>GitHub 仓库（8 个 OI 相关）</span></div>
+      <div class="stat"><b>3,085</b><span>.cpp / .cc 源文件</span></div>
+    </div>
+
+    <div class="note gold">
+      <b>最重要的发现：</b>并不是「资料不够」，而是「资料散落在四处，且没有一份和赛历对齐」。
+      桌面有三份知识文档，D 盘资料整合里有一份标注了难度的题单和一张三级证书，E 盘 Obsidian 知识库有项目档案，
+      C 盘 WorkBuddy 历史工作区还躺着四套 CSP-S 第一轮真题 PDF 与十几个已部署的网站。
+      本站把这些合并成一条可执行的线——这是它存在的主要理由。
+    </div>
+  </div>
+</section>
+
+<!-- 清单 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>本地资料清单</h2></div>
+    <div id="local"></div>
+  </div>
+</section>
+
+<!-- GitHub -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02</span><h2>GitHub 仓库（github.com/Peter1384345）</h2></div>
+    <p class="sec-lead">14 个公开仓库，其中 8 个与信息学竞赛直接相关。已有的前端资产不必重复建设，本站复用了其知识组织方式与模板体系。</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:210px">仓库</th><th>说明</th><th style="width:90px">语言</th></tr></thead>
+        <tbody id="repos"></tbody>
+      </table>
+    </div>
+    <div class="note azure mt-3">
+      <b>可复用的部分：</b><code>csp-s-2026-pro</code> 的知识星图与 16 个算法可视化、<code>csp-s-2026-round2-v5</code> 的在线答题与实时评测、
+      <code>cpp-oi-roadmap</code> 的路线图结构——这三者的交互层质量已足够，本站只需要在「内容深度」和「与大纲的对应关系」上补齐。
+    </div>
+  </div>
+</section>
+
+<!-- 使用地图 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03</span><h2>资料使用地图</h2></div>
+    <p class="sec-lead">哪一周该翻哪份文件。避免「资料都在，但要用时找不到」。</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:110px">周次</th><th style="width:230px">资料</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td class="mono small">W1–8</td><td>《CCF 信息学奥赛入门篇》+ 洛谷入门题单</td><td>建立语言闭环；此阶段不碰任何进阶资料</td></tr>
+          <tr><td class="mono small">W9–20</td><td><code>复习资料信息学.docx</code> + <code>CSP-S 2021–2024 第一轮真题</code></td><td>初赛知识扫盲；每两周一套第一轮真题</td></tr>
+          <tr><td class="mono small">W21–32</td><td><code>CSP-S知识库全集.pdf</code>（数据结构 12 篇 / 图论 15 篇）+ <code>CSP-JS+NOI 题单.xlsx</code></td><td>主力参考；按题单的 -6 标记逐个清题</td></tr>
+          <tr><td class="mono small">W33–44</td><td><code>信息学竞赛知识文集.docx</code>（第八章大纲 / 第七章模板）+ <code>NOI2025.pdf</code></td><td>对照大纲查漏；研究国赛命题风格</td></tr>
+          <tr><td class="mono small">W45–46</td><td><code>CSPS 2025题目.docx</code> + 五年第一轮真题</td><td>第一轮冲刺，按题型专项</td></tr>
+          <tr><td class="mono small">W47–52</td><td>本站模板库 + 历年第二轮真题</td><td>稳分训练与全真模拟</td></tr>
+          <tr><td class="mono small">W53–56</td><td>NOIP 近五年真题 + 错题本</td><td>难度跃迁与收官</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 扫描结论 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04</span><h2>扫描结论</h2></div>
+    <div class="grid g2">
+      <div class="card" style="border-left:3px solid var(--lv-j)">
+        <h4>已经具备的</h4>
+        <p>① 一份按难度标注的题单（最稀缺的资产，说明此前已有人做过结构化工作）；<br>
+           ② 60 篇成体系的知识文档，覆盖大纲 5–8 级绝大部分；<br>
+           ③ 五年的第一轮真题与答案；<br>
+           ④ 一套可复用的前端站点骨架（8 个 OI 仓库）。</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--seal)">
+        <h4>明显缺失的</h4>
+        <p>① <b>第二轮真题的系统整理</b>——只有零散题目，没有按年份成套；<br>
+           ② <b>错题档案</b>——3,085 个 .cpp 文件里没有一份归因记录；<br>
+           ③ <b>模拟赛记录</b>——无法证明「限时 4 小时能拿多少分」；<br>
+           ④ <b>官方大纲原文</b>——只有二手整理的 CSP-S 部分。</p>
+        <p class="small muted" style="margin-top:8px">前三项是本站试图用「计划 + 模板 + 评估」补上的，第四项已在「大纲全解」页补齐。</p>
+      </div>
+    </div>
+
+    <div class="note mt-3">
+      <b>给家长的一句话：</b>这台电脑上的资料量，已经超过绝大多数竞赛生的全部家当。
+      真正决定结果的不是再买哪本书、再下载哪个题库，而是未来 56 周里，每天那 2 小时有没有真的坐下来写代码。
+    </div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/data/books.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // 本地资料
+  document.getElementById("local").innerHTML = BOOKS.local.map(function (b, i) {
+    return `<details class="acc" ${i === 2 ? "open" : ""}>
+      <summary>
+        <span class="lv-band a" style="font-size:10px">${String(i + 1).padStart(2, "0")}</span>
+        <span>${b.f}</span>
+        <span class="small muted mono" style="margin-left:auto;font-weight:400">${b.s}</span>
+      </summary>
+      <div class="acc-body">
+        <div class="small mono" style="color:var(--ink-3);margin-bottom:8px;word-break:break-all">${b.p}</div>
+        <p style="font-size:13.4px"><b style="color:var(--ink)">内容：</b>${b.c}</p>
+        <p style="font-size:13.4px;margin-top:7px"><b style="color:var(--seal)">用法：</b>${b.use}</p>
+      </div>
+    </details>`;
+  }).join("");
+
+  const REPOS = [
+    { n: "csp-s-2026-round2-v5", d: "CSP-S 2026 第二轮备考站：在线答题 + 实时评测 + 知识点卡片 + 算法可视化", l: "JavaScript", hot: true },
+    { n: "csp-s-2026-pro", d: "知识星图力导向图 + 16 个算法可视化 + 20 道真题对比 + 42 个 C++ 模板", l: "JavaScript", hot: true },
+    { n: "cpp-oi-roadmap", d: "C++ OI Roadmap：CSP-J 到 NOIP 学习路径", l: "HTML", hot: true },
+    { n: "codequest-cpp", d: "CodeQuest C++ 竞赛学习平台（新版 / 旧版 / 路线图）", l: "HTML", hot: true },
+    { n: "csp-s-preparation", d: "CSP-S 备考资料合集", l: "HTML", hot: true },
+    { n: "csp-s-first-round", d: "第一轮备考全攻略：近 5 年真题 PDF + 在线刷题 + 考点统计", l: "HTML", hot: true },
+    { n: "csp-s-second-round", d: "第二轮备考：在线答题 + 实时评测 + 模拟赛，单文件零依赖", l: "Python", hot: true },
+    { n: "csp-s-2026-review", d: "CSP-S 2026 复习站", l: "HTML", hot: true },
+    { n: "rollcall-downloads", d: "星际点名器下载中心", l: "HTML" },
+    { n: "yuekao-review", d: "月考复习站", l: "JavaScript" },
+    { n: "gao2-monthly-exam-review", d: "高二上第一次月考全科复习指南", l: "HTML" },
+    { n: "high-school-knowledge-hub", d: "高中全科知识库", l: "HTML" },
+    { n: "magic-word-academy", d: "魔法单词学院", l: "TypeScript" },
+    { n: "personal-debug-console", d: "系统调试工具箱", l: "HTML" }
+  ];
+  document.getElementById("repos").innerHTML = REPOS.map(function (r) {
+    return `<tr${r.hot ? ' style="background:var(--surface-2)"' : ""}>
+      <td><a href="https://github.com/Peter1384345/${r.n}" target="_blank" rel="noopener" class="mono small">${r.n}</a>
+      ${r.hot ? '<span class="tag seal" style="font-size:9.5px;margin-left:6px">OI</span>' : ""}</td>
+      <td class="small">${r.d}</td>
+      <td class="small muted">${r.l}</td>
+    </tr>`;
+  }).join("");
+});
+</script>
+</body>
+</html>

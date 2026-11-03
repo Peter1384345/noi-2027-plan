@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>赛历与规则 · NOI 2027</title>
+<meta name="description" content="CSP-J/S、NOIP、省选、NOI 的晋级链路、2026–2028 赛历、名额与评级规则。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="contests.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">CONTESTS / LADDER</span>
+      <h2>赛事体系与晋级链路</h2>
+    </div>
+    <p class="sec-lead">
+      信息学奥赛是一条<b>单向漏斗</b>：CSP-J/S 面向所有人开放，NOIP 需资格，省选需 NOIP 一等奖，NOI 需进入省队。
+      每一层都在筛人，且没有补考。理解这条链路，才能理解为什么计划要这样排。
+    </p>
+
+    <div class="note">
+      <b>一句必须记住的话：</b>CSP-S 与 NOIP 同属提高级（大纲难度系数 5–8），知识点几乎完全重叠，差别只在命题取向——
+      CSP-S 偏「模型清晰、实现量大」，NOIP 偏「模型隐蔽、需要转化」。所以 CSP-S 考完不要换教材。
+    </div>
+  </div>
+</section>
+
+<!-- 链路 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>七级漏斗</h2></div>
+    <div id="ladder"></div>
+  </div>
+</section>
+
+<!-- 赛历 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02</span><h2>2026–2028 关键节点</h2></div>
+    <p class="sec-lead">日期按 CCF 历年惯例推算，<b>具体以当年官方通知为准</b>。每年 2 月官网会发布《NOI 系列活动和认证日历》，务必以此校准。</p>
+    <div class="timeline" id="calendar"></div>
+    <div class="note azure">
+      <b>为什么 2027 年的三个节点标成了「不参赛」？</b>因为报名资格是硬门槛：2027 年 3 月省选要求 NOIP 2026 一等奖，
+      而你在 2026 年 11 月起步时已经错过 NOIP 2026 报名。这些节点仍然要研究真题，但目的是标定差距，不是参赛。
+    </div>
+  </div>
+</section>
+
+<!-- 规则 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03</span><h2>六个高频疑问的直答</h2></div>
+    <div id="rules"></div>
+  </div>
+</section>
+
+<!-- 关键数字 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04</span><h2>必须记住的数字</h2></div>
+    <div class="grid g4">
+      <div class="stat"><b>400</b><span>CSP-S / NOIP 第二轮满分</span></div>
+      <div class="stat"><b>50 / 152 / 85</b><span>NOI 2025 金 / 银 / 铜牌数</span></div>
+      <div class="stat"><b>50</b><span>NOI 金牌前 50 进国家集训队</span></div>
+      <div class="stat"><b>4</b><span>最终代表中国参加 IOI 的人数</span></div>
+    </div>
+    <div class="note gold mt-3">
+      <b>关于 NOI 2025 的实测数据：</b>2025 年 7 月在绍兴一中举办，两试共 6 题，考查内容包括最短路、动态规划、哈希、
+      线段树合并、基数排序、高维前缀和、子集容斥、二分、贪心与复杂数据结构。最终产生金牌 50、银牌 152、铜牌 85。
+      这组数据说明一件事：<b>哪怕到国赛，考的仍然是 6–8 级的主干知识</b>，只是组合方式更复杂。这也是本计划把 70% 时间投在 5–8 级的原因。
+    </div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/data/contests.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // 链路
+  document.getElementById("ladder").innerHTML = LADDER.map(function (l, i) {
+    return `<div class="card" style="margin-bottom:10px;display:flex;gap:18px;align-items:flex-start">
+      <div style="flex-shrink:0;width:44px;text-align:center">
+        <div class="mono" style="font-size:1.5rem;line-height:1;color:var(--seal)">${String(i + 1).padStart(2, "0")}</div>
+        <div class="small muted" style="font-size:10px;letter-spacing:.1em;margin-top:3px">LEVEL</div>
+      </div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+          <h3 style="font-family:var(--sans);font-size:1.02rem;font-weight:600">${l.s}</h3>
+          <span class="tag ghost">${l.t}</span>
+          <span class="tag seal mono" style="font-size:10px">难度 ${l.d}</span>
+        </div>
+        <div class="small" style="color:var(--ink-2);margin:6px 0"><b>形式：</b>${l.f}</div>
+        <div class="small" style="color:var(--ink-2)"><b>资格：</b>${l.g}</div>
+        <div class="small" style="color:var(--ink-3);margin-top:6px;padding-left:10px;border-left:2px solid var(--rule-2)">${l.k}</div>
+      </div>
+    </div>`;
+  }).join("");
+
+  // 赛历
+  document.getElementById("calendar").innerHTML = CALENDAR.map(function (c) {
+    return `<div class="tl-item ${c.now ? "done" : ""}">
+      <span class="tl-date">${c.d}</span>
+      <h4>${c.t}</h4>
+      <p>${c.k}</p>
+    </div>`;
+  }).join("");
+
+  // 规则
+  document.getElementById("rules").innerHTML = RULES.map(function (r, i) {
+    return `<details class="acc" ${i === 0 ? "open" : ""}>
+      <summary>${r.q}</summary>
+      <div class="acc-body"><p style="font-size:13.8px">${r.a}</p></div>
+    </details>`;
+  }).join("");
+});
+</script>
+</body>
+</html>

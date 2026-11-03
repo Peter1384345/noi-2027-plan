@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>方法论 · NOI 2027</title>
+<meta name="description" content="刻意练习闭环、对拍工程、考场时间分配、七个失败模式与文化课平衡。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="method.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">METHOD / PRACTICE</span>
+      <h2>方法论</h2>
+    </div>
+    <p class="sec-lead">
+      这一页不讨论学什么，只讨论怎么学。同样的 1,150 小时，方法不同，产出可以差三倍。
+      下面五节是这份计划里最不该被跳过、也最容易被跳过的东西。
+    </p>
+  </div>
+</section>
+
+<!-- 训练闭环 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>刻意练习的四步闭环</h2></div>
+    <p class="sec-lead">一道题的价值，取决于你在这四步上花了多少时间，而不是你 AC 了没有。</p>
+
+    <div class="grid g4">
+      <div class="card"><span class="card-num">STEP 1</span><h4>独立想 30 分钟</h4><p>不看题解、不搜标签。把能想到的思路写下来，哪怕是错的。这 30 分钟训练的是「建模肌肉」，也是唯一无法被替代的部分。</p></div>
+      <div class="card"><span class="card-num">STEP 2</span><h4>看题解，只看到懂为止</h4><p>看到「原来如此」就停，不要看完整代码。看懂思路与抄代码是两件事，中间隔着一整次独立思考。</p></div>
+      <div class="card"><span class="card-num">STEP 3</span><h4>关屏重写</h4><p>从空白文件重写一遍，写不出来就再看一眼思路。这一步能筛掉 80% 的「以为自己懂了」。</p></div>
+      <div class="card"><span class="card-num">STEP 4</span><h4>写复盘，归因到根</h4><p>三行字：考点是什么、我卡在哪、下次怎么识别。不写复盘 = 这道题没做过。</p></div>
+    </div>
+
+    <div class="note mt-3">
+      <b>时间分配的真相：</b>一道中等题，四步合计约 70 分钟，其中写代码只占 15 分钟。
+      很多人的问题恰恰是——把 70 分钟压缩成 15 分钟的抄写，然后困惑为什么刷了 500 题还是不会。
+    </div>
+  </div>
+</section>
+
+<!-- 对拍 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02</span><h2>对拍工程</h2></div>
+    <p class="sec-lead">OI 赛制只告诉你「错了」，不告诉你「错在哪」。对拍是自己在本地把这句话问清楚的手段。</p>
+
+    <div class="grid g2">
+      <div>
+        <p style="font-size:14px">标准对拍需要四个文件：</p>
+        <div class="tbl-wrap mt-2">
+          <table>
+            <thead><tr><th style="width:110px">文件</th><th>作用</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">gen.cpp</td><td>随机数据生成器，必须覆盖边界（n=1、全相同、极端值）</td></tr>
+              <tr><td class="mono">std.cpp</td><td>暴力 / 保证正确的慢速解，用于产出标准答案</td></tr>
+              <tr><td class="mono">my.cpp</td><td>你的待测程序</td></tr>
+              <tr><td class="mono">run.bat</td><td>循环脚本，比较两个输出，不同则停下并保留数据</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted mt-2">模板库的「对拍脚本」条目可直接复制。建议把它做成一个文件夹，每次新建题目只改 gen.cpp。</p>
+      </div>
+
+      <div class="code-block">
+        <div class="code-head"><span>gen.cpp 的写法要点</span></div>
+        <pre><span class="cm">// 1. 随机种子必须用时间，否则每次数据一样</span>
+srand(time(0) ^ (unsigned long long)clock());
+
+<span class="cm">// 2. 参数要能控制数据规模，便于从小往大试</span>
+<span class="kw">int</span> n = rand() % maxn + 1;
+
+<span class="cm">// 3. 至少要有一半的数据是「边界形态」</span>
+<span class="kw">if</span> (rand() % 2) {
+    <span class="cm">// 全相同 / 已排序 / 链状图 / 菊花图</span>
+} <span class="kw">else</span> {
+    <span class="cm">// 完全随机</span>
+}
+
+<span class="cm">// 4. 值域也要随机，不要固定 1..1e9</span>
+a[i] = (long long)rand() * rand() % V + 1;</pre>
+      </div>
+    </div>
+
+    <div class="note azure">
+      <b>经验值：</b>随机数据 1000 组能查出约 90% 的实现错误；再加 200 组针对性边界数据能到 98%。
+      剩下 2% 是「数据太弱」导致的假通过——这也是为什么赛场上永远要留 15 分钟检查，而不是盲目自信。
+    </div>
+  </div>
+</section>
+
+<!-- 考场 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03</span><h2>考场时间分配</h2></div>
+    <p class="sec-lead">以 CSP-S / NOIP 第二轮（4 题、3.5–4.5 小时）为例。这套分配不是最优解，但是最稳的解。</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:110px">时段</th><th style="width:130px">任务</th><th>要点</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">0:00–0:15</td><td><b>通读四题</b></td><td>只看题面，不动手。判断哪题是 T1、哪题有特殊性质分。这个判断决定后面 4 小时的一切。</td></tr>
+          <tr><td class="mono">0:15–0:55</td><td><b>T1 拿满分</b></td><td>T1 必须 AC。写完后立刻造 3 组边界数据手测，再对拍。</td></tr>
+          <tr><td class="mono">0:55–1:55</td><td><b>T2 主攻</b></td><td>先写 O(n²) 暴力拿 60 分保底，再想正解。正解想不出来就保留暴力，不要清空重写。</td></tr>
+          <tr><td class="mono">1:55–2:55</td><td><b>T3 部分分</b></td><td>优先写特殊性质（树 / 链 / 小数据），通常能拿 30–50 分。</td></tr>
+          <tr><td class="mono">2:55–3:35</td><td><b>T4 暴力</b></td><td>不追求正解，写最朴素的搜索或 DP，拿 20–30 分。</td></tr>
+          <tr><td class="mono">3:35–4:00</td><td><b>检查，不写新代码</b></td><td>文件读写名、long long、数组大小、边界、freopen 注释。这 25 分钟平均能救回 30 分。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note gold mt-3">
+      <b>一条反直觉的建议：</b>如果 T2 在 1 小时后仍无正解思路，<b>立刻放弃并转向 T3 的特殊性质分</b>。
+      死磕一题导致后面两题空白，是业余选手最典型的失分方式。省一的分数结构里，T3 的 40 分和 T2 的 40 分完全等价。
+    </div>
+  </div>
+</section>
+
+<!-- 失败模式 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04</span><h2>七个失败模式</h2></div>
+    <p class="sec-lead">以下每一条都在真实学生身上反复出现。认出自己中了几条，比多刷十道题有用。</p>
+    <div class="grid g2">
+      <div class="card"><h4>① 只看不写</h4><p>看视频很爽，一写就废。看课时间不应超过总时间的 30%。</p></div>
+      <div class="card"><h4>② 盲目追难</h4><p>刚学完语法就刷省选题，结果每道题都看题解。难度应控制在「努力一下就够得着」。</p></div>
+      <div class="card"><h4>③ 不写暴力</h4><p>上来就追求正解，考场 0 分。先写暴力是纪律，不是能力。</p></div>
+      <div class="card"><h4>④ 不对拍</h4><p>写完就交。在 OI 赛制下，这是把命运交给运气。</p></div>
+      <div class="card"><h4>⑤ 换书成瘾</h4><p>一本没读完就换下一本，永远停在第 1–3 章。主线教材一学期只许有一本。</p></div>
+      <div class="card"><h4>⑥ 进度造假</h4><p>把「看过」当成「会了」，把「抄过」当成「写过」。进度条好看，能力没动。</p></div>
+      <div class="card" style="grid-column:1/-1"><h4>⑦ 熬夜换时长</h4><p>这是最隐蔽的一条。睡眠不足会直接摧毁工作记忆，而算法学习高度依赖工作记忆。凌晨 1 点写的线段树，第二天上午会忘掉一半。<b>每天 7 小时睡眠是这份计划的一部分，不是奢侈品。</b></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 文化课 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">05</span><h2>与文化课的平衡</h2></div>
+    <div class="grid g2">
+      <div>
+        <p style="font-size:14px">这是必须正面回答的问题，不是可以含糊过去的。</p>
+        <p style="font-size:14px;margin-top:10px">每周 16–20 小时的训练量，对高二学生意味着几乎全部课余时间。可行的策略只有三条：</p>
+        <div class="note mt-2" style="margin-left:0">
+          <b>一、把竞赛当主攻，不当兴趣。</b>兴趣可以随时停，主攻需要排优先级。这意味着必须和班主任、家长达成共识，而不是偷偷学。
+        </div>
+        <div class="note azure" style="margin-left:0">
+          <b>二、守住语文英语的底线投入。</b>每天各 30 分钟，不追求提分，只求不退步。这两科一旦掉下去，高三补回来极难。
+        </div>
+        <div class="note gold" style="margin-left:0">
+          <b>三、数学与竞赛互相增益。</b>数论、组合、递推与高中数学高度重叠。竞赛训练的严谨推理会反哺数学，不必当成两件事。
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:3px solid var(--seal);height:100%">
+          <h4>一句必须说清的话</h4>
+          <p>NOI 金牌可以保送清北，但金牌全国每年只有 50 人。省一等奖在强基计划中有实质性作用，但也不是「降分录取」的保证。</p>
+          <p style="margin-top:10px">把这当成一次<b>高投入、中等回报概率、但有独立价值</b>的尝试：即使最终没拿到省一，这一年练出的算法能力、调试耐心与自学能力，在大学与职业生涯里都是真实资产。</p>
+          <p style="margin-top:10px">但如果过程中出现持续失眠、厌学、与家人剧烈冲突——<b>停下来</b>。身心健康永远优先于任何奖项，这句话不是安慰，是判断标准。</p>
+          <p class="small muted" style="margin-top:14px">— 写在计划最后，也写在最显眼的位置</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

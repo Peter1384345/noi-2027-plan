@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>书单与资料 · NOI 2027</title>
+<meta name="description" content="CCF 官方出版物、经典竞赛教材、在线平台与按阶段配书方案。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="books.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">READING / SOURCES</span>
+      <h2>书单与资料</h2>
+    </div>
+    <p class="sec-lead">
+      市面上的信息学书单大多把「入门」和「进阶」混在一起推荐，结果学生买了十几本，一本没读完。
+      这一页按<b>权威性分层</b>：官方出版物是依据，经典教材是主线，在线平台是练习场。每本都写清「什么时候用、怎么用、别怎么用」。
+    </p>
+
+    <div class="note">
+      <b>选书的第一原则：</b>同一阶段只保留一本主线教材。主线负责建立体系，其余全部降级为「查阅工具」。
+      主线一旦确定，读不完不许换——换书是新手最常见的自欺方式。
+    </div>
+  </div>
+</section>
+
+<!-- 官方 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>CCF 官方出版物</h2></div>
+    <p class="sec-lead">中国计算机学会组编或主办出版的资料。凡与坊间说法冲突，一律以此为准。</p>
+    <div id="official"></div>
+  </div>
+</section>
+
+<!-- 经典 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02</span><h2>经典教材（按段位标注）</h2></div>
+    <p class="sec-lead">十三本中文圈验证过的教材。段位标注指「这本书主要服务的区间」，不代表只能在该区间读。</p>
+    <div class="filters" id="b-filter"></div>
+    <div class="grid g2" id="classic"></div>
+  </div>
+</section>
+
+<!-- 阶段配书 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03</span><h2>按阶段配书</h2></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:150px">阶段</th><th style="width:200px">主线（只读一本）</th><th>辅助与查阅</th></tr></thead>
+        <tbody>
+          <tr><td><b>P1 筑基</b><br><span class="small muted">W1–8</span></td><td>《CCF 信息学奥赛入门篇》</td><td>《啊哈！算法》建直觉；洛谷入门题单为主战场；《信息学奥赛一本通》初赛篇备查</td></tr>
+          <tr><td><b>P2 提速</b><br><span class="small muted">W9–20</span></td><td>《算法竞赛入门经典》（紫书）</td><td>《深入浅出程序设计竞赛》补基础；第 5–6 章搜索、第 9 章 DP 精读</td></tr>
+          <tr><td><b>P3 攻坚</b><br><span class="small muted">W21–32</span></td><td>《算法竞赛进阶指南》</td><td>本地《CSP-S 知识库全集》对应章节；《训练指南》（蓝书）按专题挑题</td></tr>
+          <tr><td><b>P4 冲顶</b><br><span class="small muted">W33–44</span></td><td>《算法竞赛进阶指南》+《信息学奥林匹克辞典》</td><td>《挑战程序设计竞赛》练思维；《具体数学》查组合恒等式；NOI 年鉴读命题思路</td></tr>
+          <tr><td><b>P5–P6 实战</b><br><span class="small muted">W45–56</span></td><td>不再读新书</td><td>只反复看：错题本、模板手抄本、第一轮知识清单、近五年真题</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note azure mt-3">
+      <b>关于「读不完」：</b>《算法竞赛进阶指南》全书 500 余页，覆盖到 NOI 金牌。本计划只要求精读其中约 60%——对应 5–8 级的部分。
+      剩下的 9–10 级内容，在 P4 阶段按需查阅即可。把一本进阶书读完，不如把 6 级知识点全部练到能默写。
+    </div>
+  </div>
+</section>
+
+<!-- 在线 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04</span><h2>在线平台</h2></div>
+    <p class="sec-lead">十二个平台，按用途分工。不要同时开五个题库——选定洛谷为主，其余按需补充。</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:170px">平台</th><th style="width:34%">用途</th><th>使用要点</th></tr></thead>
+        <tbody id="online"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/data/books.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  let filter = "all";
+
+  function renderClassic() {
+    const list = BOOKS.classic.filter(b => filter === "all" || b.level.indexOf(filter) >= 0);
+    document.getElementById("classic").innerHTML = list.map(b => `
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
+          <h3 style="font-size:1.02rem;font-family:var(--sans);font-weight:600">${b.t}</h3>
+          <span class="tag seal" style="flex-shrink:0">${b.tag}</span>
+        </div>
+        <div class="small muted" style="margin:5px 0 10px">${b.a} · ${b.pub}</div>
+        <div style="display:flex;gap:6px;margin-bottom:10px">
+          <span class="tag ghost">段位 ${b.level}</span>
+        </div>
+        <p style="font-size:13.2px"><b style="color:var(--ink)">怎么用：</b>${b.use}</p>
+        <p style="font-size:13.2px;margin-top:7px;color:var(--ink-3)"><b style="color:var(--ink-2)">注意：</b>${b.note}</p>
+      </div>`).join("");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // 官方
+    document.getElementById("official").innerHTML = BOOKS.official.map((b, i) => `
+      <details class="acc" ${i < 2 ? "open" : ""}>
+        <summary>
+          <span class="lv-band a" style="font-size:10px">官方</span>
+          <span>${b.t}</span>
+          <span class="small muted" style="font-weight:400;margin-left:auto">${b.tag}${b.free ? " · 免费" : ""}</span>
+        </summary>
+        <div class="acc-body">
+          <div class="small muted" style="margin-bottom:10px">${b.a} · ${b.pub} · ${b.y}</div>
+          <p style="font-size:13.4px"><b style="color:var(--ink)">定位：</b>${b.use}</p>
+          <p style="font-size:13.4px;margin-top:8px"><b style="color:var(--ink)">要点：</b>${b.note}</p>
+          ${b.url ? `<p class="mt-2"><a href="${b.url}" target="_blank" rel="noopener">下载 / 查看官方原文 →</a></p>` : ""}
+        </div>
+      </details>`).join("");
+
+    // 筛选
+    const levels = ["all", "零基础", "J", "S", "NOI"];
+    document.getElementById("b-filter").innerHTML =
+      `<span class="small muted" style="width:34px">段位</span>` +
+      levels.map(l => `<button class="chip ${l === "all" ? "on" : ""}" data-l="${l}">${l === "all" ? "全部" : l}</button>`).join("");
+    document.querySelectorAll("[data-l]").forEach(el => el.onclick = () => {
+      filter = el.dataset.l;
+      document.querySelectorAll("[data-l]").forEach(x => x.classList.remove("on"));
+      el.classList.add("on");
+      renderClassic();
+    });
+
+    // 在线
+    document.getElementById("online").innerHTML = BOOKS.online.map(o => `
+      <tr>
+        <td><b>${o.n}</b><br><a href="${o.u}" target="_blank" rel="noopener" class="small" style="word-break:break-all">${o.u.replace(/^https?:\/\//, "")}</a></td>
+        <td>${o.use}</td>
+        <td class="small">${o.tip}</td>
+      </tr>`).join("");
+
+    renderClassic();
+  });
+})();
+</script>
+</body>
+</html>

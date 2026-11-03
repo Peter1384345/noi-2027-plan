@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大纲全解 · NOI 大纲 2025 修订版</title>
+<meta name="description" content="NOI 大纲（2025 年修订版）10 个难度级全量知识点，标注 J/S/NOI 段位与 2025 年变化。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="syllabus.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">SYLLABUS / 2025</span>
+      <h2>NOI 大纲全解</h2>
+    </div>
+    <p class="sec-lead">
+      《NOI 大纲（2025 年修订版）》于 2025 年 4 月 18 日正式发布，是全部教学的法定依据。它用 1–10 的难度系数描述每个知识点：
+      <b>CSP-J 为 1–5 级，CSP-S 为 5–8 级，NOI 级为 7–10 级</b>。下面的条目全部来自官方 PDF，未作增删。
+    </p>
+
+    <div class="grid g3 mb-3">
+      <div class="card" style="border-left:3px solid var(--lv-j)">
+        <span class="lv-band a">CSP-J 入门级</span>
+        <h3 style="font-size:1.05rem;margin:10px 0 6px">难度系数 1–5</h3>
+        <p class="small">面向小学高年级与初中。核心是语言基础、模拟枚举、基础数据结构与简单算法。CSP-J 第二轮满分 400，一等线各省约 200–300。</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--lv-s)">
+        <span class="lv-band b">CSP-S 提高级</span>
+        <h3 style="font-size:1.05rem;margin:10px 0 6px">难度系数 5–8</h3>
+        <p class="small">面向初中高年级与高中。核心是复杂数据结构、图论建模、动态规划与字符串算法。这是省一的主战场，也是本计划投入最多的区间。</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--lv-n)">
+        <span class="lv-band c">NOI 级</span>
+        <h3 style="font-size:1.05rem;margin:10px 0 6px">难度系数 7–10</h3>
+        <p class="small">面向省队与全国赛。核心是高级数据结构、组合数学、计算几何与复杂模型构建。9 级需理解，10 级需知道存在。</p>
+      </div>
+    </div>
+
+    <div class="note gold">
+      <b>2025 年修订的实质：</b>不是改方向，而是「优化知识点、强化思维要求、弱化模板考察」。
+      新增的 <code>多维动态规划</code>、<code>扫描线</code>、<code>Manacher</code> 都指向同一件事——出题人希望你能建模，而不是背板子。
+      这在备考上的直接含义是：模板要会写，但不能只会写模板。
+    </div>
+  </div>
+</section>
+
+<!-- 2025 变化 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>2025 年相对 2023 版的变化</h2></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:110px">段位</th><th style="width:80px">类型</th><th>条目</th></tr></thead>
+        <tbody id="changes"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 知识点 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02</span><h2>全量条目与掌握度</h2></div>
+    <p class="sec-lead">勾选表示「能不看资料讲清原理 + 能默写实现 + 做过至少 3 道题」。做不到就不勾——虚高的进度条只会骗自己。</p>
+
+    <div class="filters" id="f-band"></div>
+    <div class="filters" id="f-cat"></div>
+    <div class="filters">
+      <input class="input" id="q" type="text" placeholder="筛选条目，如「线段树」「二分」">
+      <span class="small muted" id="cnt" style="margin-left:6px"></span>
+    </div>
+
+    <div id="levels"></div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/data/syllabus.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  let band = "all", cat = "all", q = "";
+
+  const CATS = ["环境", "语言", "数据结构", "算法", "图论", "字符串", "数学"];
+
+  function bandOf(lv) { return lv <= 5 ? "j" : (lv <= 8 ? "s" : "n"); }
+
+  function render() {
+    const list = SYLLABUS.points.filter(p => {
+      if (band !== "all" && bandOf(p[2]) !== band) return false;
+      if (cat !== "all" && p[1] !== cat) return false;
+      if (q && p[0].indexOf(q) === -1) return false;
+      return true;
+    });
+    document.getElementById("cnt").textContent = `命中 ${list.length} 条`;
+
+    const host = document.getElementById("levels");
+    if (!list.length) { host.innerHTML = `<div class="note">无匹配条目。</div>`; return; }
+
+    // 按等级分组
+    const groups = {};
+    list.forEach(p => { (groups[p[2]] = groups[p[2]] || []).push(p); });
+
+    host.innerHTML = Object.keys(groups).sort((a, b) => a - b).map(lv => {
+      const arr = groups[lv];
+      const band = bandOf(+lv);
+      const bandName = band === "j" ? "J 段" : (band === "s" ? "S 段" : "NOI 段");
+      const doneN = arr.filter(p => App.kpDone(p[0])).length;
+      return `<div id="lv${lv}" style="margin-bottom:22px">
+        <details class="acc" ${lv <= 6 ? "open" : ""}>
+          <summary>
+            <span class="lv-band ${band}" style="font-size:10.5px">L${lv}</span>
+            <span>${lv} 级</span>
+            <span class="small muted" style="font-weight:400">${bandName} · ${arr.length} 项</span>
+            <span class="small mono" style="margin-left:auto;color:var(--ink-3)">${doneN}/${arr.length}</span>
+          </summary>
+          <div class="acc-body" style="padding:0">
+            ${arr.map(p => {
+              const on = App.kpDone(p[0]);
+              return `<div class="kp-row ${on ? "mark" : ""}">
+                <span class="kp-lv">${p[2]}</span>
+                <span class="kp-name">${p[0]}</span>
+                <span class="tag ghost" style="font-size:10px">${p[1]}</span>
+                <span class="kp-chk" onclick="mark('${p[0].replace(/'/g, "\\'")}',this)">✓</span>
+              </div>`;
+            }).join("")}
+          </div>
+        </details>
+      </div>`;
+    }).join("");
+  }
+
+  window.mark = function (name, el) {
+    const on = App.toggleKp(name);
+    el.closest(".kp-row").classList.toggle("mark", on);
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // 变化表
+    const tb = document.getElementById("changes");
+    const colorMap = { "CSP-J": "a", "CSP-S": "b", "CSP-S ".trim(): "b", "NOI 级": "c" };
+    tb.innerHTML = SYLLABUS.meta.changes2025.map(c => {
+      const cls = c.band === "CSP-J" ? "a" : (c.band === "CSP-S" ? "b" : "c");
+      const tp = c.type === "新增" ? '<span class="tag seal">新增</span>'
+        : c.type === "移除" ? '<span class="tag">移除</span>' : '<span class="tag azure">修订</span>';
+      return `<tr><td><span class="lv-band ${cls}">${c.band}</span></td><td>${tp}</td>
+        <td>${c.items.join("　/　")}</td></tr>`;
+    }).join("");
+
+    // 筛选器
+    document.getElementById("f-band").innerHTML =
+      `<span class="small muted" style="width:34px">段位</span>
+       <button class="chip on" data-b="all">全部</button>
+       <button class="chip" data-b="j">CSP-J 1–5</button>
+       <button class="chip" data-b="s">CSP-S 5–8</button>
+       <button class="chip" data-b="n">NOI 7–10</button>`;
+
+    document.getElementById("f-cat").innerHTML =
+      `<span class="small muted" style="width:34px">分类</span>
+       <button class="chip on" data-c="all">全部</button>` +
+      CATS.map(c => `<button class="chip" data-c="${c}">${c}</button>`).join("");
+
+    document.querySelectorAll("[data-b]").forEach(el => el.onclick = () => {
+      band = el.dataset.b;
+      document.querySelectorAll("[data-b]").forEach(x => x.classList.remove("on"));
+      el.classList.add("on"); render();
+    });
+    document.querySelectorAll("[data-c]").forEach(el => el.onclick = () => {
+      cat = el.dataset.c;
+      document.querySelectorAll("[data-c]").forEach(x => x.classList.remove("on"));
+      el.classList.add("on"); render();
+    });
+    document.getElementById("q").oninput = e => { q = e.target.value.trim(); render(); };
+
+    render();
+  });
+})();
+</script>
+</body>
+</html>

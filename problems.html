@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>题单训练 · NOI 2027</title>
+<meta name="description" content="基于本地 CSP-JS+NOI 题单重构的训练索引：按大纲等级标注、洛谷题号映射、题量分配模型与真题清单。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="problems.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">PROBLEMS / TRAINING</span>
+      <h2>题单训练体系</h2>
+    </div>
+    <p class="sec-lead">
+      本页的直接来源是 <code>D:\桌面\总文件夹\资料整合\CSP-JS+NOI 题单 (未完待续).xlsx</code>。
+      原表按「CSP-J 400 分」与「CSP-S+NOIP 400 分」两段组织，知识点后标注的 <code>-5/-6/-7/-8</code> 正好对应 NOI 大纲的难度系数。
+      下面把它重排为可执行的训练索引，并补上题量分配与真题清单。
+    </p>
+
+    <div class="note gold">
+      <b>先明确一件事：</b>400 分制下，省一不需要做出 T4。分数结构永远是「T1 满分 + T2 满分或 70% + T3 拿部分分」。
+      所以下面所有题单的优先级都是 T1 &gt; T2 &gt; T3 &gt; T4，刷题顺序不能反过来。
+    </div>
+  </div>
+</section>
+
+<!-- 题量模型 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>题量分配模型</h2></div>
+    <div class="grid g4 mb-3">
+      <div class="stat"><b>800–1000</b><span>全年总题量</span></div>
+      <div class="stat"><b>2–3</b><span>日均题量（平日）</span></div>
+      <div class="stat"><b>60%</b><span>一次 AC 率目标</span></div>
+      <div class="stat"><b>100%</b><span>错题重做覆盖率</span></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:150px">阶段</th><th>题量结构</th><th style="width:110px">小计</th><th style="width:150px">核心指标</th></tr></thead>
+        <tbody>
+          <tr><td><b>P1 筑基</b></td><td>入门 60 + 普及- 60 = 120 题</td><td>120</td><td>一次 AC 率 ≥ 50%</td></tr>
+          <tr><td><b>P2 提速</b></td><td>普及- 90 + 普及/提高- 70 + 真题 4 套 = 160 题</td><td>160</td><td>J 第二轮 ≥ 250</td></tr>
+          <tr><td><b>P3 攻坚</b></td><td>提高- 110 + 提高+ 40 + 真题 4 套 = 154 题</td><td>154</td><td>S 第二轮 ≥ 160</td></tr>
+          <tr><td><b>P4 冲顶</b></td><td>提高+ 80 + 省选- 40 + 模拟 12 场 = 132 题</td><td>132</td><td>模拟均分 ≥ 220</td></tr>
+          <tr><td><b>P5 实战</b></td><td>真题回炉 60 + 模拟 16 场 = 76 题</td><td>76</td><td>S 第二轮 ≥ 200</td></tr>
+          <tr><td><b>P6 收口</b></td><td>NOIP 真题 20 套 + 模拟 4 场</td><td>24 套</td><td>NOIP ≥ 180</td></tr>
+          <tr style="background:var(--paper-2)"><td><b>合计</b></td><td>新题约 660 + 回炉与真题约 300</td><td><b>≈ 960</b></td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- J 组题单 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02</span><h2>CSP-J 400 分题单</h2></div>
+    <p class="sec-lead">对应大纲 1–5 级。题号为本地题单原有标注，洛谷 B 开头为入门题，P 开头为普及题。</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:130px">板块</th><th style="width:130px">知识点</th><th>题号</th><th style="width:110px">对应等级</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="6"><b>基础数据结构</b></td><td>队列</td><td><span class="mono small">B3958</span></td><td><span class="tag j">3 级</span></td></tr>
+          <tr><td>栈</td><td><span class="mono small">B3927</span></td><td><span class="tag j">3 级</span></td></tr>
+          <tr><td>前缀和</td><td><span class="mono small">B2122</span></td><td><span class="tag j">3 级</span></td></tr>
+          <tr><td>差分</td><td><span class="mono small">B2126 / B3843 / B2117</span></td><td><span class="tag j">4 级</span></td></tr>
+          <tr><td>二叉树</td><td><span class="mono small">B3642 · P1030 · P1827（前中后序）<br>P4913（深度）· P3915（节点数）<br>P5018（对称判断）· P8815（后缀表达式建树）</span></td><td><span class="tag j">4 级</span></td></tr>
+          <tr><td>并查集（入门）</td><td><span class="mono small">B4016</span></td><td><span class="tag s">6 级</span></td></tr>
+
+          <tr><td rowspan="4"><b>算法</b></td><td>二分</td><td>洛谷「二分」题单（自查，题单未列具体题号）</td><td><span class="tag j">4 级</span></td></tr>
+          <tr><td>模拟 / 枚举</td><td>洛谷「模拟」「枚举」题单</td><td><span class="tag j">1 级</span></td></tr>
+          <tr><td>区间 DP</td><td>洛谷「区间 DP」题单</td><td><span class="tag j">5 级</span></td></tr>
+          <tr><td>BFS / DFS / 建图搜索</td><td>洛谷「搜索」题单</td><td><span class="tag j">4–5 级</span></td></tr>
+
+          <tr><td rowspan="6"><b>背包 DP</b></td><td>01 背包</td><td><span class="mono small">P1048</span> 采药</td><td><span class="tag j">5 级</span></td></tr>
+          <tr><td>完全背包</td><td><span class="mono small">P1616</span> 疯狂的采药</td><td><span class="tag j">5 级</span></td></tr>
+          <tr><td>多重背包</td><td><span class="mono small">P1077</span> 摆花 · <span class="mono small">P1776</span> 宝物筛选（单调队列/二进制优化）</td><td><span class="tag s">6 级</span></td></tr>
+          <tr><td>混合背包</td><td><span class="mono small">P1833</span> 樱花</td><td><span class="tag s">6 级</span></td></tr>
+          <tr><td>二维费用</td><td><span class="mono small">P1507</span> NASA 的食物计划</td><td><span class="tag s">6 级</span></td></tr>
+          <tr><td>方案数</td><td><span class="mono small">P1164</span> 小 A 点菜</td><td><span class="tag j">5 级</span></td></tr>
+
+          <tr><td rowspan="4"><b>数学</b></td><td>筛选法</td><td>洛谷「质数筛」题单</td><td><span class="tag j">3 级</span></td></tr>
+          <tr><td>分解质因数</td><td>洛谷「质因数分解」题单</td><td><span class="tag j">3 级</span></td></tr>
+          <tr><td>GCD / LCM</td><td>洛谷「最大公约数」题单</td><td><span class="tag j">3 级</span></td></tr>
+          <tr><td>进制转换 / 位运算</td><td><span class="mono small">B3619 · B3753 · B3620</span></td><td><span class="tag j">1–2 级</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- S 组题单 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03</span><h2>CSP-S + NOIP 400 分题单</h2></div>
+    <p class="sec-lead">对应大纲 5–8 级。每个知识点后的 <code>-N</code> 是原题单标注的难度系数，可直接与大纲等级对照。</p>
+
+    <div class="filters" id="s-filter"></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:140px">板块</th><th style="width:170px">知识点</th><th>题号 / 备注</th><th style="width:90px">等级</th></tr></thead>
+        <tbody id="s-body"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 真题 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04</span><h2>真题清单与使用方式</h2></div>
+    <div class="grid g2">
+      <div>
+        <h4 class="mb-2">本地已有（可直接使用）</h4>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>材料</th><th style="width:100px">年份</th></tr></thead>
+            <tbody>
+              <tr><td>CSP-S 第一轮 试题 + 答案</td><td class="mono small">2021 · 2022 · 2023 · 2024</td></tr>
+              <tr><td>CSP-S1 初赛备考指南与答题技巧</td><td>专题</td></tr>
+              <tr><td>CSP 第一轮复习资料（45 页）</td><td>专题</td></tr>
+              <tr><td>CSP-S 2025 第一轮真题（整理版）</td><td class="mono small">2025</td></tr>
+              <tr><td>NOI 2025 全套资料</td><td class="mono small">2025</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted mt-2">路径见「本地资产」页。第一轮真题共 5 年，足够覆盖第一轮全部题型。</p>
+      </div>
+
+      <div>
+        <h4 class="mb-2">第二轮真题的使用纪律</h4>
+        <div class="note" style="margin-top:0">
+          <b>一年只做一遍，做完必须重做。</b><br>
+          第一遍：限时 4 小时全真模拟，含文件读写，不许查资料。<br>
+          第二遍：一周后不看答案重做，只做当时失分的题。<br>
+          第三遍：一个月后只重写「以为会了但写不出来」的那道。<br><br>
+          <b>一套真题做三遍的价值，大于三套真题各做一遍。</b>因为第二遍暴露的是「假懂」，第三遍巩固的才是真会。
+        </div>
+        <p class="small muted">推荐顺序：CSP-S 2022 → 2023 → 2024 → NOIP 2023 → 2024 → 2025。由近及远反而不利于感知难度演进。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 纪律 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">05</span><h2>刷题的四条纪律</h2></div>
+    <div class="grid g2">
+      <div class="card">
+        <h4>一、30 分钟规则</h4>
+        <p>一道题独立思考满 30 分钟才允许看题解。不足 30 分钟就看，等于放弃思考；超过 60 分钟还毫无思路，说明前置知识缺失，应回去补课而不是硬耗。</p>
+      </div>
+      <div class="card">
+        <h4>二、关屏重写</h4>
+        <p>看完题解必须关掉题解、从空白文件重写一遍。写不出来说明没懂。这一步能筛掉 80% 的「看懂了」。</p>
+      </div>
+      <div class="card">
+        <h4>三、错因归到根</h4>
+        <p>不许写「超时了」。要写「DP 状态设计多了一维，导致 O(n³) 而不是 O(n²)」。错题本的价值在于归因的精度。</p>
+      </div>
+      <div class="card">
+        <h4>四、对拍成习惯</h4>
+        <p>任何写了超过 40 行的程序，提交前必须对拍 1000 组随机数据。这不是可选项，是 OI 赛制下的生存技能。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/data/syllabus.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  const DATA = [
+    { g: "数据结构", items: [
+      { k: "树状数组", lv: 6, p: "洛谷 P3374 / P3368 模板两题" },
+      { k: "线段树", lv: 6, p: "P3372（区间加和）· P3373（乘加）· P6242（区间最值操作）" },
+      { k: "ST 表", lv: 6, p: "P3865 模板" },
+      { k: "并查集", lv: 6, p: "P3367 模板 · P2024 食物链（带权/扩展域）" },
+      { k: "带权并查集", lv: 7, p: "P1196 银河英雄传说" },
+      { k: "多倍并查集", lv: 7, p: "P1892 团伙 · P1525 关押罪犯" },
+      { k: "字典树", lv: 6, p: "P8306 模板 · P2580 于是他错误的点名开始了" },
+      { k: "平衡树", lv: 8, p: "P3369 普通平衡树 · P3391 文艺平衡树" },
+      { k: "树链剖分", lv: 8, p: "P3384 模板 · P2590 树的统计" },
+      { k: "对顶堆", lv: 6, p: "P1168 中位数" }
+    ]},
+    { g: "图论", items: [
+      { k: "最短路", lv: 6, p: "P4779（Dijkstra 堆优化）· P3385（负环）· P2419（Floyd 传递闭包）" },
+      { k: "最小生成树", lv: 6, p: "P3366 模板 · P1546 最短网络" },
+      { k: "拓扑排序", lv: 6, p: "P1113 杂务 · P4017 最大食物链计数" },
+      { k: "欧拉回路", lv: 6, p: "P2731 骑马修栅栏 · P7771 欧拉路径" },
+      { k: "Tarjan", lv: 7, p: "P2863（SCC 模板）· P3387（缩点）· P3388（割点）<br>P1656 / P7687（割边）· P8435（点双）· P8436（边双）" },
+      { k: "次短路 / 分层图", lv: 7, p: "P2865 次短路 · P4568 飞行路线（分层图）" },
+      { k: "差分约束", lv: 7, p: "P5960 模板 · P3275 糖果" },
+      { k: "二分图判定与匹配", lv: 8, p: "P1330 封锁阳光大学 · P3386 二分图最大匹配" },
+      { k: "网络流", lv: 8, p: "P3376 最大流模板 · P2756 飞行员配对方案" }
+    ]},
+    { grp: true, g: "树论", items: [
+      { k: "LCA", lv: 6, p: "P3379（在线倍增）· P8805（离线）· P10113（在线）· P8855（离线）" },
+      { k: "树的直径与重心", lv: 6, p: "P3304 直径 · P1364 医院设置（带权重心）" },
+      { k: "树形 DP", lv: 6, p: "P1352 没有上司的舞会 · P2015 二叉苹果树" },
+      { k: "树形背包", lv: 6, p: "P2014 选课 · P1273 有线电视网" },
+      { k: "树上差分 / 树上前缀和", lv: 6, p: "P3128 Max Flow · P3258 松鼠的新家" },
+      { k: "重构树", lv: 8, p: "P4197 Peaks（Kruskal 重构树）" },
+      { k: "基环树", lv: 8, p: "P2607 骑士 · P4381 Island" }
+    ]},
+    { g: "动态规划", items: [
+      { k: "状压 DP", lv: 7, p: "P1896 互不侵犯 · P2704 炮兵阵地 · P1433 吃奶酪" },
+      { k: "数位 DP", lv: 7, p: "P2602 数字计数 · P2657 windy 数" },
+      { k: "记忆化搜索", lv: 6, p: "P1434 滑雪 · P4017 最大食物链计数" },
+      { k: "单调队列优化", lv: 8, p: "P1886 滑动窗口 · P1725 琪露诺 · P3572 小鸟" },
+      { k: "斜率优化", lv: 8, p: "P3195 玩具装箱 · P2120 仓库建设" },
+      { k: "四边形不等式", lv: 8, p: "P1880 石子合并（环形区间 DP）· P4767 邮局" },
+      { k: "前缀和优化 DP", lv: 8, p: "P2513 逆序对数列" }
+    ]},
+    { g: "字符串", items: [
+      { k: "KMP", lv: 5, p: "P3375 模板 · P2375 动物园" },
+      { k: "字符串哈希", lv: 6, p: "P3370 模板 · P2852 牛奶模式" },
+      { k: "Manacher", lv: 7, p: "P3805 模板 · P4555 最长双回文串" },
+      { k: "AC 自动机", lv: 8, p: "P3808 模板（简单）· P3796（加强）· P5357（二次加强）" },
+      { k: "后缀数组", lv: 8, p: "P3809 模板 · P4051 字符加密" }
+    ]},
+    { g: "数学", items: [
+      { k: "快速幂", lv: 3, p: "P1226 模板" },
+      { k: "EXGCD", lv: 7, p: "P1082 同余方程 · P5656 二元一次不定方程" },
+      { k: "乘法逆元", lv: 7, p: "P3811 模板 · P5431 乘法逆元 2 · B3717 组合数问题" },
+      { k: "中国剩余定理", lv: 7, p: "P1495 曹冲养猪 · P4777 扩展 CRT" },
+      { k: "容斥原理", lv: 7, p: "P1450 硬币购物 · P3172 选数" },
+      { k: "卡特兰数", lv: 7, p: "P1044 栈 · P1976 鸡蛋饼" },
+      { k: "高斯消元", lv: 7, p: "P3389 模板 · P2455 线性方程组" },
+      { k: "矩阵快速幂", lv: 6, p: "P1939 矩阵加速 · P1962 斐波那契" },
+      { k: "鸽巢原理", lv: 6, p: "P2218 覆盖问题（构造类）" }
+    ]},
+    { g: "杂项", items: [
+      { k: "堆排序 / 归并排序 / 快速排序", lv: 5, p: "P1177 排序模板 · P1908 逆序对" },
+      { k: "离散化", lv: 6, p: "P1955 程序自动分析 · P1097 统计数字" },
+      { k: "扫描线", lv: 7, p: "P5490 矩形面积并 · P1856 周长并" },
+      { k: "反悔贪心", lv: 7, p: "P1484 种树 · P4053 建筑抢修" },
+      { k: "分块", lv: 8, p: "P2801 教主的魔法 · P4168 蒲公英" },
+      { k: "莫队", lv: 8, p: "P2709 小 B 的询问 · P1494 小 Z 的袜子" }
+    ]}
+  ];
+
+  let lvFilter = "all";
+
+  function render() {
+    const tb = document.getElementById("s-body");
+    let html = "";
+    DATA.forEach(sec => {
+      const items = sec.items.filter(i => lvFilter === "all" || String(i.lv) === lvFilter);
+      if (!items.length) return;
+      html += `<tr style="background:var(--paper-2)"><td colspan="4" style="font-weight:600;color:var(--ink);letter-spacing:.04em">${sec.g}</td></tr>`;
+      items.forEach(i => {
+        const cls = i.lv <= 5 ? "j" : (i.lv <= 8 ? "s" : "n");
+        html += `<tr>
+          <td class="small muted">${sec.g}</td>
+          <td><b>${i.k}</b></td>
+          <td class="small">${i.p}</td>
+          <td><span class="tag ${cls}">${i.lv} 级</span></td>
+        </tr>`;
+      });
+    });
+    tb.innerHTML = html;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("s-filter").innerHTML =
+      `<span class="small muted" style="width:34px">等级</span>` +
+      ["all", "5", "6", "7", "8"].map(l =>
+        `<button class="chip ${l === "all" ? "on" : ""}" data-lv="${l}">${l === "all" ? "全部" : l + " 级"}</button>`
+      ).join("");
+    document.querySelectorAll("[data-lv]").forEach(el => el.onclick = () => {
+      lvFilter = el.dataset.lv;
+      document.querySelectorAll("[data-lv]").forEach(x => x.classList.remove("on"));
+      el.classList.add("on");
+      render();
+    });
+    render();
+  });
+})();
+</script>
+</body>
+</html>

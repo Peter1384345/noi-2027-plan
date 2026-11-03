@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>评估体系 · NOI 2027</title>
+<meta name="description" content="四维→六维能力雷达、九个里程碑阈值、每周自检表、模拟赛评分表与止损线。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="assess.html">
+<header id="site-head"></header>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">ASSESSMENT / METRICS</span>
+      <h2>评估体系</h2>
+    </div>
+    <p class="sec-lead">
+      没有度量就没有计划。「感觉学得还行」是最危险的自我评价。这一页给出三类客观度量：
+      <b>能力画像</b>（你在哪）、<b>里程碑阈值</b>（该到哪）、<b>周自检</b>（这周有没有白过）。
+    </p>
+  </div>
+</section>
+
+<!-- 雷达 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>能力画像：起点与终点</h2></div>
+
+    <div class="grid g2" style="align-items:center">
+      <div>
+        <svg id="radar" viewBox="0 0 420 420" style="width:100%;max-width:420px;margin:0 auto;display:block"></svg>
+        <div style="display:flex;gap:22px;justify-content:center;margin-top:6px;font-size:12.5px">
+          <span><i style="display:inline-block;width:10px;height:10px;background:var(--seal);opacity:.35;margin-right:6px"></i>起点（2026.11）</span>
+          <span><i style="display:inline-block;width:10px;height:10px;background:var(--azure);opacity:.6;margin-right:6px"></i>目标（2027.11）</span>
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size:14px">六个维度各按 1–5 分评估。起点依据是 CSP-S 2026 第一轮三级证书：<b>语言实现</b>已有基础，
+        <b>应试策略</b>因经历过一次第一轮而略高于零，但<b>数据结构、图论、DP</b>基本为零。</p>
+        <div class="tbl-wrap mt-2">
+          <table>
+            <thead><tr><th>维度</th><th style="width:64px">起点</th><th style="width:64px">目标</th><th>判定依据</th></tr></thead>
+            <tbody>
+              <tr><td><b>语言实现</b></td><td class="mono">3.0</td><td class="mono">4.5</td><td>能默写 100 行无 bug 代码</td></tr>
+              <tr><td><b>数据结构</b></td><td class="mono">1.5</td><td class="mono">4.0</td><td>线段树/树剖能闭卷写</td></tr>
+              <tr><td><b>图论建模</b></td><td class="mono">1.0</td><td class="mono">4.0</td><td>陌生题 5 分钟内能建出图</td></tr>
+              <tr><td><b>动态规划</b></td><td class="mono">1.0</td><td class="mono">4.0</td><td>能独立设计状态并说明不重不漏</td></tr>
+              <tr><td><b>数学</b></td><td class="mono">1.5</td><td class="mono">3.5</td><td>exgcd/CRT/容斥能推能用</td></tr>
+              <tr><td><b>应试策略</b></td><td class="mono">2.0</td><td class="mono">4.5</td><td>4 小时内稳定拿 200+ 分</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 里程碑 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02</span><h2>九个里程碑阈值</h2></div>
+    <p class="sec-lead">每个阈值都是「达不到就不许进入下一阶段」的硬线。低于阈值继续往前推，只会在更后面的地方崩得更惨。</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:70px">里程碑</th><th style="width:90px">时间</th><th>考核内容</th><th style="width:150px">通过阈值</th></tr></thead>
+        <tbody>
+          <tr><td><b>M1</b></td><td class="mono small">W8 / 2026.12</td><td>CSP-J 2024 第一轮真题（限时 2h）</td><td><span class="tag j">≥ 70 / 100</span></td></tr>
+          <tr><td><b>M2</b></td><td class="mono small">W20 / 2027.03</td><td>CSP-J 2023 第二轮（3.5h）+ CSP-S 第一轮</td><td><span class="tag j">J ≥ 250 / 400</span> <span class="tag s">S ≥ 65 / 100</span></td></tr>
+          <tr><td><b>M3</b></td><td class="mono small">W32 / 2027.06</td><td>CSP-S 2022 第二轮（4h）+ 20 模板默写</td><td><span class="tag s">S ≥ 160 / 400</span> <span class="tag ghost">模板 ≥ 18 / 20</span></td></tr>
+          <tr><td><b>M4</b></td><td class="mono small">W44 / 2027.08</td><td>NOIP 2024 真题（4.5h）+ 累计题量</td><td><span class="tag s">≥ 160 / 400</span> <span class="tag ghost">题量 ≥ 600</span></td></tr>
+          <tr><td><b>M5</b></td><td class="mono small">W46 / 2027.09</td><td>CSP-S 2027 第一轮（正赛）</td><td><span class="tag n">≥ 80 / 100</span></td></tr>
+          <tr><td><b>M6</b></td><td class="mono small">W52 / 2027.10</td><td>CSP-S 2027 第二轮（正赛）</td><td><span class="tag n">≥ 200 / 400</span></td></tr>
+          <tr><td><b>M7</b></td><td class="mono small">W56 / 2027.11</td><td>NOIP 2027（正赛）</td><td><span class="tag n">≥ 180 / 400</span></td></tr>
+          <tr><td><b>M8</b></td><td class="mono small">2028.03</td><td>省选资格（NOIP 一等奖）</td><td><span class="tag ghost">省队名额内</span></td></tr>
+          <tr><td><b>M9</b></td><td class="mono small">2028.07</td><td>NOI 2028（正赛）</td><td><span class="tag ghost">铜牌及以上</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 周自检 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03</span><h2>每周日自检七问</h2></div>
+    <p class="sec-lead">周日晚上花 5 分钟回答，任一项为「否」则本周不算完成。这一栏比任何进度条都诚实。</p>
+    <div class="grid g2">
+      <div class="card"><h4>1. 本周知识点能否不看资料口述？</h4><p>说不清就是没懂。口述时假想对面坐着一个完全不懂的同学。</p></div>
+      <div class="card"><h4>2. 本周题量是否达标？一次 AC 率如何？</h4><p>只记数量不记质量等于白刷。一次 AC 率低于 40% 说明选题过难。</p></div>
+      <div class="card"><h4>3. 有没有至少一道题是「独立想出来」的？</h4><p>全靠题解过关的一周，等于只做了搬运工。</p></div>
+      <div class="card"><h4>4. 错题本新增了几条？归因写到根了吗？</h4><p>「WA」不是归因，「long long 没开」才是。</p></div>
+      <div class="card"><h4>5. 模板有没有默写一遍？</h4><p>模板是肌肉记忆，三天不写就手生。</p></div>
+      <div class="card"><h4>6. 有没有拖到下周的欠账？</h4><p>欠账必须在本周日的复盘里明确记下，不允许「下周补」超过一次。</p></div>
+      <div class="card"><h4>7. 睡眠是否 ≥ 7 小时？（累计三天以上）</h4><p>这条是硬指标。睡眠不足的刷题是负收益，会摧毁第二天的专注力。</p></div>
+      <div class="card" style="border-left:3px solid var(--seal)">
+        <h4>判定规则</h4>
+        <p>7 项中 ≥ 6 项为「是」：本周通过。<br>4–5 项：记录欠账，下周补。<br>≤ 3 项：本周作废，不允许勾选完成——作废一周比假装完成更有价值。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 模拟赛评分表 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04</span><h2>模拟赛评分表</h2></div>
+    <p class="sec-lead">每场 4 小时模拟赛后，按这张表逐项打分。总分不是重点，<b>失分归因的分布</b>才是。</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th style="width:120px">失分类型</th><th>典型表现</th><th style="width:150px">改进动作</th></tr></thead>
+        <tbody>
+          <tr><td><b>知识缺口</b></td><td>完全不知道这题考什么，或知道知识点但写不出</td><td>定位到具体大纲条目，回补 + 同类题 8 道</td></tr>
+          <tr><td><b>建模失败</b></td><td>知识点都会，但想不到怎么转化</td><td>做「模型归类」训练：一题写 3 种建模方向</td></tr>
+          <tr><td><b>实现错误</b></td><td>思路对，代码 WA/RE</td><td>强制对拍 + 提交前检查清单</td></tr>
+          <tr><td><b>策略失误</b></td><td>时间分配不当，或死磕一题导致后面没写</td><td>固定时间盒：T1 40min / T2 60min / T3 60min</td></tr>
+          <tr><td><b>规范失误</b></td><td>文件读写错、数组开小、long long 没开</td><td>考前 15 分钟只做检查，不写新代码</td></tr>
+          <tr><td><b>心理波动</b></td><td>卡题后心态崩，后面全乱</td><td>预设「放弃阈值」：单题 50 分钟无进展立即跳</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note mt-3">
+      <b>经验比例：</b>在 400 分制下，多数选手的失分分布大致是——知识缺口 30%、建模失败 25%、实现错误 20%、策略失误 15%、规范失误 10%。
+      如果你的「规范失误」超过 20%，说明不是水平问题，是纪律问题，这类失分最容易在两周内清零。
+    </div>
+  </div>
+</section>
+
+<!-- 止损 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">05</span><h2>止损线</h2></div>
+    <div class="grid g2">
+      <div class="card" style="border-left:3px solid var(--seal)">
+        <h4>第 20 周：最关键的一次判断</h4>
+        <p>若 CSP-J 第二轮未达 250 分，说明前 5 个月的基础存在结构性缺口。此时有两条路：</p>
+        <p style="margin-top:8px"><b>A. 延期：</b>P3 延长 4 周，放弃当年 CSP-S 一等目标，改为「稳拿二等 + 保住 NOIP 资格」，把冲一等推到下一年。</p>
+        <p style="margin-top:6px"><b>B. 转向：</b>把竞赛降级为兴趣，重心回到文化课。这不是失败，是资源配置。</p>
+        <p style="margin-top:8px" class="small muted">两条路都比「硬撑到 10 月再崩」要好。</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--azure)">
+        <h4>第 44 周：第二次判断</h4>
+        <p>若 NOIP 真题未达 160 分，则调整 P5 目标为「CSP-S 二等 + NOIP 三等」，同时开始准备 2028 年的第二次冲顶。</p>
+        <p style="margin-top:8px">信息学竞赛允许高中阶段多次参赛，<b>时间并不只有一年</b>。真正稀缺的不是时间，是持续投入的意愿。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/app.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const AXES = ["语言实现", "数据结构", "图论建模", "动态规划", "数学", "应试策略"];
+  const START = [3.0, 1.5, 1.0, 1.0, 1.5, 2.0];
+  const TARGET = [4.5, 4.0, 4.0, 4.0, 3.5, 4.5];
+  const CX = 210, CY = 205, R = 135;
+
+  function pt(i, v) {
+    const ang = -Math.PI / 2 + i * 2 * Math.PI / AXES.length;
+    const r = R * v / 5;
+    return [CX + r * Math.cos(ang), CY + r * Math.sin(ang)];
+  }
+  function poly(vals) {
+    return vals.map((v, i) => pt(i, v).join(",")).join(" ");
+  }
+
+  let svg = "";
+  // 网格
+  for (let ring = 1; ring <= 5; ring++) {
+    const pts = AXES.map((_, i) => pt(i, ring).join(",")).join(" ");
+    svg += `<polygon points="${pts}" fill="none" stroke="var(--rule)" stroke-width="1"/>`;
+  }
+  // 轴线与标签
+  AXES.forEach(function (a, i) {
+    const p = pt(i, 5);
+    svg += `<line x1="${CX}" y1="${CY}" x2="${p[0]}" y2="${p[1]}" stroke="var(--rule-2)" stroke-width="1"/>`;
+    const lp = pt(i, 5.75);
+    const anchor = Math.abs(lp[0] - CX) < 10 ? "middle" : (lp[0] > CX ? "start" : "end");
+    svg += `<text x="${lp[0]}" y="${lp[1] + 4}" text-anchor="${anchor}" font-size="11.5" fill="var(--ink-3)" font-family="var(--sans)">${a}</text>`;
+  });
+  // 刻度
+  [1, 2, 3, 4, 5].forEach(function (k) {
+    svg += `<text x="${CX + 4}" y="${CY - R * k / 5 + 3}" font-size="9" fill="var(--ink-4)" font-family="var(--mono)">${k}</text>`;
+  });
+
+  svg += `<polygon points="${poly(START)}" fill="var(--seal)" fill-opacity=".22" stroke="var(--seal)" stroke-width="1.6"/>`;
+  svg += `<polygon points="${poly(TARGET)}" fill="var(--azure)" fill-opacity=".14" stroke="var(--azure)" stroke-width="1.6" stroke-dasharray="5 3"/>`;
+  START.forEach(function (v, i) {
+    const p = pt(i, v);
+    svg += `<circle cx="${p[0]}" cy="${p[1]}" r="2.8" fill="var(--seal)"/>`;
+  });
+
+  document.getElementById("radar").innerHTML = svg;
+});
+</script>
+</body>
+</html>
