@@ -1,0 +1,428 @@
+﻿@echo off
+chcp 936 >nul 2>&1
+:: ============================================================
+::  C 盘文件作用查看器 v3  (含文件管理功能)
+::  功能:
+::    1) 查看 C 盘概况、根目录内容及全部目录/文件作用说明(内置知识库)
+::    2) 转移指定的文件/文件夹到其他位置
+::    3) 删除指定的文件/文件夹 (移入回收站, 可恢复)
+::    4) 全盘扫描: 为 C 盘每个目录/文件标注作用, 生成 UTF-8 清单
+::  用法:
+::    直接运行                  -> 进入主菜单
+::    C盘文件作用查看.bat /full -> 直接开始全盘扫描
+::  说明: 查看操作只读; 转移/删除仅对您指定的路径生效
+::        受保护区域(Windows/Program Files/ProgramData 等)拒绝操作
+::  注意: 本文件为 ANSI/GBK 编码, 请勿用 UTF-8 重新保存
+::        生成的报告/清单为 UTF-8 编码, 任意编辑器均可正常查看
+:: ============================================================
+setlocal EnableExtensions
+title C盘文件作用查看器
+
+set "KB=%~dp0cdisk_kb.txt"
+set "KB2=%~dp0cdisk_kb2.txt"
+set "COUNTF=%~dp0cdisk_count.txt"
+set "REPORT=%~dp0C盘文件说明报告.txt"
+set "FULLLIST=%~dp0C盘全部文件清单.txt"
+set "FULLANNOT=%~dp0C盘全部文件作用清单.txt"
+
+if exist "%KB%" del "%KB%" >nul 2>&1
+if exist "%KB2%" del "%KB2%" >nul 2>&1
+
+rem ============ 写入 目录/文件 作用知识库 ============
+> "%KB%" (
+    echo C:\：C 盘根目录
+    echo C:\Windows：操作系统核心目录（勿动）
+    echo C:\Windows\System32：系统核心程序/驱动/DLL（勿动）
+    echo C:\Windows\SysWOW64：32 位系统组件（勿动）
+    echo C:\Windows\WinSxS：系统组件存储库（体积大, 勿手动删）
+    echo C:\Windows\Installer：MSI 安装缓存（卸载/修复软件依赖, 勿删）
+    echo C:\Windows\Temp：系统临时文件（可清理）
+    echo C:\Windows\SoftwareDistribution：Windows 更新缓存（清理后会重新下载）
+    echo C:\Windows\Fonts：系统字体库
+    echo C:\Windows\Prefetch：程序启动预读缓存（可清理）
+    echo C:\Windows\Panther：安装/部署日志
+    echo C:\Windows\Minidump：蓝屏小转储文件（可清理）
+    echo C:\Windows\Logs：系统组件日志
+    echo C:\Windows\Boot：启动引导文件（勿动）
+    echo C:\Windows\Servicing：系统服务安装文件（勿动）
+    echo C:\Windows\Assembly：.NET 全局程序集缓存（勿动）
+    echo C:\Windows\CbsTemp：组件存储临时目录（可清理）
+    echo C:\Windows\AppReadiness：应用就绪组件（勿动）
+    echo C:\Windows\LiveKernelReports：内核错误报告（可清理）
+    echo C:\Windows\SystemApps：系统内置应用（勿动）
+    echo C:\Windows\Tasks：计划任务文件
+    echo C:\Windows\Cursors：系统鼠标指针
+    echo C:\Windows\Media：系统声音/媒体
+    echo C:\Windows\Globalization：全球化语言包
+    echo C:\Windows\Registration：组件注册数据（勿动）
+    echo C:\Windows\Resources：系统资源/主题
+    echo C:\Windows\ShellExperiences：Shell 体验组件（勿动）
+    echo C:\Windows\ShellNew：新建文件模板
+    echo C:\Windows\Speech：语音识别组件
+    echo C:\Windows\System：16 位系统文件（勿动）
+    echo C:\Windows\Web：系统默认壁纸等
+    echo C:\Windows\Debug：调试日志
+    echo C:\Windows\INF：硬件驱动安装信息
+    echo C:\Windows\Media\Speech\Windows TTS：系统语音引擎
+    echo C:\Program Files：64 位软件默认安装目录（删除请用卸载程序）
+    echo C:\Program Files ^(x86^)：32 位软件默认安装目录
+    echo C:\Program Files\Common Files：软件共享组件（勿删）
+    echo C:\Program Files\Windows Defender：系统杀毒组件（勿动）
+    echo C:\Program Files\Windows NT：系统附件/管理工具（勿动）
+    echo C:\Program Files\Microsoft Office：Office 办公套件安装目录
+    echo C:\Program Files\Microsoft Edge：Edge 浏览器安装目录
+    echo C:\Program Files\WindowsApps：Microsoft Store 应用安装目录（勿动）
+    echo C:\Program Files\NVIDIA Corporation：NVIDIA 显卡驱动/工具
+    echo C:\Program Files\Google：Google 相关软件（如 Chrome）
+    echo C:\ProgramData：所有用户共享的应用数据（杀毒库/许可证等）
+    echo C:\ProgramData\Microsoft\Windows\Start Menu：开始菜单公共项
+    echo C:\Users：用户个人文件夹
+    echo C:\Users\Public：公共用户目录（所有用户共享）
+    echo C:\Users\用户名\Desktop：桌面
+    echo C:\Users\用户名\Documents：我的文档
+    echo C:\Users\用户名\Downloads：下载文件夹
+    echo C:\Users\用户名\Pictures：图片
+    echo C:\Users\用户名\Music：音乐
+    echo C:\Users\用户名\Videos：视频
+    echo C:\Users\用户名\AppData：应用配置/缓存（分 Local/LocalLow/Roaming）
+    echo C:\Users\用户名\AppData\Local\Temp：当前用户临时文件（可清理）
+    echo C:\$Recycle.Bin：回收站实际存储位置（勿动）
+    echo C:\System Volume Information：系统还原点/卷影副本（隐藏, 勿动）
+    echo C:\Recovery：Windows 恢复环境（隐藏, 勿动）
+    echo C:\PerfLogs：性能/可靠性日志
+    echo C:\boot：启动引导文件（勿动）
+    echo C:\Intel：Intel 驱动解压临时文件（可删）
+    echo C:\AMD：AMD 驱动解压临时文件（可删）
+    echo C:\Temp：软件临时目录（若存在, 可清理）
+    echo C:\tmp：临时目录（若存在, 可清理）
+    echo C:\hiberfil.sys：休眠文件（可用 powercfg /h off 关闭）
+    echo C:\pagefile.sys：虚拟内存页面文件（勿手动删）
+    echo C:\swapfile.sys：UWP 应用交换文件
+    echo C:\bootmgr：Windows 启动管理器（删除将无法开机）
+    echo C:\BOOTSECT.BAK：引导扇区备份
+    echo C:\DumpStack.log：系统崩溃转储日志（可删, 会自动重建）
+)
+
+rem ============ 写入 文件类型 作用知识库 ============
+> "%KB2%" (
+    echo .dll：动态链接库（程序组件）
+    echo .exe：可执行程序
+    echo .sys：系统驱动程序
+    echo .dat：数据文件（具体作用看所属软件）
+    echo .log：日志文件（可清理）
+    echo .tmp：临时文件（可清理）
+    echo .bak：备份文件（确认无用后可删）
+    echo .ini：程序配置文件
+    echo .cfg：配置文件
+    echo .config：配置文件
+    echo .db：数据库文件
+    echo .sqlite：SQLite 数据库
+    echo .mdf：SQL Server 主数据库
+    echo .ldf：SQL Server 日志数据库
+    echo .pst：Outlook 邮箱数据
+    echo .ost：Outlook 离线邮箱数据
+    echo .msi：Windows 安装包
+    echo .msp：安装补丁包
+    echo .cab：压缩包（系统更新常用）
+    echo .inf：驱动安装信息文件
+    echo .reg：注册表文件（双击可导入）
+    echo .bat：批处理脚本
+    echo .cmd：批处理脚本
+    echo .ps1：PowerShell 脚本
+    echo .vbs：VBS 脚本
+    echo .js：JavaScript 脚本
+    echo .json：JSON 配置/数据文件
+    echo .xml：XML 配置/数据文件
+    echo .html：网页文件
+    echo .htm：网页文件
+    echo .pdf：PDF 文档
+    echo .docx：Word 文档
+    echo .xlsx：Excel 表格
+    echo .pptx：PowerPoint 演示文稿
+    echo .txt：文本文件
+    echo .csv：表格数据（逗号分隔）
+    echo .zip：压缩包
+    echo .rar：压缩包
+    echo .7z：压缩包
+    echo .tar：Linux 压缩包
+    echo .gz：gzip 压缩文件
+    echo .iso：光盘镜像文件
+    echo .img：磁盘镜像文件
+    echo .mp4：视频文件
+    echo .avi：视频文件
+    echo .mkv：视频文件
+    echo .wmv：Windows 视频文件
+    echo .flv：Flash 视频
+    echo .mov：QuickTime 视频
+    echo .webm：网页视频格式
+    echo .jpg：图片文件
+    echo .jpeg：图片文件
+    echo .png：图片文件
+    echo .gif：动图文件
+    echo .bmp：位图图片
+    echo .svg：矢量图文件
+    echo .webp：网页图片格式
+    echo .tif：扫描/印刷图片
+    echo .ico：图标文件
+    echo .mp3：音频文件
+    echo .wav：音频文件
+    echo .flac：无损音频
+    echo .aac：音频文件
+    echo .ogg：音频文件
+    echo .wma：Windows 音频
+    echo .mid：MIDI 音乐
+    echo .ttf：字体文件
+    echo .otf：字体文件
+    echo .crt：证书文件
+    echo .cer：证书文件
+    echo .pem：证书/密钥文件
+    echo .pfx：证书+私钥文件
+    echo .p12：证书+私钥文件
+    echo .pdb：程序调试符号文件
+    echo .py：Python 脚本
+    echo .java：Java 源码
+    echo .class：Java 字节码
+    echo .jar：Java 程序包
+    echo .apk：Android 安装包
+    echo .lnk：快捷方式
+    echo .dmp：内存转储文件（可清理）
+    echo .evtx：Windows 事件日志（可清理）
+    echo .etl：跟踪日志
+    echo .wim：Windows 系统镜像
+    echo .esd：Windows 加密镜像
+    echo .vhd：虚拟磁盘文件
+    echo .vhdx：虚拟磁盘文件
+    echo .srt：字幕文件
+    echo .ass：字幕文件
+    echo .chm：帮助文档
+    echo .lock：锁定文件
+    echo .part：未完成下载文件（可删）
+    echo .crdownload：未完成下载文件（可删）
+    echo .torrent：BT 种子文件
+)
+
+if /i "%~1"=="/full" goto :FULLSCAN
+
+rem ===================== 主菜单 =====================
+:MAIN
+cls
+echo.
+echo  ==========================================================
+echo     C 盘文件作用查看器 v3  主菜单
+echo  ==========================================================
+echo    [1] 查看 C 盘概况 + 全部目录/文件作用说明
+echo    [2] 转移指定文件/文件夹到其他位置
+echo    [3] 删除指定文件/文件夹（移入回收站, 可恢复）
+echo    [4] 全盘扫描: 为每个目录/文件标注作用, 生成清单
+echo    [0] 退出
+echo  ==========================================================
+echo  提示: 转移/删除时可直接把文件拖进窗口自动填入路径
+set "CHOICE="
+set /p "CHOICE=请输入选项并回车: "
+if not defined CHOICE goto :END
+if "%CHOICE%"=="1" goto :REPORT
+if "%CHOICE%"=="2" goto :MOVE
+if "%CHOICE%"=="3" goto :DEL
+if "%CHOICE%"=="4" goto :FULLSCAN
+if "%CHOICE%"=="0" goto :END
+goto :MAIN
+
+rem ===================== 1. 查看作用说明 =====================
+:REPORT
+echo.
+echo 正在生成报告与作用说明, 请稍候...
+if exist "%REPORT%" del "%REPORT%" >nul 2>&1
+> "%REPORT%" (
+    echo ==========================================================
+    echo                 C 盘文件作用说明报告
+    echo ==========================================================
+    echo  生成时间: %date% %time%
+    echo  说明: 本报告由脚本自动收集, 只读操作, 不修改任何文件
+    echo  编码: UTF-8
+    echo ==========================================================
+    echo.
+    echo ----------------------------------------------------------
+    echo [一] 磁盘空间概况
+    echo ----------------------------------------------------------
+    powershell -NoProfile -Command "$d=Get-PSDrive C; 'C 盘总容量: {0:N1} GB' -f (($d.Used+$d.Free)/1GB); 'C 盘已用:   {0:N1} GB' -f ($d.Used/1GB); 'C 盘剩余:   {0:N1} GB' -f ($d.Free/1GB)"
+    echo.
+    echo ----------------------------------------------------------
+    echo [二] C 盘根目录实际内容
+    echo ----------------------------------------------------------
+    dir C:\ /a
+    echo.
+    echo ----------------------------------------------------------
+    echo [三] 目录/文件作用知识库
+    echo ----------------------------------------------------------
+    type "%KB%"
+    echo.
+    echo ----------------------------------------------------------
+    echo [四] 常见文件类型作用
+    echo ----------------------------------------------------------
+    type "%KB2%"
+)
+set "BAT_REPORT=%REPORT%"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$t=[IO.File]::ReadAllText($env:BAT_REPORT,[Text.Encoding]::GetEncoding(936));[IO.File]::WriteAllText($env:BAT_REPORT,$t,(New-Object Text.UTF8Encoding($true)))"
+cls
+echo.
+echo  ==================== 目录/文件作用说明 ====================
+type "%KB%"
+echo.
+echo  ====================== 常见文件类型 ======================
+type "%KB2%"
+echo.
+echo 报告文件已生成: "%REPORT%"
+echo.
+pause
+goto :MAIN
+
+rem ===================== 2. 转移 =====================
+:MOVE
+cls
+echo.
+echo  ============ 转移文件/文件夹 ============
+echo  提示: 可直接把文件/文件夹拖进窗口自动填入路径
+echo  受保护区域（Windows/Program Files/ProgramData/回收站等）不可操作
+echo.
+set "SRC="
+set /p "SRC=请输入要转移的文件/文件夹路径: "
+if not defined SRC goto :MAIN
+if not exist "%SRC%" (
+    echo  [错误] 路径不存在: "%SRC%"
+    pause
+    goto :MOVE
+)
+call :CHECKPROTECT "%SRC%"
+if errorlevel 1 (
+    echo  [拒绝] 该路径位于系统保护区域, 不允许转移
+    pause
+    goto :MAIN
+)
+set "DST="
+set /p "DST=请输入目标文件夹路径（留空=脚本所在目录下的_C盘文件备份_）: "
+if not defined DST set "DST=%~dp0_C盘文件备份_"
+if "%DST:~-1%"=="\" set "DST=%DST:~0,-1%"
+if not exist "%DST%" mkdir "%DST%" >nul 2>&1
+if not exist "%DST%" (
+    echo  [错误] 无法创建目标文件夹: "%DST%"
+    pause
+    goto :MOVE
+)
+echo.
+echo  即将把: "%SRC%"
+echo  转移到: "%DST%"
+set "OK="
+set /p "OK=确认执行?（y=确认 / 其他任意键取消）: "
+if /i not "%OK%"=="y" goto :MAIN
+move "%SRC%" "%DST%\" >nul 2>&1
+if errorlevel 1 (
+    echo  [失败] 移动未成功. 常见原因: 跨盘符移动文件夹、目标已有同名项、权限不足
+    echo  提示: 跨盘符移动文件夹请先复制再删除, 或用图形界面操作
+) else (
+    echo  [成功] 已移动到: "%DST%"
+)
+pause
+goto :MAIN
+
+rem ===================== 3. 删除 =====================
+:DEL
+cls
+echo.
+echo  ============ 删除文件/文件夹 ============
+echo  安全说明: 删除会把对象移入系统回收站, 需要时可还原
+echo  受保护区域（Windows/Program Files/ProgramData/回收站等）不可操作
+echo.
+set "SRC="
+set /p "SRC=请输入要删除的文件/文件夹路径: "
+if not defined SRC goto :MAIN
+if not exist "%SRC%" (
+    echo  [错误] 路径不存在: "%SRC%"
+    pause
+    goto :DEL
+)
+call :CHECKPROTECT "%SRC%"
+if errorlevel 1 (
+    echo  [拒绝] 该路径位于系统保护区域, 不允许删除
+    pause
+    goto :MAIN
+)
+set "KIND=文件"
+dir /ad "%SRC%" >nul 2>&1 && set "KIND=文件夹"
+set "BAT_SRC=%SRC%"
+echo.
+echo  即将删除: "%SRC%"   ^(类型: %KIND%^)
+echo  删除后可在回收站中还原
+set "OK="
+set /p "OK=确认删除?（y=确认 / 其他任意键取消）: "
+if /i not "%OK%"=="y" goto :MAIN
+if "%KIND%"=="文件夹" (
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "Add-Type -AssemblyName Microsoft.VisualBasic;[Microsoft.VisualBasic.FileIO.FileSystem]::DeleteDirectory($env:BAT_SRC,'OnlyErrorDialogs','SendToRecycleBin')"
+) else (
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "Add-Type -AssemblyName Microsoft.VisualBasic;[Microsoft.VisualBasic.FileIO.FileSystem]::DeleteFile($env:BAT_SRC,'OnlyErrorDialogs','SendToRecycleBin')"
+)
+if exist "%SRC%" (
+    echo  [失败] 删除未成功, 可能被占用或权限不足
+) else (
+    echo  [成功] 已删除到回收站
+)
+pause
+goto :MAIN
+
+rem ===================== 4. 全盘扫描 =====================
+:FULLSCAN
+cls
+echo.
+echo  ============ 全盘扫描（带作用标注） ============
+echo  第1步: 枚举 C 盘全部文件/文件夹（文件多时需 10 分钟以上）
+echo  第2步: 为每个条目标注作用, 生成 UTF-8 清单
+echo  按 Ctrl+C 可随时中止, 已生成的部分不会损坏
+echo.
+if exist "%FULLLIST%" del "%FULLLIST%" >nul 2>&1
+dir C:\ /s /b /a > "%FULLLIST%" 2>nul
+if not exist "%FULLLIST%" (
+    echo  [错误] 扫描未产出清单文件
+    pause
+    goto :MAIN
+)
+set "BAT_FULLLIST=%FULLLIST%"
+set "BAT_COUNTF=%COUNTF%"
+powershell -NoProfile -Command "$n=0;$r=[IO.File]::OpenText($env:BAT_FULLLIST);while($null -ne $r.ReadLine()){$n++};$r.Close();[IO.File]::WriteAllText($env:BAT_COUNTF,$n.ToString(),[Text.Encoding]::ASCII)"
+set "TOTAL="
+set /p TOTAL=<"%COUNTF%"
+echo  扫描完成, 共 %TOTAL% 个条目. 正在标注作用, 请稍候...
+set "BAT_KB=%KB%"
+set "BAT_KB2=%KB2%"
+set "BAT_SRC=%FULLLIST%"
+set "BAT_DST=%FULLANNOT%"
+rem 标注脚本以 base64(UTF-16LE) 内嵌, 用 -EncodedCommand 执行, 彻底避免中文经 cmd 传参乱码
+set "PSB64=JABrAGIAPQBAAHsAfQA7AGYAbwByAGUAYQBjAGgAKAAkAGwAIABpAG4AIABbAEkATwAuAEYAaQBsAGUAXQA6ADoAUgBlAGEAZABBAGwAbABMAGkAbgBlAHMAKAAkAGUAbgB2ADoAQgBBAFQAXwBLAEIALABbAFQAZQB4AHQALgBFAG4AYwBvAGQAaQBuAGcAXQA6ADoARwBlAHQARQBuAGMAbwBkAGkAbgBnACgAOQAzADYAKQApACkAewAkAGkAPQAkAGwALgBJAG4AZABlAHgATwBmACgAJwAa/ycAKQA7AGkAZgAoACQAaQAgAC0AZwB0ACAAMAApAHsAJABrAGIAWwAkAGwALgBTAHUAYgBzAHQAcgBpAG4AZwAoADAALAAkAGkAKQAuAFQAbwBMAG8AdwBlAHIAKAApAF0APQAkAGwALgBTAHUAYgBzAHQAcgBpAG4AZwAoACQAaQArADEAKQB9AH0ACgAkAGUAawBiAD0AQAB7AH0AOwBmAG8AcgBlAGEAYwBoACgAJABsACAAaQBuACAAWwBJAE8ALgBGAGkAbABlAF0AOgA6AFIAZQBhAGQAQQBsAGwATABpAG4AZQBzACgAJABlAG4AdgA6AEIAQQBUAF8ASwBCADIALABbAFQAZQB4AHQALgBFAG4AYwBvAGQAaQBuAGcAXQA6ADoARwBlAHQARQBuAGMAbwBkAGkAbgBnACgAOQAzADYAKQApACkAewAkAGkAPQAkAGwALgBJAG4AZABlAHgATwBmACgAJwAa/ycAKQA7AGkAZgAoACQAaQAgAC0AZwB0ACAAMAApAHsAJABlAGsAYgBbACQAbAAuAFMAdQBiAHMAdAByAGkAbgBnACgAMAAsACQAaQApAC4AVABvAEwAbwB3AGUAcgAoACkAXQA9ACQAbAAuAFMAdQBiAHMAdAByAGkAbgBnACgAJABpACsAMQApAH0AfQAKACQAawB3AHMAPQBAACgAQAAoACcAYQBwAHAAZABhAHQAYQAnACwAJwCUXih1cGVuYy8AE39YWwj/71MFbgZ0Cf8nACkALABAACgAJwBkAGUAcwBrAHQAbwBwACcALAAnAExoYpeHZfZOOVknACkALABAACgAJwBkAG8AYwB1AG0AZQBuAHQAcwAnACwAJwARYoR2h2VjaCcAKQAsAEAAKAAnAGQAbwB3AG4AbABvAGEAZABzACcALAAnAAtOfY+HZfZOOVknACkALABAACgAJwBwAGkAYwB0AHUAcgBlAHMAJwAsACcA/lZHcodl9k45WScAKQAsAEAAKAAnAG0AdQBzAGkAYwAnACwAJwDzl1BOh2X2TjlZJwApACwAQAAoACcAdgBpAGQAZQBvAHMAJwAsACcAxomRmIdl9k45WScAKQAsAEAAKAAnAG4AbwBkAGUAXwBtAG8AZAB1AGwAZQBzACcALAAnAE1S73qdT1aNBVPudlVfCP/vUyBSDlTNkfpeCf8nACkALABAACgAJwAuAGcAaQB0ACcALAAnAEcAaQB0ACAA006TXkNRcGVuYycAKQAsAEAAKAAnAC4AZwByAGEAZABsAGUAJwAsACcARwByAGEAZABsAGUAIACEZ/peE39YWycAKQAsAEAAKAAnAC4AbQAyACcALAAnAE0AYQB2AGUAbgAgACxnMFfTTpNeJwApACwAQAAoACcALgBuAHUAZwBlAHQAJwAsACcATgB1AEcAZQB0ACAABVMTf1hbJwApACwAQAAoACcALgB2AHMAYwBvAGQAZQAnACwAJwBWAFMAIABDAG8AZABlACAATZFufy8A0mP2TicAKQAsAEAAKAAnAC4AYwBhAGMAaABlACcALAAnABN/WFsI/+9TBW4GdAn/JwApACwAQAAoACcAdABlAG0AcAAnACwAJwA0TvZl7nZVXwj/71MFbgZ0Cf8nACkALABAACgAJwBsAG8AZwBzACcALAAnAOVl118I/+9TBW4GdAn/JwApACwAQAAoACcAYwBhAGMAaABlACcALAAnABN/WFsI/+9TBW4GdAn/JwApACkACgAkAHMAcgBjAD0AWwBJAE8ALgBGAGkAbABlAF0AOgA6AFIAZQBhAGQATABpAG4AZQBzACgAJABlAG4AdgA6AEIAQQBUAF8AUwBSAEMALABbAFQAZQB4AHQALgBFAG4AYwBvAGQAaQBuAGcAXQA6ADoARwBlAHQARQBuAGMAbwBkAGkAbgBnACgAOQAzADYAKQApAAoAJABvAHUAdAA9AE4AZQB3AC0ATwBiAGoAZQBjAHQAIABJAE8ALgBTAHQAcgBlAGEAbQBXAHIAaQB0AGUAcgAoACQAZQBuAHYAOgBCAEEAVABfAEQAUwBUACwAJABmAGEAbABzAGUALAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABUAGUAeAB0AC4AVQBUAEYAOABFAG4AYwBvAGQAaQBuAGcAKAAkAHQAcgB1AGUAKQApACkACgBmAG8AcgBlAGEAYwBoACgAJABwACAAaQBuACAAJABzAHIAYwApAHsAJABkAHMAYwA9ACcAJwA7ACQAcABsAD0AJABwAC4AVAByAGkAbQAoACkALgBUAHIAaQBtAEUAbgBkACgAJwBcACcAKQAuAFQAbwBMAG8AdwBlAHIAKAApADsAaQBmACgAJABwAGwAIAAtAGUAcQAgACcAYwA6ACcAKQB7ACQAcABsAD0AJwBjADoAXAAnAH0AOwBmAG8AcgBlAGEAYwBoACgAJAB4ACAAaQBuACAAJABrAHcAcwApAHsAaQBmACgAJABwAGwALgBJAG4AZABlAHgATwBmACgAJAB4AFsAMABdACkAIAAtAGcAZQAgADAAKQB7ACQAZABzAGMAPQAkAHgAWwAxAF0AOwBiAHIAZQBhAGsAfQB9ADsAaQBmACgALQBuAG8AdAAgACQAZABzAGMAKQB7ACQAYwB1AHIAPQAkAHAAbAA7AHcAaABpAGwAZQAoACQAYwB1AHIAIAAtAGEAbgBkACAAJABjAHUAcgAuAEwAZQBuAGcAdABoACAALQBnAGUAIAAzACkAewBpAGYAKAAkAGsAYgAuAEMAbwBuAHQAYQBpAG4AcwBLAGUAeQAoACQAYwB1AHIAKQApAHsAJABkAHMAYwA9ACQAawBiAFsAJABjAHUAcgBdADsAYgByAGUAYQBrAH0AOwAkAGMAdQByAD0AWwBJAE8ALgBQAGEAdABoAF0AOgA6AEcAZQB0AEQAaQByAGUAYwB0AG8AcgB5AE4AYQBtAGUAKAAkAGMAdQByACkAfQB9ADsAaQBmACgALQBuAG8AdAAgACQAZABzAGMAKQB7ACQAcgBvAG8AdAA9ACQAcABsAC4AUwBwAGwAaQB0ACgAJwBcACcAKQBbADAAXQArACcAXAAnACsAJABwAGwALgBTAHAAbABpAHQAKAAnAFwAJwApAFsAMQBdADsAaQBmACgAJAByAG8AbwB0ACAALQBlAHEAIAAnAGMAOgBcAHcAaQBuAGQAbwB3AHMAJwApAHsAJABkAHMAYwA9ACcAVwBpAG4AZABvAHcAcwAgAPt8337udlVfCP8qZ+V3UFt5mCwAIAD/UnFOIFIJ/ycAfQBlAGwAcwBlAGkAZgAoACQAcgBvAG8AdAAgAC0AZQBxACAAJwBjADoAXABwAHIAbwBnAHIAYQBtACAAZgBpAGwAZQBzACcAKQB7ACQAZABzAGMAPQAnADYANAAgAE1Pb4/2TolbxYjudlVfCP/3i254pItAYl5cb4/2Tgn/JwB9AGUAbABzAGUAaQBmACgAJAByAG8AbwB0ACAALQBlAHEAIAAnAGMAOgBcAHAAcgBvAGcAcgBhAG0AIABmAGkAbABlAHMAIAAoAHgAOAA2ACkAJwApAHsAJABkAHMAYwA9ACcAMwAyACAATU9vj/ZOiVvFiO52VV8I//eLbniki0BiXlxvj/ZOCf8nAH0AZQBsAHMAZQBpAGYAKAAkAHIAbwBvAHQAIAAtAGUAcQAgACcAYwA6AFwAcAByAG8AZwByAGEAbQBkAGEAdABhACcAKQB7ACQAZABzAGMAPQAnAHFRq06UXih1cGVuY+52VV8nAH0AZQBsAHMAZQBpAGYAKAAkAHAAbAAuAFMAdABhAHIAdABzAFcAaQB0AGgAKAAnAGMAOgBcAHUAcwBlAHIAcwAnACkAKQB7ACQAZABzAGMAPQAnACh1N2IqTrpOh2X2TicAfQBlAGwAcwBlAHsAJABkAHMAYwA9ACcAdlHWTu52VV8I/2VnkG4qZ+V3LAAgAPeL6oFMiG54pIsJ/ycAfQB9ADsAJABlAD0AWwBJAE8ALgBQAGEAdABoAF0AOgA6AEcAZQB0AEUAeAB0AGUAbgBzAGkAbwBuACgAJABwACkALgBUAG8ATABvAHcAZQByACgAKQA7AGkAZgAoACQAZQAgAC0AYQBuAGQAIAAkAGUAawBiAC4AQwBvAG4AdABhAGkAbgBzAEsAZQB5ACgAJABlACkAKQB7ACQAZABzAGMAPQAkAGQAcwBjACsAJwAgAFsAh2X2Tnt8i1c6ACAAJwArACQAZQBrAGIAWwAkAGUAXQArACcAXQAnAH0AOwAkAG8AdQB0AC4AVwByAGkAdABlAEwAaQBuAGUAKAAkAHAAKwAnACAAIAA9AD4AIAAgACcAKwAkAGQAcwBjACkAfQAKACQAbwB1AHQALgBDAGwAbwBzAGUAKAApAAoA"
+powershell -NoProfile -EncodedCommand %PSB64%
+
+if exist "%FULLANNOT%" (
+    echo  [成功] 已生成: "%FULLANNOT%"
+    echo  打开后每行格式: 路径 =^> 作用说明
+) else (
+    echo  [失败] 标注清单未生成
+)
+pause
+goto :MAIN
+
+rem ===================== 保护检查 =====================
+:CHECKPROTECT
+echo %~f1 | findstr /i /b /c:"c:\windows" /c:"c:\program files" /c:"c:\programdata" /c:"c:\$recycle.bin" /c:"c:\system volume information" /c:"c:\recovery" /c:"c:\boot" >nul && exit /b 1
+echo %~f1 | findstr /i /e /c:"pagefile.sys" /c:"hiberfil.sys" /c:"swapfile.sys" /c:"bootmgr" /c:"bootsect.bak" /c:"ntuser.dat" >nul && exit /b 1
+if /i "%~f1"=="%~f0" exit /b 1
+if /i "%~f1"=="%REPORT%" exit /b 1
+if /i "%~f1"=="%FULLLIST%" exit /b 1
+if /i "%~f1"=="%FULLANNOT%" exit /b 1
+if /i "%~f1"=="C:\" exit /b 1
+if /i "%~f1"=="C:" exit /b 1
+exit /b 0
+
+:END
+if exist "%KB%" del "%KB%" >nul 2>&1
+if exist "%KB2%" del "%KB2%" >nul 2>&1
+if exist "%COUNTF%" del "%COUNTF%" >nul 2>&1
+echo.
+echo 再见!
+endlocal

@@ -1,0 +1,99 @@
+RC:0
+STDOUT:
+Collecting python-docx<2,>=1.1 (from -r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 1))
+  Obtaining dependency information for python-docx<2,>=1.1 from https://files.pythonhosted.org/packages/d0/00/1e03a4989fa5795da308cd774f05b704ace555a70f9bf9d3be057b680bcf/python_docx-1.2.0-py3-none-any.whl.metadata
+  Using cached python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting html-for-docx<2,>=1.1 (from -r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 2))
+  Obtaining dependency information for html-for-docx<2,>=1.1 from https://files.pythonhosted.org/packages/74/18/288afafb41f13153b868087dd04b81d7f7119c86aa9d80d65f6e0679aeab/html_for_docx-1.2.0-py3-none-any.whl.metadata
+  Downloading html_for_docx-1.2.0-py3-none-any.whl.metadata (17 kB)
+Collecting beautifulsoup4<5,>=4.12 (from -r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 3))
+  Obtaining dependency information for beautifulsoup4<5,>=4.12 from https://files.pythonhosted.org/packages/88/c6/92fcd42f1ba33e1184263f25bfabf3d27c383410470f169e4b8163bf9c17/beautifulsoup4-4.15.0-py3-none-any.whl.metadata
+  Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting lxml<6,>=5.2 (from -r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 4))
+  Obtaining dependency information for lxml<6,>=5.2 from https://files.pythonhosted.org/packages/91/1e/05ddcb57ad2f3069101611bd5f5084157d90861a2ef460bf42f45cced944/lxml-5.4.0-cp312-cp312-win_amd64.whl.metadata
+  Downloading lxml-5.4.0-cp312-cp312-win_amd64.whl.metadata (3.6 kB)
+Collecting httpx<1,>=0.27 (from -r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 5))
+  Obtaining dependency information for httpx<1,>=0.27 from https://files.pythonhosted.org/packages/2a/39/e50c7c3a983047577ee07d2a9e53faf5a69493943ec3f6a384bdc792deb2/httpx-0.28.1-py3-none-any.whl.metadata
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting Pillow<11,>=10.3 (from -r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 6))
+  Obtaining dependency information for Pillow<11,>=10.3 from https://files.pythonhosted.org/packages/74/0a/d4ce3c44bca8635bd29a2eab5aa181b654a734a29b263ca8efe013beea98/pillow-10.4.0-cp312-cp312-win_amd64.whl.metadata
+  Downloading pillow-10.4.0-cp312-cp312-win_amd64.whl.metadata (9.3 kB)
+Collecting click<9,>=8.1 (from -r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 7))
+  Obtaining dependency information for click<9,>=8.1 from https://files.pythonhosted.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl.metadata
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting pytest<9,>=8.2 (from -r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 8))
+  Obtaining dependency information for pytest<9,>=8.2 from https://files.pythonhosted.org/packages/a8/a4/20da314d277121d6534b3a980b29035dcd51e6744bd79075a6ce8fa4eb8d/pytest-8.4.2-py3-none-any.whl.metadata
+  Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+Collecting typing_extensions>=4.9.0 (from python-docx<2,>=1.1->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 1))
+  Obtaining dependency information for typing_extensions>=4.9.0 from https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl.metadata
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4<5,>=4.12->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 3))
+  Obtaining dependency information for soupsieve>=1.6.1 from https://files.pythonhosted.org/packages/eb/dc/ad025c1ee131eba60c69f4dd5779b18fcf1e6b21a343e2162a84d5d133c7/soupsieve-2.9.2-py3-none-any.whl.metadata
+  Downloading soupsieve-2.9.2-py3-none-any.whl.metadata (4.6 kB)
+Collecting anyio (from httpx<1,>=0.27->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 5))
+  Obtaining dependency information for anyio from https://files.pythonhosted.org/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl.metadata
+  Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting certifi (from httpx<1,>=0.27->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 5))
+  Obtaining dependency information for certifi from https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl.metadata
+  Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1,>=0.27->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 5))
+  Obtaining dependency information for httpcore==1.* from https://files.pythonhosted.org/packages/7e/f5/f66802a942d491edb555dd61e3a9961140fd64c90bce1eafd741609d334d/httpcore-1.0.9-py3-none-any.whl.metadata
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1,>=0.27->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 5))
+  Obtaining dependency information for idna from https://files.pythonhosted.org/packages/57/b0/0e52c878c53f245edd3a11020f20979b3f490f245af532c7cae3027754b5/idna-3.19-py3-none-any.whl.metadata
+  Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.27->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 5))
+  Obtaining dependency information for h11>=0.16 from https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl.metadata
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting colorama>=0.4 (from pytest<9,>=8.2->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 8))
+  Obtaining dependency information for colorama>=0.4 from https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl.metadata
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting iniconfig>=1 (from pytest<9,>=8.2->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 8))
+  Obtaining dependency information for iniconfig>=1 from https://files.pythonhosted.org/packages/cb/b1/3846dd7f199d53cb17f49cba7e651e9ce294d8497c8c150530ed11865bb8/iniconfig-2.3.0-py3-none-any.whl.metadata
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting packaging>=20 (from pytest<9,>=8.2->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 8))
+  Obtaining dependency information for packaging>=20 from https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl.metadata
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest<9,>=8.2->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 8))
+  Obtaining dependency information for pluggy<2,>=1.5 from https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl.metadata
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest<9,>=8.2->-r C:\Users\Administrator\.workbuddy\plugins\cache\workbuddy-builtin\tencent-docx\5.5.6-wb.38337834.g5f969292.h7826dc9400fd\skills\html-to-docx\scripts\requirements.txt (line 8))
+  Obtaining dependency information for pygments>=2.7.2 from https://files.pythonhosted.org/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl.metadata
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Using cached python_docx-1.2.0-py3-none-any.whl (252 kB)
+Downloading html_for_docx-1.2.0-py3-none-any.whl (88 kB)
+   ---------------------------------------- 88.6/88.6 kB 385.9 kB/s eta 0:00:00
+Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+   -------------------------------------- 109.9/109.9 kB 398.7 kB/s eta 0:00:00
+Downloading lxml-5.4.0-cp312-cp312-win_amd64.whl (3.8 MB)
+   ---------------------------------------- 3.8/3.8 MB 192.4 kB/s eta 0:00:00
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading pillow-10.4.0-cp312-cp312-win_amd64.whl (2.6 MB)
+   ---------------------------------------- 2.6/2.6 MB 180.7 kB/s eta 0:00:00
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+   -------------------------------------- 125.3/125.3 kB 136.3 kB/s eta 0:00:00
+Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+   --------------------------------------- 365.8/365.8 kB 81.0 kB/s eta 0:00:00
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+   -------------------------------------- 130.0/130.0 kB 144.6 kB/s eta 0:00:00
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ---------------------------------------- 1.3/1.3 MB 320.0 kB/s eta 0:00:00
+Downloading soupsieve-2.9.2-py3-none-any.whl (37 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+   -------------------------------------- 132.1/132.1 kB 159.3 kB/s eta 0:00:00
+Downloading idna-3.19-py3-none-any.whl (68 kB)
+   ---------------------------------------- 68.5/68.5 kB 196.3 kB/s eta 0:00:00
+Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Installing collected packages: typing_extensions, soupsieve, pygments, pluggy, Pillow, packaging, lxml, iniconfig, idna, h11, colorama, click, certifi, python-docx, pytest, httpcore, beautifulsoup4, anyio, httpx, html-for-docx
+Successfully installed Pillow-10.4.0 anyio-4.15.1 beautifulsoup4-4.15.0 certifi-2026.7.22 click-8.5.0 colorama-0.4.6 h11-0.16.0 html-for-docx-1.2.0 httpcore-1.0.9 httpx-0.28.1 idna-3.19 iniconfig-2.3.0 lxml-5.4.0 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-8.4.2 python-docx-1.2.0 soupsieve-2.9.2 typing_extensions-4.16.0
+
+STDERR:
+
+[notice] A new release of pip is available: 23.2.1 -> 26.2.1
+[notice] To update, run: C:\Users\Administrator\.venv-html-to-docx\Scripts\python.exe -m pip install --upgrade pip

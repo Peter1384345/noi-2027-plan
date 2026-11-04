@@ -1,0 +1,36 @@
+﻿=== NOW: Bluetooth devices with OK status ===
+TWS Avrcp 传输
+Realtek Bluetooth Adapter
+通用属性配置文件
+Bluetooth Device (RFCOMM Protocol TDI)
+tsn-1 Avrcp 传输
+tsn-1 Avrcp 传输
+tsn-1
+设备信息服务
+蓝牙 LE 通用属性服务
+Microsoft 蓝牙枚举器
+Bluetooth Keyboard
+通用访问配置文件
+TWS
+Microsoft 蓝牙 LE 枚举器
+TWS Avrcp 传输
+=== Audio endpoints (BT) ===
+立体声混音 (Realtek(R) Audio)
+扬声器 (Realtek(R) Audio)
+麦克风阵列 (Realtek(R) Audio)
+=== pwsh available? ===
+pwsh: False
+PSVersion: 5.1.26100.9168
+=== HID BT devices ===
+符合 HID 标准的触摸板
+USB 输入设备
+符合蓝牙低能耗 GATT 的 HID 设备
+符合 HID 标准的供应商定义设备
+Microsoft Input Configuration Device
+符合 HID 标准的供应商定义设备
+I2C HID 设备
+符合 HID 标准的供应商定义设备
+符合 HID 标准的供应商定义设备
+USB 输入设备
+符合 HID 标准的供应商定义设备
+符合 HID 标准的供应商定义设备

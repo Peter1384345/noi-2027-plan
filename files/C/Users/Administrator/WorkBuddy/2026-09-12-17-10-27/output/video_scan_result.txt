@@ -1,0 +1,16 @@
+[netease_fanren] bytes=39848
+  mp4=[]
+  m3u8=[]
+  vids=[]
+[hubeidaily_tieziniang] bytes=14556
+  mp4=[]
+  m3u8=[]
+  vids=[]
+[huangshi_xiangyouhua] bytes=15896
+  mp4=[]
+  m3u8=[]
+  vids=[]
+[wenming_cn_kangai] bytes=7668
+  mp4=[]
+  m3u8=[]
+  vids=[]

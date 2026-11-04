@@ -1,0 +1,234 @@
+﻿==========================================================
+                C 盘文件作用说明报告
+==========================================================
+ 生成时间: 2026/08/28 周五 12:02:14.81
+ 说明: 本报告由脚本自动收集, 只读操作, 不修改任何文件
+ 编码: UTF-8
+==========================================================
+
+----------------------------------------------------------
+[一] 磁盘空间概况
+----------------------------------------------------------
+C 盘总容量: 148.9 GB
+C 盘已用:   106.9 GB
+C 盘剩余:   42.0 GB
+
+----------------------------------------------------------
+[二] C 盘根目录实际内容
+----------------------------------------------------------
+ 驱动器 C 中的卷是 系统
+ 卷的序列号是 701E-2907
+
+ C:\ 的目录
+
+2026/05/10  08:07    <DIR>          $RECYCLE.BIN
+2026/07/31  00:26    <DIR>          $SysReset
+2026/04/25  14:24    <DIR>          $Windows.~WS
+2026/04/19  04:11                 0 $WINRE_BACKUP_PARTITION.MARKER
+2026/01/22  17:05        63,208,991 ${LOADING_FILE_NAME}
+2026/07/22  12:17                28 .GamingRoot
+2026/05/31  08:49    <DIR>          2222
+2026/04/18  12:54                40 5AF54AAF465D
+2023/02/15  11:23    <DIR>          Boot
+2023/02/15  10:41           443,454 bootmgr
+2022/05/07  13:19                 1 BOOTNXT
+2026/07/23  22:06    <DIR>          c
+2026/07/30  19:04    <DIR>          common_attachment
+2026/08/24  21:08    <DIR>          Config.Msi
+2026/08/15  23:25    <DIR>          cq-merge-work
+2026/08/16  02:43    <DIR>          deepseek-harness
+2026/08/23  21:10    <DIR>          DiskAnalysis_20260823
+2026/08/24  19:20    <DIR>          DiskAnalysis_20260824
+2023/02/15  11:25    <JUNCTION>     Documents and Settings [C:\Users]
+2026/04/25  15:04    <DIR>          ESD
+2026/04/25  12:34    <DIR>          inetpub
+2026/06/16  18:32    <DIR>          KDubaSoftDownloads
+2026/06/16  18:30    <DIR>          KRECYCLE
+2024/04/01  15:26    <DIR>          PerfLogs
+2026/08/16  10:50    <DIR>          Program Files
+2026/08/24  21:08    <DIR>          Program Files (x86)
+2026/08/24  12:29    <DIR>          ProgramData
+2026/05/01  16:55    <DIR>          Recovery
+2023/02/16  21:12    <DIR>          Soft
+2026/08/28  09:28       268,435,456 swapfile.sys
+2026/08/28  00:04    <DIR>          System Volume Information
+2026/08/21  16:15    <DIR>          tmp
+2026/05/10  08:07    <DIR>          Users
+2026/04/19  14:25    <DIR>          WCH.CN
+2026/08/28  10:16    <DIR>          Windows
+2026/05/30  21:56                 2 xxxx.ini
+               8 个文件    332,087,972 字节
+              28 个目录 45,148,569,600 可用字节
+
+----------------------------------------------------------
+[三] 目录/文件作用知识库
+----------------------------------------------------------
+C:\：C 盘根目录
+C:\Windows：操作系统核心目录（勿动）
+C:\Windows\System32：系统核心程序/驱动/DLL（勿动）
+C:\Windows\SysWOW64：32 位系统组件（勿动）
+C:\Windows\WinSxS：系统组件存储库（体积大, 勿手动删）
+C:\Windows\Installer：MSI 安装缓存（卸载/修复软件依赖, 勿删）
+C:\Windows\Temp：系统临时文件（可清理）
+C:\Windows\SoftwareDistribution：Windows 更新缓存（清理后会重新下载）
+C:\Windows\Fonts：系统字体库
+C:\Windows\Prefetch：程序启动预读缓存（可清理）
+C:\Windows\Panther：安装/部署日志
+C:\Windows\Minidump：蓝屏小转储文件（可清理）
+C:\Windows\Logs：系统组件日志
+C:\Windows\Boot：启动引导文件（勿动）
+C:\Windows\Servicing：系统服务安装文件（勿动）
+C:\Windows\Assembly：.NET 全局程序集缓存（勿动）
+C:\Windows\CbsTemp：组件存储临时目录（可清理）
+C:\Windows\AppReadiness：应用就绪组件（勿动）
+C:\Windows\LiveKernelReports：内核错误报告（可清理）
+C:\Windows\SystemApps：系统内置应用（勿动）
+C:\Windows\Tasks：计划任务文件
+C:\Windows\Cursors：系统鼠标指针
+C:\Windows\Media：系统声音/媒体
+C:\Windows\Globalization：全球化语言包
+C:\Windows\Registration：组件注册数据（勿动）
+C:\Windows\Resources：系统资源/主题
+C:\Windows\ShellExperiences：Shell 体验组件（勿动）
+C:\Windows\ShellNew：新建文件模板
+C:\Windows\Speech：语音识别组件
+C:\Windows\System：16 位系统文件（勿动）
+C:\Windows\Web：系统默认壁纸等
+C:\Windows\Debug：调试日志
+C:\Windows\INF：硬件驱动安装信息
+C:\Windows\Media\Speech\Windows TTS：系统语音引擎
+C:\Program Files：64 位软件默认安装目录（删除请用卸载程序）
+C:\Program Files (x86)：32 位软件默认安装目录
+C:\Program Files\Common Files：软件共享组件（勿删）
+C:\Program Files\Windows Defender：系统杀毒组件（勿动）
+C:\Program Files\Windows NT：系统附件/管理工具（勿动）
+C:\Program Files\Microsoft Office：Office 办公套件安装目录
+C:\Program Files\Microsoft Edge：Edge 浏览器安装目录
+C:\Program Files\WindowsApps：Microsoft Store 应用安装目录（勿动）
+C:\Program Files\NVIDIA Corporation：NVIDIA 显卡驱动/工具
+C:\Program Files\Google：Google 相关软件（如 Chrome）
+C:\ProgramData：所有用户共享的应用数据（杀毒库/许可证等）
+C:\ProgramData\Microsoft\Windows\Start Menu：开始菜单公共项
+C:\Users：用户个人文件夹
+C:\Users\Public：公共用户目录（所有用户共享）
+C:\Users\用户名\Desktop：桌面
+C:\Users\用户名\Documents：我的文档
+C:\Users\用户名\Downloads：下载文件夹
+C:\Users\用户名\Pictures：图片
+C:\Users\用户名\Music：音乐
+C:\Users\用户名\Videos：视频
+C:\Users\用户名\AppData：应用配置/缓存（分 Local/LocalLow/Roaming）
+C:\Users\用户名\AppData\Local\Temp：当前用户临时文件（可清理）
+C:\$Recycle.Bin：回收站实际存储位置（勿动）
+C:\System Volume Information：系统还原点/卷影副本（隐藏, 勿动）
+C:\Recovery：Windows 恢复环境（隐藏, 勿动）
+C:\PerfLogs：性能/可靠性日志
+C:\boot：启动引导文件（勿动）
+C:\Intel：Intel 驱动解压临时文件（可删）
+C:\AMD：AMD 驱动解压临时文件（可删）
+C:\Temp：软件临时目录（若存在, 可清理）
+C:\tmp：临时目录（若存在, 可清理）
+C:\hiberfil.sys：休眠文件（可用 powercfg /h off 关闭）
+C:\pagefile.sys：虚拟内存页面文件（勿手动删）
+C:\swapfile.sys：UWP 应用交换文件
+C:\bootmgr：Windows 启动管理器（删除将无法开机）
+C:\BOOTSECT.BAK：引导扇区备份
+C:\DumpStack.log：系统崩溃转储日志（可删, 会自动重建）
+
+----------------------------------------------------------
+[四] 常见文件类型作用
+----------------------------------------------------------
+.dll：动态链接库（程序组件）
+.exe：可执行程序
+.sys：系统驱动程序
+.dat：数据文件（具体作用看所属软件）
+.log：日志文件（可清理）
+.tmp：临时文件（可清理）
+.bak：备份文件（确认无用后可删）
+.ini：程序配置文件
+.cfg：配置文件
+.config：配置文件
+.db：数据库文件
+.sqlite：SQLite 数据库
+.mdf：SQL Server 主数据库
+.ldf：SQL Server 日志数据库
+.pst：Outlook 邮箱数据
+.ost：Outlook 离线邮箱数据
+.msi：Windows 安装包
+.msp：安装补丁包
+.cab：压缩包（系统更新常用）
+.inf：驱动安装信息文件
+.reg：注册表文件（双击可导入）
+.bat：批处理脚本
+.cmd：批处理脚本
+.ps1：PowerShell 脚本
+.vbs：VBS 脚本
+.js：JavaScript 脚本
+.json：JSON 配置/数据文件
+.xml：XML 配置/数据文件
+.html：网页文件
+.htm：网页文件
+.pdf：PDF 文档
+.docx：Word 文档
+.xlsx：Excel 表格
+.pptx：PowerPoint 演示文稿
+.txt：文本文件
+.csv：表格数据（逗号分隔）
+.zip：压缩包
+.rar：压缩包
+.7z：压缩包
+.tar：Linux 压缩包
+.gz：gzip 压缩文件
+.iso：光盘镜像文件
+.img：磁盘镜像文件
+.mp4：视频文件
+.avi：视频文件
+.mkv：视频文件
+.wmv：Windows 视频文件
+.flv：Flash 视频
+.mov：QuickTime 视频
+.webm：网页视频格式
+.jpg：图片文件
+.jpeg：图片文件
+.png：图片文件
+.gif：动图文件
+.bmp：位图图片
+.svg：矢量图文件
+.webp：网页图片格式
+.tif：扫描/印刷图片
+.ico：图标文件
+.mp3：音频文件
+.wav：音频文件
+.flac：无损音频
+.aac：音频文件
+.ogg：音频文件
+.wma：Windows 音频
+.mid：MIDI 音乐
+.ttf：字体文件
+.otf：字体文件
+.crt：证书文件
+.cer：证书文件
+.pem：证书/密钥文件
+.pfx：证书+私钥文件
+.p12：证书+私钥文件
+.pdb：程序调试符号文件
+.py：Python 脚本
+.java：Java 源码
+.class：Java 字节码
+.jar：Java 程序包
+.apk：Android 安装包
+.lnk：快捷方式
+.dmp：内存转储文件（可清理）
+.evtx：Windows 事件日志（可清理）
+.etl：跟踪日志
+.wim：Windows 系统镜像
+.esd：Windows 加密镜像
+.vhd：虚拟磁盘文件
+.vhdx：虚拟磁盘文件
+.srt：字幕文件
+.ass：字幕文件
+.chm：帮助文档
+.lock：锁定文件
+.part：未完成下载文件（可删）
+.crdownload：未完成下载文件（可删）
+.torrent：BT 种子文件

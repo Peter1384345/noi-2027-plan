@@ -1,0 +1,12 @@
+﻿
+
+Number            : 0
+FriendlyName      : KBG40ZNT512G TOSHIBA MEMORY
+BusType           : NVMe
+HealthStatus      : Healthy
+OperationalStatus : Online
+PartitionStyle    : GPT
+Size              : 512110190592
+
+
+

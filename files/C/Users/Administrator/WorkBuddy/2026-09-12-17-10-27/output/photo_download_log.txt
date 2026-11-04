@@ -1,0 +1,9 @@
+OK han_xibao.jpg bytes=219066
+FAIL han_jiangzhuang.jpg: <HTTPError 400: 'Bad Request'>
+[chen] imgs_found=0 first=[]
+[chen] saved=0
+[chen2] imgs_found=0 first=[]
+[chen2] saved=0
+[chen3] imgs_found=6 first=['https://vmsimage.csp.chinamcloud.com/hbrb/upload/Image/default/2024/02/01/d9f0af97d31a4848b388823c101260d4/0_640_400.jpg', 'http://hbrbapp.hubeidaily.net/640X800_pub_cb20240131144225397081_sy.png_5600b524c8234e3d8ebace62443e9efb.jpg', 'http://hbrbapp.hubeidaily.net/640X800_pub_cb20240131144225600076_sy.png_fc565fe51bf842178c7448f31588124e.jpg']
+  FAIL chen3_0: <HTTPError 403: 'Forbidden'>
+[chen3] saved=3

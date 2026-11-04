@@ -1,0 +1,8 @@
+# 归档文件按字节原样存储，禁止 Git 做换行符转换，
+# 否则 Windows 上的 CRLF 会在克隆后被改写为 LF，文件大小与清单不符。
+files/** -text
+vendor/** -text
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.pptx binary

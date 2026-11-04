@@ -1,0 +1,9 @@
+slides=21
+page[12] ok via ntf
+page[11] ok via ntf
+page[10] ok via xml
+page[8] ok via xml
+page[7] ok via ntf
+page[5] ok via xml
+saved ok=6/6 size=14549561
+verify: page[12] len=45; page[11] len=53; page[10] len=40; page[8] len=46; page[7] len=45; page[5] len=59

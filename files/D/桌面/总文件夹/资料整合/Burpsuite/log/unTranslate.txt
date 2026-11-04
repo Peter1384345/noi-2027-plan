@@ -1,0 +1,2017 @@
+Nothing to see here, you’ve hidden your table...	
+The selected project file appears to be corrupted and cannot be opened.
+
+A backup of the project has been found, please choose to open the backup file, or attempt to recover data from the corrupted file. We recommend you treat the recovery file as read only.	
+The data recovery file was created successfully. You can now manually retrieve data to use in a new project file.	
+The project file has been recovered. You can now view your data in the recovered file.	
+Yes, continue	
+No, protect me	
+<span style='font-family: sans-serif; color: #e24920'><a href='carlos-montoya'>Cancel</a></span>	
+<html><body><center>   <p>This project file came from a different installation of Burp.</p>
+
+   <p>
+        Unless you trust the source of the project file, we recommend you click <span style='font-weight: bold'>No, protect me</span>.
+        This opens the project with potentially harmful settings removed.
+   </p>
+
+   <p>Even with these settings removed, we do not recommend proxying traffic through an untrusted project file.</p>
+</center></body></html>	
+<html><center>Do you trust this project file?</center></html>	
+Temporary project in memory	
+Trust this project file	
+Last Accessed	
+Nothing to see here, you’ve hidden your table...	
+The selected project file appears to be corrupted and cannot be opened.
+
+A backup of the project has been found, please choose to open the backup file, or attempt to recover data from the corrupted file. We recommend you treat the recovery file as read only.	
+The data recovery file was created successfully. You can now manually retrieve data to use in a new project file.	
+The project file has been recovered. You can now view your data in the recovered file.	
+Yes, continue	
+No, protect me	
+<span style='font-family: sans-serif; color: #e24920'><a href='carlos-montoya'>Cancel</a></span>	
+<html><body><center>   <p>This project file came from a different installation of Burp.</p>
+
+   <p>
+        Unless you trust the source of the project file, we recommend you click <span style='font-weight: bold'>No, protect me</span>.
+        This opens the project with potentially harmful settings removed.
+   </p>
+
+   <p>Even with these settings removed, we do not recommend proxying traffic through an untrusted project file.</p>
+</center></body></html>	
+<html><center>Do you trust this project file?</center></html>	
+Temporary project in memory	
+Trust this project file	
+Last Accessed	
+Nothing to see here, you’ve hidden your table...	
+The selected project file appears to be corrupted and cannot be opened.
+
+A backup of the project has been found, please choose to open the backup file, or attempt to recover data from the corrupted file. We recommend you treat the recovery file as read only.	
+The data recovery file was created successfully. You can now manually retrieve data to use in a new project file.	
+The project file has been recovered. You can now view your data in the recovered file.	
+Yes, continue	
+No, protect me	
+<span style='font-family: sans-serif; color: #e24920'><a href='carlos-montoya'>Cancel</a></span>	
+<html><body><center>   <p>This project file came from a different installation of Burp.</p>
+
+   <p>
+        Unless you trust the source of the project file, we recommend you click <span style='font-weight: bold'>No, protect me</span>.
+        This opens the project with potentially harmful settings removed.
+   </p>
+
+   <p>Even with these settings removed, we do not recommend proxying traffic through an untrusted project file.</p>
+</center></body></html>	
+<html><center>Do you trust this project file?</center></html>	
+Temporary project in memory	
+Trust this project file	
+Last Accessed	
+<html><center>No results found</center></html>	
+Open Suite search	
+<html><body><center>It looks like your tabs are floating elsewhere...<br/>
+<br/>
+To restore all tabs, click <b>View</b> &gt; <b>Restore default tab layout</b>.</center></body></html>	
+<html><center>No issues to show</center></html>	
+<html><body><center>Any issues discovered during the scan are listed here. You can also perform admin tasks such as adding comments, deleting issues, and setting severity levels. </center></body></html>	
+All issues found by the scanner	
+Certain	
+Firm	
+In scope	
+AI enhanced	
+BCheck generated	
+Scan checks	
+Manually generated	
+Copied!	
+Explore issue	
+Severity:	
+Confidence:	
+URL:	
+<html><center>No event log items to show</center></html>	
+<html><body><center>The event log shows key task events, such as start times, alerts, and progress updates.</center></body></html>	
+Time:	
+Message:	
+close	
+0 AI credits available	
+Could not refresh your balance.	
+Buy more AI credits	
+Enable AI Features	
+Default Intruder side panel layout	
+Use these settings to choose the default layout of the Intruder side panel.	
+<html><center>No tasks to show</center></html>	
+<html><body><center>Real-time information on your scans and live tasks is displayed here. Start a new scan or live task to populate this page.</center></body></html>	
+Burp AI	
+Convert to Bambda	
+boolean	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/sitemap/SiteMapNode.html">SiteMapNode</a> object, by referencing the <b>node</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+Untitled	
+Blank	
+From template	
+New CtrlN	
+Load CtrlO	
+Load a Bambda in seconds	
+Select a Bambda from your library and use it instantly - no rewriting required!	
+Got it	
+Save to library...	
+Save as	
+Apply & close	
+Browse Bambdas on GitHub	
+Settings mode	
+Bambda mode	
+Site map filter	
+Site map filter: 	
+This HTTP/2 request is 	
+kettled	
+: it contains headers that cannot be fully represented using HTTP/1 syntax. You can see full details of the request in the inspector.	
+Variables	
+Hide uninteresting headers	
+<html><center>Inspector</center></html>	
+Notes	
+<html><center>Issues exist on child location</center></html>	
+<html><body><center>There are vulnerabilities on one or more of this location's children. Review the child locations for details.</center></body></html>	
+<html><center>Site map URL view is empty</center></html>	
+<html><body><center>The site map displays information about the contents of your target applications, along with any issues that have been discovered. The URL view shows your targets as a tree of URLs, organized hierarchically by domain and directory. To populate the URL view, run a scan or browse using Burp's browser.</center></body></html>	
+First crawl path to location	
+Destination URL: 	
+Page title: 	
+Screenshot	
+Show screenshot	
+Overall load time: 	
+HTTP messages	
+Outlinks	
+<html><center>Site map crawl paths view is empty</center></html>	
+<html><body><center>The site map displays information about the contents of your target applications, along with any issues that have been discovered. The crawl paths view shows your targets as a tree of Burp Scanner actions and pages. To populate the crawl paths view, run a scan.</center></body></html>	
+URL view	
+Crawl paths view	
+<html><head><style type="text/css">body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif;font-size: 9px; } h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif;font-size: 9px; } p { margin: 0 0 10px 0; } a { color: #e24920; } </style></head><body><h3>Description</h3><p>Operating system command injection vulnerabilities arise when an application incorporates user-controllable data into a command that is processed by a shell command interpreter. If the user data is not strictly validated, an attacker can use shell metacharacters to modify the command that is executed, and inject arbitrary further commands that will be executed by the server.</p>
+<p>OS command injection vulnerabilities are usually very serious and may lead to compromise of the server hosting the application, or of the application's own data and functionality. It may also be possible to use the server as a platform for attacks against other systems. The exact potential for exploitation depends upon the security context in which the command is executed, and the privileges that this context has regarding sensitive resources on the server.</p><h3>Remediation</h3><p>If possible, applications should avoid incorporating user-controllable data into operating system commands. In almost every situation, there are safer alternative methods of performing server-level tasks, which cannot be manipulated to perform additional commands than the one intended.</p>
+<p>If it is considered unavoidable to incorporate user-supplied data into operating system commands, the following two layers of defense should be used to prevent attacks: </p>
+<ul>
+  <li>The user data should be strictly validated. Ideally, a whitelist of specific accepted values should be used. Otherwise, only short alphanumeric strings should be accepted. Input containing any other data, including any conceivable shell metacharacter or whitespace, should be rejected.</li>
+  <li>The application should use command APIs that launch a specific process via its name and command-line parameters, rather than passing a command string to a shell interpreter that supports command chaining and redirection. For example, the Java API Runtime.exec and the ASP.NET API Process.Start do not support shell metacharacters. This defense can mitigate the impact of an attack even in the event that an attacker circumvents the input validation defenses.</li>
+</ul><h3>References</h3><ul><li><a href="https://portswigger.net/web-security/os-command-injection">Web Security Academy: OS command injection</a></li></ul><h3>Vulnerability classifications</h3><ul><li><a href="https://cwe.mitre.org/data/definitions/77.html">CWE-77: Improper Neutralization of Special Elements used in a Command ('Command Injection')</a></li><li><a href="https://cwe.mitre.org/data/definitions/78.html">CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')</a></li><li><a href="https://cwe.mitre.org/data/definitions/116.html">CWE-116: Improper Encoding or Escaping of Output</a></li><li><a href="https://capec.mitre.org/data/definitions/248.html">CAPEC-248: Command Injection</a></li></ul><h3>Typical severity</h3><p>High</p><h3>Type index</h3><p>0x00100100</p></body></html>	
+Intercept on	
+Intercept off	
+Proxy intercept is now easier and faster to use. It supports multi-request viewing, instant bulk actions such as forwarding requests, and more.	
+Introducing the new Proxy intercept	
+<html><center>Intercept is on</center></html>	
+<html><body><center>Messages between Burp's browser and your target servers are held here. This enables you to analyze and modify these messages, before you forward them.</center></body></html>	
+<html><center>Intercept is off</center></html>	
+<html><body><center>If you turn Intercept on, messages between Burp's browser and your target servers are held here. This enables you to analyze and modify these messages, before you forward them.</center></body></html>	
+Column header	
+Add custom column	
+Custom Columns	
+Using bambdas, you can customize the table layout.	
+Try it out	
+Custom columns	
+You can use Bambdas to create your own columns and get the most from your data.	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/proxy/ProxyHttpRequestResponse.html">ProxyHttpRequestResponse</a> object, by referencing the <b>requestResponse</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+HTTP history filter	
+Filter settings: 	
+<html><center>HTTP history is empty</center></html>	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/proxy/ProxyWebSocketMessage.html">ProxyWebSocketMessage</a> object, by referencing the <b>message</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+WebSockets history filter	
+<html><center>WebSockets history is empty</center></html>	
+Only intercept in-scope messages	
+Apply to out-of-scope items	
+Requires "Don't send items to Proxy history or live tasks, if out of scope" to be enabled.	
+Unpack compressed responses	
+Unpack compressed requests	
+HTTP requests	
+HTTP responses	
+WebSocket messages	
+Original	
+HTTP match and replace rules	
+Use these settings to automatically replace parts of HTTP requests and responses passing through the Proxy.	
+WebSocket match and replace rules	
+Use these settings to automatically replace parts of WebSocket messages passing through the Proxy.	
+Default Proxy history message display	
+Use this setting to choose whether the Proxy history message editor displays auto-modified, manually edited, or original messages by default	
+View history	
+Project Bambdas	
+<html><center>No custom action Bambdas</center></html>	
+<html><body><center>Try our sample Bambdas to see how they work. You can also load Bambdas from your library or create your own.</center></body></html>	
+Add samples	
+<html><center>Provides AI-powered explanations of key features.</center></html>	
+<html><body><center>To get started, highlight part of a message, right-click and select Explain this.</center></body></html>	
+Toggle tab view	
+<html><center>Your interactions will appear here</center></html>	
+in the 	
+<html><center>Burp Collaborator</center></html>	
+Using a capture filter Bambda may slow down Burp Suite's performance, as the Bambda will run against all outgoing HTTP messages.	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logger/LoggerCaptureHttpRequestResponse.html">LoggerCaptureHttpRequestResponse</a> object, by referencing the <b>requestResponse</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+A large capture limit may impact performance as it uses more memory	
+Logger capture filter	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logger/LoggerHttpRequestResponse.html">LoggerHttpRequestResponse</a> object, by referencing the <b>requestResponse</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+Logger view filter	
+<html><center>Logger is empty</center></html>	
+<html><center>Burp Organizer is empty</center></html>	
+<html><body><center>To get started, send a message to Organizer from anywhere in Burp.</center></body></html>	
+<html><body><center>Your search doesn't match any Organizer items.</center></body></html>	
+Filter by status	
+Organizer filter	
+<html><center>Burp Organizer</center></html>	
+<html><body><center>Use Burp Organizer to store and annotate HTTP messages that you want to investigate later.</center></body></html>	
+View troubleshooting guide	
+<html><center>Can't load extensions</center></html>	
+<html><body><center>This may be because of a connection issue or an untrusted certificate authority. If this is unexpected, see our troubleshooting guide.
+<br>
+<br>
+To work around this, download extensions from our website and import the .bapp files here.
+</center></body></html>	
+Import BApp file	
+<html><body><center>Your search doesn't match any extensions.
+<br>
+<br>
+If you need something specific, you might want to create your own.
+</center></body></html>	
+Download starter project	
+Featured	
+Recently updated	
+Featured extension	
+Download interface files	
+Download Javadoc files	
+BChecks are scan checks that you can create and import. Use BChecks to add extra Burp Scanner audit checks.	
+BChecks GitHub repository	
+Loading	
+Preview	
+This BCheck contains errors. To enable it, edit the definition to fix the errors.	
+Browse BChecks on GitHub	
+This Bambda contains compilation errors. To apply it, edit the code to fix the errors.	
+Lorem ipsum dolor sit amet	
+Example text	
+Upgrade to Burp Suite Professional to access the full range of Bambdas.	
+View filter	
+Capture filter	
+Custom column	
+Match and replace - Request	
+Match and replace - Response	
+Custom action	
+Location	
+Bambda library filter	
+Create new Bambdas	
+You can create new Bambdas from scratch, use a built-in template, or import existing Bambdas.	
+View GitHub repository	
+<html><center>Customize Burp with Java-based Bambdas</center></html>	
+<html><body><center>To get started, create or import a new Bambda.
+<br><br>
+Looking for ideas? Use a built-in template to create your Bambda or browse our GitHub repository for ready-to-use Bambdas.</center></body></html>	
+New Bambda	
+Bambda library	
+Use the Bambda library to store and manage your Bambdas. You can access and use your stored Bambdas from compatible tools across Burp.	
+Bambdas GitHub repository	
+Hide dialog on reload	
+Load behavior	
+Use this setting to choose whether the Load Burp extension dialog appears when you reload an extension.	
+<html><center>Harness the power of Burp Scanner with custom BChecks</center></html>	
+<html><body><center>To get started, create or import a BCheck.</center></body></html>	
+<html><center>Select a Bambda</center></html>	
+<html><body><center>Choose a Bambda from the list to view and manage its details.</center></body></html>	
+Untitled*	
+Automatic throttling	
+Other	
+CSV format (e.g. 504,505)	
+Configure every aspect of your attack in a single view	
+Save time by configuring your attack's request, payload positions and payloads without repeated tab switching.	
+Flag responses matching these expressions:	
+placeholder	
+Load...	
+Auto-pause attack	
+Use this setting to automatically pause the attack when a specified expression appears or is missing in a response.	
+Enable auto-pause	
+Case-sensitive match	
+Options:	
+Pause if an expression in the list appears in a response	
+Pause if an expression in the list is missing from a response	
+Use this setting to control whether Burp Intruder reuses the same connection for multiple HTTP/1 requests during this attack. This can increase the speed of the attack.	
+Override the project-level HTTP/1 setting	
+Reuse HTTP/1 connections if the server supports it	
+Use this setting to control whether Burp Intruder defaults to HTTP/1 or HTTP/2 for outbound connections over TLS during this attack.	
+Automatically detects and marks likely payload positions	
+<html><center>Payloads</center></html>	
+<html><body><center>To get started, highlight the part of the request or target you want to replace, then click <b>Add §</b> to set a payload position.</center></body></html>	
+Payload position:	
+No payload positions configured	
+All payload positions	
+Collaborator payloads	
+Add from list...	
+Fuzzing - email splitting attacks	
+This payload type lets you extract each payload from the response to the previous request in the attack. It is useful in some situations where you need to work recursively to extract useful data or deliver an exploit. Extract grep items can be defined in the Settings tab.	
+Sequential	
+.1	
+.1234568	
+This payload type generates Collaborator payloads. Each Collaborator payload includes a unique identifier that is a subdomain of the Collaborator server’s domain.	
+Payload configuration	
+Your balance is refreshing...	
+Site map filter: Please wait ...  	
+Filter settings: Please wait ...  	
+Logging on	
+Restore default tab layout	
+Match and replace	
+Organizer	
+Allow Burp's browser to run without a sandbox	
+Log Browser Communication	
+Log folder	
+Browser logging	
+If this setting is selected then communication with Burp's browser is logged to the specified folder. This setting does not persist when Burp is closed.
+Note that this setting only affects automated browsers.	
+Normal:	
+Use these settings to control whether Burp sends outgoing requests to an upstream proxy server, or directly to the destination web server. The first rule that matches each destination host is used. To send all traffic to a single proxy server, create a rule with * as the destination host.	
+Show password	
+Use system's default behavior	
+Prefer IPv4	
+Prefer IPv6	
+Preferred IP version for DNS resolution	
+Use this setting to choose how Burp prioritizes IP addresses during DNS lookups.	
+Uses these settings to control the TLS protocols and ciphers that Burp uses when performing TLS negotiation with upstream servers.	
+Default side panel layout	
+Use these settings to choose the default layout for side panels in all tools except Burp Intruder.	
+Hide the following headers by default:	
+Uninteresting headers	
+Use this setting to control whether Burp automatically hides the specified HTTP headers. Headers are case insensitive.	
+Zebra stripe	
+No zebra stripe	
+Table appearance	
+Use this setting to control the interface and behaviour of your tables.	
+url	
+Always trust project files	
+Unrecognized project files	
+Use this setting to configure whether a project file with a different installation of Burp should be automatically trusted or not.
+By opting not to trust these project files, we will open the project with any potentially harmful settings removed.	
+Set to half of system memory	
+Set custom value: 	
+Maximum Java memory usage	
+Set the maximum memory that Burp's Java Virtual Machine can use. Changes to this setting apply when you restart Burp.	
+Don't confirm before closing Burp	
+Burp's closing behavior	
+Use this setting to control whether a confirmation alert appears when you close Burp.	
+Disable AI features	
+What's your main reason for disabling AI?	
+I'm happy to be contacted for follow-up based on my feedback	
+Dismiss	
+Share feedback	
+AI features	
+Burp's AI features do not run unless you explicitly activate them. Select this setting to prevent accidental use of AI.	
+This is a notification banner	
+Event log (1)	
+Cya!	
+To get started, send a request to Intruder from anywhere in Burp.	
+<html><center>Intruder</center></html>	
+<html><body><center>Configure automated attacks that send the same request many times, substituting specific values with predetermined payloads each time.</center></body></html>	
+To get started, send a request to Repeater from anywhere in Burp.	
+<html><center>Repeater</center></html>	
+<html><body><center>Modify and resend individual requests to test how the server's response changes based on your input.</center></body></html>	
+Explanations	
+Custom actions	
+Tidy up your tabs	
+Click the arrow to quickly toggle between expanded and collapsed tab views.	
+Author	
+Date last modified	
+Navigation	
+WebSocket ID	
+Sniper attack	
+Inserts each payload into each position one at a time, using a single payload set.	
+Battering ram attack	
+Simultaneously places the same payload into all positions, using a single payload set.	
+Pitchfork attack	
+Allocate a payload set to each position. Intruder iterates through each set in parallel.	
+Cluster bomb attack	
+Allocate a payload set to each position. Intruder iterates through all possible combinations of each set.	
+Auto throttle	
+Enable AI	
+AI credits used this session	
+JWT Editor	
+Dolph Flynn, Fraser Winterborn	
+<html><head><style type="text/css">* { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } h2 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 11px; } h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 9px; } h4 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 8px; } p { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 8px; } ul { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 20; margin: 0; font-size: 8px; } li { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 5; margin: 0; font-size: 8px; } td { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } a { color: #e24920; } strong { color: #e24920; font-weight: bold; } .InlineCode {  background: #ffffff; font-family: "Courier New", Courier, monospace; } .Code, .Code p, p.Code, .Code td, code { font-family: "Courier New", Courier, monospace; margin: 0; padding: 0; font-size: font-size: 8px;px; } pre { background: #ffffff; margin: 10 10 10 10; padding: 20 0 0 0;} </style></head><body><p><i>JWT Editor</i> is a comprehensive tool for analyzing and manipulating JSON Web Tokens (JWTs) within Burp. It provides rich editing capabilities for both JSON Web Signatures (JWS) and JSON Web Encryptions (JWE), as well facilitating some of the common attacks on JWS implementations and their use within Burp.
+</p>
+
+<h2>Features</h2>
+
+<ul>
+	<li>Top-level <i>JWT Editor</i> tab for managing cryptographic keys, persistent storage of tokens and extension configuration.</li>
+	<li>Custom <i>JSON Web Token</i> tab within HTTP and WebSocket message editors for viewing and modifying JWTs.</li>
+	<li>Automatic JWT detection and highlighting in HTTP and WebSocket Proxy History.</li>
+	<li>Support for signing, verifying, encrypting and decrypting JWTs using stored keys.</li>
+	<li>Support for a range of common attacks on JWS.</li>
+	<li>Intruder payload provider for fuzzing within JWS.</li>
+	<li>Scanner insertion point provider to allow Burp's Scanner to insert payloads within JWS headers.</li>
+</ul>
+
+<h2>Usage</h2>
+
+<p>The <i>JWT Editor</i> tab allows you to manage keys, store interesting tokens and configure the extension. Configured keys are then available for use throughout the extension.</p>
+
+<p>In the message editor, the <i>JSON Web Token</i> tab is enabled when a JWT is detected within the corresponding message. The editor switches between JWS and JWE modes depending on the token type and editing views for each token component.</p>
+
+<p><strong>Sign:</strong> Resigns the JWS and optionally updates the JWS header.</p>
+
+<p><strong>Verify:</strong> Attempts to verify the JWS signature using available verification keys.</p>
+
+<p><strong>Encrypt:</strong> Encrypts a JWS into a JWE. The editor then switches to JWE mode.</p>
+
+<p><strong>Decrypt:</strong> Decrypts a JWE back into a JWS. The editor then switches to JWS mode.</p>
+
+<p>The Attack feature facilitates several known attacks on JWS, including:</p>
+
+<ul>
+	<li>'none' Signing Algorithm</li>
+	<li>HMAC Key Confusion</li>
+	<li>Embedded JWK</li>
+	<li>Signing with an empty HMAC key</li>
+	<li>Psychic signature attack (CVE-2022-21449)</li>
+	<li>Collaborator payload injection via x5u or jku headers (Burp Suite Professional only)</li>
+	<li>Brute-forcing weak HMAC secrets</li>
+	<li>Embedding of Collaborator payloads within jku or x5u to check for servers potentially loading remote JWKS</li>
+</ul>
+</body></html>	
+<html><head><style type="text/css">* { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } h2 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 11px; } h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 9px; } h4 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 8px; } p { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 8px; } ul { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 20; margin: 0; font-size: 8px; } li { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 5; margin: 0; font-size: 8px; } td { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } a { color: #e24920; } strong { color: #e24920; font-weight: bold; } .InlineCode {  background: #ffffff; font-family: "Courier New", Courier, monospace; } .Code, .Code p, p.Code, .Code td, code { font-family: "Courier New", Courier, monospace; margin: 0; padding: 0; font-size: font-size: 8px;px; } pre { background: #ffffff; margin: 10 10 10 10; padding: 20 0 0 0;} </style></head><body><a href="https://github.com/portswigger/jwt-editor">https://github.com/portswigger/jwt-editor</a></body></html>	
+CPU:	
+Capturing 	
+<html><body><center>Loading ...</center></body></html>	
+<html><center>Task is in detached view</center></html>	
+<html><body><center>Task detail is open in another window.</center></body></html>	
+Bring to front	
+Re-attach tab	
+Rename task	
+Items added to site map	
+View site map	
+<html><center>No items to show</center></html>	
+<html><body><center>Items found in the crawl will display here.</center></body></html>	
+Task configuration	
+View configuration	
+Task type:	
+Capturing	
+Task progress	
+Site map items added:	
+Task log	
+Comments (optional)	
+Submit	
+Rate this scan	
+Most serious vulnerabilities found (live)	
+View all	
+<html><body><center>Any issues found during the audit will be displayed here.</center></body></html>	
+<html><body><center>Scanner is crawling, issues will populate here during the audit phase.</center></body></html>	
+Total audit items:	
+Audit items pending:	
+Audit items in progress:	
+Audit items completed:	
+Network errors:	
+Base value	
+<html><center>No activity to show</center></html>	
+<html><body><center>This tab details the results of the audit phase of the scan. This can include discovering new issues, removing issues that are no longer relevant, or reclassifying existing issues.</center></body></html>	
+Audit log	
+Scanned insertion points	
+Event log (2)	
+Nothing to see here, you’ve hidden your table...	
+The selected project file appears to be corrupted and cannot be opened.
+
+A backup of the project has been found, please choose to open the backup file, or attempt to recover data from the corrupted file. We recommend you treat the recovery file as read only.	
+The data recovery file was created successfully. You can now manually retrieve data to use in a new project file.	
+The project file has been recovered. You can now view your data in the recovered file.	
+Yes, continue	
+No, protect me	
+<span style='font-family: sans-serif; color: #e24920'><a href='carlos-montoya'>Cancel</a></span>	
+<html><body><center>   <p>This project file came from a different installation of Burp.</p>
+
+   <p>
+        Unless you trust the source of the project file, we recommend you click <span style='font-weight: bold'>No, protect me</span>.
+        This opens the project with potentially harmful settings removed.
+   </p>
+
+   <p>Even with these settings removed, we do not recommend proxying traffic through an untrusted project file.</p>
+</center></body></html>	
+<html><center>Do you trust this project file?</center></html>	
+Temporary project in memory	
+Trust this project file	
+Last Accessed	
+<html><center>No results found</center></html>	
+Open Suite search	
+<html><body><center>It looks like your tabs are floating elsewhere...<br/>
+<br/>
+To restore all tabs, click <b>View</b> &gt; <b>Restore default tab layout</b>.</center></body></html>	
+<html><center>No issues to show</center></html>	
+<html><body><center>Any issues discovered during the scan are listed here. You can also perform admin tasks such as adding comments, deleting issues, and setting severity levels. </center></body></html>	
+All issues found by the scanner	
+Certain	
+Firm	
+In scope	
+AI enhanced	
+BCheck generated	
+Scan checks	
+Manually generated	
+Copied!	
+Explore issue	
+Severity:	
+Confidence:	
+URL:	
+<html><center>No event log items to show</center></html>	
+<html><body><center>The event log shows key task events, such as start times, alerts, and progress updates.</center></body></html>	
+Time:	
+Message:	
+close	
+0 AI credits available	
+Could not refresh your balance.	
+Buy more AI credits	
+Enable AI Features	
+Default Intruder side panel layout	
+Use these settings to choose the default layout of the Intruder side panel.	
+<html><center>No tasks to show</center></html>	
+<html><body><center>Real-time information on your scans and live tasks is displayed here. Start a new scan or live task to populate this page.</center></body></html>	
+Burp AI	
+Convert to Bambda	
+boolean	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/sitemap/SiteMapNode.html">SiteMapNode</a> object, by referencing the <b>node</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+Untitled	
+Blank	
+From template	
+New CtrlN	
+Load CtrlO	
+Load a Bambda in seconds	
+Select a Bambda from your library and use it instantly - no rewriting required!	
+Got it	
+Save to library...	
+Save as	
+Apply & close	
+Browse Bambdas on GitHub	
+Settings mode	
+Bambda mode	
+Site map filter	
+Site map filter: 	
+This HTTP/2 request is 	
+kettled	
+: it contains headers that cannot be fully represented using HTTP/1 syntax. You can see full details of the request in the inspector.	
+Variables	
+Hide uninteresting headers	
+<html><center>Inspector</center></html>	
+Notes	
+<html><center>Issues exist on child location</center></html>	
+<html><body><center>There are vulnerabilities on one or more of this location's children. Review the child locations for details.</center></body></html>	
+<html><center>Site map URL view is empty</center></html>	
+<html><body><center>The site map displays information about the contents of your target applications, along with any issues that have been discovered. The URL view shows your targets as a tree of URLs, organized hierarchically by domain and directory. To populate the URL view, run a scan or browse using Burp's browser.</center></body></html>	
+First crawl path to location	
+Destination URL: 	
+Page title: 	
+Screenshot	
+Show screenshot	
+Overall load time: 	
+HTTP messages	
+Outlinks	
+<html><center>Site map crawl paths view is empty</center></html>	
+<html><body><center>The site map displays information about the contents of your target applications, along with any issues that have been discovered. The crawl paths view shows your targets as a tree of Burp Scanner actions and pages. To populate the crawl paths view, run a scan.</center></body></html>	
+URL view	
+Crawl paths view	
+<html><head><style type="text/css">body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif;font-size: 9px; } h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif;font-size: 9px; } p { margin: 0 0 10px 0; } a { color: #e24920; } </style></head><body><h3>Description</h3><p>Operating system command injection vulnerabilities arise when an application incorporates user-controllable data into a command that is processed by a shell command interpreter. If the user data is not strictly validated, an attacker can use shell metacharacters to modify the command that is executed, and inject arbitrary further commands that will be executed by the server.</p>
+<p>OS command injection vulnerabilities are usually very serious and may lead to compromise of the server hosting the application, or of the application's own data and functionality. It may also be possible to use the server as a platform for attacks against other systems. The exact potential for exploitation depends upon the security context in which the command is executed, and the privileges that this context has regarding sensitive resources on the server.</p><h3>Remediation</h3><p>If possible, applications should avoid incorporating user-controllable data into operating system commands. In almost every situation, there are safer alternative methods of performing server-level tasks, which cannot be manipulated to perform additional commands than the one intended.</p>
+<p>If it is considered unavoidable to incorporate user-supplied data into operating system commands, the following two layers of defense should be used to prevent attacks: </p>
+<ul>
+  <li>The user data should be strictly validated. Ideally, a whitelist of specific accepted values should be used. Otherwise, only short alphanumeric strings should be accepted. Input containing any other data, including any conceivable shell metacharacter or whitespace, should be rejected.</li>
+  <li>The application should use command APIs that launch a specific process via its name and command-line parameters, rather than passing a command string to a shell interpreter that supports command chaining and redirection. For example, the Java API Runtime.exec and the ASP.NET API Process.Start do not support shell metacharacters. This defense can mitigate the impact of an attack even in the event that an attacker circumvents the input validation defenses.</li>
+</ul><h3>References</h3><ul><li><a href="https://portswigger.net/web-security/os-command-injection">Web Security Academy: OS command injection</a></li></ul><h3>Vulnerability classifications</h3><ul><li><a href="https://cwe.mitre.org/data/definitions/77.html">CWE-77: Improper Neutralization of Special Elements used in a Command ('Command Injection')</a></li><li><a href="https://cwe.mitre.org/data/definitions/78.html">CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')</a></li><li><a href="https://cwe.mitre.org/data/definitions/116.html">CWE-116: Improper Encoding or Escaping of Output</a></li><li><a href="https://capec.mitre.org/data/definitions/248.html">CAPEC-248: Command Injection</a></li></ul><h3>Typical severity</h3><p>High</p><h3>Type index</h3><p>0x00100100</p></body></html>	
+Intercept on	
+Intercept off	
+Proxy intercept is now easier and faster to use. It supports multi-request viewing, instant bulk actions such as forwarding requests, and more.	
+Introducing the new Proxy intercept	
+<html><center>Intercept is on</center></html>	
+<html><body><center>Messages between Burp's browser and your target servers are held here. This enables you to analyze and modify these messages, before you forward them.</center></body></html>	
+<html><center>Intercept is off</center></html>	
+<html><body><center>If you turn Intercept on, messages between Burp's browser and your target servers are held here. This enables you to analyze and modify these messages, before you forward them.</center></body></html>	
+Column header	
+Add custom column	
+Custom Columns	
+Using bambdas, you can customize the table layout.	
+Try it out	
+Custom columns	
+You can use Bambdas to create your own columns and get the most from your data.	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/proxy/ProxyHttpRequestResponse.html">ProxyHttpRequestResponse</a> object, by referencing the <b>requestResponse</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+HTTP history filter	
+Filter settings: 	
+<html><center>HTTP history is empty</center></html>	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/proxy/ProxyWebSocketMessage.html">ProxyWebSocketMessage</a> object, by referencing the <b>message</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+WebSockets history filter	
+<html><center>WebSockets history is empty</center></html>	
+Only intercept in-scope messages	
+Apply to out-of-scope items	
+Requires "Don't send items to Proxy history or live tasks, if out of scope" to be enabled.	
+Unpack compressed responses	
+Unpack compressed requests	
+HTTP requests	
+HTTP responses	
+WebSocket messages	
+Original	
+HTTP match and replace rules	
+Use these settings to automatically replace parts of HTTP requests and responses passing through the Proxy.	
+WebSocket match and replace rules	
+Use these settings to automatically replace parts of WebSocket messages passing through the Proxy.	
+Default Proxy history message display	
+Use this setting to choose whether the Proxy history message editor displays auto-modified, manually edited, or original messages by default	
+View history	
+Project Bambdas	
+<html><center>No custom action Bambdas</center></html>	
+<html><body><center>Try our sample Bambdas to see how they work. You can also load Bambdas from your library or create your own.</center></body></html>	
+Add samples	
+<html><center>Provides AI-powered explanations of key features.</center></html>	
+<html><body><center>To get started, highlight part of a message, right-click and select Explain this.</center></body></html>	
+Toggle tab view	
+<html><center>Your interactions will appear here</center></html>	
+in the 	
+<html><center>Burp Collaborator</center></html>	
+Using a capture filter Bambda may slow down Burp Suite's performance, as the Bambda will run against all outgoing HTTP messages.	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logger/LoggerCaptureHttpRequestResponse.html">LoggerCaptureHttpRequestResponse</a> object, by referencing the <b>requestResponse</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+A large capture limit may impact performance as it uses more memory	
+Logger capture filter	
+<html>
+<style>
+    p {
+        margin-top: 0;
+    }
+    ul {
+        margin-left: 15px;
+    }
+    li {
+        margin-left: 0px;
+        padding-left: 0px;
+        text-indent: -2px;
+    }
+</style>
+<p>Write your own Java code using the Montoya API. You can access the following:</p>
+<ul>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logger/LoggerHttpRequestResponse.html">LoggerHttpRequestResponse</a> object, by referencing the <b>requestResponse</b> parameter.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/utilities/Utilities.html">Utilities</a> interface, by referencing the <b>utilities</b> field.</li>
+    <li>The <a href="https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/logging/Logging.html">Logging</a> interface, by referencing the <b>logging</b> field.</li>
+</ul>
+</html>	
+Logger view filter	
+<html><center>Logger is empty</center></html>	
+<html><center>Burp Organizer is empty</center></html>	
+<html><body><center>To get started, send a message to Organizer from anywhere in Burp.</center></body></html>	
+<html><body><center>Your search doesn't match any Organizer items.</center></body></html>	
+Filter by status	
+Organizer filter	
+<html><center>Burp Organizer</center></html>	
+<html><body><center>Use Burp Organizer to store and annotate HTTP messages that you want to investigate later.</center></body></html>	
+View troubleshooting guide	
+<html><center>Can't load extensions</center></html>	
+<html><body><center>This may be because of a connection issue or an untrusted certificate authority. If this is unexpected, see our troubleshooting guide.
+<br>
+<br>
+To work around this, download extensions from our website and import the .bapp files here.
+</center></body></html>	
+Import BApp file	
+<html><body><center>Your search doesn't match any extensions.
+<br>
+<br>
+If you need something specific, you might want to create your own.
+</center></body></html>	
+Download starter project	
+Featured	
+Recently updated	
+Featured extension	
+Download interface files	
+Download Javadoc files	
+BChecks are scan checks that you can create and import. Use BChecks to add extra Burp Scanner audit checks.	
+BChecks GitHub repository	
+Loading	
+Preview	
+This BCheck contains errors. To enable it, edit the definition to fix the errors.	
+Browse BChecks on GitHub	
+This Bambda contains compilation errors. To apply it, edit the code to fix the errors.	
+Lorem ipsum dolor sit amet	
+Example text	
+Upgrade to Burp Suite Professional to access the full range of Bambdas.	
+View filter	
+Capture filter	
+Custom column	
+Match and replace - Request	
+Match and replace - Response	
+Custom action	
+Location	
+Bambda library filter	
+Create new Bambdas	
+You can create new Bambdas from scratch, use a built-in template, or import existing Bambdas.	
+View GitHub repository	
+<html><center>Customize Burp with Java-based Bambdas</center></html>	
+<html><body><center>To get started, create or import a new Bambda.
+<br><br>
+Looking for ideas? Use a built-in template to create your Bambda or browse our GitHub repository for ready-to-use Bambdas.</center></body></html>	
+New Bambda	
+Bambda library	
+Use the Bambda library to store and manage your Bambdas. You can access and use your stored Bambdas from compatible tools across Burp.	
+Bambdas GitHub repository	
+Hide dialog on reload	
+Load behavior	
+Use this setting to choose whether the Load Burp extension dialog appears when you reload an extension.	
+<html><center>Harness the power of Burp Scanner with custom BChecks</center></html>	
+<html><body><center>To get started, create or import a BCheck.</center></body></html>	
+<html><center>Select a Bambda</center></html>	
+<html><body><center>Choose a Bambda from the list to view and manage its details.</center></body></html>	
+Untitled*	
+Automatic throttling	
+Other	
+CSV format (e.g. 504,505)	
+Configure every aspect of your attack in a single view	
+Save time by configuring your attack's request, payload positions and payloads without repeated tab switching.	
+Flag responses matching these expressions:	
+placeholder	
+Load...	
+Auto-pause attack	
+Use this setting to automatically pause the attack when a specified expression appears or is missing in a response.	
+Enable auto-pause	
+Case-sensitive match	
+Options:	
+Pause if an expression in the list appears in a response	
+Pause if an expression in the list is missing from a response	
+Use this setting to control whether Burp Intruder reuses the same connection for multiple HTTP/1 requests during this attack. This can increase the speed of the attack.	
+Override the project-level HTTP/1 setting	
+Reuse HTTP/1 connections if the server supports it	
+Use this setting to control whether Burp Intruder defaults to HTTP/1 or HTTP/2 for outbound connections over TLS during this attack.	
+Automatically detects and marks likely payload positions	
+<html><center>Payloads</center></html>	
+<html><body><center>To get started, highlight the part of the request or target you want to replace, then click <b>Add §</b> to set a payload position.</center></body></html>	
+Payload position:	
+No payload positions configured	
+All payload positions	
+Collaborator payloads	
+Add from list...	
+Fuzzing - email splitting attacks	
+This payload type lets you extract each payload from the response to the previous request in the attack. It is useful in some situations where you need to work recursively to extract useful data or deliver an exploit. Extract grep items can be defined in the Settings tab.	
+Sequential	
+.1	
+.1234568	
+This payload type generates Collaborator payloads. Each Collaborator payload includes a unique identifier that is a subdomain of the Collaborator server’s domain.	
+Payload configuration	
+Your balance is refreshing...	
+Site map filter: Please wait ...  	
+Filter settings: Please wait ...  	
+Logging on	
+Restore default tab layout	
+Match and replace	
+Organizer	
+Allow Burp's browser to run without a sandbox	
+Log Browser Communication	
+Log folder	
+Browser logging	
+If this setting is selected then communication with Burp's browser is logged to the specified folder. This setting does not persist when Burp is closed.
+Note that this setting only affects automated browsers.	
+Normal:	
+Use these settings to control whether Burp sends outgoing requests to an upstream proxy server, or directly to the destination web server. The first rule that matches each destination host is used. To send all traffic to a single proxy server, create a rule with * as the destination host.	
+Show password	
+Use system's default behavior	
+Prefer IPv4	
+Prefer IPv6	
+Preferred IP version for DNS resolution	
+Use this setting to choose how Burp prioritizes IP addresses during DNS lookups.	
+Uses these settings to control the TLS protocols and ciphers that Burp uses when performing TLS negotiation with upstream servers.	
+Default side panel layout	
+Use these settings to choose the default layout for side panels in all tools except Burp Intruder.	
+Hide the following headers by default:	
+Uninteresting headers	
+Use this setting to control whether Burp automatically hides the specified HTTP headers. Headers are case insensitive.	
+Zebra stripe	
+No zebra stripe	
+Table appearance	
+Use this setting to control the interface and behaviour of your tables.	
+url	
+Always trust project files	
+Unrecognized project files	
+Use this setting to configure whether a project file with a different installation of Burp should be automatically trusted or not.
+By opting not to trust these project files, we will open the project with any potentially harmful settings removed.	
+Set to half of system memory	
+Set custom value: 	
+Maximum Java memory usage	
+Set the maximum memory that Burp's Java Virtual Machine can use. Changes to this setting apply when you restart Burp.	
+Don't confirm before closing Burp	
+Burp's closing behavior	
+Use this setting to control whether a confirmation alert appears when you close Burp.	
+Disable AI features	
+What's your main reason for disabling AI?	
+I'm happy to be contacted for follow-up based on my feedback	
+Dismiss	
+Share feedback	
+AI features	
+Burp's AI features do not run unless you explicitly activate them. Select this setting to prevent accidental use of AI.	
+To get started, send a request to Intruder from anywhere in Burp.	
+<html><center>Intruder</center></html>	
+<html><body><center>Configure automated attacks that send the same request many times, substituting specific values with predetermined payloads each time.</center></body></html>	
+To get started, send a request to Repeater from anywhere in Burp.	
+<html><center>Repeater</center></html>	
+<html><body><center>Modify and resend individual requests to test how the server's response changes based on your input.</center></body></html>	
+Explanations	
+Custom actions	
+Tidy up your tabs	
+Click the arrow to quickly toggle between expanded and collapsed tab views.	
+Author	
+Date last modified	
+Navigation	
+WebSocket ID	
+Sniper attack	
+Inserts each payload into each position one at a time, using a single payload set.	
+Battering ram attack	
+Simultaneously places the same payload into all positions, using a single payload set.	
+Pitchfork attack	
+Allocate a payload set to each position. Intruder iterates through each set in parallel.	
+Cluster bomb attack	
+Allocate a payload set to each position. Intruder iterates through all possible combinations of each set.	
+Auto throttle	
+Enable AI	
+AI credits used this session	
+JWT Editor	
+Dolph Flynn, Fraser Winterborn	
+<html><head><style type="text/css">* { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } h2 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 11px; } h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 9px; } h4 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 8px; } p { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 8px; } ul { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 20; margin: 0; font-size: 8px; } li { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 5; margin: 0; font-size: 8px; } td { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } a { color: #e24920; } strong { color: #e24920; font-weight: bold; } .InlineCode {  background: #ffffff; font-family: "Courier New", Courier, monospace; } .Code, .Code p, p.Code, .Code td, code { font-family: "Courier New", Courier, monospace; margin: 0; padding: 0; font-size: font-size: 8px;px; } pre { background: #ffffff; margin: 10 10 10 10; padding: 20 0 0 0;} </style></head><body><p><i>JWT Editor</i> is a comprehensive tool for analyzing and manipulating JSON Web Tokens (JWTs) within Burp. It provides rich editing capabilities for both JSON Web Signatures (JWS) and JSON Web Encryptions (JWE), as well facilitating some of the common attacks on JWS implementations and their use within Burp.
+</p>
+
+<h2>Features</h2>
+
+<ul>
+	<li>Top-level <i>JWT Editor</i> tab for managing cryptographic keys, persistent storage of tokens and extension configuration.</li>
+	<li>Custom <i>JSON Web Token</i> tab within HTTP and WebSocket message editors for viewing and modifying JWTs.</li>
+	<li>Automatic JWT detection and highlighting in HTTP and WebSocket Proxy History.</li>
+	<li>Support for signing, verifying, encrypting and decrypting JWTs using stored keys.</li>
+	<li>Support for a range of common attacks on JWS.</li>
+	<li>Intruder payload provider for fuzzing within JWS.</li>
+	<li>Scanner insertion point provider to allow Burp's Scanner to insert payloads within JWS headers.</li>
+</ul>
+
+<h2>Usage</h2>
+
+<p>The <i>JWT Editor</i> tab allows you to manage keys, store interesting tokens and configure the extension. Configured keys are then available for use throughout the extension.</p>
+
+<p>In the message editor, the <i>JSON Web Token</i> tab is enabled when a JWT is detected within the corresponding message. The editor switches between JWS and JWE modes depending on the token type and editing views for each token component.</p>
+
+<p><strong>Sign:</strong> Resigns the JWS and optionally updates the JWS header.</p>
+
+<p><strong>Verify:</strong> Attempts to verify the JWS signature using available verification keys.</p>
+
+<p><strong>Encrypt:</strong> Encrypts a JWS into a JWE. The editor then switches to JWE mode.</p>
+
+<p><strong>Decrypt:</strong> Decrypts a JWE back into a JWS. The editor then switches to JWS mode.</p>
+
+<p>The Attack feature facilitates several known attacks on JWS, including:</p>
+
+<ul>
+	<li>'none' Signing Algorithm</li>
+	<li>HMAC Key Confusion</li>
+	<li>Embedded JWK</li>
+	<li>Signing with an empty HMAC key</li>
+	<li>Psychic signature attack (CVE-2022-21449)</li>
+	<li>Collaborator payload injection via x5u or jku headers (Burp Suite Professional only)</li>
+	<li>Brute-forcing weak HMAC secrets</li>
+	<li>Embedding of Collaborator payloads within jku or x5u to check for servers potentially loading remote JWKS</li>
+</ul>
+</body></html>	
+<html><head><style type="text/css">* { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } h2 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 11px; } h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 9px; } h4 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 8px; } p { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 0; margin: 0; font-size: 8px; } ul { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 20; margin: 0; font-size: 8px; } li { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; padding: 5 0 5 5; margin: 0; font-size: 8px; } td { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 8px; } a { color: #e24920; } strong { color: #e24920; font-weight: bold; } .InlineCode {  background: #ffffff; font-family: "Courier New", Courier, monospace; } .Code, .Code p, p.Code, .Code td, code { font-family: "Courier New", Courier, monospace; margin: 0; padding: 0; font-size: font-size: 8px;px; } pre { background: #ffffff; margin: 10 10 10 10; padding: 20 0 0 0;} </style></head><body><a href="https://github.com/portswigger/jwt-editor">https://github.com/portswigger/jwt-editor</a></body></html>	
+CPU:	
+This is a notification banner	
+Cya!	
+Capturing 	
+<html><body><center>Loading ...</center></body></html>	
+<html><center>Task is in detached view</center></html>	
+<html><body><center>Task detail is open in another window.</center></body></html>	
+Bring to front	
+Re-attach tab	
+Rename task	
+Items added to site map	
+View site map	
+<html><center>No items to show</center></html>	
+<html><body><center>Items found in the crawl will display here.</center></body></html>	
+Task configuration	
+View configuration	
+Task type:	
+Capturing	
+Task progress	
+Site map items added:	
+Task log	
+Comments (optional)	
+Submit	
+Rate this scan	
+Most serious vulnerabilities found (live)	
+View all	
+<html><body><center>Any issues found during the audit will be displayed here.</center></body></html>	
+<html><body><center>Scanner is crawling, issues will populate here during the audit phase.</center></body></html>	
+Total audit items:	
+Audit items pending:	
+Audit items in progress:	
+Audit items completed:	
+Network errors:	
+Base value	
+<html><center>No activity to show</center></html>	
+<html><body><center>This tab details the results of the audit phase of the scan. This can include discovering new issues, removing issues that are no longer relevant, or reclassifying existing issues.</center></body></html>	
+Audit log	
+Scanned insertion points	
+Event log (1)	
+All issues (1)	
+<html>
+<head>
+<style type="text/css">
+body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 9px; }
+h2 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; }
+h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 9px; }
+p { margin: 0 0 10px 0; }
+a { color: #e24920; }
+</style>
+</head>
+<body>
+<h3>Issue description</h3>
+<p> The application fails to prevent users from connecting  to it over unencrypted connections.  An attacker able to modify a legitimate user's network traffic could bypass the application's use of SSL/TLS encryption, and use the application as a platform for attacks against its users. This attack is performed by rewriting HTTPS links as HTTP, so that if a targeted user follows a link to the site from an HTTP page, their browser never attempts to use an encrypted connection. The sslstrip tool  automates this process. </p>
+<p>
+To exploit this vulnerability, an attacker must be suitably positioned to intercept and modify the victim's network traffic.This scenario typically occurs when a client communicates with the server over an insecure connection such as public Wi-Fi, or a corporate or home network that is shared with a compromised computer. Common defenses such as switched networks are not sufficient to prevent this. An attacker situated in the user's ISP or the application's hosting infrastructure could also perform this attack. Note that an advanced adversary could potentially target any connection made over the Internet's core infrastructure. </p>
+<h3>Issue remediation</h3>
+<p>The application should instruct web browsers to only access the application using HTTPS. To do this, enable HTTP Strict Transport Security (HSTS) by adding a response header with the name 'Strict-Transport-Security' and the value 'max-age=expireTime', where expireTime is the time in seconds that browsers should remember that the site should only be accessed using HTTPS. Consider adding the 'includeSubDomains' flag if appropriate.</p>
+<p>Note that because HSTS is a &quot;trust on first use&quot; (TOFU) protocol, a user who has never accessed the application will never have seen the HSTS header, and will therefore still be vulnerable to SSL stripping attacks. To mitigate this risk, you can optionally add the 'preload' flag to the HSTS header, and submit the domain for review by browser vendors.</p>
+
+<br><br>
+<h3>References</h3>
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a></li><li><a href="https://github.com/moxie0/sslstrip">sslstrip</a></li><li><a href="https://hstspreload.appspot.com/">HSTS Preload Form</a></li></ul>
+<h3>Vulnerability classifications</h3>
+<ul><li><a href="https://cwe.mitre.org/data/definitions/523.html">CWE-523: Unprotected Transport of Credentials</a></li><li><a href="https://capec.mitre.org/data/definitions/94.html">CAPEC-94: Man in the Middle Attack</a></li><li><a href="https://capec.mitre.org/data/definitions/157.html">CAPEC-157: Sniffing Attacks</a></li></ul>
+</body>
+</html>	
+<html><center>No path available</center></html>	
+<html><body><center>This is a passively detected issue. No modified requests were made - the issue was identified from Burp Scanner’s base requests and responses.</center></body></html>	
+All issues (2)	
+All issues (3)	
+All issues (4)	
+All issues (5)	
+All issues (6)	
+All issues (7)	
+All issues (8)	
+All issues (9)	
+All issues (10)	
+All issues (11)	
+All issues (12)	
+All issues (13)	
+All issues (14)	
+All issues (15)	
+All issues (16)	
+All issues (17)	
+All issues (18)	
+All issues (19)	
+All issues (20)	
+All issues (21)	
+All issues (22)	
+All issues (23)	
+All issues (24)	
+All issues (25)	
+All issues (26)	
+All issues (27)	
+All issues (28)	
+All issues (29)	
+All issues (30)	
+All issues (31)	
+All issues (32)	
+All issues (33)	
+All issues (34)	
+All issues (35)	
+All issues (36)	
+All issues (37)	
+All issues (38)	
+All issues (39)	
+All issues (40)	
+All issues (41)	
+All issues (42)	
+All issues (43)	
+All issues (44)	
+All issues (45)	
+All issues (46)	
+All issues (47)	
+All issues (48)	
+All issues (49)	
+All issues (50)	
+All issues (51)	
+All issues (52)	
+All issues (53)	
+Event log (2)	
+Event log (3)	
+All issues (54)	
+All issues (55)	
+All issues (56)	
+All issues (57)	
+All issues (58)	
+All issues (59)	
+All issues (60)	
+All issues (61)	
+All issues (62)	
+All issues (63)	
+All issues (64)	
+All issues (65)	
+All issues (66)	
+All issues (67)	
+All issues (68)	
+All issues (69)	
+All issues (70)	
+All issues (71)	
+All issues (72)	
+All issues (73)	
+All issues (74)	
+Event log (4)	
+Event log (5)	
+All issues (75)	
+All issues (76)	
+All issues (77)	
+All issues (78)	
+All issues (79)	
+All issues (80)	
+All issues (81)	
+All issues (82)	
+All issues (83)	
+All issues (84)	
+All issues (85)	
+All issues (86)	
+All issues (87)	
+All issues (88)	
+All issues (89)	
+All issues (90)	
+All issues (91)	
+All issues (92)	
+All issues (93)	
+All issues (94)	
+All issues (95)	
+All issues (96)	
+All issues (97)	
+All issues (98)	
+All issues (99)	
+All issues (100)	
+All issues (101)	
+All issues (102)	
+All issues (103)	
+All issues (104)	
+All issues (105)	
+All issues (106)	
+All issues (107)	
+All issues (108)	
+All issues (109)	
+Event log (6)	
+All issues (110)	
+Strict transport security not enforced [2]	
+<html>
+<head>
+<style type="text/css">
+body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 9px; }
+h2 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; }
+h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 9px; }
+p { margin: 0 0 10px 0; }
+a { color: #e24920; }
+</style>
+</head>
+<body>
+<h3>Issue detail</h3>
+2 instances of this issue were identified, at the following locations:<ul><li>/pagead/ads</li><li>/pagead/interaction/</li></ul>
+
+<br><br>
+<h3>Issue background</h3>
+<p> The application fails to prevent users from connecting  to it over unencrypted connections.  An attacker able to modify a legitimate user's network traffic could bypass the application's use of SSL/TLS encryption, and use the application as a platform for attacks against its users. This attack is performed by rewriting HTTPS links as HTTP, so that if a targeted user follows a link to the site from an HTTP page, their browser never attempts to use an encrypted connection. The sslstrip tool  automates this process. </p>
+<p>
+To exploit this vulnerability, an attacker must be suitably positioned to intercept and modify the victim's network traffic.This scenario typically occurs when a client communicates with the server over an insecure connection such as public Wi-Fi, or a corporate or home network that is shared with a compromised computer. Common defenses such as switched networks are not sufficient to prevent this. An attacker situated in the user's ISP or the application's hosting infrastructure could also perform this attack. Note that an advanced adversary could potentially target any connection made over the Internet's core infrastructure. </p>
+<h3>Issue remediation</h3>
+<p>The application should instruct web browsers to only access the application using HTTPS. To do this, enable HTTP Strict Transport Security (HSTS) by adding a response header with the name 'Strict-Transport-Security' and the value 'max-age=expireTime', where expireTime is the time in seconds that browsers should remember that the site should only be accessed using HTTPS. Consider adding the 'includeSubDomains' flag if appropriate.</p>
+<p>Note that because HSTS is a &quot;trust on first use&quot; (TOFU) protocol, a user who has never accessed the application will never have seen the HSTS header, and will therefore still be vulnerable to SSL stripping attacks. To mitigate this risk, you can optionally add the 'preload' flag to the HSTS header, and submit the domain for review by browser vendors.</p>
+
+<br><br>
+<h3>References</h3>
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a></li><li><a href="https://github.com/moxie0/sslstrip">sslstrip</a></li><li><a href="https://hstspreload.appspot.com/">HSTS Preload Form</a></li></ul>
+<h3>Vulnerability classifications</h3>
+<ul><li><a href="https://cwe.mitre.org/data/definitions/523.html">CWE-523: Unprotected Transport of Credentials</a></li><li><a href="https://capec.mitre.org/data/definitions/94.html">CAPEC-94: Man in the Middle Attack</a></li><li><a href="https://capec.mitre.org/data/definitions/157.html">CAPEC-157: Sniffing Attacks</a></li></ul>
+</body>
+</html>	
+All issues (111)	
+All issues (112)	
+All issues (113)	
+Cookie scoped to parent domain [2]	
+All issues (114)	
+All issues (115)	
+All issues (116)	
+All issues (117)	
+<html>
+<head>
+<style type="text/css">
+body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 9px; }
+h2 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; }
+h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 9px; }
+p { margin: 0 0 10px 0; }
+a { color: #e24920; }
+</style>
+</head>
+<body>
+<h3>Issue detail</h3>
+3 instances of this issue were identified, at the following locations:<ul><li>/pagead/ads</li><li>/pagead/adview</li><li>/pagead/interaction/</li></ul>
+
+<br><br>
+<h3>Issue background</h3>
+<p> The application fails to prevent users from connecting  to it over unencrypted connections.  An attacker able to modify a legitimate user's network traffic could bypass the application's use of SSL/TLS encryption, and use the application as a platform for attacks against its users. This attack is performed by rewriting HTTPS links as HTTP, so that if a targeted user follows a link to the site from an HTTP page, their browser never attempts to use an encrypted connection. The sslstrip tool  automates this process. </p>
+<p>
+To exploit this vulnerability, an attacker must be suitably positioned to intercept and modify the victim's network traffic.This scenario typically occurs when a client communicates with the server over an insecure connection such as public Wi-Fi, or a corporate or home network that is shared with a compromised computer. Common defenses such as switched networks are not sufficient to prevent this. An attacker situated in the user's ISP or the application's hosting infrastructure could also perform this attack. Note that an advanced adversary could potentially target any connection made over the Internet's core infrastructure. </p>
+<h3>Issue remediation</h3>
+<p>The application should instruct web browsers to only access the application using HTTPS. To do this, enable HTTP Strict Transport Security (HSTS) by adding a response header with the name 'Strict-Transport-Security' and the value 'max-age=expireTime', where expireTime is the time in seconds that browsers should remember that the site should only be accessed using HTTPS. Consider adding the 'includeSubDomains' flag if appropriate.</p>
+<p>Note that because HSTS is a &quot;trust on first use&quot; (TOFU) protocol, a user who has never accessed the application will never have seen the HSTS header, and will therefore still be vulnerable to SSL stripping attacks. To mitigate this risk, you can optionally add the 'preload' flag to the HSTS header, and submit the domain for review by browser vendors.</p>
+
+<br><br>
+<h3>References</h3>
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a></li><li><a href="https://github.com/moxie0/sslstrip">sslstrip</a></li><li><a href="https://hstspreload.appspot.com/">HSTS Preload Form</a></li></ul>
+<h3>Vulnerability classifications</h3>
+<ul><li><a href="https://cwe.mitre.org/data/definitions/523.html">CWE-523: Unprotected Transport of Credentials</a></li><li><a href="https://capec.mitre.org/data/definitions/94.html">CAPEC-94: Man in the Middle Attack</a></li><li><a href="https://capec.mitre.org/data/definitions/157.html">CAPEC-157: Sniffing Attacks</a></li></ul>
+</body>
+</html>	
+All issues (118)	
+<html>
+<head>
+<style type="text/css">
+body { color: #000000; font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 9px; }
+h2 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; }
+h3 { font-family: Microsoft YaHei UI, Verdana, Arial, Helvetica, sans-serif; font-size: 9px; }
+p { margin: 0 0 10px 0; }
+a { color: #e24920; }
+</style>
+</head>
+<body>
+<h3>Issue detail</h3>
+4 instances of this issue were identified, at the following locations:<ul><li>/btr/view</li><li>/pagead/ads</li><li>/pagead/adview</li><li>/pagead/interaction/</li></ul>
+
+<br><br>
+<h3>Issue background</h3>
+<p> The application fails to prevent users from connecting  to it over unencrypted connections.  An attacker able to modify a legitimate user's network traffic could bypass the application's use of SSL/TLS encryption, and use the application as a platform for attacks against its users. This attack is performed by rewriting HTTPS links as HTTP, so that if a targeted user follows a link to the site from an HTTP page, their browser never attempts to use an encrypted connection. The sslstrip tool  automates this process. </p>
+<p>
+To exploit this vulnerability, an attacker must be suitably positioned to intercept and modify the victim's network traffic.This scenario typically occurs when a client communicates with the server over an insecure connection such as public Wi-Fi, or a corporate or home network that is shared with a compromised computer. Common defenses such as switched networks are not sufficient to prevent this. An attacker situated in the user's ISP or the application's hosting infrastructure could also perform this attack. Note that an advanced adversary could potentially target any connection made over the Internet's core infrastructure. </p>
+<h3>Issue remediation</h3>
+<p>The application should instruct web browsers to only access the application using HTTPS. To do this, enable HTTP Strict Transport Security (HSTS) by adding a response header with the name 'Strict-Transport-Security' and the value 'max-age=expireTime', where expireTime is the time in seconds that browsers should remember that the site should only be accessed using HTTPS. Consider adding the 'includeSubDomains' flag if appropriate.</p>
+<p>Note that because HSTS is a &quot;trust on first use&quot; (TOFU) protocol, a user who has never accessed the application will never have seen the HSTS header, and will therefore still be vulnerable to SSL stripping attacks. To mitigate this risk, you can optionally add the 'preload' flag to the HSTS header, and submit the domain for review by browser vendors.</p>
+
+<br><br>
+<h3>References</h3>
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a></li><li><a href="https://github.com/moxie0/sslstrip">sslstrip</a></li><li><a href="https://hstspreload.appspot.com/">HSTS Preload Form</a></li></ul>
+<h3>Vulnerability classifications</h3>
+<ul><li><a href="https://cwe.mitre.org/data/definitions/523.html">CWE-523: Unprotected Transport of Credentials</a></li><li><a href="https://capec.mitre.org/data/definitions/94.html">CAPEC-94: Man in the Middle Attack</a></li><li><a href="https://capec.mitre.org/data/definitions/157.html">CAPEC-157: Sniffing Attacks</a></li></ul>
+</body>
+</html>	
+All issues (119)	
+All issues (120)	
+All issues (121)	
+All issues (122)	
+All issues (123)	
+All issues (124)	
+Strict transport security not enforced [4]	
+Cookie scoped to parent domain [4]	
+All issues (125)	
+All issues (126)	
+All issues (127)	
+All issues (128)	
+All issues (129)	
+All issues (130)	
+Content security policy: allows untrusted style execution	
+All issues (131)	
+Content security policy: allows clickjacking	
+Content security policy: allows form hijacking	
+Event log (7)	
+Event log (8)	
+All issues (132)	
+All issues (133)	
+Event log (9)	
+Event log (10)	
+Event log (11)	
+Event log (12)	
+All issues (134)	
+All issues (135)	
+All issues (136)	
+Event log (13)	
+All issues (137)	
+All issues (138)	
+All issues (139)	
+All issues (140)	
+All issues (141)	
+All issues (142)	
+All issues (143)	
+Event log (14)	
+Nothing to see here, you’ve hidden your table...	
+Help improve Burp by submitting feedback about its performance	
+Burp Suite Professional Terms & Conditions of Supply
+
+IMPORTANT NOTICE: PLEASE READ THE FOLLOWING TERMS BEFORE ORDERING OR DOWNLOADING ANY SOFTWARE FROM THIS WEBSITE AS APPLICABLE TO THE LICENCE AND USE OF THAT SOFTWARE.
+
+These Burp Suite Professional Terms & Conditions of Supply together with the documents referred to in it ("Terms") constitute the terms and conditions on which PortSwigger Ltd ("Licensor") will grant to any purchaser or user ("Licensee") a licence to use the software comprising Burp Suite Professional ("Burp Suite Professional" or the "Software"), following acceptance of an order as detailed below.
+
+The following expressly form part of the Terms:
+
+- The Burp Suite Professional Licence Agreement;
+
+- The General Terms and Conditions;
+
+- The Data Processing Agreement;
+
+- The Privacy Policy; and
+
+- Any other documents referred to in the above.
+
+Licensor may vary the Terms and any document expressly incorporated into the Terms from time to time by notifying Licensee by any reasonable means, including by the use of email correspondence.
+
+The Terms apply to the exclusion of any other terms that the Licensee seeks to impose or incorporate, or which are implied by trade, custom, practice or course of dealing.
+
+1. Licences to Burp Suite Professional are available for purchase via the Licensor's website at https://portswigger.net/buy.
+
+2. Placing an order for Burp Suite Professional or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by PortSwigger Ltd.  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Burp Suite Professional terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and PortSwigger Ltd's order quotation.
+
+3. Unless PortSwigger Ltd has pre-approved the Licensee's purchase on credit in writing (and subject to any additional credit terms that apply to any such approval), payment is required in advance. Shortly after the Licensee makes payment and the order has been accepted by PortSwigger Ltd, the Licensee will receive an email containing instructions enabling the Licensee to log in and download the Licensee's software and licence key.  If the Licensee does not receive this email within 30 minutes of making payment, please email the Licensor, who will investigate the issue and endeavour to respond within one working day. In relation to purchases made on agreed credit terms, PortSwigger reserves the right to charge interest under the Late Payment of Commercial Debts (Interest) Act 1998 on invoiced amounts unpaid by their due date.
+
+4. If the Licensee's license is subject to auto-renewal and the Licensee has provided a valid recurring payment method, then payment will be taken 14 days before the expiry of the then current Licence Period (as defined in the Burp Suite Professional Licence Agreement) ("Renewal Payment Date"). Auto-renewal for specific licences can be disabled on the Licensee's account page.
+
+5. If the Licensee wishes to cancel its order, please email the Licensor, within 7 days of making payment or payment being taken for auto-renewal licenses, or if the order has been placed on credit, credit having been pre-approved by PortSwigger Ltd, please email the Licensor within 7 days of placing the order, and in each case before the Licensee downloads the software or licence key.  If the Licensee already downloaded the software or licence key, it will not be possible to refund the order.
+
+6. If the Licensee's payment is subject to any tax liability within any jurisdiction (for example, withholding tax) then it bears sole responsibility for meeting this liability, and no deductions must be made in the amount paid to PortSwigger Ltd.  PortSwigger Ltd does not accept liability for any tax liabilities that may arise from the Licensee's purchase of the Software or any associated services hereunder.
+
+7. When the contract for the purchase of Burp Suite Professional has been concluded, such contract is made for the benefit of the Licensee and PortSwigger Ltd only and is not intended to benefit, or be enforceable by, anyone else.
+
+8. These Terms (including all the documents referred to in them) are governed by and construed in accordance with English Law and submitted to the exclusive jurisdiction of the English courts.
+
+Burp Suite Professional Licence Agreement
+
+This licence agreement which incorporates the General Terms and Conditions below ("Licence") forms part of the Terms for the Software, which includes computer software, and the online documentation current at the date of the download of this Licence and accessible on https://support.portswigger.net/ ("Documentation").
+
+THE DOCUMENTATION CONTAINS THE SYSTEM REQUIREMENTS TO RUN BURP SUITE PROFESSIONAL.  INTERNET ACCESS IS REQUIRED DURING INSTALLATION TO ACTIVATE THE SOFTWARE.
+
+IF THE LICENSEE DOES NOT AGREE TO THE TERMS OF THE LICENCE AND THE BURP SUITE PROFESSIONAL TERMS AND CONDITIONS OF SUPPLY, THE LICENSOR IS UNWILLING TO LICENSE THE SOFTWARE TO THE LICENSEE AND (1) THE LICENSEE MUST DISCONTINUE ANY ON-GOING ORDERING PROCESS NOW AND MUST NOT INSTALL THE SOFTWARE; AND/OR (2) WHERE THE SOFTWARE HAS ALREADY BEEN INSTALLED, THE LICENSEE MUST CEASE USING IT IMMEDIATELY.
+
+WARNING: BURP SUITE PROFESSIONAL IS DESIGNED TO TEST FOR SECURITY FLAWS AND CAN DO DAMAGE TO TARGET SYSTEMS DUE TO THE NATURE OF ITS FUNCTIONALITY.  TESTING FOR SECURITY FLAWS INHERENTLY INVOLVES INTERACTING WITH TARGETS IN NON-STANDARD WAYS WHICH CAN CAUSE PROBLEMS IN SOME VULNERABLE TARGETS.  THE LICENSEE MUST TAKE DUE CARE WHEN USING THE SOFTWARE, MUST READ ALL DOCUMENTATION BEFORE USE AND BACK UP TARGET SYSTEMS BEFORE USE.  WHERE THE LICENSEE USES THE SOFTWARE ON PRODUCTION SYSTEMS OR OTHER SYSTEMS, IT EXPRESSLY HEREBY ACCEPTS THE RISK OF DAMAGE AND RISK OF LOSS OF DATA OR LOSS OF USE IN RESPECT OF SUCH DATA AND SYSTEMS AND ACCEPTS THAT IT SHOULD NOT USE THE SOFTWARE ON ANY SYSTEMS FOR WHICH IT DOES NOT ACCEPT THE RISK OF DAMAGE, RISK OF LOSS OF DATA OR LOSS OF USE.
+
+1. GRANT AND SCOPE OF LICENCE
+
+1.1. In consideration of the payment by the Licensee of any agreed licence fee and the Licensee agreeing to abide by the terms of the Licence, the Licensor hereby grants to the Licensee a non-exclusive, non-transferable licence for the period (the "Licence Period") specified in the Licensee's order confirmation for the number of individual users specified therein to use the Software and the Documentation on the terms of the Licence.
+
+1.2. If the Licence is subject to auto-renewal, a new Licence Period will commence on the expiry of the previous Licence Period, subject to successful payment being taken on the Renewal Payment Date. Each subsequent Licence Period commenced using the auto-renew process will be for the same duration as the previous Licence Period , unless the Licensor has agreed otherwise with the Licensee in writing.
+
+1.3. Each installation of Burp Suite Professional on an individual computer needs to be activated before it will operate, including subsequent Licences commenced using auto-renewal. It is recognised that in the course of ordinary usage of the Software, individual users may need to install the product on more than one computer. The number of activations performed for each licence is monitored. The Licensor reserves the right to limit the number of activations allowed per licence, and to prevent further activations if this limit is exceeded.
+
+1.4. The Licensee may:
+
+1.4.1. download, install and use the Software, including any Burp Apps (as defined in General Terms and Conditions, section 5) for its internal business purposes (which may, include the provision of a bespoke consultancy service to clients where the Licensee is acting in a business advisory capacity) only;
+
+1.4.2. make one copy of the Software for back-up purposes only, provided that this is necessary for the activities permitted under section 1.4.1;
+
+1.4.3. receive and use any free supplementary software code or update of the Software incorporating "patches" and corrections of errors as may be provided by the Licensor from time to time on the basis that they are governed by the terms of the Licence;
+
+1.4.4. use any Documentation in support of the use permitted under section 1.4.1 and make such numbers of copies of the Documentation as are reasonably necessary for its lawful use; and
+
+1.4.5. analyse the behaviour and performance of the documented functionality of the Software and any Burp Apps (defined as aforesaid) and disclose the findings of such analysis to any party provided that such findings are provided simultaneously and in identical form to the Licensor; and
+
+1.4.6. resell the Software, provided that:
+
+1.4.6.1. the Licensee procures that the purchaser is bound by the terms of this Licence for the benefit of the Licensor, with an ability for the Licensor to enforce such terms against the purchaser directly and that the Licensee indemnify the Licensor against all costs (including legal costs) charges and expenses incurred by the Licensor as a result of the failure by the Licensee to comply with the provisions of this paragraph and/or the resale by the Licensee of the Software to the purchaser; and
+
+1.4.6.2. the Licensee has purchased the Software directly from the Licensor.
+
+1.5. If the Licensee is a purchaser who has lawfully obtained the Software other than by direct purchase from the Licensor, the Licensee may carry out the activities specified in sections 1.4.1 to 1.4.5 above and, in consideration of the Licensor agreeing to provide updates of the Software to the Licensee during the Licence Period, either directly or via the relevant intermediary or intermediaries, the Licensee agree to be bound by the Licence directly in favour of the Licensor.
+
+1.6. In providing the Software the Licensor may process personal data pursuant to the Data Processing Agreement and the Licensee is responsible for ensuring it has (i) appropriate measures in place to minimise the personal data disclosed to Licensor; and (ii) complied with applicable data protection laws (including its obligations to ensure there is an appropriate lawful basis for disclosing the personal data to Licensor, and its transparency obligations). Processing for the purposes of performing internal analytics, or to perform its customer support and troubleshooting functions, shall be pursuant to Licensor's Privacy Notice (accessible here: https://portswigger.net/privacy).
+
+2. LICENSEE'S WARRANTY AND UNDERTAKINGS
+
+In addition to the warranties and undertakings given in the General Terms and Conditions, the Licensee undertakes to keep confidential any credentials provided by the Licensor enabling the Licensee to log in to the Licensor's server (for the purposes of downloading product builds and licence keys and to perform product activation, to create Extensions (as defined in General Terms and Conditions, section 5)), or to access the Burp Collaborator server.
+
+3. LIABILITY: ATTENTION IS DRAWN PARTICULARLY TO THE PROVISIONS OF THIS CONDITION
+
+3.1. Subject to the General Terms and Conditions, section 9.1 and section 3.2 below, the Licensor's maximum aggregate liability under or in connection with this Licence, or any collateral contract, whether in contract, tort (including negligence) or otherwise, shall be limited to a sum equal to 125% (one hundred and twenty five per cent) of the average annual Licence Fee due under the Licence.
+
+3.2. The Licensor's liability under the indemnity given in respect of Third Party IPR Claims under section 7.4 of the General Terms and Conditions shall be unlimited (subject to the Licensee's compliance with the requirements of the remainder of section 7.4 and section 7.5 of the General Terms and Conditions).
+
+3.3. Subject to the General Terms and Conditions, section 9.1, the Licensee's maximum aggregate liability to the Licensor under or in connection with this Licence, or any collateral contract, whether in contract, tort (including negligence) or otherwise, shall in each year be limited to a sum equal to 125% (one hundred and twenty five per cent) of the average annual Licence Fee due under the Licence, provided that this shall not apply (i) in respect of the Licensee's obligation to pay the fees; and (ii) in respect of a breach by the Licensee of section 7 (Intellectual Property Rights); and (iii) in respect of a breach by the Licensee of section 2 (Licensee's Warranty and Undertakings), in respect of each of which the Licensee's liability shall be unlimited.
+
+GENERAL TERMS AND CONDITIONS
+
+These terms and conditions are applicable to and form part of the Terms entered into between the Licensee and the Licensor for the Software and apply, unless specified or the context otherwise requires, whether the Software has been acquired either directly or indirectly by way of free download, pre-purchase or purchase on credit, free trial or by way of free licence for training purposes.  Unless the context otherwise requires words and expressions used in the remainder of the Terms shall have the same meanings when used in these terms and conditions.
+
+1. LICENSEE'S WARRANTY AND UNDERTAKINGS
+
+1.1. The Licensee warrants that it is not purchasing licences to the Software as a consumer, but will be using the Software in its business and that any users placing orders for the Software and/or accepting these Terms are duly authorised by the Licensee to acquire licences to the Software.
+
+1.2. Except as expressly set out in the Licence or as permitted by any local law, the Licensee undertakes:
+
+1.2.1. not to use (or allow to be used) the Software, the Documentation for any unlawful purposes, particularly as the Software contains functionality that can be used to attack and compromise computer systems, and the Licensee shall be responsible for all losses, costs, liabilities or other damages incurred by the Licensor in connection with any claim by a third party in connection with a breach by the Licensee of this obligation;
+
+1.2.2. to keep confidential any credentials provided by the Licensor enabling the Licensee to log in to the Licensor's server (for the purposes of downloading product builds and licence keys and to perform product activation, to create Extensions (as defined in section 5), or to access the Burp Collaborator server;
+
+1.2.3. to obtain all necessary authorisations from system owners prior to using the Software or any Burp Apps thereon;
+
+1.2.4. unless agreed by the Licensor not to copy the Software or Documentation except where such copying is incidental to normal use of the Software, or where it is necessary for the purpose of back-up or operational security;
+
+1.2.5. subject to the provisions of section 5, not to rent, lease, sub-license, loan, translate, merge, adapt, vary or modify the Software or Documentation;
+
+1.2.6. subject to the provisions of section 5, not to make alterations to, or modifications of, the whole or any part of the Software, nor permit the Software or any part of it to be combined with, or become incorporated in, any other programs;
+
+1.2.7. not to disassemble, decompile, reverse engineer or create derivative works based on, the whole or any part of the Software nor attempt to do any such thing except to the extent that (by virtue of section 296A of the Copyright, Designs and Patents Act 1988) such actions cannot be prohibited because they are essential for the purpose of achieving inter-operability of the Software with another software program, and provided that the information obtained by the Licensee during such activities:
+
+1.2.7.1. is used only for the purpose of achieving inter-operability of the Software with another software program; and
+
+1.2.7.2. is not unnecessarily disclosed or communicated without the Licensor's prior written consent to any third party; and
+
+1.2.7.3. is not used to create any software which is substantially similar to the Software;
+
+1.2.8. to supervise and control use of the Software and ensure that the Software is used by the Licensee's employees and representatives in accordance with the terms of the Licence;
+
+1.2.9. to replace the current version of the Software with any updated or upgraded version or new release provided by the Licensor to the Licensee via its account or the Software, immediately on receipt (and failure to do so may result in the Licensee's ineligibility for support pursuant to this Agreement);
+
+1.2.10. to keep all copies of the Software secure and to maintain accurate and up-to-date records of the number of locations of all copies of the Software;
+
+1.2.11. to include the copyright notice of the Licensor on all entire and partial copies the Licensee makes of the Software on any medium;
+
+1.2.12. not to provide or otherwise make available the Software in whole or in part (including but not limited to program listings, object and source program listings, object code and source code), in any form to any person other than the Licensee's employees without prior written consent from the Licensor;
+
+1.2.13. unless specifically authorised by the Licensor in writing, not to use the Software as part of an automated service offering to third parties;
+
+1.2.14. unless specifically authorised by the Licensor in writing, not to use the Software as part of CI/CD pipelines;
+
+1.2.15. not to engage in any activity, practice or conduct which would constitute an offence under sections 1, 2 or 6 of the Bribery Act 2010, if such activity, practice or conduct had been carried out in the UK; and
+
+1.2.16. to be responsible for all liability claims, actions, or causes of action, together with the legal costs of the Licensor in bringing the same, arising by reason of or in any way relating to the Licensee's actions or activities of its employees, agents, or contractors under the Licence.
+
+2. SUPPORT AND UPGRADES
+
+2.1. The downloading of a licence for the Software entitles the Licensee to free product support provided via the Licensor's support centre portal on its website at the Licensor's sole discretion.  Such support will be subject to any support conditions, guidance or FAQs on https://support.portswigger.net/ from time to time.
+
+2.2. If licences to new releases of the Software are offered for sale to the Licensor's customers generally, these may be made available free of charge to the Licensee for the duration of the Licence provided that the Licensee enters into a new licence agreement in respect of such new release on such terms as may be notified to the Licensee by the Licensor at that time.  If no such new licence terms are notified, these terms shall continue to apply.
+
+3. BURP COLLABORATOR
+
+3.1. The Licensor has developed Burp Collaborator which is a component of the Software's automated and manual testing tools available in respect of the Burp Suite DAST and Burp Suite Professional Software and the terms of this section 3 shall only apply in respect of that Software.  Burp Collaborator involves the Licensee deploying a system on the public web (the "Collaborator Server") which acts as the recipient of third-system interactions that may be triggered by payloads that the Software sends to target systems enabling the detection of certain types of vulnerability.  A full description of the functionality of Burp Collaborator forms part of the Documentation if it applies to the version of the Software the Licensee has downloaded.
+
+3.2. The functionality of Burp Collaborator gives rise to issues that require careful consideration by the Licensee as fully set out in the Documentation.  By utilising any features of the Software that may cause interaction with Burp Collaborator, the Licensee will be deemed to have read the relevant Documentation, fully understood the functionality and the alternative methods of utilisation of Burp Collaborator and considered the consequences of utilisation for its organisation and as a result of such consideration has decided that Burp Collaborator, in the form utilised by it, is suitable and appropriate for use by it.  The Licensor considers Burp Collaborator to be efficacious in identifying vulnerabilities of the target website in connection with third-system interactions, but the Licensee must make its own evaluation before using the Collaborator Server in any of the alternative manners set out in the Documentation.
+
+3.3. If the Licensee is permitted by the Licensor to use the Burp Collaborator server as part of a bespoke consultancy permitted under the terms of the Licence, by doing so the Licensee warrants to the Licensor that it has recommended the client to use the Burp Collaborator server in accordance with the terms of the Documentation and the client has instructed the Licensee to use the same having discussed with the Licensee the contents of the Documentation relating thereto.
+
+3.4. The Licensee acknowledges and accepts that by utilising the Burp Collaborator server either on its own behalf or on behalf of a client pursuant to a bespoke consultancy, the Licensor could be a Sub-Processor of its client's personal data under the provisions of the General Data Protection Regulation (Regulation (EU) 2016/679).  If the Licensor does act as a Sub-Processor, it shall handle the Licensee or the Licensee's client's data in accordance with its Privacy Notice and as set out in the Documentation relating to Burp Collaborator.
+
+4. BURP INFILTRATOR
+
+4.1. The Licensor has developed Burp Infiltrator which is a component of the Software for instrumenting deployed applications in order to facilitate testing using the Software in respect of the Burp Suite DAST Burp Suite Professional Software and the terms of this section 4 shall only apply in respect of that Software.  Burp Infiltrator involves the Licensee deploying or procuring deployment of the Infiltrator component within the target system which enhances the ability of the Software to detect certain types of vulnerability.  A full description of the functionality of Burp Infiltrator forms part of the Documentation if it applies to the version of the Software the Licensee has downloaded.
+
+4.2. The functionality of Burp Infiltrator gives rise to issues that require careful consideration by the user as fully set out in the Documentation.  By deploying or procuring deployment of the Infiltrator tool, the Licensee will be deemed to have read the relevant Documentation, fully understood the functionality of Burp Infiltrator and considered the consequences of utilisation for its organisation and any bespoke consultancy clients of the Licensee and, as a result of such consideration, has decided that Burp Infiltrator is suitable and appropriate for use by it and by any client of the Licensee.  The Licensor considers Burp Infiltrator to be efficacious in helping to identify vulnerabilities of the target website, but the Licensee must make its own evaluation before utilising Burp Infiltrator in the manner set out in the Documentation.
+
+4.3. If the Licensee causes its client to install Burp Infiltrator as part of a bespoke consultancy permitted under the terms of the Licence, by so doing it warrants to the Licensor that it has recommended to the client to install Burp Infiltrator on its system and has discussed with the client the contents of the Documentation relating thereto and the potential consequences of such installation.
+
+5. EXTENSIONS
+
+5.1. In the Licence Agreement, "Extension" means all programming additions made by a Licensee or on his behalf or with his concurrence to the Software using the Burp Extender API (as hereinafter defined) to either:
+
+5.1.1. extend the functionality of the Software or any other software produced by the Licensor; or
+
+5.1.2. enable the Software or any other software produced by the Licensor to inter-operate with other software;
+
+but not to copy, clone, reproduce or emulate any existing feature of any software produced by the Licensor; and "Burp App" or "BApp" means an Extension adopted by the Licensor pursuant to this clause.
+
+5.2 "Burp Extender API" means the official Burp Extender application programming interface made available by PortSwigger Ltd and further described as part of the Documentation.
+
+5.3. Extensions may be created for the use of the Licensee provided that if any such Extension is published (which, for the avoidance of doubt, shall include sharing such Extension with another licensee or a third party unless the party to which the Extension is provided is either a client of the Licensee and the relevant Extension has been created for use on an engagement for that or another client of the Licensee, or another Licensee within the Licensee's organisation) the Licensee shall notify the Licensor and provide to it a copy of such Extension and the Licensee agrees that any such Extension shall, at the option of the Licensor, become either:
+
+5.3.1. a Burp App; or
+
+5.3.2. part of the Software.
+
+5.4. When the creation of an Extension is notified to the Licensor or shared publicly and comes to the attention of the Licensor the Licensor has the option, in its sole discretion, to make the Extension a Burp App (Burp App, or BApp) after having carried out such diligence as it deems appropriate, on the Extension.
+
+5.5. The Licensor has established the BApp Store product feature where Burp Apps are described and may be downloaded without charge for use as an Extension.
+
+5.6. All Extensions and Burp Apps remain the property of the author but by creating such Extension, the author has granted an irrevocable, worldwide, perpetual, non-exclusive licence free of charge to the Licensor to incorporate such Extension in the Software and to use, copy, modify and adapt it for any purpose at the Licensor's option and an irrevocable, perpetual, non-exclusive licence to use the Extension free of charge to all third party licensees who download the Burp App from the BApp Store.
+
+5.7. If, at the sole option of the Licensor, the Licensor incorporates an Extension into the Software a notice will be placed on the BApp Store to that effect.
+
+5.8. The Licensor retains the right, without incurring any liability to the Licensee, to disable without notice any Burp App being used by the Licensee where the Licensor considers in its sole discretion that it is necessary to do so for operational, security or quality reasons.
+
+6. THIRD PARTY SOFTWARE
+
+The Software may make use of third party technology that is provided with the Software.  The Licensor may provide certain notices to the Licensee in the Documentation, readmes or notice files in connection with such third party technology.  Third party technology will be licensed to the Licensee either under the terms of this License or, if specified in the Documentation, readmes or notice files, under separate terms or as otherwise notified to the Licensor by the Licensee.
+
+7. INTELLECTUAL PROPERTY RIGHTS
+
+7.1. The Licensee acknowledges that all intellectual property rights in the Software and the Documentation anywhere in the world belong to the Licensor, that rights in the Software are licensed (not sold) to the Licensee, and that the Licensee has no rights in, or to, the Software or the Documentation other than the right to use them in accordance with the terms of the Licence.
+
+7.2. The Licensee acknowledges that it has no right to have access to the Software in source code form.
+
+7.3. The integrity of this Software is protected by technical protection measures ("TPM") so that the intellectual property rights, including copyright, in the Software of the Licensor are not misappropriated.  The Licensee must not attempt in any way to remove or circumvent any such TPM, nor apply or manufacture for sale or hire, import, distribute, sell or let for hire, offer or expose for sale or hire, advertise for sale or hire or have in its possession for private or commercial purposes any means the sole intended purpose of which is to facilitate the unauthorised removal or circumvention of such TPM.
+
+7.4. The Licensor will defend Licensee against any claim, demand, suit or proceeding made or brought against Licensee by a third party alleging that any Software or services infringe or misappropriate such third party's intellectual property rights (a "Third Party IPR Claim"), and will indemnify Licensee from any direct damages, finally awarded against Licensee as a result of, or for amounts paid by Licensee under a settlement approved by Licensor in writing of, a Third Party IPR Claim, provided that, in each case the Licensee:
+
+7.4.1. promptly gives Licensor written notice of the Third Party IPR Claim;
+
+7.4.2. gives the Licensor, at its sole option, the sole control of the defence and settlement of the Third Party IPR Claim; and
+
+7.4.3. gives Licensor all reasonable assistance, at Licensor's expense.
+
+If Licensor receives information about an infringement or misappropriation claim related to the Software or services, Licensor may in its discretion and at no cost to Licensee (i) modify the Software or services so that they are no longer claimed to infringe or misappropriate, (ii) obtain a license for Licensee's continued use of the Software or services in accordance with this Agreement, or (iii) terminate Licensee's subscriptions for such Software or services upon 30 days' written notice and refund Licensee any prepaid fees covering the remainder of the term of the terminated licence.  The above defence and indemnification obligations do not apply if (1) the allegation does not state with specificity that the Software or services are the basis of the Third Party Claim; (2) a Third Party Claim arises from the use or combination of the Software or services or any part thereof with software, hardware, data, or processes not provided by Licensor, if the Software or Services or use thereof would not infringe without such combination; (3) a Third Party Claim arises from Software or services for which there is no charge or has been provided on a free trial or community licence basis; or (4) a Third Party Claim arises from the Licensee's or a third party's materials or application or Licensee's breach of this Agreement.  This clause provides the Licensor's sole liability to, and the Licensee's exclusive remedy against, the Licensor for any Third Party IPR Claim.
+
+8. LICENSOR'S WARRANTY
+
+8.1. The Licensor warrants that for a period of 90 days from the date of purchase of the Software (Warranty Period) the Software will, when properly used, perform substantially in accordance with the functions described in the Documentation (provided that the Software is properly used on the computer and with the runtime environment for which it was designed as referred to in the Documentation).  Burp Apps do not have the benefit of this warranty and the warranty in relation to Burp Collaborator is limited as set out in the Documentation as it relates to Burp Collaborator.  This clause 8.1 does not apply in respect of Software for which there is no charge or has been provided on a free trial or community licence basis.
+
+8.2. The Licensee acknowledges that the Software and the Burp Apps are provided "as is" and have not been developed to meet its individual requirements, and that it is therefore the Licensee's responsibility to ensure that the facilities and functions of the Software as described in the Documentation and the facilities and functions of any Burp App meet its requirements.
+
+8.3. The Licensee acknowledges that the Software and the Burp Apps may not be free of bugs or errors, and agree that the existence of minor errors shall not constitute a breach of the Licence.
+
+8.4. If, within the Warranty Period, the Licensee notifies the Licensor in writing of any defect or fault in the Software in consequence of which it fails to perform substantially in accordance with the Documentation, and such defect or fault does not result from the Licensee having amended the Software or used it in contravention of the terms of the Licence, the Licensor will, at its sole option, either repair or replace the Software, provided that the Licensee make available all the information that may be necessary to help the Licensor to remedy the defect or fault, including sufficient information to enable the Licensor to recreate the defect or fault.
+
+9. LICENSOR'S LIABILITY: ATTENTION IS DRAWN PARTICULARLY TO THE PROVISIONS OF THIS CONDITION
+
+9.1. Nothing in the Licence shall limit or exclude the liability of either party for death or personal injury resulting from negligence, fraud, fraudulent misrepresentation or any other liability that cannot be limited by law.
+
+9.2. Subject to section 9.1, and section 3.2 of the Burp Suite Professional Licence Agreement, the Licensor's liability for losses suffered by the Licensee arising out of or in connection with the Licence (including any liability for the acts or omissions of its employees, agents and subcontractors), whether arising in contract, tort (including negligence), misrepresentation or otherwise, shall not include liability for:
+
+9.2.1. loss of turnover, sales or income;
+
+9.2.2. loss of business profits or contracts;
+
+9.2.3. business interruption;
+
+9.2.4. loss of the use of money or anticipated savings;
+
+9.2.5. loss of information;
+
+9.2.6. loss of opportunity, goodwill or reputation;
+
+9.2.7. loss of, damage to or corruption of software or data; or
+
+9.2.8. any indirect or consequential loss or damage of any kind howsoever arising and whether caused by tort (including negligence), breach of contract or otherwise.
+
+9.3. The Licence sets out the full extent of the Licensor's obligations and liabilities in respect of the supply of the Software and Burp Apps.  In particular, there are no conditions, warranties, representations or other terms, express or implied, that are binding on the Licensor except as specifically stated in the Licence.  Any condition, warranty, representation or other term concerning the supply of the Software and Burp Apps which might otherwise be implied into, or incorporated in, the Licence, or any collateral contract, whether by statute, common law or otherwise, is hereby excluded to the fullest extent permitted by law.
+
+10. PUBLICITY AND COMMUNICATION
+
+10.1. By entering into the Licence the Licensee agrees that the Licensor may refer to the Licensee as one of its customers internally and in externally published media and, where relevant, the Licensee grants its consent to the use of the Licensee's logo(s) for this purpose, unless the Licensee notifies the Licensor in writing that the Licensor may not refer to it for such purpose.  Any additional disclosure by the Licensor with respect to the Licensee shall be subject to its prior written consent.
+
+10.2. By entering into the Licence, the Licensee consents that the Licensor may process the personal data that it collects from the Licensee in accordance with the Licensor's Privacy Policy.  The Licensee is responsible for ensuring it has in place all relevant consents, permissions or rights to share any personal data with the Licensor for the Licensor's use in accordance with the Privacy Policy and these Terms.  In particular, the Licensor may use information it holds about the Licensee or its designated contacts for the purposes of, inter alia, sending out renewal reminders, questionnaires to certain categories of users including non-renewers and feedback requests.
+
+10.3. In limited circumstances as described in the Documentation as it relates to Burp Collaborator it is possible that data may be collected by the Licensor in respect of the Licensee and the target systems against which they are using Burp.  The Licensor shall deal with all such data in accordance with the Documents relating to Burp Collaborator and the Licensor's Privacy Policy.
+
+10.4. Any questions, comments and requests regarding the Licensor's data processing practices may be addressed to office@portswigger.net.
+
+11. TERMINATION
+
+11.1. The Licensor may terminate the Licence immediately by written notice to the Licensee if the Licensee or any of its users commit a material or persistent breach of the Licence, including without limitation, any failure to make any payment due to the Licensor by its due date, which the Licensee fails to remedy (if remediable) within 14 days after the service of written notice requiring the Licensee to do so.
+
+11.2. Upon termination for any reason:
+
+11.2.1. all rights granted to the Licensee under the Licence shall cease;
+
+11.2.2. the Licensee must cease all activities authorised by the Licence;
+
+11.2.3. the Licensee must immediately delete or remove the Software and any Burp Apps from all computer equipment in its possession, and immediately destroy or return to the Licensor (at the Licensor's option) all copies of the Software and Burp Apps then in its possession, custody or control and, in the case of destruction, certify to the Licensor that it have done so; and
+
+11.2.4. the Licensee must immediately pay to the Licensor any sums due to the Licensor under the Licence.
+
+12. TRANSFER OF RIGHTS AND OBLIGATIONS
+
+12.1. The Licence is binding on the Licensee and the Licensor, and each of their respective successors and assigns.
+
+12.2. The Licensee may not transfer, assign, charge or otherwise dispose of the Licence, or any of its rights or obligations arising under it, without the Licensor's prior written consent.
+
+12.3. Where Licensee is a company, the licenses granted hereunder shall also extend to the Licensee's Group members (meaning, in relation to any company, that company, its subsidiaries, its ultimate holding company and all subsidiaries of such ultimate holding company, as such terms are defined in the Companies Act 2006), provided that such Group members have no right under the Contracts (Rights of Third Parties) Act 1999 to enforce any term of the Agreement.
+
+12.4. The Licensor may transfer, assign, charge, sub-contract or otherwise dispose of the Licence, or any of the Licensor's rights or obligations arising under it, at any time during the term of the Licence.
+
+13. NOTICES
+
+All notices given by the Licensee to the Licensor must be given to PortSwigger Ltd at office@portswigger.net or 6 Booths Park, Chelford Road, Knutsford, WA16 8ZS, United Kingdom. The Licensor may give notice to the Licensee at either the e-mail or postal address the Licensee provided to the Licensor when purchasing the Software, or if the Licensee has updated their account details on the website following the purchase of the Software, these details shall be used.  Notice will be deemed received and properly served immediately when posted on the Licensor's website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter.  In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.
+
+14. EVENTS OUTSIDE LICENSOR'S CONTROL
+
+14.1. The Licensor will not be liable or responsible for any failure to perform, or delay in performance of, any of the Licensor's obligations under the Licence that is caused by events outside its reasonable control ("Force Majeure Event").
+
+14.2. A Force Majeure Event includes any act, event, non-happening, omission or accident beyond the Licensor's reasonable control and includes in particular (without limitation) the following:
+
+14.2.1. strikes, lock-outs or other industrial action;
+
+14.2.2. civil commotion, riot, invasion, terrorist attack or threat of terrorist attack, war (whether declared or not) or threat of or preparation for war;
+
+14.2.3. fire, explosion, storm, flood, earthquake, subsidence, epidemic or other natural disaster;
+
+14.2.4. impossibility of the use of railways, shipping, aircraft, motor transport or other means of public or private transport;
+
+14.2.5. impossibility of the use of public or private telecommunications networks; and
+
+14.2.6. the acts, decrees, legislation, regulations or restrictions of any government.
+
+14.3. The Licensor's performance under the Licence is deemed to be suspended for the period that the Force Majeure Event continues, and the Licensor will have an extension of time for performance for the duration of that period.  The Licensor will use its reasonable endeavours to bring the Force Majeure Event to a close or to find a solution by which its obligations under the Licence may be performed despite the Force Majeure Event.
+
+15. WAIVER
+
+15.1. If the Licensor fails, at any time during the term of the Licence, to insist upon strict performance of any of the Licensee's obligations under the Licence, or if the Licensor fails to exercise any of the rights or remedies to which the Licensor is entitled under the Licence, this shall not constitute a waiver of such rights or remedies and shall not relieve the Licensee from compliance with such obligations.
+
+15.2. A waiver by the Licensor of any default shall not constitute a waiver of any subsequent default.
+
+15.3. No waiver by the Licensor of any of the provisions of the Licence shall be effective unless it is expressly stated to be a waiver and is communicated to the Licensee in writing.
+
+16. SEVERABILITY
+
+If any of the terms of the Licence are determined by any competent authority to be invalid, unlawful or unenforceable to any extent, such term, condition or provision will to that extent be severed from the remaining terms, conditions and provisions which will continue to be valid to the fullest extent permitted by law.
+
+17. ENTIRE AGREEMENT
+
+17.1. This Licence and any document expressly referred to in it represents the entire agreement between the parties in relation to the licensing of the Software, the Documentation and any Burp Apps and supersedes any prior agreement, understanding or arrangement between the parties, whether oral or in writing.
+
+17.2. The parties each acknowledge that, in entering into the Licence, they have not relied on any representation, undertaking or promise given by the other or implied from anything said or written in negotiations between the parties prior to entering into the Licence except as expressly stated in the Licence.
+
+17.3. Neither party shall have any remedy in respect of any untrue statement made by the other, whether orally or in writing, prior to the date on which the parties entered into this Licence (unless such untrue statement was made fraudulently) and the other party's only remedy shall be for breach of contract as provided in these terms and conditions.
+
+18. LAW AND JURISDICTION
+
+The Licence, its subject matter or its formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with English law and submitted to the exclusive jurisdiction of the English courts.	
+Nothing to see here, you’ve hidden your table...	
+Nothing to see here, you’ve hidden your table...	
+Help improve Burp by submitting feedback about its performance	
+Burp Suite Professional Terms & Conditions of Supply
+
+IMPORTANT NOTICE: PLEASE READ THE FOLLOWING TERMS BEFORE ORDERING OR DOWNLOADING ANY SOFTWARE FROM THIS WEBSITE AS APPLICABLE TO THE LICENCE AND USE OF THAT SOFTWARE.
+
+These Burp Suite Professional Terms & Conditions of Supply together with the documents referred to in it ("Terms") constitute the terms and conditions on which PortSwigger Ltd ("Licensor") will grant to any purchaser or user ("Licensee") a licence to use the software comprising Burp Suite Professional ("Burp Suite Professional" or the "Software"), following acceptance of an order as detailed below.
+
+The following expressly form part of the Terms:
+
+- The Burp Suite Professional Licence Agreement;
+
+- The General Terms and Conditions;
+
+- The Data Processing Agreement;
+
+- The Privacy Policy; and
+
+- Any other documents referred to in the above.
+
+Licensor may vary the Terms and any document expressly incorporated into the Terms from time to time by notifying Licensee by any reasonable means, including by the use of email correspondence.
+
+The Terms apply to the exclusion of any other terms that the Licensee seeks to impose or incorporate, or which are implied by trade, custom, practice or course of dealing.
+
+1. Licences to Burp Suite Professional are available for purchase via the Licensor's website at https://portswigger.net/buy.
+
+2. Placing an order for Burp Suite Professional or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by PortSwigger Ltd.  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Burp Suite Professional terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and PortSwigger Ltd's order quotation.
+
+3. Unless PortSwigger Ltd has pre-approved the Licensee's purchase on credit in writing (and subject to any additional credit terms that apply to any such approval), payment is required in advance. Shortly after the Licensee makes payment and the order has been accepted by PortSwigger Ltd, the Licensee will receive an email containing instructions enabling the Licensee to log in and download the Licensee's software and licence key.  If the Licensee does not receive this email within 30 minutes of making payment, please email the Licensor, who will investigate the issue and endeavour to respond within one working day. In relation to purchases made on agreed credit terms, PortSwigger reserves the right to charge interest under the Late Payment of Commercial Debts (Interest) Act 1998 on invoiced amounts unpaid by their due date.
+
+4. If the Licensee's license is subject to auto-renewal and the Licensee has provided a valid recurring payment method, then payment will be taken 14 days before the expiry of the then current Licence Period (as defined in the Burp Suite Professional Licence Agreement) ("Renewal Payment Date"). Auto-renewal for specific licences can be disabled on the Licensee's account page.
+
+5. If the Licensee wishes to cancel its order, please email the Licensor, within 7 days of making payment or payment being taken for auto-renewal licenses, or if the order has been placed on credit, credit having been pre-approved by PortSwigger Ltd, please email the Licensor within 7 days of placing the order, and in each case before the Licensee downloads the software or licence key.  If the Licensee already downloaded the software or licence key, it will not be possible to refund the order.
+
+6. If the Licensee's payment is subject to any tax liability within any jurisdiction (for example, withholding tax) then it bears sole responsibility for meeting this liability, and no deductions must be made in the amount paid to PortSwigger Ltd.  PortSwigger Ltd does not accept liability for any tax liabilities that may arise from the Licensee's purchase of the Software or any associated services hereunder.
+
+7. When the contract for the purchase of Burp Suite Professional has been concluded, such contract is made for the benefit of the Licensee and PortSwigger Ltd only and is not intended to benefit, or be enforceable by, anyone else.
+
+8. These Terms (including all the documents referred to in them) are governed by and construed in accordance with English Law and submitted to the exclusive jurisdiction of the English courts.
+
+Burp Suite Professional Licence Agreement
+
+This licence agreement which incorporates the General Terms and Conditions below ("Licence") forms part of the Terms for the Software, which includes computer software, and the online documentation current at the date of the download of this Licence and accessible on https://support.portswigger.net/ ("Documentation").
+
+THE DOCUMENTATION CONTAINS THE SYSTEM REQUIREMENTS TO RUN BURP SUITE PROFESSIONAL.  INTERNET ACCESS IS REQUIRED DURING INSTALLATION TO ACTIVATE THE SOFTWARE.
+
+IF THE LICENSEE DOES NOT AGREE TO THE TERMS OF THE LICENCE AND THE BURP SUITE PROFESSIONAL TERMS AND CONDITIONS OF SUPPLY, THE LICENSOR IS UNWILLING TO LICENSE THE SOFTWARE TO THE LICENSEE AND (1) THE LICENSEE MUST DISCONTINUE ANY ON-GOING ORDERING PROCESS NOW AND MUST NOT INSTALL THE SOFTWARE; AND/OR (2) WHERE THE SOFTWARE HAS ALREADY BEEN INSTALLED, THE LICENSEE MUST CEASE USING IT IMMEDIATELY.
+
+WARNING: BURP SUITE PROFESSIONAL IS DESIGNED TO TEST FOR SECURITY FLAWS AND CAN DO DAMAGE TO TARGET SYSTEMS DUE TO THE NATURE OF ITS FUNCTIONALITY.  TESTING FOR SECURITY FLAWS INHERENTLY INVOLVES INTERACTING WITH TARGETS IN NON-STANDARD WAYS WHICH CAN CAUSE PROBLEMS IN SOME VULNERABLE TARGETS.  THE LICENSEE MUST TAKE DUE CARE WHEN USING THE SOFTWARE, MUST READ ALL DOCUMENTATION BEFORE USE AND BACK UP TARGET SYSTEMS BEFORE USE.  WHERE THE LICENSEE USES THE SOFTWARE ON PRODUCTION SYSTEMS OR OTHER SYSTEMS, IT EXPRESSLY HEREBY ACCEPTS THE RISK OF DAMAGE AND RISK OF LOSS OF DATA OR LOSS OF USE IN RESPECT OF SUCH DATA AND SYSTEMS AND ACCEPTS THAT IT SHOULD NOT USE THE SOFTWARE ON ANY SYSTEMS FOR WHICH IT DOES NOT ACCEPT THE RISK OF DAMAGE, RISK OF LOSS OF DATA OR LOSS OF USE.
+
+1. GRANT AND SCOPE OF LICENCE
+
+1.1. In consideration of the payment by the Licensee of any agreed licence fee and the Licensee agreeing to abide by the terms of the Licence, the Licensor hereby grants to the Licensee a non-exclusive, non-transferable licence for the period (the "Licence Period") specified in the Licensee's order confirmation for the number of individual users specified therein to use the Software and the Documentation on the terms of the Licence.
+
+1.2. If the Licence is subject to auto-renewal, a new Licence Period will commence on the expiry of the previous Licence Period, subject to successful payment being taken on the Renewal Payment Date. Each subsequent Licence Period commenced using the auto-renew process will be for the same duration as the previous Licence Period , unless the Licensor has agreed otherwise with the Licensee in writing.
+
+1.3. Each installation of Burp Suite Professional on an individual computer needs to be activated before it will operate, including subsequent Licences commenced using auto-renewal. It is recognised that in the course of ordinary usage of the Software, individual users may need to install the product on more than one computer. The number of activations performed for each licence is monitored. The Licensor reserves the right to limit the number of activations allowed per licence, and to prevent further activations if this limit is exceeded.
+
+1.4. The Licensee may:
+
+1.4.1. download, install and use the Software, including any Burp Apps (as defined in General Terms and Conditions, section 5) for its internal business purposes (which may, include the provision of a bespoke consultancy service to clients where the Licensee is acting in a business advisory capacity) only;
+
+1.4.2. make one copy of the Software for back-up purposes only, provided that this is necessary for the activities permitted under section 1.4.1;
+
+1.4.3. receive and use any free supplementary software code or update of the Software incorporating "patches" and corrections of errors as may be provided by the Licensor from time to time on the basis that they are governed by the terms of the Licence;
+
+1.4.4. use any Documentation in support of the use permitted under section 1.4.1 and make such numbers of copies of the Documentation as are reasonably necessary for its lawful use; and
+
+1.4.5. analyse the behaviour and performance of the documented functionality of the Software and any Burp Apps (defined as aforesaid) and disclose the findings of such analysis to any party provided that such findings are provided simultaneously and in identical form to the Licensor; and
+
+1.4.6. resell the Software, provided that:
+
+1.4.6.1. the Licensee procures that the purchaser is bound by the terms of this Licence for the benefit of the Licensor, with an ability for the Licensor to enforce such terms against the purchaser directly and that the Licensee indemnify the Licensor against all costs (including legal costs) charges and expenses incurred by the Licensor as a result of the failure by the Licensee to comply with the provisions of this paragraph and/or the resale by the Licensee of the Software to the purchaser; and
+
+1.4.6.2. the Licensee has purchased the Software directly from the Licensor.
+
+1.5. If the Licensee is a purchaser who has lawfully obtained the Software other than by direct purchase from the Licensor, the Licensee may carry out the activities specified in sections 1.4.1 to 1.4.5 above and, in consideration of the Licensor agreeing to provide updates of the Software to the Licensee during the Licence Period, either directly or via the relevant intermediary or intermediaries, the Licensee agree to be bound by the Licence directly in favour of the Licensor.
+
+1.6. In providing the Software the Licensor may process personal data pursuant to the Data Processing Agreement and the Licensee is responsible for ensuring it has (i) appropriate measures in place to minimise the personal data disclosed to Licensor; and (ii) complied with applicable data protection laws (including its obligations to ensure there is an appropriate lawful basis for disclosing the personal data to Licensor, and its transparency obligations). Processing for the purposes of performing internal analytics, or to perform its customer support and troubleshooting functions, shall be pursuant to Licensor's Privacy Notice (accessible here: https://portswigger.net/privacy).
+
+2. LICENSEE'S WARRANTY AND UNDERTAKINGS
+
+In addition to the warranties and undertakings given in the General Terms and Conditions, the Licensee undertakes to keep confidential any credentials provided by the Licensor enabling the Licensee to log in to the Licensor's server (for the purposes of downloading product builds and licence keys and to perform product activation, to create Extensions (as defined in General Terms and Conditions, section 5)), or to access the Burp Collaborator server.
+
+3. LIABILITY: ATTENTION IS DRAWN PARTICULARLY TO THE PROVISIONS OF THIS CONDITION
+
+3.1. Subject to the General Terms and Conditions, section 9.1 and section 3.2 below, the Licensor's maximum aggregate liability under or in connection with this Licence, or any collateral contract, whether in contract, tort (including negligence) or otherwise, shall be limited to a sum equal to 125% (one hundred and twenty five per cent) of the average annual Licence Fee due under the Licence.
+
+3.2. The Licensor's liability under the indemnity given in respect of Third Party IPR Claims under section 7.4 of the General Terms and Conditions shall be unlimited (subject to the Licensee's compliance with the requirements of the remainder of section 7.4 and section 7.5 of the General Terms and Conditions).
+
+3.3. Subject to the General Terms and Conditions, section 9.1, the Licensee's maximum aggregate liability to the Licensor under or in connection with this Licence, or any collateral contract, whether in contract, tort (including negligence) or otherwise, shall in each year be limited to a sum equal to 125% (one hundred and twenty five per cent) of the average annual Licence Fee due under the Licence, provided that this shall not apply (i) in respect of the Licensee's obligation to pay the fees; and (ii) in respect of a breach by the Licensee of section 7 (Intellectual Property Rights); and (iii) in respect of a breach by the Licensee of section 2 (Licensee's Warranty and Undertakings), in respect of each of which the Licensee's liability shall be unlimited.
+
+GENERAL TERMS AND CONDITIONS
+
+These terms and conditions are applicable to and form part of the Terms entered into between the Licensee and the Licensor for the Software and apply, unless specified or the context otherwise requires, whether the Software has been acquired either directly or indirectly by way of free download, pre-purchase or purchase on credit, free trial or by way of free licence for training purposes.  Unless the context otherwise requires words and expressions used in the remainder of the Terms shall have the same meanings when used in these terms and conditions.
+
+1. LICENSEE'S WARRANTY AND UNDERTAKINGS
+
+1.1. The Licensee warrants that it is not purchasing licences to the Software as a consumer, but will be using the Software in its business and that any users placing orders for the Software and/or accepting these Terms are duly authorised by the Licensee to acquire licences to the Software.
+
+1.2. Except as expressly set out in the Licence or as permitted by any local law, the Licensee undertakes:
+
+1.2.1. not to use (or allow to be used) the Software, the Documentation for any unlawful purposes, particularly as the Software contains functionality that can be used to attack and compromise computer systems, and the Licensee shall be responsible for all losses, costs, liabilities or other damages incurred by the Licensor in connection with any claim by a third party in connection with a breach by the Licensee of this obligation;
+
+1.2.2. to keep confidential any credentials provided by the Licensor enabling the Licensee to log in to the Licensor's server (for the purposes of downloading product builds and licence keys and to perform product activation, to create Extensions (as defined in section 5), or to access the Burp Collaborator server;
+
+1.2.3. to obtain all necessary authorisations from system owners prior to using the Software or any Burp Apps thereon;
+
+1.2.4. unless agreed by the Licensor not to copy the Software or Documentation except where such copying is incidental to normal use of the Software, or where it is necessary for the purpose of back-up or operational security;
+
+1.2.5. subject to the provisions of section 5, not to rent, lease, sub-license, loan, translate, merge, adapt, vary or modify the Software or Documentation;
+
+1.2.6. subject to the provisions of section 5, not to make alterations to, or modifications of, the whole or any part of the Software, nor permit the Software or any part of it to be combined with, or become incorporated in, any other programs;
+
+1.2.7. not to disassemble, decompile, reverse engineer or create derivative works based on, the whole or any part of the Software nor attempt to do any such thing except to the extent that (by virtue of section 296A of the Copyright, Designs and Patents Act 1988) such actions cannot be prohibited because they are essential for the purpose of achieving inter-operability of the Software with another software program, and provided that the information obtained by the Licensee during such activities:
+
+1.2.7.1. is used only for the purpose of achieving inter-operability of the Software with another software program; and
+
+1.2.7.2. is not unnecessarily disclosed or communicated without the Licensor's prior written consent to any third party; and
+
+1.2.7.3. is not used to create any software which is substantially similar to the Software;
+
+1.2.8. to supervise and control use of the Software and ensure that the Software is used by the Licensee's employees and representatives in accordance with the terms of the Licence;
+
+1.2.9. to replace the current version of the Software with any updated or upgraded version or new release provided by the Licensor to the Licensee via its account or the Software, immediately on receipt (and failure to do so may result in the Licensee's ineligibility for support pursuant to this Agreement);
+
+1.2.10. to keep all copies of the Software secure and to maintain accurate and up-to-date records of the number of locations of all copies of the Software;
+
+1.2.11. to include the copyright notice of the Licensor on all entire and partial copies the Licensee makes of the Software on any medium;
+
+1.2.12. not to provide or otherwise make available the Software in whole or in part (including but not limited to program listings, object and source program listings, object code and source code), in any form to any person other than the Licensee's employees without prior written consent from the Licensor;
+
+1.2.13. unless specifically authorised by the Licensor in writing, not to use the Software as part of an automated service offering to third parties;
+
+1.2.14. unless specifically authorised by the Licensor in writing, not to use the Software as part of CI/CD pipelines;
+
+1.2.15. not to engage in any activity, practice or conduct which would constitute an offence under sections 1, 2 or 6 of the Bribery Act 2010, if such activity, practice or conduct had been carried out in the UK; and
+
+1.2.16. to be responsible for all liability claims, actions, or causes of action, together with the legal costs of the Licensor in bringing the same, arising by reason of or in any way relating to the Licensee's actions or activities of its employees, agents, or contractors under the Licence.
+
+2. SUPPORT AND UPGRADES
+
+2.1. The downloading of a licence for the Software entitles the Licensee to free product support provided via the Licensor's support centre portal on its website at the Licensor's sole discretion.  Such support will be subject to any support conditions, guidance or FAQs on https://support.portswigger.net/ from time to time.
+
+2.2. If licences to new releases of the Software are offered for sale to the Licensor's customers generally, these may be made available free of charge to the Licensee for the duration of the Licence provided that the Licensee enters into a new licence agreement in respect of such new release on such terms as may be notified to the Licensee by the Licensor at that time.  If no such new licence terms are notified, these terms shall continue to apply.
+
+3. BURP COLLABORATOR
+
+3.1. The Licensor has developed Burp Collaborator which is a component of the Software's automated and manual testing tools available in respect of the Burp Suite DAST and Burp Suite Professional Software and the terms of this section 3 shall only apply in respect of that Software.  Burp Collaborator involves the Licensee deploying a system on the public web (the "Collaborator Server") which acts as the recipient of third-system interactions that may be triggered by payloads that the Software sends to target systems enabling the detection of certain types of vulnerability.  A full description of the functionality of Burp Collaborator forms part of the Documentation if it applies to the version of the Software the Licensee has downloaded.
+
+3.2. The functionality of Burp Collaborator gives rise to issues that require careful consideration by the Licensee as fully set out in the Documentation.  By utilising any features of the Software that may cause interaction with Burp Collaborator, the Licensee will be deemed to have read the relevant Documentation, fully understood the functionality and the alternative methods of utilisation of Burp Collaborator and considered the consequences of utilisation for its organisation and as a result of such consideration has decided that Burp Collaborator, in the form utilised by it, is suitable and appropriate for use by it.  The Licensor considers Burp Collaborator to be efficacious in identifying vulnerabilities of the target website in connection with third-system interactions, but the Licensee must make its own evaluation before using the Collaborator Server in any of the alternative manners set out in the Documentation.
+
+3.3. If the Licensee is permitted by the Licensor to use the Burp Collaborator server as part of a bespoke consultancy permitted under the terms of the Licence, by doing so the Licensee warrants to the Licensor that it has recommended the client to use the Burp Collaborator server in accordance with the terms of the Documentation and the client has instructed the Licensee to use the same having discussed with the Licensee the contents of the Documentation relating thereto.
+
+3.4. The Licensee acknowledges and accepts that by utilising the Burp Collaborator server either on its own behalf or on behalf of a client pursuant to a bespoke consultancy, the Licensor could be a Sub-Processor of its client's personal data under the provisions of the General Data Protection Regulation (Regulation (EU) 2016/679).  If the Licensor does act as a Sub-Processor, it shall handle the Licensee or the Licensee's client's data in accordance with its Privacy Notice and as set out in the Documentation relating to Burp Collaborator.
+
+4. BURP INFILTRATOR
+
+4.1. The Licensor has developed Burp Infiltrator which is a component of the Software for instrumenting deployed applications in order to facilitate testing using the Software in respect of the Burp Suite DAST Burp Suite Professional Software and the terms of this section 4 shall only apply in respect of that Software.  Burp Infiltrator involves the Licensee deploying or procuring deployment of the Infiltrator component within the target system which enhances the ability of the Software to detect certain types of vulnerability.  A full description of the functionality of Burp Infiltrator forms part of the Documentation if it applies to the version of the Software the Licensee has downloaded.
+
+4.2. The functionality of Burp Infiltrator gives rise to issues that require careful consideration by the user as fully set out in the Documentation.  By deploying or procuring deployment of the Infiltrator tool, the Licensee will be deemed to have read the relevant Documentation, fully understood the functionality of Burp Infiltrator and considered the consequences of utilisation for its organisation and any bespoke consultancy clients of the Licensee and, as a result of such consideration, has decided that Burp Infiltrator is suitable and appropriate for use by it and by any client of the Licensee.  The Licensor considers Burp Infiltrator to be efficacious in helping to identify vulnerabilities of the target website, but the Licensee must make its own evaluation before utilising Burp Infiltrator in the manner set out in the Documentation.
+
+4.3. If the Licensee causes its client to install Burp Infiltrator as part of a bespoke consultancy permitted under the terms of the Licence, by so doing it warrants to the Licensor that it has recommended to the client to install Burp Infiltrator on its system and has discussed with the client the contents of the Documentation relating thereto and the potential consequences of such installation.
+
+5. EXTENSIONS
+
+5.1. In the Licence Agreement, "Extension" means all programming additions made by a Licensee or on his behalf or with his concurrence to the Software using the Burp Extender API (as hereinafter defined) to either:
+
+5.1.1. extend the functionality of the Software or any other software produced by the Licensor; or
+
+5.1.2. enable the Software or any other software produced by the Licensor to inter-operate with other software;
+
+but not to copy, clone, reproduce or emulate any existing feature of any software produced by the Licensor; and "Burp App" or "BApp" means an Extension adopted by the Licensor pursuant to this clause.
+
+5.2 "Burp Extender API" means the official Burp Extender application programming interface made available by PortSwigger Ltd and further described as part of the Documentation.
+
+5.3. Extensions may be created for the use of the Licensee provided that if any such Extension is published (which, for the avoidance of doubt, shall include sharing such Extension with another licensee or a third party unless the party to which the Extension is provided is either a client of the Licensee and the relevant Extension has been created for use on an engagement for that or another client of the Licensee, or another Licensee within the Licensee's organisation) the Licensee shall notify the Licensor and provide to it a copy of such Extension and the Licensee agrees that any such Extension shall, at the option of the Licensor, become either:
+
+5.3.1. a Burp App; or
+
+5.3.2. part of the Software.
+
+5.4. When the creation of an Extension is notified to the Licensor or shared publicly and comes to the attention of the Licensor the Licensor has the option, in its sole discretion, to make the Extension a Burp App (Burp App, or BApp) after having carried out such diligence as it deems appropriate, on the Extension.
+
+5.5. The Licensor has established the BApp Store product feature where Burp Apps are described and may be downloaded without charge for use as an Extension.
+
+5.6. All Extensions and Burp Apps remain the property of the author but by creating such Extension, the author has granted an irrevocable, worldwide, perpetual, non-exclusive licence free of charge to the Licensor to incorporate such Extension in the Software and to use, copy, modify and adapt it for any purpose at the Licensor's option and an irrevocable, perpetual, non-exclusive licence to use the Extension free of charge to all third party licensees who download the Burp App from the BApp Store.
+
+5.7. If, at the sole option of the Licensor, the Licensor incorporates an Extension into the Software a notice will be placed on the BApp Store to that effect.
+
+5.8. The Licensor retains the right, without incurring any liability to the Licensee, to disable without notice any Burp App being used by the Licensee where the Licensor considers in its sole discretion that it is necessary to do so for operational, security or quality reasons.
+
+6. THIRD PARTY SOFTWARE
+
+The Software may make use of third party technology that is provided with the Software.  The Licensor may provide certain notices to the Licensee in the Documentation, readmes or notice files in connection with such third party technology.  Third party technology will be licensed to the Licensee either under the terms of this License or, if specified in the Documentation, readmes or notice files, under separate terms or as otherwise notified to the Licensor by the Licensee.
+
+7. INTELLECTUAL PROPERTY RIGHTS
+
+7.1. The Licensee acknowledges that all intellectual property rights in the Software and the Documentation anywhere in the world belong to the Licensor, that rights in the Software are licensed (not sold) to the Licensee, and that the Licensee has no rights in, or to, the Software or the Documentation other than the right to use them in accordance with the terms of the Licence.
+
+7.2. The Licensee acknowledges that it has no right to have access to the Software in source code form.
+
+7.3. The integrity of this Software is protected by technical protection measures ("TPM") so that the intellectual property rights, including copyright, in the Software of the Licensor are not misappropriated.  The Licensee must not attempt in any way to remove or circumvent any such TPM, nor apply or manufacture for sale or hire, import, distribute, sell or let for hire, offer or expose for sale or hire, advertise for sale or hire or have in its possession for private or commercial purposes any means the sole intended purpose of which is to facilitate the unauthorised removal or circumvention of such TPM.
+
+7.4. The Licensor will defend Licensee against any claim, demand, suit or proceeding made or brought against Licensee by a third party alleging that any Software or services infringe or misappropriate such third party's intellectual property rights (a "Third Party IPR Claim"), and will indemnify Licensee from any direct damages, finally awarded against Licensee as a result of, or for amounts paid by Licensee under a settlement approved by Licensor in writing of, a Third Party IPR Claim, provided that, in each case the Licensee:
+
+7.4.1. promptly gives Licensor written notice of the Third Party IPR Claim;
+
+7.4.2. gives the Licensor, at its sole option, the sole control of the defence and settlement of the Third Party IPR Claim; and
+
+7.4.3. gives Licensor all reasonable assistance, at Licensor's expense.
+
+If Licensor receives information about an infringement or misappropriation claim related to the Software or services, Licensor may in its discretion and at no cost to Licensee (i) modify the Software or services so that they are no longer claimed to infringe or misappropriate, (ii) obtain a license for Licensee's continued use of the Software or services in accordance with this Agreement, or (iii) terminate Licensee's subscriptions for such Software or services upon 30 days' written notice and refund Licensee any prepaid fees covering the remainder of the term of the terminated licence.  The above defence and indemnification obligations do not apply if (1) the allegation does not state with specificity that the Software or services are the basis of the Third Party Claim; (2) a Third Party Claim arises from the use or combination of the Software or services or any part thereof with software, hardware, data, or processes not provided by Licensor, if the Software or Services or use thereof would not infringe without such combination; (3) a Third Party Claim arises from Software or services for which there is no charge or has been provided on a free trial or community licence basis; or (4) a Third Party Claim arises from the Licensee's or a third party's materials or application or Licensee's breach of this Agreement.  This clause provides the Licensor's sole liability to, and the Licensee's exclusive remedy against, the Licensor for any Third Party IPR Claim.
+
+8. LICENSOR'S WARRANTY
+
+8.1. The Licensor warrants that for a period of 90 days from the date of purchase of the Software (Warranty Period) the Software will, when properly used, perform substantially in accordance with the functions described in the Documentation (provided that the Software is properly used on the computer and with the runtime environment for which it was designed as referred to in the Documentation).  Burp Apps do not have the benefit of this warranty and the warranty in relation to Burp Collaborator is limited as set out in the Documentation as it relates to Burp Collaborator.  This clause 8.1 does not apply in respect of Software for which there is no charge or has been provided on a free trial or community licence basis.
+
+8.2. The Licensee acknowledges that the Software and the Burp Apps are provided "as is" and have not been developed to meet its individual requirements, and that it is therefore the Licensee's responsibility to ensure that the facilities and functions of the Software as described in the Documentation and the facilities and functions of any Burp App meet its requirements.
+
+8.3. The Licensee acknowledges that the Software and the Burp Apps may not be free of bugs or errors, and agree that the existence of minor errors shall not constitute a breach of the Licence.
+
+8.4. If, within the Warranty Period, the Licensee notifies the Licensor in writing of any defect or fault in the Software in consequence of which it fails to perform substantially in accordance with the Documentation, and such defect or fault does not result from the Licensee having amended the Software or used it in contravention of the terms of the Licence, the Licensor will, at its sole option, either repair or replace the Software, provided that the Licensee make available all the information that may be necessary to help the Licensor to remedy the defect or fault, including sufficient information to enable the Licensor to recreate the defect or fault.
+
+9. LICENSOR'S LIABILITY: ATTENTION IS DRAWN PARTICULARLY TO THE PROVISIONS OF THIS CONDITION
+
+9.1. Nothing in the Licence shall limit or exclude the liability of either party for death or personal injury resulting from negligence, fraud, fraudulent misrepresentation or any other liability that cannot be limited by law.
+
+9.2. Subject to section 9.1, and section 3.2 of the Burp Suite Professional Licence Agreement, the Licensor's liability for losses suffered by the Licensee arising out of or in connection with the Licence (including any liability for the acts or omissions of its employees, agents and subcontractors), whether arising in contract, tort (including negligence), misrepresentation or otherwise, shall not include liability for:
+
+9.2.1. loss of turnover, sales or income;
+
+9.2.2. loss of business profits or contracts;
+
+9.2.3. business interruption;
+
+9.2.4. loss of the use of money or anticipated savings;
+
+9.2.5. loss of information;
+
+9.2.6. loss of opportunity, goodwill or reputation;
+
+9.2.7. loss of, damage to or corruption of software or data; or
+
+9.2.8. any indirect or consequential loss or damage of any kind howsoever arising and whether caused by tort (including negligence), breach of contract or otherwise.
+
+9.3. The Licence sets out the full extent of the Licensor's obligations and liabilities in respect of the supply of the Software and Burp Apps.  In particular, there are no conditions, warranties, representations or other terms, express or implied, that are binding on the Licensor except as specifically stated in the Licence.  Any condition, warranty, representation or other term concerning the supply of the Software and Burp Apps which might otherwise be implied into, or incorporated in, the Licence, or any collateral contract, whether by statute, common law or otherwise, is hereby excluded to the fullest extent permitted by law.
+
+10. PUBLICITY AND COMMUNICATION
+
+10.1. By entering into the Licence the Licensee agrees that the Licensor may refer to the Licensee as one of its customers internally and in externally published media and, where relevant, the Licensee grants its consent to the use of the Licensee's logo(s) for this purpose, unless the Licensee notifies the Licensor in writing that the Licensor may not refer to it for such purpose.  Any additional disclosure by the Licensor with respect to the Licensee shall be subject to its prior written consent.
+
+10.2. By entering into the Licence, the Licensee consents that the Licensor may process the personal data that it collects from the Licensee in accordance with the Licensor's Privacy Policy.  The Licensee is responsible for ensuring it has in place all relevant consents, permissions or rights to share any personal data with the Licensor for the Licensor's use in accordance with the Privacy Policy and these Terms.  In particular, the Licensor may use information it holds about the Licensee or its designated contacts for the purposes of, inter alia, sending out renewal reminders, questionnaires to certain categories of users including non-renewers and feedback requests.
+
+10.3. In limited circumstances as described in the Documentation as it relates to Burp Collaborator it is possible that data may be collected by the Licensor in respect of the Licensee and the target systems against which they are using Burp.  The Licensor shall deal with all such data in accordance with the Documents relating to Burp Collaborator and the Licensor's Privacy Policy.
+
+10.4. Any questions, comments and requests regarding the Licensor's data processing practices may be addressed to office@portswigger.net.
+
+11. TERMINATION
+
+11.1. The Licensor may terminate the Licence immediately by written notice to the Licensee if the Licensee or any of its users commit a material or persistent breach of the Licence, including without limitation, any failure to make any payment due to the Licensor by its due date, which the Licensee fails to remedy (if remediable) within 14 days after the service of written notice requiring the Licensee to do so.
+
+11.2. Upon termination for any reason:
+
+11.2.1. all rights granted to the Licensee under the Licence shall cease;
+
+11.2.2. the Licensee must cease all activities authorised by the Licence;
+
+11.2.3. the Licensee must immediately delete or remove the Software and any Burp Apps from all computer equipment in its possession, and immediately destroy or return to the Licensor (at the Licensor's option) all copies of the Software and Burp Apps then in its possession, custody or control and, in the case of destruction, certify to the Licensor that it have done so; and
+
+11.2.4. the Licensee must immediately pay to the Licensor any sums due to the Licensor under the Licence.
+
+12. TRANSFER OF RIGHTS AND OBLIGATIONS
+
+12.1. The Licence is binding on the Licensee and the Licensor, and each of their respective successors and assigns.
+
+12.2. The Licensee may not transfer, assign, charge or otherwise dispose of the Licence, or any of its rights or obligations arising under it, without the Licensor's prior written consent.
+
+12.3. Where Licensee is a company, the licenses granted hereunder shall also extend to the Licensee's Group members (meaning, in relation to any company, that company, its subsidiaries, its ultimate holding company and all subsidiaries of such ultimate holding company, as such terms are defined in the Companies Act 2006), provided that such Group members have no right under the Contracts (Rights of Third Parties) Act 1999 to enforce any term of the Agreement.
+
+12.4. The Licensor may transfer, assign, charge, sub-contract or otherwise dispose of the Licence, or any of the Licensor's rights or obligations arising under it, at any time during the term of the Licence.
+
+13. NOTICES
+
+All notices given by the Licensee to the Licensor must be given to PortSwigger Ltd at office@portswigger.net or 6 Booths Park, Chelford Road, Knutsford, WA16 8ZS, United Kingdom. The Licensor may give notice to the Licensee at either the e-mail or postal address the Licensee provided to the Licensor when purchasing the Software, or if the Licensee has updated their account details on the website following the purchase of the Software, these details shall be used.  Notice will be deemed received and properly served immediately when posted on the Licensor's website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter.  In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.
+
+14. EVENTS OUTSIDE LICENSOR'S CONTROL
+
+14.1. The Licensor will not be liable or responsible for any failure to perform, or delay in performance of, any of the Licensor's obligations under the Licence that is caused by events outside its reasonable control ("Force Majeure Event").
+
+14.2. A Force Majeure Event includes any act, event, non-happening, omission or accident beyond the Licensor's reasonable control and includes in particular (without limitation) the following:
+
+14.2.1. strikes, lock-outs or other industrial action;
+
+14.2.2. civil commotion, riot, invasion, terrorist attack or threat of terrorist attack, war (whether declared or not) or threat of or preparation for war;
+
+14.2.3. fire, explosion, storm, flood, earthquake, subsidence, epidemic or other natural disaster;
+
+14.2.4. impossibility of the use of railways, shipping, aircraft, motor transport or other means of public or private transport;
+
+14.2.5. impossibility of the use of public or private telecommunications networks; and
+
+14.2.6. the acts, decrees, legislation, regulations or restrictions of any government.
+
+14.3. The Licensor's performance under the Licence is deemed to be suspended for the period that the Force Majeure Event continues, and the Licensor will have an extension of time for performance for the duration of that period.  The Licensor will use its reasonable endeavours to bring the Force Majeure Event to a close or to find a solution by which its obligations under the Licence may be performed despite the Force Majeure Event.
+
+15. WAIVER
+
+15.1. If the Licensor fails, at any time during the term of the Licence, to insist upon strict performance of any of the Licensee's obligations under the Licence, or if the Licensor fails to exercise any of the rights or remedies to which the Licensor is entitled under the Licence, this shall not constitute a waiver of such rights or remedies and shall not relieve the Licensee from compliance with such obligations.
+
+15.2. A waiver by the Licensor of any default shall not constitute a waiver of any subsequent default.
+
+15.3. No waiver by the Licensor of any of the provisions of the Licence shall be effective unless it is expressly stated to be a waiver and is communicated to the Licensee in writing.
+
+16. SEVERABILITY
+
+If any of the terms of the Licence are determined by any competent authority to be invalid, unlawful or unenforceable to any extent, such term, condition or provision will to that extent be severed from the remaining terms, conditions and provisions which will continue to be valid to the fullest extent permitted by law.
+
+17. ENTIRE AGREEMENT
+
+17.1. This Licence and any document expressly referred to in it represents the entire agreement between the parties in relation to the licensing of the Software, the Documentation and any Burp Apps and supersedes any prior agreement, understanding or arrangement between the parties, whether oral or in writing.
+
+17.2. The parties each acknowledge that, in entering into the Licence, they have not relied on any representation, undertaking or promise given by the other or implied from anything said or written in negotiations between the parties prior to entering into the Licence except as expressly stated in the Licence.
+
+17.3. Neither party shall have any remedy in respect of any untrue statement made by the other, whether orally or in writing, prior to the date on which the parties entered into this Licence (unless such untrue statement was made fraudulently) and the other party's only remedy shall be for breach of contract as provided in these terms and conditions.
+
+18. LAW AND JURISDICTION
+
+The Licence, its subject matter or its formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with English law and submitted to the exclusive jurisdiction of the English courts.	

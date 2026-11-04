@@ -1,0 +1,12 @@
+﻿30e7bc294e4c  ->  (no name)
+41428be8e590  ->  坔S
+4142d4dedac3  ->  (no name)
+54466e3b361b  ->  求敵潴瑯⁨敋批慯摲�
+5b86557a2c1d  ->  獴⵮1
+6c0dc4d83828  ->  (no name)
+c4278cdeb727  ->  (no name)
+cc242e40c9f3  ->  (no name)
+e25d1764ae29  ->  剔鳃䕋薅껥₢午㄰5
+f0b040a0de89  ->  (no name)
+=== RsBthFilter / driver in use ===
+Realtek Bluetooth Adapter | Provider=Realtek Semiconductor Corp. | DriverName= | Ver=18.4032.0.3007 | Inf=oem239.inf

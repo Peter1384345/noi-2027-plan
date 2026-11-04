@@ -1,0 +1,4 @@
+﻿step1
+step2: connection object created
+step3: opened
+step4: closed

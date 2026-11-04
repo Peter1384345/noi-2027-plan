@@ -1,0 +1,6 @@
+﻿Restart failed for bthserv: 由于以下错误无法停止服务“蓝牙支持服务 (bthserv)”: 无法打开计算机“.”上的 bthserv 服务。
+Restart failed for BthAvctpSvc: 由于以下错误无法停止服务“AVCTP 服务 (BthAvctpSvc)”: 无法打开计算机“.”上的 BthAvctpSvc 服务。
+Restart failed for frameserver: 由于以下错误无法停止服务“Windows Camera Frame Server (frameserver)”: 无法打开计算机“.”上的 frameserver 服务。
+BthAvctpSvc : Running
+bthserv : Running
+frameserver : Stopped

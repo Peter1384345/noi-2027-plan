@@ -1,0 +1,10 @@
+﻿=== Machine ===
+Model=83FU Manufacturer=LENOVO
+OS=Microsoft Windows 11 专业版 Build=26200 LastBoot=2026/9/14 21:40:20
+=== Reboot required? ===
+Pending reboot: False
+UpdateExeVolatile: False
+=== BT operational logs ===
+-- Microsoft-Windows-Bluetooth-BthUSB/Operational : unavailable (在 localhost 计算机上没有与“Microsoft-Windows-Bluetooth-BthUSB/Operational”匹配的事件日志。)
+-- Microsoft-Windows-Bluetooth-BthClassName/Operational : unavailable (在 localhost 计算机上没有与“Microsoft-Windows-Bluetooth-BthClassName/Operational”匹配的事件日志。)
+-- Microsoft-Windows-RadioMgr/Operational : unavailable (在 localhost 计算机上没有与“Microsoft-Windows-RadioMgr/Operational”匹配的事件日志。)

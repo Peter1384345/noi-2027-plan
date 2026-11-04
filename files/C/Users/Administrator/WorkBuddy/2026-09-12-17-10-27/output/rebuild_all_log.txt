@@ -1,0 +1,8 @@
+copy ok size=11450422
+notes15 ok=15 (last=xml)
+insert rc=0
+fixnotes rc=0
+final_slides=21
+video_pages=6
+slides_with_notes=18
+final_size=14549561

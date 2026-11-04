@@ -1,0 +1,5 @@
+﻿[HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] SecurityHealth => C:\WINDOWS\system32\SecurityHealthSystray.exe
+[HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] RtkAudUService => "C:\WINDOWS\System32\DriverStore\FileRepository\realtekservice.inf_amd64_d35f8fd16b4e1830\RtkAudUService64.exe" -background
+[HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] GoogleChromeAutoLaunch_D76624D3C7B8C4F3481A93E3B035D45E => "D:\Tabbit\Tabbit Browser\Application\Tabbit Browser.exe" --no-startup-window /prefetch:5
+[HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] cn.coze.desktop => E:\coze\Coze.exe --open-at-login
+[HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] MicrosoftEdgeAutoLaunch_98769996E24836F99EC8617644423B4C => "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start

@@ -1,0 +1,108 @@
+﻿TOTAL: 107
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\7-Zip\7-Zip File Manager.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\7-Zip\7-Zip Help.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Accessories\Steps Recorder.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Accessories\System Tools\Character Map.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Component Services.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Computer Management.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\dfrgui.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\dhcp.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Disk Cleanup.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\DNS.LNK
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Event Viewer.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Hyper-V Manager.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\iSCSI Initiator.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Memory Diagnostics Tool.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\ODBC Data Sources (32-bit).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\ODBC Data Sources (64-bit).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Performance Monitor.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Print Management.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\RecoveryDrive.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Registry Editor.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Resource Monitor.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Security Configuration Management.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\services.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\System Configuration.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\System Information.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Task Scheduler.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\VMCreate.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Administrative Tools\Windows Defender Firewall with Advanced Security.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Anaconda (Anaconda)\Anaconda Navigator.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Anaconda (Anaconda)\Anaconda PowerShell Prompt.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Anaconda (Anaconda)\Anaconda Prompt.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Anaconda (Anaconda)\Jupyter Notebook.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Anaconda (Anaconda)\Spyder.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Arduino IDE.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Bambu Studio\Bambu Studio.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Bambu Studio\Uninstall.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Dev-C++\License.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Dev-C++\Uninstall Red Panda Dev-C++.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Git\Git Bash.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Git\Git CMD.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Git\Git GUI.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Git\Git Release Notes.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Lenovo\联想电脑管家.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Marvis.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Microsoft Edge.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Node.js\Install Additional Tools for Node.js.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Node.js\Node.js command prompt.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Node.js\Node.js.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Node.js\Uninstall Node.js.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Obsidian.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Python 3.12\IDLE (Python 3.12 64-bit).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Python 3.12\Python 3.12 (64-bit).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Python 3.12\Python 3.12 Manuals (64-bit).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Python 3.12\Python 3.12 Module Docs (64-bit).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\System Tools\Task Manager.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VideoLAN\Documentation.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VideoLAN\Release Notes.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VideoLAN\VideoLAN Website.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VideoLAN\VLC media player - reset preferences and cache files.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VideoLAN\VLC media player skinned.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VideoLAN\VLC media player.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VMware\vctl 的命令提示符.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VMware\VMware Workstation 17 Player.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VMware\VMware Workstation Pro.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\VMware\虚拟网络编辑器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Watt Toolkit\Watt Toolkit.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Watt Toolkit\卸载Watt Toolkit.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 附件\步骤记录器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 附件\字符映射表.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\DHCP.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\DNS.LNK
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\Hyper-V 管理器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\Hyper-V 快速创建.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\iSCSI 发起程序.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\ODBC 数据源(32 位).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\ODBC 数据源(64 位).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\Windows 内存诊断.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\本地安全策略.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\磁盘管理.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\磁盘清理.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\打印管理.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\服务.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\恢复驱动器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\计算机管理.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\具有高级安全性的 Windows Defender 防火墙.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\任务计划程序.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\事件查看器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\系统配置.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\系统信息.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\性能监视器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\优化驱动器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\注册表编辑器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\资源监视器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\组件服务.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 系统\任务管理器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\WorkBuddy.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\WSL Settings.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\WSL.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\嘉立创EDA(专业版)\嘉立创EDA(专业版).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\嘉立创EDA(专业版)\卸载 嘉立创EDA(专业版).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\扣子.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\夸克网盘.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\腾讯软件\QQ\QQ.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\腾讯应用宝-畅玩手机软件游戏.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\微信\微信.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\微信\卸载微信.lnk
+C:\用户\Default\桌面\常用工具\1.自选软件安装器.lnk

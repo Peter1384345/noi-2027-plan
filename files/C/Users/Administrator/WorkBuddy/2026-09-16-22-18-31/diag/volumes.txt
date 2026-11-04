@@ -1,0 +1,9 @@
+﻿
+DriveLetter FileSystemLabel FileSystem HealthStatus DriveType SizeGB
+----------- --------------- ---------- ------------ --------- ------
+          D 软件              NTFS       Healthy      Fixed     180.14
+          C 系统              NTFS       Healthy      Fixed     148.95
+                            NTFS       Healthy      Fixed       1.05
+          E                 NTFS       Healthy      Fixed     146.48
+
+

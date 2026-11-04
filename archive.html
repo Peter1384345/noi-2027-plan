@@ -3,151 +3,140 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>全量档案库 · NOI 2027 一年计划</title>
-<meta name="description" content="C/D/E 三盘逐文件索引、OI 正文全文检索、原文件下载、GitHub 全部仓库文件直达。">
+<title>资料仓库 · NOI 2027 一年计划</title>
+<meta name="description" content="全部资料文件实体已装入本仓库：1,133 个文件、770 MB，支持目录浏览、模糊搜索、PDF/Word/Excel/代码在线预览与下载。">
 <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="vendor/prism.css">
 <style>
-.arc-wrap { max-width: 1200px; margin: 0 auto; padding: 0 22px 78px; }
-.arc-hero { padding: 54px 0 26px; border-bottom: 1px solid var(--line, #ddd6c7); }
-.kicker { font: 600 12px/1 var(--mono, monospace); letter-spacing: .18em; color: var(--seal, #a8322a); text-transform: uppercase; margin-bottom: 16px; }
-.arc-hero h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.25; margin: 0 0 14px; font-family: var(--serif, Georgia, serif); }
-.lede { font-size: 16px; line-height: 1.8; color: var(--ink-2, #4b5057); max-width: 820px; margin: 0; }
-.arc-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 30px; }
-.arc-stat { background: var(--surface, #fffcf5); border: 1px solid var(--line, #ddd6c7); border-radius: 10px; padding: 16px 14px; }
-.arc-stat b { display: block; font: 700 24px/1.2 var(--mono, monospace); color: var(--ink, #16191c); }
-.arc-stat span { display: block; margin-top: 7px; font-size: 12px; color: var(--ink-2, #4b5057); }
-.arc-note { margin: 26px 0 30px; padding: 18px 20px; border-left: 3px solid var(--seal, #a8322a); background: var(--surface, #fffcf5); font-size: 14px; line-height: 1.85; color: var(--ink-2, #4b5057); }
-.arc-note b { color: var(--ink, #16191c); }
-.arc-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
-.arc-tabs button { font: 600 14px/1 inherit; padding: 11px 20px; border: 1px solid var(--line, #ddd6c7); border-radius: 999px; background: transparent; color: var(--ink-2, #4b5057); cursor: pointer; }
-.arc-tabs button.on { background: var(--ink, #16191c); color: var(--paper, #f6f3ec); border-color: var(--ink, #16191c); }
-.arc-panel { display: none; }
-.arc-panel.on { display: block; }
-.arc-drives { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
-.arc-drives button { padding: 8px 18px; border: 1px solid var(--line, #ddd6c7); border-radius: 8px; background: var(--surface, #fffcf5); cursor: pointer; font: 600 13px/1 var(--mono, monospace); }
-.arc-drives button.on { background: var(--azure, #1d5b57); color: #fff; border-color: var(--azure, #1d5b57); }
-.arc-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
-.arc-input, .arc-select { font: 14px/1 inherit; padding: 10px 12px; border: 1px solid var(--line, #ddd6c7); border-radius: 8px; background: var(--surface, #fffcf5); color: var(--ink, #16191c); }
-.arc-input { flex: 1 1 300px; min-width: 220px; }
-.arc-select { min-width: 150px; }
-.arc-status { font-size: 13px; color: var(--ink-2, #4b5057); margin: 10px 0; min-height: 20px; }
-.arc-status.warn { color: var(--seal, #a8322a); }
-.arc-table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
-.arc-table th { text-align: left; padding: 10px 8px; border-bottom: 2px solid var(--line, #ddd6c7); font-weight: 600; }
-.arc-table td { padding: 9px 8px; border-bottom: 1px solid var(--line, #ddd6c7); vertical-align: top; }
-.arc-table td.p { word-break: break-all; font-family: var(--mono, monospace); font-size: 12px; }
-.arc-table td.n { white-space: nowrap; color: var(--ink-2, #4b5057); }
-.arc-pager { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-size: 13px; color: var(--ink-2, #4b5057); }
-.arc-pager button { padding: 7px 14px; border: 1px solid var(--line, #ddd6c7); border-radius: 7px; background: var(--surface, #fffcf5); cursor: pointer; }
-.arc-pager button:disabled { opacity: .4; cursor: default; }
-.arc-list { display: grid; gap: 10px; }
-.arc-item { border: 1px solid var(--line, #ddd6c7); border-radius: 10px; background: var(--surface, #fffcf5); padding: 14px 16px; }
-.arc-item h3 { font-size: 15px; margin: 0 0 6px; word-break: break-all; }
-.arc-item .meta { font: 12px/1.6 var(--mono, monospace); color: var(--ink-2, #4b5057); word-break: break-all; }
-.arc-item .snip { font-size: 13px; line-height: 1.7; margin: 9px 0 0; color: var(--ink-2, #4b5057); }
-.arc-item pre { margin: 12px 0 0; padding: 14px; border-radius: 8px; background: #f3efe6; overflow: auto; max-height: 460px; font: 12px/1.65 var(--mono, monospace); white-space: pre-wrap; word-break: break-all; }
-[data-theme="dark"] .arc-item pre { background: #22262a; }
-.arc-item mark { background: #f2d98c; color: inherit; padding: 0 2px; }
-.arc-btn { display: inline-block; margin-top: 10px; padding: 7px 14px; border: 1px solid var(--azure, #1d5b57); border-radius: 7px; color: var(--azure, #1d5b57); text-decoration: none; font-size: 13px; font-weight: 600; }
-.arc-btn:hover { background: var(--azure, #1d5b57); color: #fff; }
-.arc-btn.ghost { border-color: var(--line, #ddd6c7); color: var(--ink-2, #4b5057); margin-left: 8px; }
-details.arc-repo { border: 1px solid var(--line, #ddd6c7); border-radius: 10px; background: var(--surface, #fffcf5); margin-bottom: 10px; }
-details.arc-repo > summary { cursor: pointer; padding: 14px 16px; font-weight: 600; font-size: 15px; }
-details.arc-repo > summary span { font-weight: 400; font-size: 12px; color: var(--ink-2, #4b5057); margin-left: 10px; }
-.arc-repo .body { padding: 0 16px 14px; }
-.arc-repo .body a { display: block; font: 12px/1.9 var(--mono, monospace); color: var(--azure, #1d5b57); word-break: break-all; text-decoration: none; }
-.arc-repo .body a:hover { text-decoration: underline; }
-.arc-repo .body .desc { font-size: 13px; color: var(--ink-2, #4b5057); margin: 0 0 10px; }
-@media (max-width: 800px) { .arc-stats { grid-template-columns: repeat(2, 1fr); } .arc-table th:nth-child(4), .arc-table td:nth-child(4) { display: none; } }
+.fx-wrap { max-width: 1280px; margin: 0 auto; padding: 0 18px 70px; }
+.fx-hero { padding: 48px 0 22px; border-bottom: 1px solid var(--line, #ddd6c7); }
+.fx-kicker { font: 600 12px/1 var(--mono, monospace); letter-spacing: .18em; color: var(--seal, #a8322a); text-transform: uppercase; margin-bottom: 14px; }
+.fx-hero h1 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.28; margin: 0 0 12px; font-family: var(--serif, Georgia, serif); }
+.fx-lede { font-size: 15.5px; line-height: 1.8; color: var(--ink-2, #4b5057); max-width: 860px; margin: 0; }
+.fx-stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.fx-stat { background: var(--surface, #fffcf5); border: 1px solid var(--line, #ddd6c7); border-radius: 9px; padding: 11px 15px; min-width: 118px; }
+.fx-stat b { display: block; font: 700 19px/1.2 var(--mono, monospace); }
+.fx-stat span { display: block; margin-top: 5px; font-size: 11.5px; color: var(--ink-2, #4b5057); }
+.fx-body { display: grid; grid-template-columns: 268px 1fr; gap: 22px; margin-top: 26px; align-items: start; }
+.fx-tree { border: 1px solid var(--line, #ddd6c7); border-radius: 11px; background: var(--surface, #fffcf5); padding: 12px 8px; max-height: 76vh; overflow: auto; position: sticky; top: 14px; }
+.fx-tree h5 { margin: 2px 6px 10px; font-size: 12px; letter-spacing: .08em; color: var(--ink-2, #4b5057); text-transform: uppercase; }
+.fx-tree details { margin: 1px 0; }
+.fx-tree summary { cursor: pointer; padding: 5px 7px; border-radius: 6px; font-size: 13px; word-break: break-all; }
+.fx-tree summary:hover { background: rgba(29, 91, 87, .08); }
+.fx-tree .leaf { display: block; padding: 5px 7px 5px 24px; font-size: 12.5px; border-radius: 6px; color: var(--ink-2, #4b5057); cursor: pointer; }
+.fx-tree .leaf:hover, .fx-tree .leaf.on { background: rgba(29, 91, 87, .1); color: var(--azure, #1d5b57); }
+.fx-tree .cnt { color: var(--ink-2, #4b5057); font-size: 11px; opacity: .75; margin-left: 5px; }
+.fx-main { min-width: 0; }
+.fx-bar { display: flex; gap: 9px; flex-wrap: wrap; margin-bottom: 12px; }
+.fx-input, .fx-select { font: 14px/1 inherit; padding: 10px 12px; border: 1px solid var(--line, #ddd6c7); border-radius: 8px; background: var(--surface, #fffcf5); color: var(--ink, #16191c); }
+.fx-input { flex: 1 1 280px; }
+.fx-status { font-size: 13px; color: var(--ink-2, #4b5057); margin: 4px 0 14px; min-height: 18px; }
+.fx-grid { display: grid; gap: 8px; }
+.fx-item { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border: 1px solid var(--line, #ddd6c7); border-radius: 9px; background: var(--surface, #fffcf5); cursor: pointer; }
+.fx-item:hover { border-color: var(--azure, #1d5b57); }
+.fx-item .ic { flex: 0 0 34px; height: 34px; border-radius: 7px; display: grid; place-items: center; font: 700 10px/1 var(--mono, monospace); color: #fff; }
+.fx-item .nm { flex: 1; min-width: 0; }
+.fx-item .nm b { display: block; font-size: 14px; font-weight: 600; word-break: break-all; }
+.fx-item .nm span { display: block; font: 11.5px/1.5 var(--mono, monospace); color: var(--ink-2, #4b5057); word-break: break-all; }
+.fx-item .sz { flex: 0 0 auto; font: 12px/1 var(--mono, monospace); color: var(--ink-2, #4b5057); }
+.fx-more { margin-top: 12px; text-align: center; }
+.fx-more button { padding: 9px 20px; border: 1px solid var(--line, #ddd6c7); border-radius: 8px; background: var(--surface, #fffcf5); cursor: pointer; font: 600 13px/1 inherit; }
+.fx-note { margin-top: 34px; padding: 16px 18px; border-left: 3px solid var(--seal, #a8322a); background: var(--surface, #fffcf5); font-size: 13.5px; line-height: 1.8; color: var(--ink-2, #4b5057); }
+.fx-modal { position: fixed; inset: 0; background: rgba(16, 18, 20, .62); display: none; z-index: 90; padding: 22px; }
+.fx-modal.on { display: block; }
+.fx-sheet { max-width: 1120px; height: 100%; margin: 0 auto; background: var(--paper, #f6f3ec); border-radius: 12px; display: flex; flex-direction: column; overflow: hidden; }
+.fx-sheet header { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--line, #ddd6c7); background: var(--surface, #fffcf5); }
+.fx-sheet header .t { flex: 1; min-width: 0; }
+.fx-sheet header b { display: block; font-size: 14.5px; word-break: break-all; }
+.fx-sheet header span { display: block; font: 11.5px/1.5 var(--mono, monospace); color: var(--ink-2, #4b5057); word-break: break-all; }
+.fx-sheet header button, .fx-sheet header a { padding: 7px 13px; border: 1px solid var(--line, #ddd6c7); border-radius: 7px; background: transparent; cursor: pointer; font: 600 12.5px/1 inherit; color: inherit; text-decoration: none; white-space: nowrap; }
+.fx-view { flex: 1; overflow: auto; padding: 18px; }
+.fx-view pre { margin: 0; font: 12.5px/1.7 var(--mono, monospace); white-space: pre-wrap; word-break: break-all; }
+.fx-view canvas { display: block; margin: 0 auto 12px; max-width: 100%; box-shadow: 0 2px 14px rgba(0, 0, 0, .14); }
+.fx-view table { border-collapse: collapse; font-size: 12.5px; background: #fff; }
+.fx-view table td, .fx-view table th { border: 1px solid #d8d2c4; padding: 5px 9px; white-space: nowrap; }
+.fx-pdfbar { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; font: 12.5px/1 var(--mono, monospace); }
+.fx-pdfbar button { padding: 6px 14px; border: 1px solid var(--line, #ddd6c7); border-radius: 7px; background: var(--surface, #fffcf5); cursor: pointer; }
+.fx-empty { text-align: center; padding: 46px 20px; color: var(--ink-2, #4b5057); font-size: 14px; }
+@media (max-width: 900px) { .fx-body { grid-template-columns: 1fr; } .fx-tree { position: static; max-height: 300px; } }
 </style>
 </head>
 <body>
 <header id="site-head"></header>
-<main class="arc-wrap">
+<main class="fx-wrap">
 
-  <section class="arc-hero">
-    <div class="kicker">Archive / 全量资料档案</div>
-    <h1>把整台机器与全部仓库，装进一个可检索的档案库</h1>
-    <p class="lede">C、D、E 三盘逐文件索引；OI 相关文本正文全文入库；原始 PDF / DOCX / XLSX 可下载；GitHub 上全部仓库逐文件直达。不是链接目录，是能检索、能翻、能拿走的档案。</p>
-    <div class="arc-stats" id="arc-stats"></div>
+  <section class="fx-hero">
+    <div class="fx-kicker">Repository / 资料仓库</div>
+    <h1>全部资料已装进这个仓库，不再只是索引</h1>
+    <p class="fx-lede">C、D、E 三盘的资料文件已按原始目录结构复制进 <code>files/</code>，共 <b id="s-count">—</b> 个、<b id="s-bytes">—</b>。可逐层浏览、模糊搜索，并在站内直接预览 PDF、Word、Excel、代码与 Markdown，或下载原文件。站点由 PDF.js、docx-preview、SheetJS、MiniSearch、Prism 五个开源项目驱动。</p>
+    <div class="fx-stats" id="fx-stats"></div>
   </section>
 
-  <section class="arc-note">
-    <b>收录口径（有必要说清楚）</b>
-    <p>全盘扫描去重后共 <b id="note-files">—</b> 个文件、<b id="note-bytes">—</b>，绝大多数是 Anaconda、Mixly/Arduino、DevEco、编辑器扩展等工具链与缓存，并非学习资料。因此：<b>① 全部文件逐条进入可检索索引</b>（路径、大小、日期、类型）；<b>② 与 OI 相关的文本正文装入站内全文检索</b>；<b>③ 核心原文件做成下载副本</b>；<b>④ GitHub 15 个仓库 870 个文件全部列出并直达源文件</b>。16 GB 全量镜像既不现实（Pages 站点上限约 1 GB），也没有阅读价值，故未采用。本地路径在每个条目里原样保留，随时可回本机打开。</p>
-  </section>
-
-  <div class="arc-tabs" id="arc-tabs">
-    <button data-t="local" class="on">本地全盘索引</button>
-    <button data-t="docs">站内正文全文</button>
-    <button data-t="files">原文件下载</button>
-    <button data-t="github">GitHub 仓库</button>
+  <div class="fx-body">
+    <aside class="fx-tree">
+      <h5>目录</h5>
+      <div id="tree"></div>
+    </aside>
+    <section class="fx-main">
+      <div class="fx-bar">
+        <input id="q" class="fx-input" placeholder="搜索文件名或路径，支持模糊匹配（如 真题 / 知识库 / pptx / noip）">
+        <select id="kind" class="fx-select">
+          <option value="all">全部类型</option>
+          <option value="pdf">PDF</option>
+          <option value="word">Word</option>
+          <option value="sheet">Excel</option>
+          <option value="slide">PPT</option>
+          <option value="code">代码</option>
+          <option value="text">文本 / Markdown</option>
+        </select>
+        <select id="sort" class="fx-select">
+          <option value="p">按路径</option>
+          <option value="s">按体积</option>
+          <option value="m">按时间</option>
+        </select>
+      </div>
+      <div class="fx-status" id="status"></div>
+      <div class="fx-grid" id="list"></div>
+      <div class="fx-more" id="more"></div>
+    </section>
   </div>
 
-  <!-- 本地全盘 -->
-  <section class="arc-panel on" id="p-local">
-    <div class="arc-drives" id="arc-drives"></div>
-    <div class="arc-bar">
-      <input id="lq" class="arc-input" placeholder="按路径或文件名检索，例如：资料整合 / CSP-S / 2023 / 知识库">
-      <select id="ldir" class="arc-select"><option value="">全部目录</option></select>
-      <select id="lkind" class="arc-select">
-        <option value="all">全部类型</option>
-        <option value="code">代码</option>
-        <option value="doc">文档</option>
-        <option value="pkg">压缩包</option>
-      </select>
-      <select id="lsort" class="arc-select">
-        <option value="p">按路径</option>
-        <option value="s">按体积</option>
-        <option value="m">按时间</option>
-      </select>
-    </div>
-    <div class="arc-status" id="lstatus"></div>
-    <div id="lresult"></div>
-  </section>
-
-  <!-- 站内正文 -->
-  <section class="arc-panel" id="p-docs">
-    <div class="arc-bar">
-      <input id="dq" class="arc-input" placeholder="全文检索站内正文，例如：动态规划 / 树链剖分 / 快速幂 / 初赛">
-    </div>
-    <div class="arc-status" id="dstatus"></div>
-    <div class="arc-list" id="dresult"></div>
-    <div class="arc-pager" id="dpager"></div>
-  </section>
-
-  <!-- 原文件下载 -->
-  <section class="arc-panel" id="p-files">
-    <div class="arc-bar">
-      <input id="fq" class="arc-input" placeholder="按文件名或原路径筛选下载副本">
-    </div>
-    <div class="arc-status" id="fstatus"></div>
-    <div class="arc-list" id="fresult"></div>
-  </section>
-
-  <!-- GitHub 仓库 -->
-  <section class="arc-panel" id="p-github">
-    <div class="arc-bar">
-      <input id="gq" class="arc-input" placeholder="筛选仓库名或文件路径">
-    </div>
-    <div class="arc-status" id="gstatus"></div>
-    <div id="gresult"></div>
-  </section>
-
+  <div class="fx-note">
+    <b>关于收录范围</b>：全盘扫描去重后共 207,715 个文件（15.6 GB），其中绝大多数是 Windows 系统文件、Anaconda / Mixly / DevEco 等开发工具链、编辑器扩展与缓存。这些不是资料，复制进来既超出 GitHub Pages 约 1 GB 的站点上限，也没有阅读价值。因此本仓库收录的是<b>资料类文件实体</b>：排除系统目录、工具链、隐藏缓存、压缩包与音视频后，去重得到 <b id="s-count2">—</b> 个文件、<b id="s-bytes2">—</b>，全部原样复制进 <code>files/</code>，保留 <code>C/ D/ E/</code> 盘符与原有目录层级。
+  </div>
 </main>
 <footer id="site-foot"></footer>
 
-<script src="assets/data/archive/meta.js"></script>
+<div class="fx-modal" id="modal">
+  <div class="fx-sheet">
+    <header>
+      <div class="t"><b id="m-title">—</b><span id="m-meta">—</span></div>
+      <a id="m-down" href="#" download>下载</a>
+      <a id="m-open" href="#" target="_blank" rel="noopener">新窗口</a>
+      <button id="m-close">关闭</button>
+    </header>
+    <div class="fx-view" id="m-view"></div>
+  </div>
+</div>
+
+<script src="vendor/minisearch.min.js"></script>
+<script src="vendor/pdf216.min.js"></script>
+<script src="vendor/jszip.min.js"></script>
+<script src="vendor/docx-preview.min.js"></script>
+<script src="vendor/xlsx.full.min.js"></script>
+<script src="vendor/prism.min.js"></script>
+<script src="vendor/prism-c.min.js"></script>
+<script src="vendor/prism-cpp.min.js"></script>
+<script src="assets/data/files/manifest.js"></script>
 <script src="assets/js/app.js"></script>
 <script>
 (function () {
   "use strict";
-  var M = window.ARCHIVE_META;
-  var IDX = window.ARCHIVE_IDX = window.ARCHIVE_IDX || {};
-  var DOCS = null;
-  var PAGE_L = 60, PAGE_D = 20;
-  var S = { drive: "D", q: "", kind: "all", dir: "", page: 1, sort: "p",
-            dq: "", dpage: 1, fq: "", gq: "", tab: "local" };
+  var MF = window.FILE_MANIFEST;
+  var FILES = null, MINI = null, CUR = [], SHOWN = 200, DIR = "", TREE_NODES = 0;
+  var KIND_COLOR = { pdf: "#a8322a", word: "#1d5b57", sheet: "#1f6b4a", slide: "#8d2f26",
+                     code: "#3b4a6b", text: "#6b5b3b" };
+  var KIND_NAME = { pdf: "PDF", word: "DOC", sheet: "XLS", slide: "PPT", code: "CODE", text: "TXT" };
 
   function $(id) { return document.getElementById(id); }
   function esc(s) {
@@ -163,262 +152,312 @@ details.arc-repo > summary span { font-weight: 400; font-size: 12px; color: var(
   }
   function fmtDate(t) {
     if (!t) return "—";
+    var d = new Date(t * 1000);
+    return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+  }
+  function urlOf(p) {
+    return "files/" + p.split("/").map(encodeURIComponent).join("/");
+  }
+  function base(p) { var a = p.split("/"); return a[a.length - 1]; }
+
+  function init() {
+    // 剔除 Office 临时锁文件（~$ 前缀）与系统垃圾，它们不是可用资料
+    var raw = MF.files.filter(function (r) {
+      var n = base(r[0]);
+      return n.charAt(0) !== "~" && n.charAt(0) !== "." && !/^(thumbs\.db|desktop\.ini)$/i.test(n);
+    });
+    var keptBytes = 0;
+    FILES = raw.map(function (r, i) {
+      keptBytes += r[1];
+      return { i: i, p: r[0], s: r[1], m: r[2], e: r[3], k: r[4], h: r[5], name: base(r[0]) };
+    });
+    $("s-count").textContent = FILES.length.toLocaleString("zh-CN");
+    $("s-bytes").textContent = fmt(keptBytes);
+    $("s-count2").textContent = FILES.length.toLocaleString("zh-CN");
+    $("s-bytes2").textContent = fmt(keptBytes);
+
+    renderTree();
+    $("fx-stats").innerHTML = [
+      [FILES.length.toLocaleString("zh-CN"), "文件实体已入库"],
+      [fmt(keptBytes), "仓库内总体积"],
+      [TREE_NODES.toLocaleString("zh-CN"), "目录层级节点"],
+      [(MF.byKind.pdf || [0])[0], "PDF 文档"],
+      [(MF.byKind.word || [0])[0], "Word 文档"],
+      [(MF.byKind.slide || [0])[0], "PPT 演示"]
+    ].map(function (x) {
+      return '<div class="fx-stat"><b>' + esc(x[0]) + "</b><span>" + esc(x[1]) + "</span></div>";
+    }).join("");
+
+    MINI = new MiniSearch({
+      fields: ["name", "p"],
+      storeFields: ["p"],
+      searchOptions: { prefix: true, fuzzy: 0.2, boost: { name: 2 } }
+    });
+    MINI.addAll(FILES.map(function (f) {
+      return { id: f.i, name: f.name, p: f.p, k: f.k, e: f.e };
+    }));
+
+    render();
+    bind();
     try {
-      var d = new Date(t * 1000);
-      return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
-    } catch (e) { return "—"; }
-  }
-  function script(src, cb) {
-    var s = document.createElement("script");
-    s.src = src;
-    s.onload = function () { cb(null); };
-    s.onerror = function () { cb(new Error("加载失败")); };
-    document.head.appendChild(s);
-  }
-  function hl(text, q) {
-    if (!q) return esc(text);
-    var i = text.toLowerCase().indexOf(q.toLowerCase());
-    if (i < 0) return esc(text);
-    return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
+      var op = new URLSearchParams(location.search).get("open");
+      if (op) setTimeout(function () { openFile(op); }, 400);
+    } catch (e) { /* 忽略 */ }
   }
 
-  // ---------- 概览 ----------
-  function renderStats() {
-    var d = M.drives, g = M.github;
-    var items = [
-      [M.totalFiles.toLocaleString("zh-CN"), "本地文件逐条索引"],
-      [fmt(M.totalBytes), "三盘扫描总体积"],
-      [M.docs.count.toLocaleString("zh-CN"), "站内正文全文"],
-      [M.downloads.length, "原文件下载副本"],
-      [g.repos.length + " / " + g.totalFiles, "GitHub 仓库 / 文件"]
-    ];
-    $("arc-stats").innerHTML = items.map(function (x) {
-      return '<div class="arc-stat"><b>' + esc(x[0]) + "</b><span>" + esc(x[1]) + "</span></div>";
-    }).join("");
-    $("note-files").textContent = M.totalFiles.toLocaleString("zh-CN");
-    $("note-bytes").textContent = fmt(M.totalBytes);
-  }
-
-  // ---------- 盘与目录 ----------
-  function renderDrives() {
-    var ds = Object.keys(M.drives).sort();
-    $("arc-drives").innerHTML = ds.map(function (x) {
-      var a = M.drives[x];
-      return '<button data-d="' + x + '" class="' + (x === S.drive ? "on" : "") + '">' +
-        x + " 盘 · " + a[0].toLocaleString("zh-CN") + " 文件 · " + fmt(a[1]) + "</button>";
-    }).join("");
-    Array.prototype.forEach.call($("arc-drives").querySelectorAll("button"), function (b) {
-      b.onclick = function () {
-        S.drive = b.getAttribute("data-d"); S.page = 1;
-        renderDrives(); renderLocal();
-      };
-    });
-    var sel = $("ldir");
-    var nodes = M.tree.filter(function (t) { return t.n >= 5 && t.d === S.drive; })
-                       .sort(function (a, b) { return a.p.localeCompare(b.p); }).slice(0, 250);
-    sel.innerHTML = '<option value="">全部目录</option>' + nodes.map(function (t) {
-      return '<option value="' + esc(t.p) + '">' + esc(t.p) + " · " + t.n + " 个" +
-        (t.x ? " [工具链]" : "") + "</option>";
-    }).join("");
-    sel.value = S.dir;
-  }
-
-  // ---------- 本地全盘 ----------
-  function ensureDrive(cb) {
-    if (IDX[S.drive]) return cb(null);
-    $("lstatus").className = "arc-status warn";
-    $("lstatus").textContent = "正在加载 " + S.drive + " 盘完整索引（约 14 MB，首次加载稍候）…";
-    $("lresult").innerHTML = "";
-    script("assets/data/archive/idx-" + S.drive + ".js", function (err) {
-      if (err) {
-        $("lstatus").textContent = "索引加载失败，请刷新重试。";
-        return;
+  function renderTree() {
+    // 只建目录节点：叶节点=含文件的目录，点击后右侧按 DIR 前缀筛文件
+    var root = { children: {}, n: 0 }, nodes = 0;
+    FILES.forEach(function (f) {
+      var parts = f.p.split("/"), node = root;
+      for (var i = 0; i < parts.length - 1; i++) {
+        var seg = parts[i];
+        if (!node.children[seg]) {
+          node.children[seg] = { name: seg, path: parts.slice(0, i + 1).join("/"), children: {}, n: 0 };
+        }
+        node = node.children[seg];
+        node.n += 1;
       }
-      cb(null);
     });
-  }
-  function localRows() {
-    var rows = IDX[S.drive] || [], q = S.q.trim().toLowerCase(), out = [];
-    for (var i = 0; i < rows.length; i++) {
-      var r = rows[i];
-      if (S.dir && r[0].indexOf(S.dir) !== 0) continue;
-      if (S.kind !== "all" && r[4] !== S.kind) continue;
-      if (q && r[0].toLowerCase().indexOf(q) < 0) continue;
-      out.push(r);
+    (function count(node) {
+      Object.keys(node.children).forEach(function (k) { nodes++; count(node.children[k]); });
+    })(root);
+    TREE_NODES = nodes;
+    function draw(node) {
+      var keys = Object.keys(node.children).sort();
+      if (!keys.length) return "";
+      return keys.map(function (k) {
+        var c = node.children[k];
+        var has = Object.keys(c.children).length > 0;
+        if (has) {
+          return "<details><summary>" + esc(k) + '<span class="cnt">' + c.n + "</span></summary>" +
+            draw(c) + "</details>";
+        }
+        return '<span class="leaf" data-d="' + esc(c.path) + '">' + esc(k) +
+          '<span class="cnt">' + c.n + "</span></span>";
+      }).join("");
     }
-    if (S.sort === "s") out.sort(function (a, b) { return b[1] - a[1]; });
-    else if (S.sort === "m") out.sort(function (a, b) { return b[2] - a[2]; });
-    return out;
-  }
-  function renderLocal() {
-    ensureDrive(function () {
-      var rows = localRows(), total = rows.length;
-      var maxPage = Math.max(1, Math.ceil(total / PAGE_L));
-      if (S.page > maxPage) S.page = maxPage;
-      var slice = rows.slice((S.page - 1) * PAGE_L, S.page * PAGE_L);
-      $("lstatus").className = "arc-status";
-      $("lstatus").textContent = S.drive + " 盘共 " + (IDX[S.drive] || []).length.toLocaleString("zh-CN") +
-        " 条，当前条件命中 " + total.toLocaleString("zh-CN") + " 条。点击列头外的任意处可复制路径。";
-      var html = '<table class="arc-table"><thead><tr><th style="width:62%">相对路径（根为 ' + S.drive + ":/）</th>" +
-        '<th style="width:12%">类型</th><th style="width:12%">大小</th><th style="width:14%">修改日期</th></tr></thead><tbody>';
-      html += slice.map(function (r) {
-        return "<tr><td class=\"p\" title=\"" + esc(S.drive + ":/" + r[0]) + "\">" +
-          hl(S.drive + ":/" + r[0], S.q.trim()) + "</td><td class=\"n\">" + esc(r[3]) + "</td>" +
-          "<td class=\"n\">" + fmt(r[1]) + "</td><td class=\"n\">" + fmtDate(r[2]) + "</td></tr>";
-      }).join("");
-      html += "</tbody></table>";
-      html += '<div class="arc-pager"><button id="lprev"' + (S.page <= 1 ? " disabled" : "") + ">上一页</button>" +
-        "<span>第 " + S.page + " / " + maxPage + " 页</span>" +
-        '<button id="lnext"' + (S.page >= maxPage ? " disabled" : "") + ">下一页</button>" +
-        '<span>每页 ' + PAGE_L + " 条</span></div>";
-      $("lresult").innerHTML = html;
-      $("lprev").onclick = function () { if (S.page > 1) { S.page--; renderLocal(); } };
-      $("lnext").onclick = function () { if (S.page < maxPage) { S.page++; renderLocal(); } };
-    });
-  }
-
-  // ---------- 站内正文 ----------
-  function ensureDocs(cb) {
-    if (DOCS) return cb(null);
-    $("dstatus").className = "arc-status warn";
-    $("dstatus").textContent = "正在加载正文索引（约 7 MB）…";
-    script("assets/data/archive/docs.js", function (err) {
-      if (err) { $("dstatus").textContent = "正文加载失败，请刷新重试。"; return; }
-      DOCS = window.ARCHIVE_DOCS || [];
-      cb(null);
-    });
-  }
-  function renderDocs() {
-    ensureDocs(function () {
-      var q = S.dq.trim(), hits = [];
-      if (q) {
-        var lq = q.toLowerCase();
-        for (var i = 0; i < DOCS.length; i++) {
-          var d = DOCS[i], k = d.t.toLowerCase().indexOf(lq);
-          if (k < 0 && d.p.toLowerCase().indexOf(lq) < 0) continue;
-          hits.push({ d: d, k: k });
-        }
-      } else {
-        hits = DOCS.map(function (d) { return { d: d, k: -1 }; });
+    $("tree").innerHTML = draw(root);
+    $("tree").addEventListener("click", function (e) {
+      var el = e.target.closest ? e.target.closest(".leaf") : null;
+      if (el) {
+        DIR = el.getAttribute("data-d");
+        $("q").value = "";
+        markLeaf(el);
+        SHOWN = 200;
+        render();
       }
-      var maxPage = Math.max(1, Math.ceil(hits.length / PAGE_D));
-      if (S.dpage > maxPage) S.dpage = maxPage;
-      var slice = hits.slice((S.dpage - 1) * PAGE_D, S.dpage * PAGE_D);
-      $("dstatus").className = "arc-status";
-      $("dstatus").textContent = "站内正文 " + DOCS.length + " 篇，命中 " + hits.length + " 篇。点击标题展开全文。";
-      $("dresult").innerHTML = slice.map(function (h, i) {
-        var d = h.d, body = "";
-        if (h.k >= 0) {
-          var a = Math.max(0, h.k - 90), b = Math.min(d.t.length, h.k + q.length + 160);
-          body = "…" + d.t.slice(a, b).replace(/\s+/g, " ") + "…";
-        } else {
-          body = d.t.slice(0, 220).replace(/\s+/g, " ");
+    });
+  }
+
+  function markLeaf(el) {
+    Array.prototype.forEach.call($("tree").querySelectorAll(".leaf"), function (x) {
+      x.className = "leaf";
+    });
+    if (el) el.className = "leaf on";
+  }
+
+  function compute() {
+    var q = $("q").value.trim(), k = $("kind").value, s = $("sort").value;
+    var pool = FILES;
+    if (DIR) pool = pool.filter(function (f) { return f.p.indexOf(DIR + "/") === 0; });
+    if (k !== "all") pool = pool.filter(function (f) { return f.k === k; });
+    if (q) {
+      var set = {};
+      MINI.search(q).forEach(function (r) { set[r.id] = 1; });
+      pool = pool.filter(function (f) { return set[f.i]; });
+    }
+    if (s === "s") pool = pool.slice().sort(function (a, b) { return b.s - a.s; });
+    else if (s === "m") pool = pool.slice().sort(function (a, b) { return b.m - a.m; });
+    return { list: pool, q: q };
+  }
+
+  function render() {
+    var r = compute();
+    CUR = r.list;
+    $("status").innerHTML = (DIR ? "目录 <code>" + esc(DIR) + "</code> · " : "") +
+      "命中 <b>" + CUR.length.toLocaleString("zh-CN") + "</b> 个文件" +
+      (r.q ? "（关键词 " + esc(r.q) + "）" : "");
+    paint();
+  }
+
+  function paint() {
+    var slice = CUR.slice(0, SHOWN);
+    if (!slice.length) {
+      $("list").innerHTML = '<div class="fx-empty">没有匹配的文件，换个关键词或点左侧目录。</div>';
+      $("more").innerHTML = "";
+      return;
+    }
+    $("list").innerHTML = slice.map(function (f) {
+      var c = KIND_COLOR[f.k] || "#666";
+      return '<div class="fx-item" data-p="' + esc(f.p) + '">' +
+        '<div class="ic" style="background:' + c + '">' + esc(KIND_NAME[f.k] || f.e) + "</div>" +
+        '<div class="nm"><b>' + esc(f.name) + "</b><span>" + esc(f.p) + "</span></div>" +
+        '<div class="sz">' + fmt(f.s) + "</div></div>";
+    }).join("");
+    $("more").innerHTML = CUR.length > SHOWN
+      ? '<button id="btn-more">再显示 ' + Math.min(200, CUR.length - SHOWN) +
+        " 个（共 " + CUR.length + "）</button>" : "";
+    if ($("btn-more")) {
+      $("btn-more").onclick = function () { SHOWN += 200; paint(); };
+    }
+  }
+
+  function openFile(p) {
+    var f = null;
+    for (var i = 0; i < FILES.length; i++) { if (FILES[i].p === p) { f = FILES[i]; break; } }
+    if (!f) return;
+    var u = urlOf(p);
+    $("m-title").textContent = f.name;
+    $("m-meta").textContent = f.e.toUpperCase() + " · " + fmt(f.s) + " · " + fmtDate(f.m) + " · " + p;
+    $("m-down").href = u;
+    $("m-down").setAttribute("download", f.name);
+    $("m-open").href = u;
+    $("m-view").innerHTML = '<div class="fx-empty">正在加载…</div>';
+    $("modal").className = "fx-modal on";
+
+    if (f.k === "pdf") previewPdf(u);
+    else if (f.k === "word") previewDocx(u);
+    else if (f.k === "sheet") previewSheet(u);
+    else if (f.k === "slide") {
+      $("m-view").innerHTML = '<div class="fx-empty">PPT 无法在浏览器内渲染。<br>请点右上角「下载」或「新窗口」打开原文件。</div>';
+    } else previewText(u, f.e);
+  }
+
+  function pdfFallback(u, why) {
+    var box = $("m-view");
+    box.innerHTML = '<div class="fx-pdfbar" style="color:#7a6a52">' + why +
+      '</div><iframe src="' + esc(u) + '" style="width:100%;height:74vh;border:0;background:#fff"></iframe>';
+  }
+
+  function previewPdf(u) {
+    var box = $("m-view");
+    if (!window.pdfjsLib) { pdfFallback(u, "内置阅读器未就绪，已切换浏览器原生预览 · "); return; }
+    try {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = new URL("vendor/pdf216.worker.min.js", location.href).href;
+    } catch (e) { /* 交给原生兜底 */ }
+    box.innerHTML = '<div class="fx-empty">正在解析 PDF…</div>';
+    var settled = false;
+    var guard = setTimeout(function () {
+      if (!settled) { settled = true; pdfFallback(u, "解析超时（文件较大或组件未初始化），已切换浏览器原生预览 · "); }
+    }, 7000);
+
+    pdfjsLib.getDocument({ url: u, isEvalSupported: false, useSystemFonts: true }).promise
+      .then(function (pdf) {
+        if (settled) return;
+        settled = true; clearTimeout(guard);
+        var page = 1;
+        box.innerHTML = '<div class="fx-pdfbar"><button id="pp">上一页</button>' +
+          '<span id="pn">1 / ' + pdf.numPages + "</span>" +
+          '<button id="pnx">下一页</button></div><div id="pc"></div>';
+        function draw() {
+          pdf.getPage(page).then(function (pg) {
+            var vp = pg.getViewport({ scale: 1.32 });
+            var cv = document.createElement("canvas");
+            cv.width = vp.width;
+            cv.height = vp.height;
+          var host = $("pc");
+          host.innerHTML = "";
+          host.removeAttribute("data-painted");
+          host.appendChild(cv);
+          var task = pg.render({ canvasContext: cv.getContext("2d"), viewport: vp });
+          if (task && task.promise) {
+            task.promise.then(function () { host.setAttribute("data-painted", "1"); },
+                              function () { /* 单页渲染失败不阻断翻页 */ });
+          }
+          $("pn").textContent = page + " / " + pdf.numPages;
+            $("pp").disabled = page <= 1;
+            $("pnx").disabled = page >= pdf.numPages;
+          }).catch(function () {
+            pdfFallback(u, "页面渲染失败，已切换浏览器原生预览 · ");
+          });
         }
-        var id = "doc" + (S.dpage * 100 + i);
-        return '<div class="arc-item"><h3>' + hl(d.p, q) + "</h3>" +
-          '<div class="meta">' + esc(d.e) + " · " + fmt(d.s) + " · " + esc(d.p) + "</div>" +
-          '<p class="snip">' + hl(body, q) + "</p>" +
-          '<button class="arc-btn" onclick="var e=document.getElementById(\'' + id + '\');e.style.display=e.style.display===\'none\'?\'block\':\'none\'">展开全文</button>' +
-          '<pre id="' + id + '" style="display:none">' + esc(d.t) + "</pre></div>";
-      }).join("");
-      $("dpager").innerHTML = '<button id="dprev"' + (S.dpage <= 1 ? " disabled" : "") + ">上一页</button>" +
-        "<span>第 " + S.dpage + " / " + maxPage + " 页</span>" +
-        '<button id="dnext"' + (S.dpage >= maxPage ? " disabled" : "") + ">下一页</button>";
-      $("dprev").onclick = function () { if (S.dpage > 1) { S.dpage--; renderDocs(); } };
-      $("dnext").onclick = function () { if (S.dpage < maxPage) { S.dpage++; renderDocs(); } };
-    });
-  }
-
-  // ---------- 下载区 ----------
-  function renderFiles() {
-    var q = S.fq.trim().toLowerCase();
-    var list = M.downloads.filter(function (d) {
-      return !q || d.n.toLowerCase().indexOf(q) >= 0 || d.p.toLowerCase().indexOf(q) >= 0;
-    });
-    $("fstatus").textContent = "共 " + M.downloads.length + " 个去重后的原文件副本，合计 " +
-      fmt(M.downloadBytes) + "；当前显示 " + list.length + " 个。文件名已安全化，原名与本地路径一并保留。";
-    $("fresult").innerHTML = list.map(function (d) {
-      return '<div class="arc-item"><h3>' + hl(d.n, S.fq.trim()) + "</h3>" +
-        '<div class="meta">' + esc(d.e) + " · " + fmt(d.s) + " · 本地：" + esc(d.p) + "</div>" +
-        '<a class="arc-btn" href="' + esc(d.u) + '" download="' + esc(d.n) + '">下载原文件</a>' +
-        '<a class="arc-btn ghost" href="' + esc(d.u) + '" target="_blank" rel="noopener">新窗口打开</a></div>';
-    }).join("");
-  }
-
-  // ---------- GitHub ----------
-  function ghUrl(r, f) {
-    var seg = f.p.split("/").map(encodeURIComponent).join("/");
-    return r.url + "/blob/" + encodeURIComponent(r.branch) + "/" + seg;
-  }
-  function renderGithub() {
-    var q = S.gq.trim().toLowerCase();
-    var repos = M.github.repos.filter(function (r) {
-      return !q || r.name.toLowerCase().indexOf(q) >= 0 ||
-        r.files.some(function (f) { return f.p.toLowerCase().indexOf(q) >= 0; });
-    });
-    $("gstatus").textContent = "GitHub 账号 " + M.github.owner + " 共 " + M.github.repos.length +
-      " 个仓库 / " + M.github.totalFiles + " 个文件，展开可逐文件直达源文件。";
-    $("gresult").innerHTML = repos.map(function (r) {
-      var files = r.files.filter(function (f) {
-        return !q || r.name.toLowerCase().indexOf(q) >= 0 || f.p.toLowerCase().indexOf(q) >= 0;
+        $("pp").onclick = function () { if (page > 1) { page--; draw(); } };
+        $("pnx").onclick = function () { if (page < pdf.numPages) { page++; draw(); } };
+        draw();
+      })
+      .catch(function () {
+        if (settled) return;
+        settled = true; clearTimeout(guard);
+        pdfFallback(u, "该 PDF 无法内嵌解析（可能为扫描件或加密），已切换浏览器原生预览 · ");
       });
-      return '<details class="arc-repo"><summary>' + esc(r.name) +
-        '<span>' + r.files.length + " 文件 · " + esc(r.branch) + " 分支" +
-        (r.private ? " · 私有" : " · 公开") + "</span></summary>" +
-        '<div class="body">' + (r.desc ? '<p class="desc">' + esc(r.desc) + "</p>" : "") +
-        (r.error ? '<p class="desc">读取异常：' + esc(r.error) + "</p>" : "") +
-        '<a href="' + esc(r.url) + '" target="_blank" rel="noopener">→ 打开仓库主页</a>' +
-        files.map(function (f) {
-          return '<a href="' + esc(ghUrl(r, f)) + '" target="_blank" rel="noopener">' +
-            hl(f.p, S.gq.trim()) + " <span class=\"meta\">" + fmt(f.s) + "</span></a>";
-        }).join("") + "</div></details>";
-    }).join("");
   }
 
-  // ---------- 交互绑定 ----------
-  var TABS = ["local", "docs", "files", "github"];
+  function previewDocx(u) {
+    var box = $("m-view");
+    if (!window.docx || !window.JSZip) {
+      box.innerHTML = '<div class="fx-empty">Word 组件未加载，请刷新或直接下载。</div>';
+      return;
+    }
+    box.innerHTML = '<div class="fx-empty">正在解析 Word…</div>';
+    fetch(u).then(function (r) { return r.arrayBuffer(); }).then(function (buf) {
+      box.innerHTML = "";
+      return docx.renderAsync(buf, box, null, { className: "docx", inWrapper: true, breakPages: true });
+    }).catch(function () {
+      box.innerHTML = '<div class="fx-empty">Word 解析失败，请直接下载。</div>';
+    });
+  }
 
-  function activate(t) {
-    if (TABS.indexOf(t) < 0) t = "local";
-    S.tab = t;
-    Array.prototype.forEach.call($("arc-tabs").querySelectorAll("button"), function (x) {
-      x.className = x.getAttribute("data-t") === t ? "on" : "";
+  function previewSheet(u) {
+    var box = $("m-view");
+    if (!window.XLSX) {
+      box.innerHTML = '<div class="fx-empty">表格组件未加载，请刷新或直接下载。</div>';
+      return;
+    }
+    box.innerHTML = '<div class="fx-empty">正在解析表格…</div>';
+    fetch(u).then(function (r) { return r.arrayBuffer(); }).then(function (buf) {
+      var wb = XLSX.read(new Uint8Array(buf), { type: "array" });
+      var names = wb.SheetNames;
+      box.innerHTML = '<div class="fx-pdfbar"><span>工作表</span><select id="sht">' +
+        names.map(function (n) { return "<option>" + esc(n) + "</option>"; }).join("") +
+        '</select></div><div id="shv"></div>';
+      function show(n) {
+        $("shv").innerHTML = XLSX.utils.sheet_to_html(wb.Sheets[n], { editable: false });
+      }
+      $("sht").onchange = function () { show(this.value); };
+      show(names[0]);
+    }).catch(function () {
+      box.innerHTML = '<div class="fx-empty">表格解析失败，请直接下载。</div>';
     });
-    TABS.forEach(function (k) {
-      $("p-" + k).className = "arc-panel" + (k === t ? " on" : "");
+  }
+
+  var CODE_LANG = { cpp: "cpp", cc: "cpp", cxx: "cpp", c: "cpp", h: "cpp", hpp: "cpp", hxx: "cpp",
+                    py: "python", js: "javascript", pas: "pascal", java: "java" };
+
+  function previewText(u, ext) {
+    var box = $("m-view");
+    box.innerHTML = '<div class="fx-empty">正在读取…</div>';
+    fetch(u).then(function (r) { return r.text(); }).then(function (t) {
+      if (t.length > 400000) t = t.slice(0, 400000) + "\n\n…（已截断，完整内容请下载）";
+      var lang = CODE_LANG[ext];
+      var plain = !lang || !window.Prism || !Prism.languages[lang];
+      var html;
+      if (plain) html = esc(t);
+      else {
+        try { html = Prism.highlight(t, Prism.languages[lang], lang); }
+        catch (e) { html = esc(t); plain = true; }
+      }
+      box.innerHTML = '<pre class="language-' + (plain ? "none" : lang) + '"><code>' + html + "</code></pre>";
+    }).catch(function () {
+      box.innerHTML = '<div class="fx-empty">读取失败，请直接下载。</div>';
     });
-    if (t === "local") renderLocal();
-    if (t === "docs") renderDocs();
-    if (t === "files") renderFiles();
-    if (t === "github") renderGithub();
   }
 
   function bind() {
-    $("arc-tabs").onclick = function (e) {
-      var b = e.target.closest ? e.target.closest("button[data-t]") : null;
-      if (!b) return;
-      activate(b.getAttribute("data-t"));
+    $("q").oninput = function () { SHOWN = 200; render(); };
+    $("kind").onchange = function () { SHOWN = 200; render(); };
+    $("sort").onchange = function () { SHOWN = 200; render(); };
+    $("list").onclick = function (e) {
+      var it = e.target.closest ? e.target.closest(".fx-item") : null;
+      if (it) openFile(it.getAttribute("data-p"));
     };
-    $("lq").oninput = function () { S.q = this.value; S.page = 1; renderLocal(); };
-    $("ldir").onchange = function () { S.dir = this.value; S.page = 1; renderLocal(); };
-    $("lkind").onchange = function () { S.kind = this.value; S.page = 1; renderLocal(); };
-    $("lsort").onchange = function () { S.sort = this.value; S.page = 1; renderLocal(); };
-    $("dq").oninput = function () { S.dq = this.value; S.dpage = 1; renderDocs(); };
-    $("fq").oninput = function () { S.fq = this.value; renderFiles(); };
-    $("gq").oninput = function () { S.gq = this.value; renderGithub(); };
+    $("m-close").onclick = function () { $("modal").className = "fx-modal"; };
+    $("modal").onclick = function (e) { if (e.target === $("modal")) $("modal").className = "fx-modal"; };
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") $("modal").className = "fx-modal";
+    });
   }
 
-  function init() {
-    renderStats();
-    renderDrives();
-    bind();
-    var t = "local";
-    try {
-      var q = new URLSearchParams(location.search).get("tab");
-      if (q && TABS.indexOf(q) >= 0) t = q;
-    } catch (e) { /* 忽略 */ }
-    activate(t);
-  }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else { init(); }

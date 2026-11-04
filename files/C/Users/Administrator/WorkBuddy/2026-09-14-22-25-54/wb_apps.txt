@@ -1,0 +1,132 @@
+﻿AppsFolder item count: 130
+Anaconda Navigator
+Anaconda Prompt
+Jupyter Notebook
+Anaconda PowerShell Prompt
+Anaconda PowerShell Prompt
+Spyder
+Canva
+Arduino IDE
+扣子
+Kimi
+Bambu Studio
+Uninstall
+License
+抖音
+Bambu Studio
+Red Panda Dev-C++
+DevEco Studio
+DiskGenius
+嘉立创EDA(专业版)
+卸载 嘉立创EDA(专业版)
+Mixly
+Node.js
+Watt Toolkit
+卸载Watt Toolkit
+Trae CN (User)
+TRAE Work CN (User)
+Microsoft Visual Studio Code (User)
+虚拟网络编辑器
+微信
+百度网盘
+豆包
+7-Zip Help
+7-Zip 26.02 (x64)
+Documentation
+Release Notes
+VideoLAN Website
+VLC media player
+配置工具
+Git FAQs (Frequently Asked Questions)
+Node.js website
+Node.js documentation
+Node.js documentation
+嘉立创EDA(专业版) 网站
+WPS Office
+联想电脑管家
+Obsidian
+VLC media player skinned
+vctl 的命令提示符
+Git Bash
+Git CMD
+Node.js command prompt
+IDLE (Python 3.12 64-bit)
+Event Viewer
+Security Configuration Management
+Hyper-V Manager
+Task Manager
+VLC media player - reset preferences and cache files
+Performance Monitor
+Task Scheduler
+Resource Monitor
+Computer Management
+DNS
+腾讯应用宝-畅玩手机软件游戏
+Python 3.12 Module Docs (64-bit)
+Uninstall Node.js
+Install Additional Tools for Node.js
+Visual Studio Code
+远程桌面连接
+WSL
+Microsoft Edge
+QQ
+夸克网盘
+Tabbit Browser
+Marvis
+VMware Workstation 17 Player
+VMware Workstation Pro
+WorkBuddy
+Character Map
+Disk Cleanup
+命令提示符
+Component Services
+dfrgui
+dhcp
+磁盘管理
+iSCSI Initiator
+Memory Diagnostics Tool
+System Configuration
+System Information
+ODBC Data Sources (64-bit)
+Print Management
+Steps Recorder
+RecoveryDrive
+services
+Windows Defender Firewall with Advanced Security
+Git GUI
+Git Release Notes
+VMCreate
+Python 3.12 Manuals (64-bit)
+Python 3.12 (64-bit)
+微信输入法
+WSL Settings
+ODBC Data Sources (32-bit)
+文件资源管理器
+注册表编辑器
+卸载百度网盘
+邮件
+日历
+设置
+天气
+终端
+Windows 安全中心
+Solitaire & Casual Games
+便笺
+Game Bar
+画图
+Blender 5.2.1.0
+录音机
+Ubuntu
+入门
+Windows 备份
+单击以执行
+媒体播放器
+相机
+记事本
+Dolby Access
+计算器
+截图工具
+时钟
+Microsoft Store
+Outlook
+iterated: 130

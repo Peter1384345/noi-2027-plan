@@ -1,0 +1,12 @@
+before_slides=15
+layout_used='DEFAULT' placeholders=0
+deleted_old_video_pages=0
+removed_inline_placeholders=0
+notes_fallback V6: notes_text_frame is None
+notes_fallback V5: notes_text_frame is None
+notes_fallback V4: notes_text_frame is None
+notes_fallback V3: notes_text_frame is None
+notes_fallback V2: notes_text_frame is None
+notes_fallback V1: notes_text_frame is None
+after_slides=21 saved_size=14549890
+order: [1]- [2]- [3]- [4]- [5]- [6]第一章 · 微光 ｜ 视频插页 V1 [7]- [8]- [9]第一章 · 微光 ｜ 视频插页 V2 [10]- [11]第二章 · 成炬 ｜ 视频插页 V3 [12]- [13]- [14]第三章 · 微光成炬 ｜ 视频插页 V4 [15]- [16]第三章 · 微光成炬 ｜ 视频插页 V5 [17]- [18]尾声 ｜ 视频插页 V6 [19]- [20]- [21]-

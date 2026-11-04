@@ -1,0 +1,63 @@
+====================================================
+汕头市第一中学校服 · 三视图 AI 绘图 Prompt
+====================================================
+校服特征（综合参考图 + 网络调研）：
+- 风格：经典校园运动风，"红黑箭头"设计
+- 上衣：白色 Polo 翻领短袖，肩部和袖子有红色箭头状条纹装饰，黑色色块点缀
+- 下装：黑色运动长裤，裤腿侧面两条白色竖条纹
+- 配色：白 / 黑 / 红，校训"红勤实健"
+- 要求：不含校徽（no school badge/logo）
+
+
+【男生三视图 · 中文 Prompt】
+服装设计三视图（正视图、侧视图、背视图），一位中国高中男生，白色背景。
+
+正视图：正面站立，双手自然下垂。白色Polo翻领短袖，肩部和袖子有红色箭头状条纹装饰，上臂外侧有黑色色块点缀，胸前空白无校徽。黑色运动长裤，两侧各两条白色竖条纹。白色运动鞋。
+
+侧视图：右侧站立，双手自然下垂。展示红色箭头条纹从肩部延伸至袖口的侧面效果，黑色色块在袖子外侧可见。黑色长裤侧面两条白色竖条纹清晰。
+
+背视图：背面站立。白色Polo衫背面为纯白色无装饰，黑色运动长裤背面可见四条白色竖条纹（左右裤腿各两条）。
+
+三视图并排排列，从左到右依次为正视图、侧视图、背视图，白色背景，写实服装设计稿风格，统一光线，比例一致。
+
+
+【女生三视图 · 中文 Prompt】
+服装设计三视图（正视图、侧视图、背视图），一位中国高中女生，中长发，白色背景。
+
+正视图：正面站立，双手自然下垂。白色Polo翻领短袖，肩部和袖子有红色箭头状条纹装饰，上臂外侧有黑色色块点缀，胸前空白无校徽。黑色运动长裤，两侧各两条白色竖条纹。白色运动鞋。
+
+侧视图：右侧站立，双手自然下垂。展示红色箭头条纹从肩部延伸至袖口的侧面效果，黑色色块在袖子外侧可见。黑色长裤侧面两条白色竖条纹清晰。中长发自然垂落。
+
+背视图：背面站立，中长发。白色Polo衫背面为纯白色无装饰，黑色运动长裤背面可见四条白色竖条纹（左右裤腿各两条）。
+
+三视图并排排列，从左到右依次为正视图、侧视图、背视图，白色背景，写实服装设计稿风格，统一光线，比例一致。
+
+
+【男生三视图 · English Prompt】
+Three-view character sheet (front view, side view, back view) of a Chinese high school boy, white background, clothing design reference sheet style.
+
+Front view: standing facing forward, arms at sides. White polo collared short-sleeve shirt with red arrow-shaped stripe decorations on shoulders and sleeves, black color block accents on outer upper arms, no badge or logo on chest. Black sports trousers with two white vertical stripes on each leg side. White sneakers.
+
+Side view: standing facing right, arms at sides. Red arrow stripes visible wrapping from shoulder to sleeve edge, black color blocks visible on sleeve outer side. Two white stripes clearly visible on the side of black trousers.
+
+Back view: standing facing away. White polo shirt back is plain white with no decorations. Black trousers back shows four white vertical stripes (two on each leg).
+
+Three views arranged side by side left to right: front, side, back. White background, consistent lighting and proportions.
+
+
+【女生三视图 · English Prompt】
+Three-view character sheet (front view, side view, back view) of a Chinese high school girl with medium-length hair, white background, clothing design reference sheet style.
+
+Front view: standing facing forward, arms at sides. White polo collared short-sleeve shirt with red arrow-shaped stripe decorations on shoulders and sleeves, black color block accents on outer upper arms, no badge or logo on chest. Black sports trousers with two white vertical stripes on each leg side. White sneakers.
+
+Side view: standing facing right, arms at sides. Red arrow stripes visible wrapping from shoulder to sleeve edge, black color blocks visible on sleeve outer side. Two white stripes clearly visible on the side of black trousers. Medium-length hair naturally falling.
+
+Back view: standing facing away, medium-length hair visible. White polo shirt back is plain white with no decorations. Black trousers back shows four white vertical stripes (two on each leg).
+
+Three views arranged side by side left to right: front, side, back. White background, consistent lighting and proportions.
+
+
+====================================================
+推荐工具：Midjourney / Stable Diffusion / DALL-E / 通义万相
+使用建议：先生成单张三视图，再根据效果微调 prompt。
+（内容由AI生成，仅供参考）

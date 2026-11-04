@@ -1,0 +1,119 @@
+﻿[计划任务] \CozeBridge | 状态:Ready | 执行:cmd.exe /c ^"C:\Program Files\nodejs\node.exe^" ^"C:\Users\Administrator\.coze\bridge\lib\index.js^" --daemon >> ^"C:\Users\Administrator\.coze\bridge\bridge.log^" 2>&1
+[计划任务] \WpsUpdateLogonTask_Administrator | 状态:Ready | 执行:E:\wps office\WPS Office\ksolaunch.exe /wpsupdate -from=task -source=task
+[计划任务] \WpsWakeWnsLogonTask | 状态:Ready | 执行:"E:\wps office\WPS Office\\ksolaunch.exe" Run addons/kpluginwrapper/kpluginwrapper.dll run_plugin -plugin_name=kmessagepushcenter -dll_name=kmessagepushcenter wake_wns
+[计划任务] \DouyinUser\DouyinGuard\LaunchDouyinGuard | 状态:Ready | 执行:D:\新建文件夹\douyin\douyin_guard.exe --start-from=taskschd
+[计划任务] \Microsoft\Windows\Active Directory Rights Management Services Client\AD RMS Rights Policy Template Management (Manual) | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\AppID\VerifiedPublisherCertStoreCheck | 状态:Ready | 执行:%windir%\system32\appidcertstorecheck.exe 
+[计划任务] \Microsoft\Windows\Autochk\Proxy | 状态:Ready | 执行:%windir%\system32\rundll32.exe /d acproxy.dll,PerformAutochkOperations
+[计划任务] \Microsoft\Windows\CertificateServicesClient\UserTask | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\Data Integrity Scan\Data Integrity Check And Scan | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\Diagnosis\RecommendedTroubleshootingScanner | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\DirectX\DirectXDatabaseUpdater | 状态:Ready | 执行:%windir%\system32\directxdatabaseupdater.exe 
+[计划任务] \Microsoft\Windows\DirectX\DXGIAdapterCache | 状态:Ready | 执行:%windir%\system32\dxgiadaptercache.exe 
+[计划任务] \Microsoft\Windows\ExploitGuard\ExploitGuard MDM policy Refresh | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\International\Synchronize Language Settings | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\LanguageComponentsInstaller\Installation | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\LanguageComponentsInstaller\ReconcileLanguageResources | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\Management\Provisioning\Logon | 状态:Ready | 执行:%windir%\system32\ProvTool.exe /turn 5 /source LogonIdleTask
+[计划任务] \Microsoft\Windows\MemoryDiagnostic\AutomaticOfflineMemoryDiagnostic | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\Multimedia\SystemSoundsService | 状态:Running | 执行: 
+[计划任务] \Microsoft\Windows\Network Connectivity Status Indicator\NcsiIdentifyUserProxies | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\Plug and Play\Device Install Reboot Required | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\Setup\PITRTask | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\SoftwareProtectionPlatform\SvcRestartTaskLogon | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\SpacePort\SpaceAgentTask | 状态:Ready | 执行:%windir%\system32\SpaceAgent.exe 
+[计划任务] \Microsoft\Windows\SpacePort\SpaceManagerTask | 状态:Ready | 执行:%windir%\system32\spaceman.exe /Work
+[计划任务] \Microsoft\Windows\TextServicesFramework\MsCtfMonitor | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\Windows Error Reporting\QueueReporting | 状态:Ready | 执行:%windir%\system32\wermgr.exe -upload
+[计划任务] \Microsoft\Windows\WindowsColorSystem\Calibration Loader | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\Wininet\CacheTask | 状态:Running | 执行: 
+[计划任务] \Microsoft\Windows\Work Folders\Work Folders Logon Synchronization | 状态:Ready | 执行: 
+[计划任务] \Microsoft\Windows\Work Folders\Work Folders Maintenance Work | 状态:Ready | 执行: 
+[服务-Auto] AppVClient | Microsoft App-V Client | 运行:Stopped | C:\WINDOWS\system32\AppVClient.exe
+[服务-Auto] AppXSvc | AppX Deployment Service (AppXSVC) | 运行:Running | C:\WINDOWS\system32\svchost.exe -k wsappx -p
+[服务-Auto] AudioEndpointBuilder | Windows Audio Endpoint Builder | 运行:Running | C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+[服务-Auto] Audiosrv | Windows Audio | 运行:Running | C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+[服务-Auto] BFE | Base Filtering Engine | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+[服务-Auto] BrokerInfrastructure | Background Tasks Infrastructure Service | 运行:Running | C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+[服务-Auto] bthserv | 蓝牙支持服务 | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalService -p
+[服务-Auto] camsvc | 功能访问管理器服务 | 运行:Running | C:\WINDOWS\system32\svchost.exe -k osprivacy -p
+[服务-Auto] CDPSvc | 连接设备平台服务 | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalService -p
+[服务-Auto] COMSysApp | COM+ System Application | 运行:Running | C:\WINDOWS\system32\dllhost.exe /Processid:{02D4B3F1-FD88-11D1-960D-00805FC79235}
+[服务-Auto] CoreMessagingRegistrar | CoreMessaging | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetwork -p
+[服务-Auto] CryptSvc | Cryptographic Services | 运行:Running | C:\WINDOWS\system32\svchost.exe -k NetworkService -p
+[服务-Auto] DcomLaunch | DCOM Server Process Launcher | 运行:Running | C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+[服务-Auto] Dhcp | DHCP Client | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+[服务-Auto] DispBrokerDesktopSvc | 显示策略服务 | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalService -p
+[服务-Auto] Dnscache | DNS Client | 运行:Running | C:\WINDOWS\system32\svchost.exe -k NetworkService -p
+[服务-Auto] DolbyDAXAPI | Dolby DAX API Service | 运行:Running | C:\WINDOWS\System32\DriverStore\FileRepository\dax3_swc_aposvc.inf_amd64_6c19a4caad42dde0\DAX3API.exe
+[服务-Auto] douyin_performance_service | 抖音客户端性能优化服务 | 运行:Running | C:\WINDOWS\system32\svchost -k douyin_performance_service
+[服务-Auto] DPS | Diagnostic Policy Service | 运行:Running | C:\WINDOWS\System32\svchost.exe -k LocalServiceNoNetwork -p
+[服务-Auto] DusmSvc | 数据使用量 | 运行:Running | C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p -s DusmSvc
+[服务-Auto] edgeupdate | Microsoft Edge Update Service (edgeupdate) | 运行:Stopped | "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" /svc
+[服务-Auto] EventLog | Windows Event Log | 运行:Running | C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+[服务-Auto] EventSystem | COM+ Event System | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalServiceRedirectionGuard -p
+[服务-Auto] FontCache | Windows Font Cache Service | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalService -p
+[服务-Auto] FontCache3.0.0.0 | Windows Presentation Foundation Font Cache 3.0.0.0 | 运行:Running | C:\WINDOWS\Microsoft.Net\Framework64\v3.0\WPF\PresentationFontCache.exe
+[服务-Auto] FrameServer | Windows Camera Frame Server | 运行:Running | C:\WINDOWS\System32\svchost.exe -k Camera
+[服务-Auto] FrameServerMonitor | Windows Camera Frame Server Monitor | 运行:Stopped | C:\WINDOWS\System32\svchost.exe -k CameraMonitor
+[服务-Auto] gpsvc | Group Policy Client | 运行:Running | C:\WINDOWS\system32\svchost.exe -k GPSvcGroup
+[服务-Auto] IKEEXT | IKE and AuthIP IPsec Keying Modules | 运行:Running | C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+[服务-Auto] IntelAudioService | Intel(R) Audio Service | 运行:Running | C:\WINDOWS\System32\DriverStore\FileRepository\intcoed.inf_amd64_f1ee27a36959d31b\AS\IAS\IntelAudioService.exe
+[服务-Auto] InventorySvc | 清单和兼容性评估服务 | 运行:Running | C:\WINDOWS\system32\svchost.exe -k InvSvcGroup -p
+[服务-Auto] iphlpsvc | IP Helper | 运行:Running | C:\WINDOWS\System32\svchost.exe -k NetSvcs -p
+[服务-Auto] jhi_service | Intel(R) Dynamic Application Loader Host Interface Service | 运行:Running | C:\WINDOWS\System32\DriverStore\FileRepository\dal.inf_amd64_8a3f88e34f6b8385\jhi_service.exe
+[服务-Auto] LanmanServer | Server | 运行:Running | C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+[服务-Auto] LanmanWorkstation | Workstation | 运行:Running | C:\WINDOWS\System32\svchost.exe -k NetworkService -p
+[服务-Auto] LenovoFnAndFunctionKeys | Lenovo Fn and function keys service | 运行:Running | C:\WINDOWS\System32\DriverStore\FileRepository\lenovofnandfunctionkeys.inf_amd64_5e21bf389d23855a\LenovoUtilityService.exe
+[服务-Auto] LenovoPcManagerService | LenovoPcManagerService | 运行:Running | "D:\联想电脑管家\PCManager\5.1.200.8201\LenovoPcManagerService.exe"
+[服务-Auto] MDCoreSvc | Microsoft Defender Core 服务 | 运行:Running | "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26080.3-0\MpDefenderCoreService.exe"
+[服务-Auto] mpssvc | Windows Defender Firewall | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+[服务-Auto] NdlSvc | NdlSvc | 运行:Running | C:\WINDOWS\System32\svchost.exe -k NdlSvc
+[服务-Auto] nsi | Network Store Interface Service | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalService -p
+[服务-Auto] pdfReaderUpdateSrv | PdfReader Update Event Notification Service | 运行:Running | C:\Users\Administrator\AppData\Local\winToolBox\Tools\pdf\pdfReaderSrv.exe
+[服务-Auto] perceptionsimulation | Windows 感知模拟服务 | 运行:Running | C:\WINDOWS\system32\PerceptionSimulation\PerceptionSimulationService.exe
+[服务-Auto] Power | Power | 运行:Running | C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+[服务-Auto] ProfSvc | User Profile Service | 运行:Running | C:\WINDOWS\system32\svchost.exe -k UserProfileService -p
+[服务-Auto] QuarkCloudDriveUpdaterInternalService1.0.0.11 | QuarkCloudDriveUpdater InternalService 1.0.0.11 (QuarkCloudDriveUpdaterInternalService1.0.0.11) | 运行:Stopped | "C:\Program Files\QuarkCloudDriveUpdater\QuarkCloudDriveUpdater\1.0.0.11\updater.exe" --system --windows-service --service=update-internal --enable-logging --vmodule=*/components/winhttp/*=1,*/components/update_client/*=2,*/chrome/updater/*=2,*/chrome/updater/quark/*=2,*/quark/utils/*=2,*/quark/common/cms/*=2,*/quattro/common/ut/*=1
+[服务-Auto] QuarkCloudDriveUpdaterService1.0.0.11 | QuarkCloudDriveUpdater Service 1.0.0.11 (QuarkCloudDriveUpdaterService1.0.0.11) | 运行:Stopped | "C:\Program Files\QuarkCloudDriveUpdater\QuarkCloudDriveUpdater\1.0.0.11\updater.exe" --system --windows-service --service=update --enable-logging --vmodule=*/components/winhttp/*=1,*/components/update_client/*=2,*/chrome/updater/*=2,*/chrome/updater/quark/*=2,*/quark/utils/*=2,*/quark/common/cms/*=2,*/quattro/common/ut/*=1
+[服务-Auto] RpcEptMapper | RPC Endpoint Mapper | 运行:Running | C:\WINDOWS\system32\svchost.exe -k RPCSS -p
+[服务-Auto] RpcSs | Remote Procedure Call (RPC) | 运行:Running | C:\WINDOWS\system32\svchost.exe -k rpcss -p
+[服务-Auto] RtkAudioUniversalService | Realtek Audio Universal Service | 运行:Running | C:\WINDOWS\System32\DriverStore\FileRepository\realtekservice.inf_amd64_d35f8fd16b4e1830\RtkAudUService64.exe
+[服务-Auto] RtkBtManServ | Realtek Bluetooth Device Manager Service | 运行:Running | C:\WINDOWS\System32\DriverStore\FileRepository\rtkbtfilter.inf_amd64_11c43d8cdd0436a1\RtkBtManServ.exe
+[服务-Auto] SamSs | Security Accounts Manager | 运行:Running | C:\WINDOWS\system32\lsass.exe
+[服务-Auto] Schedule | Task Scheduler | 运行:Running | C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+[服务-Auto] SENS | System Event Notification Service | 运行:Running | C:\WINDOWS\system32\svchost.exe -k netsvcsRedirectionGuard -p
+[服务-Auto] SensorDataService | Sensor Data Service | 运行:Stopped | C:\WINDOWS\System32\SensorDataService.exe
+[服务-Auto] ShellHWDetection | Shell Hardware Detection | 运行:Running | C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+[服务-Auto] Spooler | Print Spooler | 运行:Running | C:\WINDOWS\System32\spoolsv.exe
+[服务-Auto] sppsvc | Software Protection | 运行:Running | C:\WINDOWS\system32\sppsvc.exe
+[服务-Auto] ssh-agent | OpenSSH Authentication Agent | 运行:Running | C:\WINDOWS\System32\OpenSSH\ssh-agent.exe
+[服务-Auto] StateRepository | State Repository Service | 运行:Running | C:\WINDOWS\system32\svchost.exe -k appmodel -p
+[服务-Auto] StorSvc | Storage Service | 运行:Running | C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+[服务-Auto] SystemEventsBroker | System Events Broker | 运行:Running | C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+[服务-Auto] TextInputManagementService | Text Input Management Service | 运行:Running | C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+[服务-Auto] Themes | Themes | 运行:Running | C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+[服务-Auto] TieringEngineService | Storage Tiers Management | 运行:Running | C:\WINDOWS\system32\TieringEngineService.exe
+[服务-Auto] TrkWks | Distributed Link Tracking Client | 运行:Running | C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+[服务-Auto] UserManager | User Manager | 运行:Running | C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+[服务-Auto] UsoSvc | 更新 Orchestrator 服务 | 运行:Running | C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+[服务-Auto] vds | Virtual Disk | 运行:Running | C:\WINDOWS\System32\vds.exe
+[服务-Auto] VMAuthdService | VMware Authorization Service | 运行:Running | "D:\VMware Workstation\vmware-authd.exe"
+[服务-Auto] vmcompute | Hyper-V 主机计算服务 | 运行:Running | C:\WINDOWS\system32\vmcompute.exe
+[服务-Auto] vmms | Hyper-V 虚拟机管理 | 运行:Running | C:\WINDOWS\system32\vmms.exe
+[服务-Auto] VMnetDHCP | VMware DHCP Service | 运行:Running | C:\WINDOWS\SysWOW64\vmnetdhcp.exe
+[服务-Auto] VMware NAT Service | VMware NAT Service | 运行:Running | C:\WINDOWS\SysWOW64\vmnat.exe
+[服务-Auto] wbengine | Block Level Backup Engine Service | 运行:Stopped | "C:\WINDOWS\system32\wbengine.exe"
+[服务-Auto] Wcmsvc | Windows Connection Manager | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p -s Wcmsvc
+[服务-Auto] WinDefend | Microsoft Defender 防病毒服务 | 运行:Running | "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26080.3-0\MsMpEng.exe"
+[服务-Auto] WinInterceptUpdateSrv | Intercept Update Event Notification Service | 运行:Running | C:\Users\Administrator\AppData\Local\winToolBox\Tools\protect\winInterceptSer.exe
+[服务-Auto] Winmgmt | Windows Management Instrumentation | 运行:Running | C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+[服务-Auto] WlanSvc | WLAN AutoConfig | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+[服务-Auto] wmiApSrv | WMI Performance Adapter | 运行:Running | C:\WINDOWS\system32\wbem\WmiApSrv.exe
+[服务-Auto] WpnService | Windows 推送通知系统服务 | 运行:Running | C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+[服务-Auto] WSAIFabricSvc | WSAIFabricSvc | 运行:Running | C:\WINDOWS\system32\svchost.exe -k WSAIFabricSvcGroup -p
+[服务-Auto] wscsvc | 安全中心 | 运行:Running | C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+[服务-Auto] cbdhsvc_147c6c | 剪贴板用户服务_147c6c | 运行:Running | C:\WINDOWS\system32\svchost.exe -k ClipboardSvcGroup -p
+[服务-Auto] CDPUserSvc_147c6c | 连接设备平台用户服务_147c6c | 运行:Running | C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup
+[服务-Auto] webthreatdefusersvc_147c6c | Web 威胁防御用户服务_147c6c | 运行:Running | C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+[服务-Auto] WpnUserService_147c6c | Windows Push Notifications User Service_147c6c | 运行:Running | C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup

@@ -1,0 +1,11 @@
+一些暂时不知道有什么用的以后可以恢复的应用：
+1.Clash Verge(代理节点)
+2.Microsoft To Do(Windows应用）
+3.Microsoft Team(Windows应用）
+4.Xbox（所在地区不可用）
+5.地图（Windows已弃用）
+6.Winrar(解压缩)
+7.Microsoft Team
+8.Microsoft OneDrive
+9.Narrator Extension - Excel/Outlook/PowerPoint/Word    系统“讲述人”辅助功能的扩展，不用屏幕朗读功能可删
+10.intel® Graphics Software	显卡控制面板增强版，保留驱动即可，这个可删

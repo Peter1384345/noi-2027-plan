@@ -1,0 +1,6 @@
+﻿clone_exit=1
+fatal: destination path 'dragon-raja-story' already exists and is not an empty directory.
+failed to run git: exit status 128
+
+git_exists=True
+head=HEAD fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree. Use '--' to separate paths from revisions, like this: 'git <command> [<revision>...] -- [<file>...]'

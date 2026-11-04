@@ -1,0 +1,196 @@
+Host:	主机:
+Port:	端口:
+User:	用户名:
+Password:	密码:
+Connect		连接
+Help	帮助
+View	视图
+Attacks		攻击
+Reporting	报告
+New Connection		新建连接
+Preferences		设置
+Options to configure Cobalt Strike.		配置Cobalt Strike的选项
+Tab Activity:		标签
+Toolbar:	工具栏
+Show toolbar in main window		在主窗口中显示工具栏
+VNC Ports:		VNC端口
+GUI Font:		字体设置
+These options control the look of Cobalt Strike's consoles.		Console外观
+Font:	字体
+Foreground:		前景色
+Background:		背景色
+Highlight:		突出
+This panel is a list of team server SSL cert SHA-1 hashes.You may remove trusted hashes here.		服务器SSL证书SHA-1哈希的列表。您可以在此处删除哈希值。
+These options control the look of Cobalt Strike's graph views.		这些选项控制Cobalt Strike图形视图的外观。
+Selection:		选择
+Auto Layout:	自动布局
+Statusbar		状态栏
+These options control the look of the statusbars within Cobalt Strike's consoles.	这些选项控制Cobalt Strike控制台中状态栏的外观。
+Team Servers	服务器
+This panel is a list of saved connection profiles.You may remove stored profiles here.		此面板是已保存连接服务器的列表。您可以在此处进行删除。
+Visualization		可视化
+VPN Interfaces		VPN接口
+Listeners		监听器
+Script Manager		脚本管理器
+Close		关闭
+Event Log		日志
+Login		登陆
+Scan		扫描
+Services	服务
+Host	主机
+Ports	端口
+Max Sockets		最大连接
+Session		会话
+Launch		开始
+Applications	应用信息
+Credentials		凭证信息
+Downloads		文件下载
+Targets		目标
+Script Console		脚本控制台
+This package generates an HTML application that runs a payload.		生成一个HTML应用程序类型的后门
+Packages	生成后门
+Listener：		监听器
+Keystrokes		键盘记录
+Homepage		官方主页
+Support		技术支持
+System Information		系统信息
+About		关于
+Interact	进入beacon
+Access		执行
+Explore		目标
+Pivoting		中转
+Spawn		增加会话
+Proxy Pivots		代理信息
+Web Drive-by	钓鱼攻击
+Manage		web服务管理
+Clone Site		克隆网站
+Host File		文件下载
+Spear Phish		邮件钓鱼
+Screenshots		屏幕截图
+Web Log		web日志
+Screenshot		屏幕截图
+Process List		进程列表
+Port Scan		端口扫描
+File Browser	文件管理
+Desktop (VNC)		远程VNC
+0. Activity Report		活动报告
+1. Hosts Report		主机报告
+2. Indicators of Compromise		目标报告
+3. Sessions Report		会话报告
+4. Social Engineering Report		社会工程报告
+Reset Data		重置数据
+Export Data		数据出口
+Browser Pivot		浏览器代理
+Session:		会话
+Short Title:		短标题
+Long Title:		长标题
+Description:		描述
+Output:		输出
+Connect to team server		连接到服务器
+Disconnect from team server		断开与服务器的连接
+Configure Listeners		配置监听
+Show sessions in graph view		在图表视图中显示会话
+Show sessions in table view		在视图表中显示会话
+Show targets in table view		在视图表中显示目标
+Downloaded Files		下载文件
+Generate Windows Executable(Stageless)		生成无状态的可执行木马
+Setup Java Signed Applet Attack			设置Java签名的Applet攻击
+MS Office Macro Attack			MS Office宏攻击
+Manage Web Server		管理Web服务器
+Session Table		会话列表
+Target Table		目标列表
+Pivot Graph			枢纽视图
+Connection refused: connect			连接被拒绝
+This is the connect dialog. You should use it to connect to a Cobalt Strike (Aggressor) team server.		连接到Cobalt Strike(Aggressor)服务器
+This panel is a list of team server SSL cert SHA-1 hashes. You may remove trusted hashes here.		服务器SSL证书SHA-1哈希的列表。 你可以对其进行删除
+These options allow you to customize Cobalt Strike's report template and load custom reports.		这些选项允许您自定义Cobalt Strike的报告模板并加载自定义报告。
+This panel is a list of saved connection profiles. You may remove stored profiles here.			此面板是已保存的连接配置文件的列表。 您可以在此处进行删除
+Restart Cobalt Strike for the GUl Font change to take effect		重新启动Cobalt Strike以使GUl字体更改生效
+Operating System		操作系统
+Set Name		名字
+Set Note		备注
+Remove Host		删除主机
+Use session's current access token		使用当前会话的访问令牌
+Host a file through Cobalt Strike's web server		通过Cobalt Strike的Web服务器托管文件
+The system profiler is a client-side reconaissance tool. It finds common applications (with version numbers) used by the user.			系统分析器是一种客户端侦察工具。 它找到用户安装应用程序(带版本号)
+System Profiler		信息搜集
+Note...		备注
+Dump Hashes		转储Hash
+Elevate		提权
+This dialog generates a golden ticket and injects it into the current session.		生成黄金票证并将其注入当前会话。
+Attempt to execute a listener in an elevated context.		尝试利用漏洞提权
+Use Java Applet to get information		使用Java Applet获取信息
+The Smart Applet detects the Java version and uses an embedded exploit to disable the Java security sandbox. This attack is cross-platform and cross-browser.		自动检测java版本并进行攻击
+Vulnerable Java Versions		易受攻击的Java版本
+Java 1.6.0_45 and below		Java 1.6.0_45及以下版本
+Java 1.7.0_21 and below		Java 1.7.0_21及以下版本
+This package sets up a self-signed Java applet. This package will spawn the specified listener if the user gives the applet permission to run.		使用java自签名的程序进行钓鱼攻击
+Host a file through Cobalt Strike's web server	提供一个文件下载，可以修改Mime信息
+This package generates a VBA macro that you may embed into a Microsoft Word or Excel document. This attack works in x86 and x64 Office on Windows.		生成office宏病毒文件，此程序包生成一个VBA宏，您可以将其嵌入到Microsoft Word或Excel文档中。 此攻击适用于Windows上的x86和x64 Office
+This dialog generates a payload to stage a Cobalt Strike listener. Several output options are available.		生成各种语言版本的payload
+This package generates an autorun.inf that abuses the AutoPlay feature on Windows. Use this package to infect Windows XP and Vista systems through CDs and USB sticks.		生成利用自动播放运行的木马文件，此程序包生成一个autorun.inf，它滥用Windows上的AutoPlay功能。 使用此软件包通过CD和u盘感染Windows XP和Vista系统
+This package creates a Windows document dropper. This package drops a document to disk, opens it, and executes a payload.		捆绑器，能够对文档类进行捆绑，该包创建一个Windows文档dropper。 此包将文档放入磁盘，打开它并执行有效负载
+This dialog generates a Windows executable. Use Cobalt Strike Arsenal scripts (Help -> Arsenal) to customize this process.		生成可执行Windows木马，此对话框生成Windows可执行文件。 使用Cobalt Strike Arsenal脚本（帮助 - > Arsenal）来自定义此过程
+Export a stageless Beacon as a Windows executable. Use Cobalt Strike Arsenal scripts (Help -> Arsenal) to customize this process.		生成无状态的可执行Windows木马，将无状态Beacon导出为Windows可执行文件。 使用Cobalt Strike Arsenal脚本（帮助 - > Arsenal）来自定义此过程
+Scripted Web Delivery		脚本web传递
+Signed Applet Attack		签名Applet攻击
+Smart Applet Attack			智能攻击
+This attack hosts an artifact that delivers a Cobalt Strike payload. The provided one-liner will allow you to quickly get a session on a target host.		利用powershell，bitsadmin，regsvr32远程下马， 提供的单行程序将允许您快速获得目标主机上的会话
+The site cloner copies a website and fixes the code so images load. You may add exploits to cloned sites or capture data submitted by visitors		网站克隆者复制网站并修复代码，以便加载图像。 您可以向克隆网站添加漏洞利用或捕获访问者提交的数据
+Event Log   		日志
+Applications   		应用信息
+Credentials   		凭据信息
+Downloads   		文件下载
+Keystrokes   		键盘记录
+Proxy Pivots   		代理信息
+Screenshots   		屏幕截图
+Scripts Console   		脚本控制台
+Targets   		目标
+Web Log   		web日志
+Interfaces   		VPN接口
+Listeners   		监听器
+Scripts   		脚本管理器
+Arsenal		武器库
+Golden Ticket		黄金票据
+Make Token			制作令牌
+Sites   			网站
+Mask email addresses and passwords		对电子邮件地址和密码打码
+This action will clear Cobalt Strike's data model. You will lose all information collected up to this point. You will not be able to get it back. Press "Yes' to reset the data model.			此操作将清除Cobalt Strike的数据模型。 到目前为止，您将丢失所有收集的信息，你将无法恢复它。 按 是 重置数据模型。
+Listener:		监听器:
+Use x64 payload			使用x64 payload
+File:		文件:
+Local URl:			URL
+Local Host:		主机地址
+Local Port:		端口
+Mime Type:		Mime类型
+URI Path:		URL路径
+Type:		类型
+Restart Cobalt Strike for the GUl Font change to take effect			重新启动Cobalt Strike以使GUl字体更改生效
+Embedded File:			捆绑文件:
+File Name:			文件名
+The team server's fingerprint is:			服务器的指纹是:
+Does this match the fingerprint shown when the team server started?			这是否与服务器启动时显示的指纹相匹配？
+How long should beacon sleep for (seconds jitter%)?			beacon延迟多长时间(秒)？
+Set Beacon Note:		设置备注
+Proxy Server Port:			代理服务端口：
+A pivot listener is a way to use a compromised system as a redirector for other Beacon sessions.			将受感染系统用作内网中其他Beacon会话的中转器。
+Start a network interface and listener for CovertVPN. When a CovertVPN client is deployed, you will have a layer 2 tap into your target's network.			Covert VPN在Cobalt Strike系统上创建了一个网络接口，并将此接口连接到目标网络。
+Clone host MAC address			克隆主机MAC地址
+Edit credential store.			编辑凭证
+Note:		备注:
+Add a new target.		添加新的目标
+Address:		地址:
+Name:		名字
+os:			系统
+Congrats. You' re the owner of an HTML app package.			生成hta木马成功
+Copied text to clipboard			复制文本到剪贴板
+Saved Windows EXE to			将Windows EXE保存到
+Clone URL:			克隆网址：
+Log keystrokes on cloned site			在克隆站点上进行键盘记录
+Enable SSL			启用S​​SL
+Open in window			独立打开窗口
+Pushed screenshot to team server			推送截图到服务器
+Save screenshot			保存截图
+Send to bottom			发送到底部
+Rename Tab			窗口标题
+Close like tabs			关闭标签

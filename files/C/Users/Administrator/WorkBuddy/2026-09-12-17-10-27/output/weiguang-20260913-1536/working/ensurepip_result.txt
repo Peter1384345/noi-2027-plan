@@ -1,0 +1,11 @@
+CMD:C:\Users\Administrator\.venv-html-to-docx\Scripts\python.exe -m ensurepip --upgrade
+RC:0
+STDOUT:
+Looking in links: c:\Users\ADMINI~1\AppData\Local\Temp\tmpxdmce6e_
+Processing c:\users\administrator\appdata\local\temp\tmpxdmce6e_\pip-23.2.1-py3-none-any.whl
+Installing collected packages: pip
+Successfully installed pip-23.2.1
+
+STDERR:
+
+

@@ -1,0 +1,10 @@
+﻿OK 已删除注册表启动项: cn.coze.desktop
+OK 已删除注册表启动项: GoogleChromeAutoLaunch_D76624D3C7B8C4F3481A93E3B035D45E
+OK 已删除注册表启动项: MicrosoftEdgeAutoLaunch_98769996E24836F99EC8617644423B4C
+FAIL CozeBridge => 拒绝访问。
+
+--- 验证 ---
+确认已移除: cn.coze.desktop
+确认已移除: GoogleChromeAutoLaunch_D76624D3C7B8C4F3481A93E3B035D45E
+确认已移除: MicrosoftEdgeAutoLaunch_98769996E24836F99EC8617644423B4C
+CozeBridge 当前状态: Ready

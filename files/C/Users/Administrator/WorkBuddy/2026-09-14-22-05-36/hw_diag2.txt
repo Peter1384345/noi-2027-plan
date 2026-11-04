@@ -1,0 +1,15 @@
+﻿=== Airplane mode / radio reg ===
+RadioManagement: AirplaneMode=
+=== Camera consent (HKCU global) ===
+webcam Value = Allow
+=== Camera consent (HKLM global) ===
+webcam Value = Allow
+=== Nonpackaged webcam subkeys ===
+#Anaconda#envs#python38#python.exe = 
+#Program Files#Tencent#Weixin#Weixin.exe = 
+#微信#Weixin#Weixin.exe = 
+=== Camera error code ===
+Integrated Monitor | Status=OK | ErrCode=0
+Integrated Camera | Status=OK | ErrCode=0
+=== Bluetooth PAN/net ===
+蓝牙网络连接 2 | Bluetooth Device (Personal Area Network) #2 | Status=Disconnected

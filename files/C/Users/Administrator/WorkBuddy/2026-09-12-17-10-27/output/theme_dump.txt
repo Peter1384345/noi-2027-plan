@@ -1,0 +1,81 @@
+[ppt/theme/theme1.xml] dk1=000000, lt1=FFFFFF, dk2=44546A, lt2=E7E6E6, accent1=4472C4, accent2=ED7D31, accent3=A5A5A5, accent4=FFC000, accent5=5B9BD5, accent6=70AD47, hlink=0563C1, folHlink=954F72
+[ppt/theme/theme1.xml] fonts: ['Calibri Light', 'Calibri']
+[ppt/theme/theme2.xml] dk1=000000, lt1=FFFFFF, dk2=44546A, lt2=E7E6E6, accent1=4472C4, accent2=ED7D31, accent3=A5A5A5, accent4=FFC000, accent5=5B9BD5, accent6=70AD47, hlink=0563C1, folHlink=954F72
+[ppt/theme/theme2.xml] fonts: ['Calibri Light', 'Calibri']
+[ppt/theme/theme3.xml] dk1=000000, lt1=FFFFFF, dk2=0E2841, lt2=E8E8E8, accent1=156082, accent2=E97132, accent3=196B24, accent4=0F9ED5, accent5=A02B93, accent6=4EA72E, hlink=467886, folHlink=96607D
+[ppt/theme/theme3.xml] fonts: ['等线 Light', '等线']
+--- slide[1] bg=None fills=[('#F5B62E', 4), ('#FFDC96', 2), ('#FFE1A0', 2), ('#0A0A0A', 1)] fonts=[('仿宋', 2), ('微软雅黑', 2)]
+    text ('#FFFF00', 36.0, '仿宋', '制作者：拾光者')
+    text ('#FFFF00', 36.0, '仿宋', '小组')
+    text ('#FFFF00', 28.0, '微软雅黑', '——')
+    text ('#FFFF00', 28.0, '微软雅黑', '星火自有燎原时')
+--- slide[2] bg=None fills=[('#F5B62E', 4), ('#FFDC96', 3), ('#FFE1A0', 2), ('#FF0000', 1)] fonts=[('微软雅黑', 2), ('仿宋', 2)]
+    text ('#FFFF00', 28.0, '微软雅黑', '——')
+    text ('#FFFF00', 28.0, '微软雅黑', '星火自有燎原时')
+    text ('#FFFF00', 36.0, '仿宋', '制作者：拾光者')
+    text ('#FFFF00', 36.0, '仿宋', '小组')
+--- slide[3] bg=None fills=[('#E8C87A', 6), ('#F3EDDF', 4), ('#FF0000', 1), ('#C00000', 1)] fonts=[('Georgia', 13), ('微软雅黑', 12)]
+    text ('scheme:ACCENT_4 (8)', 9.0, 'Georgia', 'CONTENTS')
+    text (None, 34.5, 'STXingkai', '目录')
+    text (None, 9.75, 'Georgia', 'FIVE CHAPTER')
+    text (None, 9.75, 'Georgia', '· ONE STORY')
+--- slide[4] bg=None fills=[('#C00000', 5), ('#FFFFFF', 5), ('#F7F4EE', 1), ('#C9A227', 1)] fonts=[('微软雅黑', 64), ('仿宋', 1)]
+    text ('#FFFFFF', 9.0, '微软雅黑', 'OUR TEAM · ')
+    text ('#FFFFFF', 9.0, '微软雅黑', '团队分工')
+    text ('#2A2825', 33.0, '微软雅黑', '团队分工')
+    text ('#FF0000', 39.0, '仿宋', '微光成炬')
+--- slide[5] bg=None fills=[('#E8C87A', 1)] fonts=[('Georgia', 5), ('微软雅黑', 5)]
+    text ('#E8C87A', 180.0, 'Georgia', '01')
+    text ('#FFFF00', 20.0, '微软雅黑', 'PART 01 · ')
+    text ('#FFFF00', 20.0, '微软雅黑', '寒门筑梦')
+    text ('#FFFFFF', 75.0, '微软雅黑', '微光')
+--- slide[6] bg=None fills=[('#F7F4EE', 1), ('#FFFFFF', 1), ('#C00000', 1)] fonts=[('微软雅黑', 42)]
+    text ('#C00000', 45.0, '微软雅黑', '韩雅平')
+    text (None, 10.9, '微软雅黑', '——')
+    text (None, 10.9, '微软雅黑', '河南郏县曹庄村')
+    text (None, 10.9, '微软雅黑', ' · 2026 ')
+--- slide[7] bg=None fills=[] fonts=[('微软雅黑', 13), ('Georgia', 2)]
+    text ('#FFFF00', 20.0, '微软雅黑', 'PART 01 · ')
+    text ('#FFFF00', 20.0, '微软雅黑', '寒门筑梦')
+    text ('#FFFF00', 20.0, '微软雅黑', ' ')
+    text ('#E8C87A', 270.0, 'Georgia', '699')
+--- slide[8] bg=None fills=[] fonts=[('Georgia', 7), ('微软雅黑', 5)]
+    text ('#E8C87A', 180.0, 'Georgia', '02')
+    text ('#FFFF00', 20.0, '微软雅黑', 'PART 02 · ')
+    text ('#FFFF00', 20.0, '微软雅黑', '高山邮路')
+    text ('#FFFFFF', 75.0, '微软雅黑', '成炬')
+--- slide[9] bg=None fills=[('#C9A227', 4), ('#F7F4EE', 1), ('#FFFFFF', 1), ('#C00000', 1)] fonts=[('微软雅黑', 57), ('Georgia', 8)]
+    text ('#C00000', 45.0, '微软雅黑', '陈新超')
+    text ('#FFC000', 10.9, '微软雅黑', '——')
+    text ('#FFC000', 10.9, '微软雅黑', '湖北阳新县水源村')
+    text ('#FFC000', 10.9, '微软雅黑', ' · ')
+--- slide[10] bg=None fills=[('#C00000', 5), ('#FFFFFF', 4), ('#F7F4EE', 1), ('#C9A227', 1)] fonts=[('微软雅黑', 50), ('Georgia', 1)]
+    text ('#FFFFFF', 9.0, '微软雅黑', 'OUR SERVICE ')
+    text ('#FFFFFF', 9.0, '微软雅黑', '服务站')
+    text ('#FF0000', 39.0, '微软雅黑', '一个人的')
+    text ('#FF0000', 39.0, '微软雅黑', '暖心服务站')
+--- slide[11] bg=None fills=[] fonts=[('微软雅黑', 18), ('Georgia', 2)]
+    text ('#FFFFFF', 9.75, '微软雅黑', 'PART 02 · ')
+    text ('#FFFFFF', 9.75, '微软雅黑', '高山邮路')
+    text ('#FFFFFF', 9.75, '微软雅黑', ' · 10 / 13')
+    text ('#E8C87A', 195.0, 'Georgia', '1700+')
+--- slide[12] bg=None fills=[('#F7F4EE', 1), ('#C00000', 1), ('#000000', 1)] fonts=[('微软雅黑', 22)]
+    text ('#FFFFFF', 9.0, '微软雅黑', 'EPILOGUE · ')
+    text ('#FFFFFF', 9.0, '微软雅黑', '尾声')
+    text ('#FF0000', 28.0, '微软雅黑', '韩雅平')
+    text ('#FF0000', 28.0, '微软雅黑', ' · ')
+--- slide[13] bg=None fills=[] fonts=[('微软雅黑', 9), ('Georgia', 1)]
+    text ('#E8C87A', 11.25, 'Georgia', 'FROM SPARK T')
+    text ('#FFFF00', 24.0, '微软雅黑', '——')
+    text ('#FFFF00', 24.0, '微软雅黑', '星火自有燎原时')
+    text ('#FFFFFF', 14.0, '微软雅黑', '特别')
+--- slide[14] bg=None fills=[] fonts=[('微软雅黑', 9), ('Georgia', 1)]
+    text ('#E8C87A', 11.25, 'Georgia', 'FROM SPARK T')
+    text ('#FFFF00', 24.0, '微软雅黑', '——')
+    text ('#FFFF00', 24.0, '微软雅黑', '星火自有燎原时')
+    text ('#FFFFFF', 14.0, '微软雅黑', '特别')
+--- slide[15] bg=None fills=[('scheme:bg2', 1)] fonts=[('微软雅黑', 9), ('Georgia', 1)]
+    text ('#E8C87A', 11.25, 'Georgia', 'FROM SPARK T')
+    text ('#FFFF00', 24.0, '微软雅黑', '——')
+    text ('#FFFF00', 24.0, '微软雅黑', '星火自有燎原时')
+    text ('#FFFFFF', 14.0, '微软雅黑', '特别')

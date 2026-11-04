@@ -1,0 +1,40 @@
+﻿=== setupapi.dev.log recent BT entries ===
+>>>  [Device Install (DiShowUpdateDevice) - USB\VID_0BDA&PID_4853\00E04C000001]
+     ndv: {Update Driver Software Wizard - USB\VID_0BDA&PID_4853\00E04C000001}
+     dvi:                usb\vid_0bda&pid_4853&rev_0000
+     dvi:                usb\vid_0bda&pid_4853
+     dvi:                usb\compat_vid_0bda&class_e0&subclass_01&prot_01
+     dvi:                usb\compat_vid_0bda&class_e0&subclass_01
+     dvi:                usb\compat_vid_0bda&class_e0
+     dvi:                HardwareID   - USB\VID_0BDA&PID_4853
+     dvi:                DevDesc      - Realtek Bluetooth Adapter
+     dvi:                Section      - RsBthFilter_I0.NT
+     dvi:                usb\vid_0bda&pid_4853&rev_0000
+     dvi:                usb\vid_0bda&pid_4853
+     dvi:                usb\compat_vid_0bda&class_e0&subclass_01&prot_01
+     dvi:                usb\compat_vid_0bda&class_e0&subclass_01
+     dvi:                usb\compat_vid_0bda&class_e0
+     dvi:                InfName      - C:\WINDOWS\System32\DriverStore\FileRepository\bth.inf_amd64_7d906870db558e1b\bth.inf
+     dvi:                DevDesc      - Generic Bluetooth Adapter
+     dvi:                Section      - BthUsbGeneric.NT
+     dvi:                HardwareID   - USB\VID_0BDA&PID_4853
+     dvi:                DevDesc      - Realtek Bluetooth Adapter
+     dvi:                Section      - RsBthFilter.NT
+     dvi:                HardwareID   - USB\VID_0BDA&PID_4853
+     dvi:                DevDesc      - Realtek Bluetooth Adapter
+     dvi:                Section      - RsBthFilter_I0.NT
+     dvi:                          Description - Realtek Bluetooth Adapter
+     dvi:                          Section     - RsBthFilter_I0
+<<<  [Exit status: FAILURE(0x000004c7)]
+<<<  [Exit status: FAILURE(0x000004c7)]
+=== Paired keys registry (attempt) ===
+paired node: 30e7bc294e4c
+paired node: 41428be8e590
+paired node: 4142d4dedac3
+paired node: 54466e3b361b
+paired node: 5b86557a2c1d
+paired node: 6c0dc4d83828
+paired node: c4278cdeb727
+paired node: cc242e40c9f3
+paired node: e25d1764ae29
+paired node: f0b040a0de89

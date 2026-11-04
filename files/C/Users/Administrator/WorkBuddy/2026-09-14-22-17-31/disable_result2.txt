@@ -1,0 +1,4 @@
+﻿FAIL: 程序“schtasks.exe”无法运行: 拒绝访问。所在位置 行:445 字符: 24
++ ...  try { $r = schtasks.exe /Change /TN "CozeBridge" /DISABLE 2>&1 | Out ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~。
+CozeBridge 当前状态: Ready

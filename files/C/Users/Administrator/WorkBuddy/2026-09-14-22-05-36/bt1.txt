@@ -1,0 +1,13 @@
+﻿=== Elevation ===
+IsAdmin=False User=黄梓涵\Administrator
+=== Realtek BT adapter details ===
+FriendlyName=Realtek Bluetooth Adapter; Status=OK; Problem=CM_PROB_NONE
+InstanceId=USB\VID_0BDA&PID_4853\00E04C000001
+Bus hint: USB
+=== USB controllers / hubs status ===
+Intel(R) USB 3.10 可扩展主机控制器 - 1.20 (Microsoft) | OK | CM_PROB_NONE
+USB 根集线器(USB 3.0) | OK | CM_PROB_NONE
+USB Composite Device | OK | CM_PROB_NONE
+USB Composite Device | OK | CM_PROB_NONE
+Intel(R) USB 3.20 可扩展主机控制器 - 1.20 (Microsoft) | OK | CM_PROB_NONE
+USB 根集线器(USB 3.0) | OK | CM_PROB_NONE

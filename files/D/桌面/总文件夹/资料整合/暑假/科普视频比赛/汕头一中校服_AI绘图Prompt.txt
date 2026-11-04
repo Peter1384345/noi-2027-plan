@@ -1,0 +1,31 @@
+====================================================
+汕头市第一中学校服 · AI 绘图 Prompt 文案
+====================================================
+校服特征（综合参考图 + 网络调研）：
+- 风格：经典校园运动风，"红黑箭头"设计
+- 上衣：白色 Polo 翻领短袖，肩部和袖子有红色条纹/箭头装饰，黑色色块点缀
+- 下装：黑色运动长裤，裤腿侧面两条白色竖条纹
+- 校训：红勤实健
+- 要求：不含校徽（no school badge/logo）
+
+
+【男生形象 · 中文 Prompt】
+一位中国高中男生，穿着白色Polo翻领短袖校服，肩部和袖子有红色箭头状条纹装饰和黑色色块点缀，下身是黑色运动长裤，裤腿侧面有两条白色竖条纹。全身站立姿势，白色背景，写实插画风格，无校徽无Logo，青春阳光。
+
+
+【女生形象 · 中文 Prompt】
+一位中国高中女生，穿着白色Polo翻领短袖校服，肩部和袖子有红色箭头状条纹装饰和黑色色块点缀，下身是黑色运动长裤，裤腿侧面有两条白色竖条纹。全身站立姿势，白色背景，写实插画风格，无校徽无Logo，青春阳光。
+
+
+【男生形象 · English Prompt】
+A Chinese high school boy standing full body, wearing a white polo collared short-sleeve school uniform with red arrow-shaped stripe decorations and black color block accents on the shoulders and sleeves, black sports trousers with two white vertical stripes on each side. Clean white background, realistic illustration style, no school badge or logo, youthful and energetic look.
+
+
+【女生形象 · English Prompt】
+A Chinese high school girl standing full body, wearing a white polo collared short-sleeve school uniform with red arrow-shaped stripe decorations and black color block accents on the shoulders and sleeves, black sports trousers with two white vertical stripes on each side. Clean white background, realistic illustration style, no school badge or logo, youthful and energetic look.
+
+
+====================================================
+推荐 AI 绘图工具：Midjourney / Stable Diffusion / DALL-E / 通义万相
+使用时直接复制上方 Prompt 粘贴即可。
+（内容由AI生成，仅供参考）

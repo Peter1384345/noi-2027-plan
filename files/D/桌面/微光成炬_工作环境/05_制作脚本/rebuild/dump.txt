@@ -1,0 +1,722 @@
+====================================================================================================
+PAGE 1   shapes=22
+  [00] 矩形 1         AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=#0A0A0A
+  [01] 圆角矩形 2       AUTO_SHAPE (1) L 1.33 T 0.83 W 0.03 H 0.03  fill=#FFDC96
+  [02] 圆角矩形 3       AUTO_SHAPE (1) L 3.00 T 1.46 W 0.04 H 0.04  fill=#FFEBB4
+  [03] 圆角矩形 4       AUTO_SHAPE (1) L 5.29 T 0.62 W 0.02 H 0.02  fill=#FFD28C
+  [04] 圆角矩形 5       AUTO_SHAPE (1) L 7.89 T 1.15 W 0.03 H 0.03  fill=#FFE1A0
+  [05] 圆角矩形 6       AUTO_SHAPE (1) L10.50 T 0.52 W 0.04 H 0.04  fill=#FFF0BE
+  [06] 圆角矩形 7       AUTO_SHAPE (1) L 0.81 T 5.21 W 0.02 H 0.02  fill=#FFC882
+  [07] 圆角矩形 8       AUTO_SHAPE (1) L 1.33 T 6.25 W 0.03 H 0.03  fill=#FFE1A0
+  [08] 圆角矩形 9       AUTO_SHAPE (1) L 9.98 T 6.56 W 0.03 H 0.03  fill=#FFDC96
+  [09] 圆角矩形 10      AUTO_SHAPE (1) L 3.21 T 1.72 W 0.10 H 0.10  fill=#F5B62E
+  [10] 图片 11        PICTURE (13)   L 2.58 T 1.61 W 1.77 H 1.77  fill=err
+  [11] 圆角矩形 12      AUTO_SHAPE (1) L 5.39 T 1.77 W 0.10 H 0.10  fill=#F5B62E
+  [12] 图片 13        PICTURE (13)   L 4.77 T 1.61 W 1.77 H 1.77  fill=err
+  [13] 圆角矩形 14      AUTO_SHAPE (1) L 7.58 T 1.72 W 0.10 H 0.10  fill=#F5B62E
+  [14] 图片 15        PICTURE (13)   L 6.96 T 1.61 W 1.77 H 1.77  fill=err
+  [15] 圆角矩形 16      AUTO_SHAPE (1) L 9.77 T 1.77 W 0.10 H 0.10  fill=#F5B62E
+  [16] 图片 17        PICTURE (13)   L 9.14 T 1.61 W 1.77 H 1.77  fill=err
+  [17] 图片 112       PICTURE (13)   L 5.29 T 2.73 W 3.16 H 7.69  fill=err
+  [18] 图片 90        PICTURE (13)   L-3.79 T 2.98 W 4.06 H 4.52  fill=err
+  [19] 图片 94        PICTURE (13)   L13.23 T 2.98 W 4.31 H 5.41  fill=err
+  [20] 文本框 23       TEXT_BOX (17)  L 4.46 T 3.49 W 6.46 H 0.71  fill=other
+        ¶ align=- runs=2
+          sz=36.0 b=- col=#FFFF00 font=仿宋 spc=None | '制作者：拾光者'
+          sz=36.0 b=- col=#FFFF00 font=仿宋 spc=None | '小组'
+  [21] 文本框 83       TEXT_BOX (17)  L 8.85 T 3.22 W 3.01 H 0.08  fill=None
+        ¶ align=LEFT (1) runs=2
+          sz=28.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '——'
+          sz=28.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '星火自有燎原时'
+====================================================================================================
+PAGE 2   shapes=23
+  [00] 矩形 1         AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=#FF0000
+  [01] 圆角矩形 2       AUTO_SHAPE (1) L 1.25 T 0.83 W 0.03 H 0.03  fill=#FFDC96
+  [02] 圆角矩形 3       AUTO_SHAPE (1) L 2.92 T 1.46 W 0.04 H 0.04  fill=#FFEBB4
+  [03] 圆角矩形 4       AUTO_SHAPE (1) L 5.21 T 0.62 W 0.02 H 0.02  fill=#FFD28C
+  [04] 圆角矩形 5       AUTO_SHAPE (1) L 7.81 T 1.15 W 0.03 H 0.03  fill=#FFE1A0
+  [05] 圆角矩形 6       AUTO_SHAPE (1) L10.42 T 0.52 W 0.04 H 0.04  fill=#FFF0BE
+  [06] 圆角矩形 7       AUTO_SHAPE (1) L 0.73 T 5.21 W 0.02 H 0.02  fill=#FFC882
+  [07] 圆角矩形 8       AUTO_SHAPE (1) L 1.25 T 6.25 W 0.03 H 0.03  fill=#FFE1A0
+  [08] 圆角矩形 9       AUTO_SHAPE (1) L 9.90 T 6.56 W 0.03 H 0.03  fill=#FFDC96
+  [09] 圆角矩形 10      AUTO_SHAPE (1) L 3.12 T 1.72 W 0.10 H 0.10  fill=#F5B62E
+  [10] 图片 11        PICTURE (13)   L 2.50 T 1.61 W 1.77 H 1.77  fill=err
+  [11] 圆角矩形 12      AUTO_SHAPE (1) L 5.31 T 1.77 W 0.10 H 0.10  fill=#F5B62E
+  [12] 图片 13        PICTURE (13)   L 4.69 T 1.61 W 1.77 H 1.77  fill=err
+  [13] 圆角矩形 14      AUTO_SHAPE (1) L 7.50 T 1.72 W 0.10 H 0.10  fill=#F5B62E
+  [14] 图片 15        PICTURE (13)   L 6.88 T 1.61 W 1.77 H 1.77  fill=err
+  [15] 圆角矩形 16      AUTO_SHAPE (1) L 9.69 T 1.77 W 0.10 H 0.10  fill=#F5B62E
+  [16] 图片 17        PICTURE (13)   L 9.06 T 1.61 W 1.77 H 1.77  fill=err
+  [17] 图片 112       PICTURE (13)   L 5.31 T 2.65 W 3.16 H 7.69  fill=err
+  [18] 图片 90        PICTURE (13)   L 0.00 T 3.18 W 4.06 H 4.52  fill=err
+  [19] 图片 94        PICTURE (13)   L 9.43 T 2.65 W 4.31 H 5.41  fill=err
+  [20] 圆角矩形 18      AUTO_SHAPE (1) L 1.15 T 1.11 W 0.03 H 0.03  fill=#FFDC96
+  [21] 文本框 83       TEXT_BOX (17)  L 8.85 T 3.22 W 3.01 H 0.08  fill=None
+        ¶ align=LEFT (1) runs=2
+          sz=28.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '——'
+          sz=28.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '星火自有燎原时'
+  [22] 文本框 21       TEXT_BOX (17)  L 4.46 T 3.49 W 6.46 H 0.71  fill=other
+        ¶ align=- runs=2
+          sz=36.0 b=- col=#FFFF00 font=仿宋 spc=None | '制作者：拾光者'
+          sz=36.0 b=- col=#FFFF00 font=仿宋 spc=None | '小组'
+====================================================================================================
+PAGE 3   shapes=31
+  [00] 矩形 117       AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=#FF0000
+  [01] 圆角矩形 119     AUTO_SHAPE (1) L-1.35 T 5.10 W 4.38 H 4.38  fill=err
+  [02] 矩形 121       AUTO_SHAPE (1) L 1.00 T 0.66 W 0.38 H 0.01  fill=#E8C87A
+  [03] 文本框 122      TEXT_BOX (17)  L 1.52 T 0.58 W 1.51 H 0.16  fill=None
+        ¶ align=- runs=1
+          sz=9.0 b=- col=? font=Georgia spc=750 | 'CONTENTS'
+  [04] 矩形 124       AUTO_SHAPE (1) L 1.00 T 1.05 W 0.03 H 0.48  fill=#C00000
+  [05] 文本框 125      TEXT_BOX (17)  L 1.24 T 1.00 W 1.29 H 0.58  fill=None
+        ¶ align=- runs=1
+          sz=34.5 b=- col=? font=STXingkai spc=1200 | '目录'
+  [06] 文本框 126      TEXT_BOX (17)  L 2.74 T 1.28 W 2.97 H 0.17  fill=None
+        ¶ align=- runs=2
+          sz=9.8 b=- col=? font=Georgia spc=300 | 'FIVE CHAPTERS '
+          sz=9.8 b=- col=? font=Georgia spc=300 | '· ONE STORY'
+  [07] 任意多边形 127    FREEFORM (5)   L 1.00 T 2.23 W11.33 H 0.96  fill=#F3EDDF
+  [08] 文本框 128      TEXT_BOX (17)  L 1.00 T 2.34 W 1.23 H 0.71  fill=None
+        ¶ align=- runs=1
+          sz=42.0 b=- col=? font=Georgia spc=None | '01'
+  [09] 矩形 129       AUTO_SHAPE (1) L 2.44 T 2.43 W 0.01 H 0.54  fill=#E8C87A
+  [10] 文本框 130      TEXT_BOX (17)  L 2.66 T 2.45 W 5.72 H 0.30  fill=None
+        ¶ align=- runs=3
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | '序章'
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | ' · '
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | '我们的分工'
+  [11] 文本框 131      TEXT_BOX (17)  L 2.66 T 2.81 W 5.72 H 0.15  fill=None
+        ¶ align=- runs=1
+          sz=8.2 b=- col=? font=Georgia spc=300 | 'PROLOGUE · OUR TEAM OF FIFTEEN'
+  [12] 任意多边形 135    FREEFORM (5)   L 1.00 T 3.18 W11.33 H 0.96  fill=#F3EDDF
+  [13] 文本框 136      TEXT_BOX (17)  L 1.00 T 3.29 W 1.23 H 0.71  fill=None
+        ¶ align=- runs=1
+          sz=42.0 b=- col=? font=Georgia spc=None | '02'
+  [14] 矩形 137       AUTO_SHAPE (1) L 2.44 T 3.38 W 0.01 H 0.54  fill=#E8C87A
+  [15] 文本框 138      TEXT_BOX (17)  L 2.66 T 3.40 W 5.72 H 0.30  fill=None
+        ¶ align=- runs=3
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | '微光'
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | ' · '
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | '韩雅平'
+  [16] 文本框 139      TEXT_BOX (17)  L 2.66 T 3.76 W 5.72 H 0.15  fill=None
+        ¶ align=- runs=1
+          sz=8.2 b=- col=? font=Georgia spc=300 | 'PART 01 · A LIGHT FROM A VILLAGE HOME'
+  [17] 任意多边形 143    FREEFORM (5)   L 1.00 T 4.12 W11.33 H 0.96  fill=#F3EDDF
+  [18] 文本框 144      TEXT_BOX (17)  L 1.00 T 4.24 W 1.23 H 0.71  fill=None
+        ¶ align=- runs=1
+          sz=42.0 b=- col=? font=Georgia spc=None | '03'
+  [19] 矩形 145       AUTO_SHAPE (1) L 2.44 T 4.32 W 0.01 H 0.54  fill=#E8C87A
+  [20] 文本框 146      TEXT_BOX (17)  L 2.66 T 4.34 W 5.72 H 0.30  fill=None
+        ¶ align=- runs=3
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | '成炬'
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | ' · '
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | '陈新超'
+  [21] 文本框 147      TEXT_BOX (17)  L 2.66 T 4.71 W 5.72 H 0.15  fill=None
+        ¶ align=- runs=1
+          sz=8.2 b=- col=? font=Georgia spc=300 | 'PART 02 · THE ROAD POSTWOMAN'
+  [22] 任意多边形 151    FREEFORM (5)   L 1.00 T 5.07 W11.33 H 0.96  fill=#F3EDDF
+  [23] 文本框 152      TEXT_BOX (17)  L 1.00 T 5.19 W 1.23 H 0.71  fill=None
+        ¶ align=- runs=1
+          sz=42.0 b=- col=? font=Georgia spc=None | '04'
+  [24] 矩形 153       AUTO_SHAPE (1) L 2.44 T 5.27 W 0.01 H 0.54  fill=#E8C87A
+  [25] 文本框 154      TEXT_BOX (17)  L 2.66 T 5.29 W 5.74 H 0.30  fill=None
+        ¶ align=- runs=1
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | '微光成炬'
+  [26] 文本框 155      TEXT_BOX (17)  L 2.66 T 5.66 W 5.74 H 0.15  fill=None
+        ¶ align=- runs=1
+          sz=8.2 b=- col=? font=Georgia spc=300 | 'EPILOGUE · TWO GLIMMERS, ONE TORCH'
+  [27] 文本框 159      TEXT_BOX (17)  L 1.00 T 6.14 W 1.23 H 0.71  fill=None
+        ¶ align=- runs=1
+          sz=42.0 b=- col=? font=Georgia spc=None | '05'
+  [28] 矩形 160       AUTO_SHAPE (1) L 2.44 T 6.22 W 0.01 H 0.54  fill=#E8C87A
+  [29] 文本框 161      TEXT_BOX (17)  L 2.66 T 6.24 W 5.74 H 0.30  fill=None
+        ¶ align=- runs=2
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | '致谢'
+          sz=18.0 b=- col=#F3EDDF font=微软雅黑 spc=375 | ' '
+  [30] 文本框 162      TEXT_BOX (17)  L 2.66 T 6.60 W 5.74 H 0.15  fill=None
+        ¶ align=- runs=1
+          sz=8.2 b=- col=? font=Georgia spc=300 | 'CREDITS · ACKNOWLEDGEMENTS'
+====================================================================================================
+PAGE 4   shapes=31
+  [00] 矩形 167       AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=#F7F4EE
+  [01] 矩形 169       AUTO_SHAPE (1) L 0.88 T 0.58 W 2.29 H 0.28  fill=#C00000
+  [02] 文本框 170      TEXT_BOX (17)  L 1.04 T 0.65 W 1.96 H 0.16  fill=None
+        ¶ align=- runs=2
+          sz=9.0 b=Y col=#FFFFFF font=微软雅黑 spc=300 | 'OUR TEAM · '
+          sz=9.0 b=Y col=#FFFFFF font=微软雅黑 spc=300 | '团队分工'
+  [03] 文本框 172      TEXT_BOX (17)  L 0.88 T 1.23 W 3.75 H 0.55  fill=None
+        ¶ align=- runs=1
+          sz=33.0 b=Y col=#2A2825 font=微软雅黑 spc=600 | '团队分工'
+  [04] 文本框 173      TEXT_BOX (17)  L 0.88 T 1.91 W 3.75 H 0.78  fill=None
+        ¶ align=- runs=1
+          sz=39.0 b=Y col=#FF0000 font=仿宋 spc=900 | '微光成炬'
+  [05] 文本框 175      TEXT_BOX (17)  L 0.36 T 2.98 W 4.27 H 0.51  fill=None
+        ¶ align=- runs=1
+          sz=16.0 b=Y col=#C9A227 font=Georgia spc=225 | 'FIVE GROUPS · ONE DECK'
+  [06] 矩形 176       AUTO_SHAPE (1) L 4.61 T 1.60 W 8.09 H 0.79  fill=#FFFFFF
+  [07] 任意多边形 177    FREEFORM (5)   L 4.56 T 1.60 W 8.14 H 0.79  fill=#C00000
+  [08] 文本框 178      TEXT_BOX (17)  L 4.86 T 1.75 W 1.16 H 0.25  fill=None
+        ¶ align=- runs=1
+          sz=13.5 b=Y col=#C00000 font=微软雅黑 spc=150 | '文案采编组'
+  [09] 文本框 179      TEXT_BOX (17)  L 6.18 T 1.75 W 2.56 H 0.25  fill=None
+        ¶ align=LEFT (1) runs=6
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '叶晓禧'
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | ' / '
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '庄菡琳'
+          sz=11.2 b=Y col=#C9A227 font=微软雅黑 spc=75 | '·主讲'
+  [10] 文本框 180      TEXT_BOX (17)  L 4.86 T 2.06 W 7.54 H 0.17  fill=None
+        ¶ align=- runs=5
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '故事采写'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '文案打磨'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+  [11] 矩形 181       AUTO_SHAPE (1) L 4.61 T 2.52 W 8.09 H 0.79  fill=#FFFFFF
+  [12] 任意多边形 182    FREEFORM (5)   L 4.56 T 2.52 W 8.14 H 0.79  fill=#C00000
+  [13] 文本框 183      TEXT_BOX (17)  L 4.86 T 2.67 W 1.16 H 0.25  fill=None
+        ¶ align=- runs=1
+          sz=13.5 b=Y col=#C00000 font=微软雅黑 spc=150 | '视觉设计组'
+  [14] 文本框 184      TEXT_BOX (17)  L 6.18 T 2.67 W 2.09 H 0.25  fill=None
+        ¶ align=- runs=5
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '王文钰'
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | ' / '
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '陈昕越'
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | ' / '
+  [15] 文本框 185      TEXT_BOX (17)  L 4.86 T 2.98 W 7.54 H 0.17  fill=None
+        ¶ align=- runs=5
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '版式设计'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '视觉统一'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+  [16] 矩形 186       AUTO_SHAPE (1) L 4.61 T 3.45 W 8.09 H 0.79  fill=#FFFFFF
+  [17] 任意多边形 187    FREEFORM (5)   L 4.56 T 3.45 W 8.14 H 0.79  fill=#C00000
+  [18] 文本框 188      TEXT_BOX (17)  L 4.86 T 3.60 W 1.39 H 0.25  fill=None
+        ¶ align=- runs=1
+          sz=13.5 b=Y col=#C00000 font=微软雅黑 spc=150 | '素材与主讲组'
+  [19] 文本框 189      TEXT_BOX (17)  L 6.41 T 3.60 W 3.13 H 0.25  fill=None
+        ¶ align=- runs=8
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '辛夏瑶'
+          sz=11.2 b=Y col=#C9A227 font=微软雅黑 spc=75 | '·主讲'
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | ' / '
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '郑静琪'
+  [20] 文本框 190      TEXT_BOX (17)  L 4.86 T 3.91 W 7.54 H 0.17  fill=None
+        ¶ align=- runs=5
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '素材收集'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '图片制作'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+  [21] 矩形 191       AUTO_SHAPE (1) L 4.61 T 4.37 W 8.09 H 0.79  fill=#FFFFFF
+  [22] 任意多边形 192    FREEFORM (5)   L 4.56 T 4.37 W 8.14 H 0.79  fill=#C00000
+  [23] 文本框 193      TEXT_BOX (17)  L 4.86 T 4.52 W 1.39 H 0.25  fill=None
+        ¶ align=- runs=1
+          sz=13.5 b=Y col=#C00000 font=微软雅黑 spc=150 | '数据与审校组'
+  [24] 文本框 194      TEXT_BOX (17)  L 6.41 T 4.52 W 1.33 H 0.25  fill=None
+        ¶ align=- runs=3
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '王锦志'
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | ' / '
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '杜恒锐'
+  [25] 文本框 195      TEXT_BOX (17)  L 4.86 T 4.83 W 7.54 H 0.17  fill=None
+        ¶ align=- runs=5
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '数据核对'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '事实核查'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+  [26] 矩形 196       AUTO_SHAPE (1) L 4.61 T 5.30 W 8.09 H 0.79  fill=#FFFFFF
+  [27] 任意多边形 197    FREEFORM (5)   L 4.56 T 5.30 W 8.14 H 0.79  fill=#C9A227
+  [28] 文本框 198      TEXT_BOX (17)  L 4.86 T 5.45 W 1.39 H 0.25  fill=None
+        ¶ align=- runs=1
+          sz=13.5 b=Y col=#C9A227 font=微软雅黑 spc=150 | '合成与统筹组'
+  [29] 文本框 199      TEXT_BOX (17)  L 6.41 T 5.45 W 2.19 H 0.25  fill=None
+        ¶ align=LEFT (1) runs=7
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | ' '
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '黄淑淼'
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '/ '
+          sz=11.2 b=- col=#2A2826 font=微软雅黑 spc=75 | '林泽凯'
+  [30] 文本框 200      TEXT_BOX (17)  L 4.86 T 5.76 W 7.54 H 0.17  fill=None
+        ¶ align=- runs=7
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '页面合成'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | '动效串联'
+          sz=9.4 b=- col=#8A8378 font=微软雅黑 spc=75 | ' · '
+====================================================================================================
+PAGE 5   shapes=10
+  [00] 矩形 202       AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=grad[#8E0000(0.00)→#C00000(0.55)→#9E0000(1.00)]@300
+  [01] 图片 203       PICTURE (13)   L 7.01 T 0.00 W 7.80 H 7.50  fill=err
+  [02] 矩形 204       AUTO_SHAPE (1) L 6.32 T 0.00 W 1.81 H 7.50  fill=grad[#8E0000(0.00)→#8E0000(0.60)→#8E0000(1.00)]@0
+  [03] 文本框 205      TEXT_BOX (17)  L 0.62 T 0.56 W 2.85 H 3.00  fill=None
+        ¶ align=- runs=1
+          sz=180.0 b=Y col=#E8C87A font=Georgia spc=-450 | '01'
+  [04] 文本框 206      TEXT_BOX (17)  L 0.24 T 0.40 W 1.93 H 0.17  fill=None
+        ¶ align=- runs=2
+          sz=20.0 b=Y col=#FFFF00 font=微软雅黑 spc=375 | 'PART 01 · '
+          sz=20.0 b=Y col=#FFFF00 font=微软雅黑 spc=375 | '寒门筑梦'
+  [05] 文本框 207      TEXT_BOX (17)  L 0.94 T 2.46 W 3.75 H 1.31  fill=None
+        ¶ align=- runs=1
+          sz=75.0 b=Y col=#FFFFFF font=微软雅黑 spc=1500 | '微光'
+  [06] 文本框 208      TEXT_BOX (17)  L 1.00 T 4.04 W 1.25 H 0.38  fill=None
+        ¶ align=- runs=1
+          sz=22.5 b=Y col=#FFFFFF font=微软雅黑 spc=750 | '韩雅平'
+  [07] 文本框 209      TEXT_BOX (17)  L 0.73 T 4.67 W 3.31 H 0.18  fill=None
+        ¶ align=- runs=4
+          sz=14.0 b=Y col=#FFFF00 font=Georgia spc=300 | 'HAN YAPING · '
+          sz=14.0 b=Y col=#FFFF00 font=Georgia spc=300 | '寒门苦读'
+          sz=14.0 b=Y col=#FFFF00 font=Georgia spc=300 | ' · '
+          sz=14.0 b=Y col=#FFFF00 font=Georgia spc=300 | '圆梦清华'
+  [08] 文本框 210      TEXT_BOX (17)  L 0.35 T 5.43 W 4.06 H 0.27  fill=None
+        ¶ align=- runs=1
+          sz=-1.0 b=Y col=#FFFF00 font=微软雅黑 spc=225 | '三间平房，二十八张奖状，是寒门最硬的底气'
+  [09] 矩形 211       AUTO_SHAPE (1) L 1.00 T 6.72 W 0.75 H 0.03  fill=#E8C87A
+====================================================================================================
+PAGE 6   shapes=11
+  [00] 矩形 214       AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=#F7F4EE
+  [01] 图片 215       PICTURE (13)   L 0.00 T 0.00 W 6.25 H 7.50  fill=err
+  [02] 矩形 216       AUTO_SHAPE (1) L 4.90 T 0.00 W 1.98 H 7.50  fill=grad[#F7F4EE(0.00)→#F7F4EE(0.88)]@0
+  [03] 文本框 219      TEXT_BOX (17)  L 6.60 T 0.92 W 5.73 H 0.75  fill=None
+        ¶ align=- runs=1
+          sz=45.0 b=Y col=#C00000 font=微软雅黑 spc=750 | '韩雅平'
+  [04] 文本框 221      TEXT_BOX (17)  L 7.44 T 1.90 W 5.73 H 0.19  fill=None
+        ¶ align=- runs=10
+          sz=10.9 b=- col=? font=微软雅黑 spc=150 | '——'
+          sz=10.9 b=- col=? font=微软雅黑 spc=150 | '河南郏县曹庄村'
+          sz=10.9 b=- col=? font=微软雅黑 spc=150 | ' · 2026 '
+          sz=10.9 b=- col=? font=微软雅黑 spc=150 | '届'
+  [05] 文本框 222      TEXT_BOX (17)  L 6.60 T 2.31 W 5.73 H 2.88  fill=None
+        ¶ align=- runs=5
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '三间平房，墙上贴满'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | ' '
+          sz=14.0 b=Y col=#C00000 font=微软雅黑 spc=30 | '28 '
+          sz=14.0 b=Y col=#C00000 font=微软雅黑 spc=30 | '张奖状'
+        ¶ align=- runs=15
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '6 '
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '岁那年，浙江嘉善的顾虹阿姨在镜头里看到她'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '"'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '想上学'
+        ¶ align=- runs=5
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '她被清华「'
+          sz=14.0 b=Y col=#C00000 font=微软雅黑 spc=30 | '卓越医师科学家'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '」八年制录取——学医，是为了治好妈妈的病；住校'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | ' 6 '
+  [06] 文本框 223      TEXT_BOX (17)  L 6.67 T 5.68 W 0.44 H 0.41  fill=None
+  [07] 文本框 227      TEXT_BOX (17)  L 9.21 T 5.60 W 0.24 H 0.41  fill=None
+  [08] 矩形 231       AUTO_SHAPE (1) L 6.71 T 6.34 W 5.69 H 0.96  fill=#FFFFFF
+  [09] 任意多边形 232    FREEFORM (5)   L 6.67 T 6.31 W 5.73 H 0.96  fill=#C00000
+  [10] 文本框 233      TEXT_BOX (17)  L 6.88 T 6.47 W 5.27 H 0.65  fill=None
+        ¶ align=- runs=4
+          sz=11.2 b=Y col=#211F1B font=微软雅黑 spc=75 | '"'
+          sz=11.2 b=Y col=#211F1B font=微软雅黑 spc=75 | '家庭物质上的贫困，并不是我学习的阻力，'
+          sz=11.2 b=Y col=#211F1B font=微软雅黑 spc=75 | '而是我学习最大的动力。只有学好知识，才能改变自己和家庭的命运。'
+          sz=11.2 b=Y col=#211F1B font=微软雅黑 spc=75 | '"'
+====================================================================================================
+PAGE 7   shapes=9
+  [00] 矩形 235       AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=grad[#8E0000(0.00)→#C00000(0.55)→#9E0000(1.00)]@300
+  [01] 图片 236       PICTURE (13)   L 7.92 T 0.00 W 5.42 H 7.50  fill=err
+  [02] 矩形 237       AUTO_SHAPE (1) L 6.67 T 0.00 W 2.50 H 7.50  fill=grad[#8E0000(0.00)→#8E0000(0.60)→#8E0000(1.00)]@0
+  [03] 文本框 238      TEXT_BOX (17)  L 0.52 T 0.42 W 2.77 H 0.17  fill=None
+        ¶ align=- runs=3
+          sz=20.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | 'PART 01 · '
+          sz=20.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '寒门筑梦'
+          sz=20.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | ' '
+  [04] 文本框 239      TEXT_BOX (17)  L 0.67 T 0.94 W 7.10 H 4.50  fill=None
+        ¶ align=- runs=1
+          sz=270.0 b=Y col=#E8C87A font=Georgia spc=-450 | '699'
+  [05] 文本框 240      TEXT_BOX (17)  L 0.67 T 4.77 W 2.80 H 0.33  fill=None
+        ¶ align=- runs=3
+          sz=19.5 b=Y col=#FFFFFF font=微软雅黑 spc=450 | '物理类'
+          sz=19.5 b=Y col=#FFFFFF font=微软雅黑 spc=450 | ' · '
+          sz=19.5 b=Y col=#E8C87A font=微软雅黑 spc=450 | '圆梦清华'
+  [06] 文本框 241      TEXT_BOX (17)  L 0.88 T 5.62 W 2.67 H 0.19  fill=None
+        ¶ align=- runs=6
+          sz=20.0 b=- col=#FFFFFF font=微软雅黑 spc=150 | '语文'
+          sz=20.0 b=- col=#FFFFFF font=微软雅黑 spc=150 | ' 132 · '
+          sz=20.0 b=- col=#FFFFFF font=微软雅黑 spc=150 | '数学'
+          sz=20.0 b=- col=#FFFFFF font=微软雅黑 spc=150 | ' 144 · '
+  [07] 文本框 242      TEXT_BOX (17)  L 0.88 T 6.83 W 3.54 H 0.19  fill=None
+        ¶ align=- runs=1
+          sz=11.2 b=- col=#FFFFFF font=微软雅黑 spc=150 | '出分当天，清华招生组的电话打进了那间平房'
+  [08] 文本框 243      TEXT_BOX (17)  L 4.83 T 6.83 W 3.03 H 0.19  fill=None
+        ¶ align=- runs=1
+          sz=9.8 b=- col=#E8C87A font=Georgia spc=225 | 'A LIGHT FROM A VILLAGE HOME'
+====================================================================================================
+PAGE 8   shapes=9
+  [00] 矩形 245       AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=grad[#8E0000(0.00)→#C00000(0.55)→#9E0000(1.00)]@300
+  [01] 图片 246       PICTURE (13)   L 7.75 T 0.00 W 6.42 H 7.50  fill=err
+  [02] 矩形 247       AUTO_SHAPE (1) L 6.56 T 0.00 W 1.57 H 7.50  fill=grad[#8E0000(0.00)→#8E0000(0.60)→#8E0000(1.00)]@0
+  [03] 文本框 248      TEXT_BOX (17)  L 0.62 T 0.56 W 3.20 H 3.00  fill=None
+        ¶ align=- runs=1
+          sz=180.0 b=Y col=#E8C87A font=Georgia spc=-450 | '02'
+  [04] 文本框 249      TEXT_BOX (17)  L 0.32 T 0.56 W 1.93 H 0.17  fill=None
+        ¶ align=- runs=2
+          sz=20.0 b=Y col=#FFFF00 font=微软雅黑 spc=375 | 'PART 02 · '
+          sz=20.0 b=Y col=#FFFF00 font=微软雅黑 spc=375 | '高山邮路'
+  [05] 文本框 250      TEXT_BOX (17)  L 0.94 T 2.46 W 3.75 H 1.31  fill=None
+        ¶ align=- runs=1
+          sz=75.0 b=Y col=#FFFFFF font=微软雅黑 spc=1500 | '成炬'
+  [06] 文本框 251      TEXT_BOX (17)  L 1.00 T 4.04 W 1.25 H 0.38  fill=None
+        ¶ align=- runs=1
+          sz=22.5 b=Y col=#FFFFFF font=微软雅黑 spc=750 | '陈新超'
+  [07] 文本框 252      TEXT_BOX (17)  L 0.76 T 4.69 W 3.48 H 0.18  fill=None
+        ¶ align=- runs=6
+          sz=14.0 b=- col=#E8C87A font=Georgia spc=300 | 'CHEN XINCHAO · '
+          sz=14.0 b=- col=#E8C87A font=Georgia spc=300 | '抗癌'
+          sz=14.0 b=- col=#E8C87A font=Georgia spc=300 | ' · '
+          sz=14.0 b=- col=#E8C87A font=Georgia spc=300 | '坚守'
+  [08] 文本框 253      TEXT_BOX (17)  L 0.42 T 5.68 W 4.16 H 0.21  fill=None
+        ¶ align=- runs=1
+          sz=-1.0 b=Y col=#FFFF00 font=微软雅黑 spc=225 | '一辆没空调的旧货车，开出了两万人的暖心邮路'
+====================================================================================================
+PAGE 9   shapes=34
+  [00] 矩形 257       AUTO_SHAPE (1) L 0.20 T 0.00 W13.33 H 7.50  fill=#F7F4EE
+  [01] 图片 258       PICTURE (13)   L 0.00 T 0.00 W 6.25 H 7.50  fill=err
+  [02] 矩形 259       AUTO_SHAPE (1) L 4.94 T-0.12 W 1.98 H 7.47  fill=grad[#F7F4EE(0.00)→#F7F4EE(0.88)]@0
+  [03] 文本框 262      TEXT_BOX (17)  L 6.67 T 0.94 W 5.73 H 0.75  fill=None
+        ¶ align=- runs=1
+          sz=45.0 b=Y col=#C00000 font=微软雅黑 spc=750 | '陈新超'
+  [04] 文本框 264      TEXT_BOX (17)  L 8.35 T 1.69 W 5.73 H 0.19  fill=None
+        ¶ align=- runs=6
+          sz=10.9 b=Y col=#FFC000 font=微软雅黑 spc=150 | '——'
+          sz=10.9 b=Y col=#FFC000 font=微软雅黑 spc=150 | '湖北阳新县水源村'
+          sz=10.9 b=Y col=#FFC000 font=微软雅黑 spc=150 | ' · '
+          sz=10.9 b=Y col=#FFC000 font=微软雅黑 spc=150 | '乡邮员'
+  [05] 文本框 265      TEXT_BOX (17)  L 6.66 T 2.24 W 1.44 H 0.23  fill=None
+        ¶ align=- runs=1
+          sz=13.5 b=Y col=#C00000 font=Georgia spc=75 | '2012'
+  [06] 矩形 266       AUTO_SHAPE (1) L 7.33 T 2.39 W 0.35 H 0.02  fill=#C9A227
+  [07] 文本框 267      TEXT_BOX (17)  L 6.67 T 2.61 W 1.44 H 0.17  fill=None
+        ¶ align=- runs=1
+          sz=9.8 b=Y col=#2A2825 font=微软雅黑 spc=75 | '确诊肝癌早期'
+  [08] 文本框 268      TEXT_BOX (17)  L 6.66 T 2.98 W 1.44 H 0.22  fill=None
+        ¶ align=- runs=1
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '为省费用自学注射'
+  [09] 文本框 269      TEXT_BOX (17)  L 8.09 T 2.27 W 1.44 H 0.23  fill=None
+        ¶ align=- runs=1
+          sz=13.5 b=Y col=#C00000 font=Georgia spc=75 | '2020'
+  [10] 矩形 270       AUTO_SHAPE (1) L 8.82 T 2.39 W 0.35 H 0.02  fill=#C9A227
+  [11] 文本框 271      TEXT_BOX (17)  L 8.10 T 2.63 W 1.44 H 0.17  fill=None
+        ¶ align=- runs=1
+          sz=9.8 b=Y col=#2A2825 font=微软雅黑 spc=75 | '开通快递点'
+  [12] 文本框 272      TEXT_BOX (17)  L 8.09 T 2.98 W 1.44 H 0.22  fill=None
+        ¶ align=- runs=4
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '率先'
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '"'
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '快递进村'
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '"'
+  [13] 文本框 273      TEXT_BOX (17)  L 9.44 T 2.27 W 1.44 H 0.23  fill=None
+        ¶ align=- runs=1
+          sz=13.5 b=Y col=#C00000 font=Georgia spc=75 | '2022'
+  [14] 矩形 274       AUTO_SHAPE (1) L10.39 T 2.40 W 0.35 H 0.02  fill=#C9A227
+  [15] 文本框 275      TEXT_BOX (17)  L 9.44 T 2.68 W 1.44 H 0.17  fill=None
+        ¶ align=- runs=1
+          sz=9.8 b=Y col=#2A2825 font=微软雅黑 spc=75 | '加入党支部'
+  [16] 文本框 276      TEXT_BOX (17)  L 9.44 T 3.00 W 1.44 H 0.22  fill=None
+        ¶ align=- runs=1
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '阳新首个·唯一女党员'
+  [17] 文本框 277      TEXT_BOX (17)  L10.95 T 2.28 W 1.44 H 0.23  fill=None
+        ¶ align=- runs=1
+          sz=13.5 b=Y col=#C00000 font=Georgia spc=75 | '2023'
+  [18] 矩形 278       AUTO_SHAPE (1) L11.60 T 2.41 W 0.35 H 0.02  fill=#C9A227
+  [19] 文本框 279      TEXT_BOX (17)  L10.96 T 2.68 W 1.44 H 0.17  fill=None
+        ¶ align=- runs=1
+          sz=9.8 b=Y col=#2A2825 font=微软雅黑 spc=75 | '入选荆楚楷模'
+  [20] 文本框 280      TEXT_BOX (17)  L10.97 T 3.05 W 1.44 H 0.22  fill=None
+        ¶ align=- runs=4
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '获评'
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '"'
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '示范点'
+          sz=8.7 b=- col=#8A8378 font=微软雅黑 spc=38 | '"'
+  [21] 文本框 281      TEXT_BOX (17)  L 6.66 T 3.21 W 5.75 H 1.68  fill=None
+        ¶ align=- runs=19
+          sz=16.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '每天清晨'
+          sz=16.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | ' 5 '
+          sz=16.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '点起床，'
+          sz=16.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '6:20 '
+        ¶ align=- runs=8
+          sz=16.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '曾患肝癌，为省治疗费自学注射、独自赴武汉复诊；'
+          sz=16.0 b=Y col=#C00000 font=微软雅黑 spc=30 | '2023 '
+          sz=16.0 b=Y col=#C00000 font=微软雅黑 spc=30 | '年入选「荆楚楷模」'
+          sz=16.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '，快递点获评'
+  [22] 文本框 282      TEXT_BOX (17)  L 6.71 T 6.21 W 0.99 H 0.38  fill=None
+        ¶ align=- runs=1
+          sz=22.5 b=Y col=#C00000 font=Georgia spc=None | '1700+'
+  [23] 文本框 283      TEXT_BOX (17)  L 7.78 T 6.21 W 0.15 H 0.38  fill=None
+        ¶ align=- runs=1
+          sz=16.0 b=- col=#FFC000 font=微软雅黑 spc=75 | '天'
+  [24] 文本框 284      TEXT_BOX (17)  L 8.23 T 6.21 W 0.57 H 0.38  fill=None
+        ¶ align=- runs=1
+          sz=22.5 b=Y col=#C00000 font=Georgia spc=None | '120'
+  [25] 文本框 285      TEXT_BOX (17)  L 8.84 T 6.21 W 0.49 H 0.38  fill=None
+        ¶ align=- runs=3
+          sz=16.0 b=- col=#FFC000 font=微软雅黑 spc=75 | '公里'
+          sz=16.0 b=- col=#FFC000 font=微软雅黑 spc=75 | '/'
+          sz=16.0 b=- col=#FFC000 font=微软雅黑 spc=75 | '天'
+  [26] 文本框 286      TEXT_BOX (17)  L 9.65 T 6.21 W 0.65 H 0.38  fill=None
+        ¶ align=- runs=1
+          sz=22.5 b=Y col=#C00000 font=Georgia spc=None | '400'
+  [27] 文本框 287      TEXT_BOX (17)  L10.39 T 6.21 W 0.43 H 0.38  fill=None
+        ¶ align=- runs=1
+          sz=16.0 b=- col=#FFC000 font=微软雅黑 spc=75 | '件包裹'
+  [28] 文本框 288      TEXT_BOX (17)  L11.36 T 6.21 W 0.38 H 0.38  fill=None
+        ¶ align=- runs=1
+          sz=22.5 b=Y col=#C9A227 font=Georgia spc=None | '10'
+  [29] 文本框 289      TEXT_BOX (17)  L11.89 T 6.33 W 0.27 H 0.39  fill=None
+        ¶ align=- runs=1
+          sz=16.0 b=- col=#FFC000 font=微软雅黑 spc=75 | '个村'
+  [30] 矩形 290       AUTO_SHAPE (1) L 6.66 T 6.72 W 6.62 H 0.64  fill=#FFFFFF
+  [31] 任意多边形 291    FREEFORM (5)   L 6.66 T 6.72 W 5.73 H 0.75  fill=#C00000
+  [32] 文本框 292      TEXT_BOX (17)  L 6.72 T 6.72 W 5.26 H 0.32  fill=None
+        ¶ align=- runs=3
+          sz=16.0 b=Y col=#211F1B font=微软雅黑 spc=75 | '"'
+          sz=16.0 b=Y col=#211F1B font=微软雅黑 spc=75 | '我是党员，应该做榜样。只要身体允许，我就会一直做下去。'
+          sz=16.0 b=Y col=#211F1B font=微软雅黑 spc=75 | '"'
+  [33] 文本框 1        TEXT_BOX (17)  L12.06 T 2.16 W 4.44 H 0.40  fill=other
+        ¶ align=- runs=1
+          sz=-1.0 b=Y col=#FF0000 font=None spc=None | '......'
+====================================================================================================
+PAGE 10   shapes=24
+  [00] 矩形 33        AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=#F7F4EE
+  [01] 矩形 34        AUTO_SHAPE (1) L 0.88 T 0.58 W 2.40 H 0.28  fill=#C00000
+  [02] 文本框 35       TEXT_BOX (17)  L 1.04 T 0.65 W 2.06 H 0.16  fill=None
+        ¶ align=- runs=2
+          sz=9.0 b=Y col=#FFFFFF font=微软雅黑 spc=300 | 'OUR SERVICE · '
+          sz=9.0 b=Y col=#FFFFFF font=微软雅黑 spc=300 | '服务站'
+  [03] 文本框 37       TEXT_BOX (17)  L 0.64 T 1.67 W 4.40 H 1.70  fill=None
+        ¶ align=- runs=1
+          sz=39.0 b=Y col=#FF0000 font=微软雅黑 spc=300 | '一个人的'
+        ¶ align=- runs=1
+          sz=39.0 b=Y col=#FF0000 font=微软雅黑 spc=300 | '暖心服务站'
+  [04] 文本框 38       TEXT_BOX (17)  L 0.41 T 3.57 W 4.63 H 0.75  fill=None
+        ¶ align=- runs=3
+          sz=14.0 b=- col=#8A8378 font=微软雅黑 spc=150 | '一辆旧货车，开成了流动的'
+          sz=14.0 b=Y col=#FF0000 font=微软雅黑 spc=150 | '便民点'
+          sz=14.0 b=- col=#8A8378 font=微软雅黑 spc=150 | '；'
+        ¶ align=- runs=3
+          sz=14.0 b=- col=#8A8378 font=微软雅黑 spc=150 | '快递点，就是'
+          sz=14.0 b=Y col=#FF0000 font=微软雅黑 spc=150 | '乡亲们的服务站'
+          sz=14.0 b=- col=#8A8378 font=微软雅黑 spc=150 | '。'
+  [05] 文本框 39       TEXT_BOX (17)  L 0.88 T 4.83 W 4.17 H 0.17  fill=None
+        ¶ align=- runs=1
+          sz=9.8 b=- col=#C9A227 font=Georgia spc=225 | 'MOE THAN DELIVERY'
+  [06] 矩形 40        AUTO_SHAPE (1) L 4.28 T 1.70 W 3.99 H 2.00  fill=#FFFFFF
+  [07] 任意多边形 41     FREEFORM (5)   L 4.28 T 1.67 W 3.99 H 2.03  fill=#C00000
+  [08] 文本框 42       TEXT_BOX (17)  L 4.54 T 1.94 W 3.46 H 0.19  fill=None
+        ¶ align=- runs=2
+          sz=9.8 b=Y col=#C00000 font=微软雅黑 spc=225 | '01 · '
+          sz=9.8 b=Y col=#C00000 font=微软雅黑 spc=225 | '便民车'
+  [09] 文本框 43       TEXT_BOX (17)  L 4.54 T 2.26 W 3.46 H 1.14  fill=None
+        ¶ align=- runs=3
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '教老人用手机缴费、帮忙操作网购退货、'
+          sz=14.0 b=Y col=#FF0000 font=微软雅黑 spc=30 | '替留守家庭寄送物品，捎东西、指路'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '、载人都是常事。'
+  [10] 矩形 44        AUTO_SHAPE (1) L 8.49 T 1.70 W 3.99 H 2.00  fill=#FFFFFF
+  [11] 任意多边形 45     FREEFORM (5)   L 8.49 T 1.67 W 3.99 H 2.03  fill=#C00000
+  [12] 文本框 46       TEXT_BOX (17)  L 8.75 T 1.94 W 3.46 H 0.19  fill=None
+        ¶ align=- runs=2
+          sz=9.8 b=Y col=#C00000 font=微软雅黑 spc=225 | '02 · '
+          sz=9.8 b=Y col=#C00000 font=微软雅黑 spc=225 | '代买菜'
+  [13] 文本框 47       TEXT_BOX (17)  L 8.75 T 2.26 W 3.46 H 1.14  fill=None
+        ¶ align=- runs=9
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '村里的老人去趟县城不容易，她每天'
+          sz=14.0 b=Y col=#FF0000 font=微软雅黑 spc=30 | '拖货'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '回来，顺路'
+          sz=14.0 b=Y col=#FF0000 font=微软雅黑 spc=30 | '把菜捎上'
+  [14] 矩形 48        AUTO_SHAPE (1) L 4.28 T 3.95 W 3.99 H 2.00  fill=#FFFFFF
+  [15] 任意多边形 49     FREEFORM (5)   L 4.28 T 3.92 W 3.99 H 2.03  fill=#C00000
+  [16] 文本框 50       TEXT_BOX (17)  L 4.54 T 4.19 W 3.46 H 0.19  fill=None
+        ¶ align=- runs=2
+          sz=9.8 b=Y col=#C00000 font=微软雅黑 spc=225 | '03 · '
+          sz=9.8 b=Y col=#C00000 font=微软雅黑 spc=225 | '打退堂鼓'
+  [17] 文本框 51       TEXT_BOX (17)  L 4.54 T 4.50 W 3.46 H 1.15  fill=None
+        ¶ align=- runs=8
+          sz=14.0 b=Y col=#FF0000 font=微软雅黑 spc=30 | '太苦了'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '，她也把快递点转让过——接手的人只撑了三天就喊'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '"'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '太辛苦了'
+  [18] 矩形 52        AUTO_SHAPE (1) L 8.49 T 3.95 W 3.99 H 2.00  fill=#FFFFFF
+  [19] 任意多边形 53     FREEFORM (5)   L 8.49 T 3.92 W 3.99 H 2.03  fill=#C9A227
+  [20] 文本框 54       TEXT_BOX (17)  L 8.75 T 4.19 W 3.46 H 0.19  fill=None
+        ¶ align=- runs=2
+          sz=9.8 b=Y col=#C9A227 font=微软雅黑 spc=225 | '04 · '
+          sz=9.8 b=Y col=#C9A227 font=微软雅黑 spc=225 | '示范点'
+  [21] 文本框 55       TEXT_BOX (17)  L 8.75 T 4.51 W 3.46 H 1.14  fill=None
+        ¶ align=- runs=7
+          sz=14.0 b=Y col=#FF0000 font=微软雅黑 spc=30 | '2021 '
+          sz=14.0 b=Y col=#FF0000 font=微软雅黑 spc=30 | '年网湖抗洪'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '，她与男同志并肩扛沙袋、守大堤；快递点获评'
+          sz=14.0 b=Y col=#3A3A38 font=微软雅黑 spc=30 | '"'
+  [22] 矩形 56        AUTO_SHAPE (1) L 0.73 T 6.92 W 0.50 H 0.02  fill=#C00000
+  [23] 文本框 57       TEXT_BOX (17)  L 1.66 T 6.69 W 3.93 H 0.19  fill=None
+        ¶ align=- runs=5
+          sz=24.0 b=Y col=#2A2825 font=微软雅黑 spc=150 | '乡亲们叫她'
+          sz=24.0 b=Y col=#2A2825 font=微软雅黑 spc=150 | '"'
+          sz=24.0 b=Y col=#FF0000 font=微软雅黑 spc=150 | '铁娘子'
+          sz=24.0 b=Y col=#2A2825 font=微软雅黑 spc=150 | '"'
+====================================================================================================
+PAGE 11   shapes=9
+  [00] 矩形 23        AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=grad[#8E0000(0.00)→#C00000(0.55)→#9E0000(1.00)]@300
+  [01] 图片 24        PICTURE (13)   L 7.71 T 0.00 W 5.62 H 7.50  fill=err
+  [02] 矩形 25        AUTO_SHAPE (1) L 6.46 T 0.00 W 2.50 H 7.50  fill=grad[#8E0000(0.00)→#8E0000(0.60)→#8E0000(1.00)]@0
+  [03] 文本框 26       TEXT_BOX (17)  L 0.88 T 0.58 W 2.77 H 0.17  fill=None
+        ¶ align=- runs=3
+          sz=9.8 b=- col=#FFFFFF font=微软雅黑 spc=300 | 'PART 02 · '
+          sz=9.8 b=- col=#FFFFFF font=微软雅黑 spc=300 | '高山邮路'
+          sz=9.8 b=- col=#FFFFFF font=微软雅黑 spc=300 | ' · 10 / 13'
+  [04] 文本框 27       TEXT_BOX (17)  L 0.55 T 0.88 W 8.32 H 3.25  fill=None
+        ¶ align=- runs=1
+          sz=195.0 b=Y col=#E8C87A font=Georgia spc=-300 | '1700+'
+  [05] 文本框 28       TEXT_BOX (17)  L 0.85 T 3.96 W 3.04 H 0.31  fill=None
+        ¶ align=- runs=3
+          sz=18.8 b=Y col=#FFFFFF font=微软雅黑 spc=450 | '多个日夜'
+          sz=18.8 b=Y col=#FFFFFF font=微软雅黑 spc=450 | ' · '
+          sz=18.8 b=Y col=#E8C87A font=微软雅黑 spc=450 | '暖心邮路'
+  [06] 文本框 29       TEXT_BOX (17)  L 0.25 T 4.75 W 4.26 H 0.75  fill=None
+        ¶ align=- runs=5
+          sz=20.0 b=- col=#FFFF00 font=微软雅黑 spc=150 | '一辆没空调的二手厢式货车'
+          sz=20.0 b=- col=#FFFF00 font=微软雅黑 spc=150 | ' · 10 '
+          sz=20.0 b=- col=#FFFF00 font=微软雅黑 spc=150 | '个村'
+          sz=20.0 b=- col=#FFFF00 font=微软雅黑 spc=150 | ' · 2.3 '
+        ¶ align=- runs=5
+          sz=20.0 b=- col=#FFFF00 font=微软雅黑 spc=150 | '第一次开车，'
+          sz=20.0 b=- col=#FFFF00 font=微软雅黑 spc=150 | '40 '
+          sz=20.0 b=- col=#FFFF00 font=微软雅黑 spc=150 | '公里开了'
+          sz=20.0 b=- col=#FFFF00 font=微软雅黑 spc=150 | ' 2 '
+  [07] 文本框 30       TEXT_BOX (17)  L 0.88 T 6.83 W 2.82 H 0.19  fill=None
+        ¶ align=- runs=2
+          sz=11.2 b=- col=#FFFFFF font=微软雅黑 spc=150 | '2021 '
+          sz=11.2 b=- col=#FFFFFF font=微软雅黑 spc=150 | '网湖抗洪，她扛沙袋、守大堤'
+  [08] 文本框 31       TEXT_BOX (17)  L 4.11 T 6.83 W 3.31 H 0.19  fill=None
+        ¶ align=- runs=1
+          sz=9.8 b=- col=#E8C87A font=Georgia spc=225 | 'A ROAD THROUGH THE MOUNTAINS'
+====================================================================================================
+PAGE 12   shapes=17
+  [00] 矩形 59        AUTO_SHAPE (1) L 0.01 T 0.00 W13.33 H 7.50  fill=#F7F4EE
+  [01] 矩形 60        AUTO_SHAPE (1) L 0.71 T 0.58 W 1.89 H 0.28  fill=#C00000
+  [02] 文本框 61       TEXT_BOX (17)  L 0.88 T 0.65 W 1.55 H 0.16  fill=None
+        ¶ align=- runs=2
+          sz=9.0 b=Y col=#FFFFFF font=微软雅黑 spc=300 | 'EPILOGUE · '
+          sz=9.0 b=Y col=#FFFFFF font=微软雅黑 spc=300 | '尾声'
+  [03] 矩形 63        AUTO_SHAPE (1) L 6.51 T 1.56 W 0.01 H 2.81  fill=#000000
+  [04] 文本框 64       TEXT_BOX (17)  L 0.36 T 1.84 W 5.21 H 1.16  fill=None
+  [05] 文本框 65       TEXT_BOX (17)  L 0.10 T 3.24 W 5.25 H 0.10  fill=None
+        ¶ align=- runs=3
+          sz=28.0 b=Y col=#FF0000 font=微软雅黑 spc=225 | '韩雅平'
+          sz=28.0 b=Y col=#FF0000 font=微软雅黑 spc=225 | ' · '
+          sz=28.0 b=Y col=#FF0000 font=微软雅黑 spc=225 | '寒门圆梦'
+  [06] 文本框 66       TEXT_BOX (17)  L 0.36 T 4.26 W 5.21 H 0.33  fill=None
+        ¶ align=- runs=6
+          sz=10.5 b=- col=#3A3A38 font=微软雅黑 spc=75 | '28 '
+          sz=10.5 b=- col=#3A3A38 font=微软雅黑 spc=75 | '张奖状'
+          sz=10.5 b=- col=#3A3A38 font=微软雅黑 spc=75 | ' · 12 '
+          sz=10.5 b=- col=#3A3A38 font=微软雅黑 spc=75 | '年资助'
+  [07] 文本框 67       TEXT_BOX (17)  L 0.36 T 4.51 W 5.21 H 0.32  fill=None
+        ¶ align=- runs=1
+          sz=10.2 b=- col=#8A8378 font=微软雅黑 spc=None | '一张书桌，也能撑起一座山。'
+  [08] 文本框 69       TEXT_BOX (17)  L 9.80 T 3.71 W 5.21 H 0.18  fill=None
+        ¶ align=- runs=3
+          sz=28.0 b=Y col=#FF0000 font=微软雅黑 spc=225 | '陈新超'
+          sz=28.0 b=Y col=#FF0000 font=微软雅黑 spc=225 | ' · '
+          sz=28.0 b=Y col=#FF0000 font=微软雅黑 spc=225 | '乡邮坚守'
+  [09] 文本框 70       TEXT_BOX (17)  L10.32 T 4.38 W 5.21 H 0.33  fill=None
+        ¶ align=- runs=6
+          sz=10.5 b=- col=#3A3A38 font=微软雅黑 spc=75 | '1700 '
+          sz=10.5 b=- col=#3A3A38 font=微软雅黑 spc=75 | '个日夜'
+          sz=10.5 b=- col=#3A3A38 font=微软雅黑 spc=75 | ' · 10 '
+          sz=10.5 b=- col=#3A3A38 font=微软雅黑 spc=75 | '个村'
+  [10] 文本框 71       TEXT_BOX (17)  L10.25 T 4.71 W 5.21 H 0.32  fill=None
+        ¶ align=- runs=1
+          sz=10.2 b=- col=#8A8378 font=微软雅黑 spc=None | '把邮路走成归途，把温暖送进每一户人家。'
+  [11] 文本框 73       TEXT_BOX (17)  L 1.07 T 6.45 W 0.08 H 0.23  fill=None
+  [12] 图片 112       PICTURE (13)   L 4.59 T 2.44 W 3.42 H 8.32  fill=err
+  [13] 图片 11        PICTURE (13)   L 0.01 T 1.64 W 1.77 H 1.77  fill=err
+  [14] 图片 13        PICTURE (13)   L 1.61 T 1.55 W 1.77 H 1.77  fill=err
+  [15] 图片 15        PICTURE (13)   L 9.80 T 1.64 W 1.77 H 1.77  fill=err
+  [16] 图片 3         PICTURE (13)   L11.24 T 1.64 W 1.77 H 1.77  fill=err
+====================================================================================================
+PAGE 13   shapes=12
+  [00] 矩形 77        AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=grad[#8E0000(0.00)→#C00000(0.55)→#9E0000(1.00)]@300
+  [01] 矩形 78        AUTO_SHAPE (1) L11.10 T 5.27 W 1.56 H 1.56  fill=None
+  [02] 矩形 79        AUTO_SHAPE (1) L11.27 T 5.44 W 1.23 H 1.23  fill=None
+  [03] 文本框 80       TEXT_BOX (17)  L 4.76 T 1.23 W 3.81 H 0.19  fill=None
+        ¶ align=- runs=1
+          sz=11.2 b=- col=#E8C87A font=Georgia spc=750 | 'FROM SPARK TO FLAME'
+  [04] 文本框 83       TEXT_BOX (17)  L 9.16 T 3.30 W 3.01 H 0.08  fill=None
+        ¶ align=LEFT (1) runs=2
+          sz=24.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '——'
+          sz=24.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '星火自有燎原时'
+  [05] 文本框 84       TEXT_BOX (17)  L 4.88 T 6.11 W 3.88 H 0.72  fill=None
+        ¶ align=CENTER (2) runs=3
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '特别'
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '鸣谢：'
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '\u3000\u3000文案采编组\u3000／\u3000视觉设计组'
+        ¶ align=CENTER (2) runs=2
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '素材与主讲组\u3000／\u3000数据与审校组\u3000／\u3000合成与'
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '统筹组'
+  [06] 文本框 85       TEXT_BOX (17)  L 3.48 T 3.85 W 3.40 H 0.17  fill=None
+        ¶ align=- runs=2
+          sz=40.0 b=- col=#FFFF00 font=微软雅黑 spc=300 | '十五人同行，共燃一盏灯'
+          sz=28.0 b=- col=#FFFF00 font=微软雅黑 spc=300 | ' '
+  [07] 图片 11        PICTURE (13)   L 2.50 T 1.61 W 1.77 H 1.77  fill=err
+  [08] 图片 13        PICTURE (13)   L 4.69 T 1.61 W 1.77 H 1.77  fill=err
+  [09] 图片 15        PICTURE (13)   L 6.88 T 1.61 W 1.77 H 1.77  fill=err
+  [10] 图片 17        PICTURE (13)   L 9.06 T 1.61 W 1.77 H 1.77  fill=err
+  [11] 图片 112       PICTURE (13)   L 5.11 T 0.99 W 3.42 H 8.32  fill=err
+====================================================================================================
+PAGE 14   shapes=12
+  [00] 矩形 77        AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=grad[#8E0000(0.00)→#C00000(0.55)→#9E0000(1.00)]@300
+  [01] 矩形 78        AUTO_SHAPE (1) L11.10 T 5.27 W 1.56 H 1.56  fill=None
+  [02] 矩形 79        AUTO_SHAPE (1) L11.27 T 5.44 W 1.23 H 1.23  fill=None
+  [03] 文本框 80       TEXT_BOX (17)  L 4.76 T 1.23 W 3.81 H 0.19  fill=None
+        ¶ align=- runs=1
+          sz=11.2 b=- col=#E8C87A font=Georgia spc=750 | 'FROM SPARK TO FLAME'
+  [04] 文本框 83       TEXT_BOX (17)  L 9.16 T 3.30 W 3.01 H 0.08  fill=None
+        ¶ align=LEFT (1) runs=2
+          sz=24.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '——'
+          sz=24.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '星火自有燎原时'
+  [05] 文本框 84       TEXT_BOX (17)  L 4.88 T 6.11 W 3.88 H 0.72  fill=None
+        ¶ align=CENTER (2) runs=3
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '特别'
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '鸣谢：'
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '\u3000\u3000文案采编组\u3000／\u3000视觉设计组'
+        ¶ align=CENTER (2) runs=2
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '素材与主讲组\u3000／\u3000数据与审校组\u3000／\u3000合成与'
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '统筹组'
+  [06] 文本框 85       TEXT_BOX (17)  L 3.48 T 3.85 W 3.40 H 0.17  fill=None
+        ¶ align=- runs=2
+          sz=40.0 b=- col=#FFFF00 font=微软雅黑 spc=300 | '十五人同行，共燃一盏灯'
+          sz=28.0 b=- col=#FFFF00 font=微软雅黑 spc=300 | ' '
+  [07] 图片 11        PICTURE (13)   L 2.50 T 1.61 W 1.77 H 1.77  fill=err
+  [08] 图片 13        PICTURE (13)   L 4.69 T 1.61 W 1.77 H 1.77  fill=err
+  [09] 图片 15        PICTURE (13)   L 6.88 T 1.61 W 1.77 H 1.77  fill=err
+  [10] 图片 17        PICTURE (13)   L 9.06 T 1.61 W 1.77 H 1.77  fill=err
+  [11] 图片 112       PICTURE (13)   L 5.11 T 0.99 W 3.42 H 8.32  fill=err
+====================================================================================================
+PAGE 15   shapes=15
+  [00] 矩形 77        AUTO_SHAPE (1) L 0.00 T 0.00 W13.33 H 7.50  fill=grad[#8E0000(0.00)→#C00000(0.55)→#9E0000(1.00)]@300
+  [01] 矩形 78        AUTO_SHAPE (1) L11.10 T 5.27 W 1.56 H 1.56  fill=None
+  [02] 矩形 79        AUTO_SHAPE (1) L11.27 T 5.44 W 1.23 H 1.23  fill=None
+  [03] 文本框 80       TEXT_BOX (17)  L 4.76 T 1.23 W 3.81 H 0.19  fill=None
+        ¶ align=- runs=1
+          sz=11.2 b=- col=#E8C87A font=Georgia spc=750 | 'FROM SPARK TO FLAME'
+  [04] 文本框 83       TEXT_BOX (17)  L 9.16 T 3.30 W 3.01 H 0.08  fill=None
+        ¶ align=LEFT (1) runs=2
+          sz=24.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '——'
+          sz=24.0 b=Y col=#FFFF00 font=微软雅黑 spc=300 | '星火自有燎原时'
+  [05] 文本框 84       TEXT_BOX (17)  L 4.88 T 6.11 W 3.88 H 0.72  fill=None
+        ¶ align=CENTER (2) runs=3
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '特别'
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '鸣谢：'
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '\u3000\u3000文案采编组\u3000／\u3000视觉设计组'
+        ¶ align=CENTER (2) runs=2
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '素材与主讲组\u3000／\u3000数据与审校组\u3000／\u3000合成与'
+          sz=14.0 b=Y col=#FFFFFF font=微软雅黑 spc=150 | '统筹组'
+  [06] 文本框 85       TEXT_BOX (17)  L 3.48 T 3.85 W 3.40 H 0.17  fill=None
+        ¶ align=- runs=2
+          sz=40.0 b=- col=#FFFF00 font=微软雅黑 spc=300 | '十五人同行，共燃一盏灯'
+          sz=28.0 b=- col=#FFFF00 font=微软雅黑 spc=300 | ' '
+  [07] 图片 11        PICTURE (13)   L 2.50 T 1.61 W 1.77 H 1.77  fill=err
+  [08] 图片 13        PICTURE (13)   L 4.69 T 1.61 W 1.77 H 1.77  fill=err
+  [09] 图片 15        PICTURE (13)   L 6.88 T 1.61 W 1.77 H 1.77  fill=err
+  [10] 图片 17        PICTURE (13)   L 9.06 T 1.61 W 1.77 H 1.77  fill=err
+  [11] 文本框 0        TEXT_BOX (17)  L 0.00 T 3.16 W13.33 H 2.40  fill=theme:BACKGROUND_2 (16)
+  [12] 文本框 1        TEXT_BOX (17)  L 3.87 T 3.58 W 5.59 H 1.72  fill=other
+        ¶ align=- runs=1
+          sz=96.0 b=Y col=#FF0000 font=仿宋 spc=None | '谢谢聆听'
+  [13] 图片 2         PICTURE (13)   L13.96 T 2.88 W 2.69 H 3.35  fill=err
+  [14] 图片 3         PICTURE (13)   L-3.31 T 3.04 W 2.78 H 3.47  fill=err

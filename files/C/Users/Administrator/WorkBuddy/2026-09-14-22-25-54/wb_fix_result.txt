@@ -1,0 +1,8 @@
+﻿elevated: True
+regedit.exe : OK
+control.exe : OK
+winver.exe : OK
+index dir already exists
+WSearch after restart: Running
+index rebuild triggered : OK
+done

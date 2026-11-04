@@ -1,0 +1,18 @@
+open: open started (slide), chunks streaming via /stream for file_id=C:\Users\Administrator\WorkBuddy\2026-09-12-17-10-27\微光成炬-星火自有燎原时-复件.pptx
+
+file_id='C://Users//Administrator//WorkBuddy//2026-09-12-17-10-27//微光成炬-星火自有燎原时-复件.pptx'
+notes page[12] ok=False error: JSON-RPC 错误 -32603: slide_add_notes: SlideEditor::AddNotes: presentation is not open
+{"ok": 
+notes page[11] ok=False error: JSON-RPC 错误 -32603: slide_add_notes: SlideEditor::AddNotes: presentation is not open
+{"ok": 
+notes page[10] ok=False error: JSON-RPC 错误 -32603: slide_add_notes: SlideEditor::AddNotes: presentation is not open
+{"ok": 
+notes page[8] ok=False error: JSON-RPC 错误 -32603: slide_add_notes: SlideEditor::AddNotes: presentation is not open
+{"ok": 
+notes page[7] ok=False error: JSON-RPC 错误 -32603: slide_add_notes: SlideEditor::AddNotes: presentation is not open
+{"ok": 
+notes page[5] ok=False error: JSON-RPC 错误 -32603: slide_add_notes: SlideEditor::AddNotes: presentation is not open
+{"ok": 
+save: error: JSON-RPC 错误 -32603: [-1]save_file: file_path is required (no original path registered for file_id=C://Users//Administrator//WorkBuddy//2026-09-12-17-10-27//微光成炬-星火自有燎原时-复件.pptx)
+{"ok": false, 
+close: Editor closed for file_id=C://Users//Administrator//WorkBuddy//2026-09-12-17-10-27//微光成炬-星火自有燎原时-复件.pptx

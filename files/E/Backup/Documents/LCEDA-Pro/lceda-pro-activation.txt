@@ -1,0 +1,8 @@
+{
+    "username": "eda_ypqqmwew",
+    "customer_code": "12616179A",
+    "email": "",
+    "phone": "15767801374",
+    "company": "",
+    "license": "dXNlcm5hbWV8Y3VzdG9tZXJfY29kZXxlbWFpbHxwaG9uZXxjb21wYW55,CQ4u/DtonGjJ1HUsLDtbFenIrZiPkDKhIYF994Z0BpA6BPTTHsL/GdpfeT/rljxVPSeDfequSqDbGf7PCWQXSR5WFdO6DXP+7/eQ7gY4wgJ8B6lYt/7SJ2UurUrlu18P8b89/K9zJO5ahSXMKGado4O8AkwKg+xd2dvMEaqvea0="
+}

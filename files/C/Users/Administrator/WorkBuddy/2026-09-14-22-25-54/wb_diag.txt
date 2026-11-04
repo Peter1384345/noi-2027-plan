@@ -1,0 +1,8 @@
+﻿=== target files ===
+C:\Windows\regedit.exe : True
+C:\Windows\System32\mspaint.exe : False
+C:\Windows\System32\notepad.exe : False
+C:\Windows\System32\control.exe : True
+C:\Windows\System32\winver.exe : True
+=== admin check ===
+False

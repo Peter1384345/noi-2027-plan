@@ -1,0 +1,8 @@
+﻿=== CONTAINS exact ===
+matched: 1
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\注册表编辑器.lnk
+=== CONTAINS prefix ===
+matched: 1
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\注册表编辑器.lnk
+=== CONTAINS regedit ===
+matched: 0

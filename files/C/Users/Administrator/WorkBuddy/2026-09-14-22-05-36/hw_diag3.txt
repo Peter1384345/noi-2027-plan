@@ -1,0 +1,8 @@
+﻿=== Recent BthUSB/bth errors (System log, 14d) ===
+2026/9/9 20:14:59 | BTHUSB | 本地蓝牙无线收发器与蓝牙无线收发器地址为 (5b:86:55:7a:2c:1d) 的设备之间的相互验证失败。
+=== Camera-related errors (14d) ===
+=== frameserver detail ===
+frameserver: State=Stopped StartMode=Auto ProcessId=0
+=== BTHUSB driver ===
+Integrated Camera | DriverVersion=10.0.22000.20386 | DriverDate=2025/9/2 8:00:00 | IsSigned=True
+Realtek Bluetooth Adapter | DriverVersion=18.4032.0.3007 | DriverDate=2025/9/30 8:00:00 | IsSigned=True

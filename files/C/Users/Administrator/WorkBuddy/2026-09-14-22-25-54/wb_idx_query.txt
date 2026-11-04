@@ -1,0 +1,32 @@
+﻿=== all .lnk count ===
+matched: 107
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Arduino IDE.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Marvis.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Microsoft Edge.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Obsidian.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\WorkBuddy.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\WSL Settings.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\WSL.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\夸克网盘.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\扣子.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\腾讯应用宝-畅玩手机软件游戏.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 附件\字符映射表.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 附件\步骤记录器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\腾讯软件\QQ\QQ.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 系统\任务管理器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\DHCP.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\DNS.LNK
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\Hyper-V 管理器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\iSCSI 发起程序.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\ODBC 数据源(32 位).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\ODBC 数据源(64 位).lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\Hyper-V 快速创建.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\Windows 内存诊断.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\事件查看器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\任务计划程序.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\优化驱动器.lnk
+C:\ProgramData\Microsoft\Windows\「开始」菜单\程序\Windows 工具\具有高级安全性的 Windows Defender 防火墙.lnk
+=== path contains Start Menu ===
+matched: 0
+=== filename contains regedit ===
+matched: 0

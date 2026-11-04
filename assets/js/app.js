@@ -11,7 +11,7 @@
     { h: "plan.html",      t: "56 周计划", s: "Plan" },
     { h: "kb.html",        t: "知识库",  s: "Knowledge Base" },
     { h: "papers.html",    t: "真题库",  s: "Papers" },
-    { h: "archive.html",   t: "档案库",  s: "Archive" },
+    { h: "archive.html",   t: "资料仓库", s: "Repository" },
     { h: "syllabus.html",  t: "大纲",   s: "Syllabus" },
     { h: "problems.html",  t: "题单",   s: "Problems" },
     { h: "templates.html", t: "模板",   s: "Templates" },
@@ -96,7 +96,7 @@
                 <h5>学习路径</h5>
                 <a href="plan.html">56 周计划</a>
                 <a href="kb.html">知识库（73 篇）</a>
-                <a href="archive.html">全量档案库</a>
+                <a href="archive.html">资料仓库（1133 个文件）</a>
                 <a href="papers.html">真题库</a>
                 <a href="syllabus.html">大纲全解</a>
               </div>
@@ -143,8 +143,7 @@
     /* ---------- 搜索 ---------- */
     buildIndex() {
       const idx = [];
-      idx.push({ t: "全量档案库 · C/D/E 三盘", s: "207,715 个文件逐条索引 · 877 篇正文 · 115 份原文件", h: "archive.html", k: "档案" });
-      idx.push({ t: "GitHub 全部仓库", s: "15 个仓库 / 870 个文件逐文件直达", h: "archive.html", k: "档案" });
+      idx.push({ t: "资料仓库 · 全部文件实体", s: "1,133 个文件 / 770 MB 已入库 · PDF/Word/Excel/代码在线预览", h: "archive.html", k: "仓库" });
       if (window.WEEKS) WEEKS.forEach(w => idx.push({
         t: `第 ${w.w} 周 · ${w.t}`, s: w.kg, h: `plan.html#w${w.w}`, k: "计划"
       }));

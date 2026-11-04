@@ -24,7 +24,7 @@
 | `contests.html` | 七级漏斗、2026–2028 赛历、六个高频疑问直答 |
 | `assess.html` | 能力雷达、9 个里程碑阈值、周自检七问、评分表、止损线 |
 | `resources.html` | C/D/E 三盘扫描结论、11 类高价值资料、GitHub 仓库清单、资料使用地图 |
-| `archive.html` | 全量档案库：207,715 个文件逐条索引、877 篇正文全文检索、115 份原文件下载、15 个 GitHub 仓库 870 文件直达 |
+| `archive.html` | 资料仓库：1,133 个文件实体（770 MB）已全部入库，目录浏览、MiniSearch 模糊搜索、PDF/Word/Excel/代码在线预览与下载 |
 | `method.html` | 刻意练习闭环、对拍工程、考场时间分配、七个失败模式 |
 
 ## 核心判断
@@ -41,7 +41,8 @@
 - 数据层分离在 `assets/js/data/`：`weeks.js`、`syllabus.js`、`books.js`、`templates.js`、`contests.js`
 - 进度持久化用 `localStorage`（键 `noi2027.progress.v1`），主题偏好同样本地保存
 - 支持全站搜索（按 `/` 唤起）、深浅色切换、打印样式
-- 档案库数据由 `../build/scan_assets.py`、`scan_github.py`、`gen_archive.py` 生成，索引按盘分片、按需加载
+- 资料仓库由 `../build/scan_assets.py`、`scan_github.py`、`ingest_files.py` 生成：文件实体在 `files/`，清单在 `assets/data/files/manifest.js`
+- 在线预览依赖 `vendor/` 内五个开源项目（MIT / Apache-2.0 / BSD）：PDF.js、docx-preview + JSZip、SheetJS、MiniSearch、Prism
 
 ```
 .
@@ -59,14 +60,15 @@
 ├── method.html
 ├── 404.html
 ├── .nojekyll
+├── files/                 # 资料文件实体（按 C/ D/ E/ 原始目录结构）
+├── vendor/                # 开源插件：PDF.js / docx-preview / SheetJS / MiniSearch / Prism
 └── assets
     ├── css/main.css
     ├── js
     │   ├── app.js
     │   └── data/*.js
-    ├── data/kb/*.js         # 站内正文（73 篇 / 30.4 万字）与真题数据
-    ├── data/archive/*.js    # 全量索引、正文、目录树、GitHub 清单
-    └── archive/files/*      # 115 份原文件下载副本
+    ├── data/kb/*.js       # 站内正文（73 篇 / 30.4 万字）与真题数据
+    └── data/files/manifest.js   # 资料仓库清单（1,133 个文件）
 ```
 
 ## 数据来源

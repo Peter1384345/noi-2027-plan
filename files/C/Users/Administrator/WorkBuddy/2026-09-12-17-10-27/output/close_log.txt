@@ -1,0 +1,9 @@
+[close_file] rc=1 out=error: 读取 --json-file 失败: [Errno 2] No such file or directory: '-'
+{"ok": false, "exit_code": 1, "error": "读取 --json-file 失败: [Errno 2] No such file or directory: '-'"}
+ err=error: 读取 --json-file 失败: [Errno 2] No such file or directory: '-'
+{"ok": false, "exit_code": 1, "error": "读取 --json-file 失败: [Errno 2] No such file or directory: '-'"}
+
+[close_file retry] rc=1 out=error: JSON-RPC 错误 -32603: close_file: no editor open for file_id=C://Users//Administrator//WorkBuddy//2026-09-12-17-10-27//微光成炬-星火自有燎原时-复件.pptx
+{"ok": false, "exit_code": 1, "error": "JSON-RPC 错误 -32603: close_file: no editor open for file_id=C://Users//Administrator//WorkBuddy//2026-09-12-17-10-27//微光成炬-星火自有燎原时-复件.pptx", "rpc_code": -32603}
+ err=error: JSON-RPC 错误 -32603: close_file: no editor open for file_id=C://Users//Administrator//WorkBuddy//2026-09-12-17-10-27//微光成炬-星火自有燎原时-复件.pptx
+{"ok": false, "exit_code": 1, "error": "JSON-RPC 错误 -32603: close_file: no editor open for file_id=C://Users//Administrator//WorkBuddy//2026-09-12-17-10-27//微光成炬-星火自有燎原时-复件.pptx", "rpc_code": -32603}

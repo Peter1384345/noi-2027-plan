@@ -1,0 +1,6 @@
+STDOUT:
+{"success": true, "output_docx_path": "C:\\Users\\Administrator\\WorkBuddy\\2026-09-12-17-10-27\\output\\weiguang-20260913-1536\\stage3\\微光成炬-PPT附稿.docx", "output_docx_user_specified": false}
+
+STDERR:
+
+RC:0
