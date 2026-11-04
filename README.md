@@ -42,7 +42,15 @@
 - 进度持久化用 `localStorage`（键 `noi2027.progress.v1`），主题偏好同样本地保存
 - 支持全站搜索（按 `/` 唤起）、深浅色切换、打印样式
 - 资料仓库由 `../build/scan_assets.py`、`scan_github.py`、`ingest_files.py` 生成：文件实体在 `files/`，清单在 `assets/data/files/manifest.js`
-- 在线预览依赖 `vendor/` 内五个开源项目（MIT / Apache-2.0 / BSD）：PDF.js、docx-preview + JSZip、SheetJS、MiniSearch、Prism
+- 在线预览依赖 `vendor/` 内五个开源项目（MIT / Apache-2.0 / BSD），全部本地 vendor 化、运行时不联网：
+
+  | 插件 | 版本 | 用途 |
+  | --- | --- | --- |
+  | MiniSearch | 6.3.0 | 文件名/路径模糊检索（前缀 + 0.2 容错，文件名权重 2 倍） |
+  | PDF.js | 2.16.105 | PDF 分页渲染；7 秒无响应或解析失败自动回退浏览器原生阅读器 |
+  | docx-preview + JSZip | 0.3.2 / 3.10.1 | Word 排版还原（分页、表格、图片） |
+  | SheetJS | 0.18.5 | Excel 多工作表切换、CSV |
+  | Prism | 1.29.0 + C/C++ 组件 | 代码高亮；C++ 组件必须先加载 `prism-c.min.js`，否则静默失效 |
 
 ```
 .
