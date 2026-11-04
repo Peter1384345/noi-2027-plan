@@ -177,6 +177,16 @@
     $("s-bytes2").textContent = fmt(keptBytes);
 
     renderTree();
+    // 空闲时预热 PDF worker（约 1 MB），把首次预览的冷启动从 ~9 秒压到 1 秒级
+    try {
+      if (window.pdfjsLib) {
+        var wsrc = new URL("vendor/pdf216.worker.min.js", location.href).href;
+        pdfjsLib.GlobalWorkerOptions.workerSrc = wsrc;
+        var lk = document.createElement("link");
+        lk.rel = "prefetch"; lk.as = "script"; lk.href = wsrc;
+        document.head.appendChild(lk);
+      }
+    } catch (e) { /* 预热失败不影响功能 */ }
     $("fx-stats").innerHTML = [
       [FILES.length.toLocaleString("zh-CN"), "文件实体已入库"],
       [fmt(keptBytes), "仓库内总体积"],
@@ -338,9 +348,10 @@
     } catch (e) { /* 交给原生兜底 */ }
     box.innerHTML = '<div class="fx-empty">正在解析 PDF…</div>';
     var settled = false;
+    // 首次打开需要下载 1 MB worker 再解析，线上冷启动实测约 9 秒，阈值给足余量
     var guard = setTimeout(function () {
-      if (!settled) { settled = true; pdfFallback(u, "解析超时（文件较大或组件未初始化），已切换浏览器原生预览 · "); }
-    }, 7000);
+      if (!settled) { settled = true; pdfFallback(u, "解析较慢或该文件不受支持，已切换浏览器原生阅读器（可缩放、可检索）· "); }
+    }, 18000);
 
     pdfjsLib.getDocument({ url: u, isEvalSupported: false, useSystemFonts: true }).promise
       .then(function (pdf) {
