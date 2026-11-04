@@ -24,7 +24,7 @@
 | `contests.html` | 七级漏斗、2026–2028 赛历、六个高频疑问直答 |
 | `assess.html` | 能力雷达、9 个里程碑阈值、周自检七问、评分表、止损线 |
 | `resources.html` | C/D/E 三盘扫描结论、11 类高价值资料、GitHub 仓库清单、资料使用地图 |
-| `archive.html` | 资料仓库：1,133 个文件实体（770 MB）已全部入库，目录浏览、MiniSearch 模糊搜索、PDF/Word/Excel/代码在线预览与下载 |
+| `archive.html` | 资料仓库：1,133 个文件实体（770 MB）已全部入库，目录浏览、MiniSearch 模糊搜索、PDF（原生阅读器）/Word/Excel/代码在线预览与下载 |
 | `method.html` | 刻意练习闭环、对拍工程、考场时间分配、七个失败模式 |
 
 ## 核心判断
@@ -42,12 +42,11 @@
 - 进度持久化用 `localStorage`（键 `noi2027.progress.v1`），主题偏好同样本地保存
 - 支持全站搜索（按 `/` 唤起）、深浅色切换、打印样式
 - 资料仓库由 `../build/scan_assets.py`、`scan_github.py`、`ingest_files.py` 生成：文件实体在 `files/`，清单在 `assets/data/files/manifest.js`
-- 在线预览依赖 `vendor/` 内五个开源项目（MIT / Apache-2.0 / BSD），全部本地 vendor 化、运行时不联网：
+- 在线预览依赖 `vendor/` 内四个开源项目（MIT / Apache-2.0 / BSD），全部本地 vendor 化、运行时不联网；PDF 交给浏览器原生阅读器：
 
   | 插件 | 版本 | 用途 |
   | --- | --- | --- |
   | MiniSearch | 6.3.0 | 文件名/路径模糊检索（前缀 + 0.2 容错，文件名权重 2 倍） |
-  | PDF.js | 2.16.105 | PDF 分页渲染；7 秒无响应或解析失败自动回退浏览器原生阅读器 |
   | docx-preview + JSZip | 0.3.2 / 3.10.1 | Word 排版还原（分页、表格、图片） |
   | SheetJS | 0.18.5 | Excel 多工作表切换、CSV |
   | Prism | 1.29.0 + C/C++ 组件 | 代码高亮；C++ 组件必须先加载 `prism-c.min.js`，否则静默失效 |
@@ -69,7 +68,7 @@
 ├── 404.html
 ├── .nojekyll
 ├── files/                 # 资料文件实体（按 C/ D/ E/ 原始目录结构）
-├── vendor/                # 开源插件：PDF.js / docx-preview / SheetJS / MiniSearch / Prism
+├── vendor/                # 开源插件：MiniSearch / docx-preview + JSZip / SheetJS / Prism
 └── assets
     ├── css/main.css
     ├── js
