@@ -13,8 +13,8 @@
   var cache = {};       // id -> { nodes, styles, scripts }
   var loadedSrc = {};   // 已执行过的外链脚本
   var curId = null;
-  var busying = false;
   var bar = null;
+  var warmed = false;
 
   function $(id) { return document.getElementById(id); }
 
@@ -31,7 +31,7 @@
     var b = barEl();
     b.style.opacity = "1";
     b.style.width = "18%";
-    setTimeout(function () { if (busying) b.style.width = "62%"; }, 180);
+    setTimeout(function () { b.style.width = "68%"; }, 220);
   }
   function barDone() {
     var b = barEl();
@@ -116,16 +116,38 @@
     restore();
   }
 
+  /* ---------------- 后台预热：预取其余视图的 HTML ---------------- */
+  // 视图 HTML 加起来只有一百多 KB，首屏就绪后逐个预取，之后切换基本瞬时
+  function warm() {
+    if (warmed) return;
+    warmed = true;
+    var ids = Object.keys(VIEWS).filter(function (k) { return !cache[k]; });
+    var i = 0;
+    function next() {
+      if (i >= ids.length) return;
+      fetchView(ids[i++]).catch(function () {}).then(function () { setTimeout(next, 80); });
+    }
+    setTimeout(next, 600);
+  }
+
   /* ---------------- 按序执行脚本 ---------------- */
-  function runInline(text) {
+  var seq = 0;
+
+  // 每个视图脚本都写成 document.addEventListener("DOMContentLoaded", init)。
+  // 若直接派发 DOMContentLoaded，残留的旧监听器也会被唤醒，此时 DOM 已换 → 报错。
+  // 故把注册点改写成一次性事件名，每轮挂载唯一，旧监听器永远收不到。
+  function runInline(text, evName) {
+    var src = String(text).replace(
+      /document\.addEventListener\(\s*(["'])DOMContentLoaded\1\s*,/g,
+      'document.addEventListener("' + evName + '",'
+    );
     var el = document.createElement("script");
-    el.textContent = text;
+    el.textContent = src;
     document.body.appendChild(el);
-    // 执行完即移除，避免脚本节点在 body 里堆积
     if (el.parentNode) el.parentNode.removeChild(el);
   }
 
-  function runScripts(list) {
+  function runScripts(list, evName) {
     return list.reduce(function (p, s) {
       return p.then(function () {
         if (s.src) {
@@ -139,7 +161,7 @@
             document.body.appendChild(el);
           });
         }
-        runInline(s.text);
+        runInline(s.text, evName);
         return null;
       });
     }, Promise.resolve());
@@ -164,10 +186,11 @@
       document.head.appendChild(st);
     }
 
+    var evName = "view:mount:" + (++seq);
     capture();                       // 开始记录本视图注册的监听器
-    return runScripts(data.scripts).then(function () {
+    return runScripts(data.scripts, evName).then(function () {
       restore();
-      document.dispatchEvent(new Event("DOMContentLoaded"));
+      document.dispatchEvent(new Event(evName));   // 只唤醒本轮注册的初始化
       view.classList.remove("loading");
       afterMount(anchor);
     }, function (e) {
@@ -192,6 +215,7 @@
 
   /* ---------------- 主流程 ---------------- */
   var token = 0;
+  var chain = Promise.resolve();   // 挂载串行队列
 
   function go() {
     var r = parse();
@@ -204,24 +228,24 @@
       return;
     }
 
-    // 用递增 token 串行化：快速连点时只渲染最后一次请求，避免 DOM 与脚本错配
+    // 视图挂载必须串行：src 脚本是异步的，两轮挂载交叠会让监听器记录错位
     var my = ++token;
-    busying = true;
     barStart();
-
-    fetchView(r.id).then(function (data) {
-      if (my !== token) return null;
-      curId = r.id;
-      return mount(r.id, data, r.anchor);
+    chain = chain.then(function () {
+      if (my !== token) return null;          // 已被更新的路由取代
+      return fetchView(r.id).then(function (data) {
+        if (my !== token) return null;
+        curId = r.id;
+        return mount(r.id, data, r.anchor);
+      });
     }).then(function () {
       if (my !== token) return;
-      busying = false;
       barDone();
       App.setActive(r.id);
       App._idx = null;
+      warm();
     }).catch(function (err) {
       if (my !== token) return;
-      busying = false;
       barDone();
       $("view").innerHTML =
         '<section class="section"><div class="wrap"><div class="note">' +
