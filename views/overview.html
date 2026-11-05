@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<base href="../">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOI 2027 一年计划 · 从零到 NOI 的 56 周</title>
+<meta name="description" content="依据 CCF NOI 大纲（2025 年修订版）与 CCF 赛历编制的 56 周信息学奥赛作战计划：逐周任务、198 项知识点、56 个模板、真题训练与评估体系。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="index.html">
+<header id="site-head"></header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-kicker">CCF NOI 2027 · 56 周作战方案</div>
+    <h1>从零到 <em>NOI</em><br>的一年</h1>
+    <p class="hero-lead">
+      这不是一份励志计划表，也不是一个资料目录。它把《NOI 大纲（2025 年修订版）》的 <b id="kp-total">—</b> 个知识点逐条拆进 56 周，
+      并把本地 <b>73 篇、30.4 万字</b>的竞赛正文、五年真题、56 个模板，以及 C/D/E 三盘去重后的 <b>1,133</b> 个资料文件（770 MB）全部装入同一个仓库——
+      按 CCF 赛历倒排到 CSP-S 2027、NOIP 2027 两个实战节点，每周给出任务、题量与可验收的通过标准。
+      起点是 CSP-S 2026 第一轮三级，终点是 NOIP 一等奖。
+    </p>
+
+    <div class="countdown" id="cd"></div>
+    <div class="small muted" style="margin-top:8px">距 CSP-S 2027 第一轮（2027 年 9 月 18 日，按历年惯例推算）</div>
+
+    <div class="hero-meta">
+      <div><b>56</b><span>周 · 12 个月</span></div>
+      <div><b id="m-kp">—</b><span>大纲知识点</span></div>
+      <div><b>30.4<span style="font-size:.62em">万</span></b><span>站内正文字数</span></div>
+      <div><b>56</b><span>核心模板</span></div>
+      <div><b>800+</b><span>目标题量</span></div>
+      <div><b id="m-prog">0%</b><span>当前完成度</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 三条硬结论 ==================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">01 / 前提</span>
+      <h2>先讲三条不好听但必须接受的结论</h2>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <span class="card-num">结论一</span>
+        <h3>一年到 NOI 正赛，时间上不成立</h3>
+        <p>NOI 正赛必须依次通过 CSP-S 第二轮、NOIP 一等奖、省选。省选在每年 3–4 月，NOI 在 7 月。若 2026 年 11 月起步，2027 年 3 月的省选只剩 4 个月——通过概率接近于零。</p>
+        <p style="margin-top:10px">因此本计划的目标不是「参加 NOI 2027」，而是<b>在 12 个月内建成 NOI 级知识体系并拿下 NOIP 一等奖</b>，把正赛窗口锁定在 <b>2028 年 7 月</b>（约 20 个月）。这是一位教练能给出的最短可信路径。</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">结论二</span>
+        <h3>决定省一的是 T1 和 T2，不是 T4</h3>
+        <p>CSP-S 第二轮满分 400。多数省份一等线在 150–200 分之间，换算下来只需要「T1 满分 + T2 满分或 70% + T3 拿 30–50 分」。</p>
+        <p style="margin-top:10px">所以整份计划有 12 周专门训练「稳分」：T1 限时满分、暴力分写满、特殊性质分不放过。做出 T4 从来不是省一的必要条件。</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">结论三</span>
+        <h3>刷题量不等于进步量</h3>
+        <p>题量目标定为 800–1000 题，但真正的指标是「一次 AC 率」与「错题重做成功率」。一道题独立想 30 分钟、看题解、关掉题解重写、写复盘——这套流程走一遍，胜过无脑刷五题。</p>
+        <p style="margin-top:10px">计划里每 4 周设一周复盘，第 42 周整周用于弱项回补，就是为了防止「假努力」。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 六阶段 ==================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">02 / 路线</span>
+      <h2>六个阶段，56 周</h2>
+    </div>
+    <p class="sec-lead">每个阶段都有明确的进入条件与退出标准。未达退出标准不进下一阶段——这是整份计划最重要的纪律。</p>
+
+    <div class="grid g2" id="phases"></div>
+
+    <div class="mt-3">
+      <a class="card-link" href="plan.html">查看逐周任务表 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 数据面板 ==================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">03 / 结构</span>
+      <h2>知识分布与时间投入</h2>
+    </div>
+
+    <div class="grid g2">
+      <div>
+        <h4 style="margin-bottom:14px">大纲知识点按难度级分布</h4>
+        <div id="lv-bars"></div>
+        <div class="note azure mt-2">
+          <b>怎么读这张图：</b>1–3 级是地基（约 40 项），4–5 级是分水岭（约 41 项），6–8 级是省一的核心战场（约 83 项），9–10 级是省队与国赛的门槛（约 34 项）。本计划的时间分配与这张图完全一致：地基 8 周，分水岭 12 周，核心战场 24 周，门槛 12 周。
+        </div>
+      </div>
+
+      <div>
+        <h4 style="margin-bottom:14px">周投入时长曲线</h4>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>阶段</th><th>工作日 / 天</th><th>周末 / 天</th><th>周总计</th></tr></thead>
+            <tbody>
+              <tr><td><b>P1 筑基</b>（W1–8）</td><td>1.5 h</td><td>3 h</td><td>13.5 h</td></tr>
+              <tr><td><b>P2 提速</b>（W9–20）</td><td>2 h</td><td>4 h</td><td>18 h</td></tr>
+              <tr><td><b>P3 攻坚</b>（W21–32）</td><td>2 h</td><td>5 h</td><td>20 h</td></tr>
+              <tr><td><b>P4 冲顶</b>（W33–44）</td><td>2.5 h</td><td>6 h</td><td>24.5 h</td></tr>
+              <tr><td><b>P5 实战</b>（W45–52）</td><td>2.5 h</td><td>8 h（含模拟赛）</td><td>28.5 h</td></tr>
+              <tr><td><b>P6 收口</b>（W53–56）</td><td>3 h</td><td>8 h</td><td>31 h</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted mt-2">寒假（W14–15）与暑假（W37–40）为集训期，每天 6–8 小时。全年累计约 <b>1,150 小时</b>——这是从零到省一量级的真实成本，不是估算。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 板块入口 ==================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">04 / 索引</span>
+      <h2>十二个板块</h2>
+    </div>
+
+    <div class="grid g3">
+      <a class="card" href="plan.html">
+        <span class="card-num">PLAN</span>
+        <h3>56 周计划</h3>
+        <p>逐周主题、知识点、任务、题量与验收标准，可按阶段筛选并勾选完成。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="kb.html" style="border-left:3px solid var(--seal)">
+        <span class="card-num">KNOWLEDGE</span>
+        <h3>知识库 · 30.4 万字</h3>
+        <p>73 篇正文全部装进站内：CSP-S 61 篇（23.2 万字）+ 文集 8 章 + 初赛清单资料 + 2025 真题，全文检索、代码高亮、标记已读。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="papers.html" style="border-left:3px solid var(--seal)">
+        <span class="card-num">PAPERS</span>
+        <h3>真题库</h3>
+        <p>CSP-S 2022 / 2023 第一轮可在线作答并判分，2025 全文阅读，2021·2024 原卷说明。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="archive.html" style="border-left:3px solid var(--azure)">
+        <span class="card-num">REPOSITORY</span>
+        <h3>资料仓库</h3>
+        <p>1,133 个资料文件、770 MB 已实体入库，保留原始目录结构；目录浏览、模糊搜索，PDF / Word / Excel / 代码在线预览。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="syllabus.html">
+        <span class="card-num">SYLLABUS</span>
+        <h3>大纲全解</h3>
+        <p>2025 修订版 10 个难度级全量条目，标注 J/S/NOI 段位、分类与 2025 年变化。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="books.html">
+        <span class="card-num">READING</span>
+        <h3>书单资料</h3>
+        <p>CCF 官方出版物 6 类 + 经典教材 13 本 + 在线平台 12 个，按阶段配书。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="problems.html">
+        <span class="card-num">PROBLEMS</span>
+        <h3>题单训练</h3>
+        <p>基于本地「CSP-JS+NOI 题单」重构，按大纲难度标注洛谷题号与训练量模型。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="templates.html">
+        <span class="card-num">TEMPLATES</span>
+        <h3>模板库</h3>
+        <p>56 个可直接复制的 C++ 模板，标注等级、复杂度与最容易踩的坑。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="contests.html">
+        <span class="card-num">CONTESTS</span>
+        <h3>赛历规则</h3>
+        <p>晋级链路、2026–2028 赛历、名额与评级规则，附六个高频疑问的直答。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="assess.html">
+        <span class="card-num">ASSESSMENT</span>
+        <h3>评估体系</h3>
+        <p>四维能力雷达、9 个里程碑阈值、周测与模拟赛评分表、止损线。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="resources.html">
+        <span class="card-num">ASSETS</span>
+        <h3>本地资产</h3>
+        <p>C/D/E 三盘扫描结论、11 类高价值资料、GitHub 仓库清单与资料使用地图；逐文件级清单见全量档案库。</p>
+        <span class="card-link">进入</span>
+      </a>
+      <a class="card" href="method.html">
+        <span class="card-num">METHOD</span>
+        <h3>方法论</h3>
+        <p>刻意练习闭环、对拍工程、考场时间分配、七个最常见的失败模式。</p>
+        <span class="card-link">进入</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 起点 ==================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">05 / 基线</span>
+      <h2>起点与终点</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item done">
+        <span class="tl-date">2026 · 09</span>
+        <h4>CSP-S 2026 第一轮 · 三级（广东赛区，GD-S02743）</h4>
+        <p>已具备提高级第一轮基础，说明计算机常识、读程序能力达标；但未达一等，且第二轮实战经验为零。这是本计划的真实起点——不是零基础，但离省一还差两次完整的第二轮训练。</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-date">2027 · 03</span>
+        <h4>期中测评：CSP-J 第二轮 ≥ 250 分 + CSP-S 第一轮 ≥ 65 分</h4>
+        <p>第 20 周的硬门槛。达标则继续冲 S 级；未达标则把 P3 延长 4 周，且放弃当年 CSP-S 一等目标，改为「稳拿二等 + 保 NOIP 资格」。</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-date">2027 · 09–10</span>
+        <h4>CSP-S 2027 两轮认证</h4>
+        <p>第一轮目标 ≥ 80 分；第二轮目标 ≥ 200 分。第二轮成绩直接决定 NOIP 报名资格。</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-date">2027 · 11</span>
+        <h4>NOIP 2027 · 目标 ≥ 180 分</h4>
+        <p>本年度终点。一等奖是省选门票，也是这份计划在一年的尺度上能交付的最好结果。</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-date">2028 · 03 → 07</span>
+        <h4>省选 2028 → NOI 2028</h4>
+        <p>若 NOIP 一等，则进入省选赛道。这是「从零到 NOI」在物理时间上最早可能成立的路径。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-foot"></footer>
+
+<script src="assets/js/data/weeks.js"></script>
+<script src="assets/js/data/syllabus.js"></script>
+<script src="assets/data/kb/catalog.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // 知识点总数
+  const total = SYLLABUS.points.length;
+  document.getElementById("kp-total").textContent = total;
+  document.getElementById("m-kp").textContent = total;
+
+  // 倒计时
+  App.countdown("cd", "2027-09-18");
+
+  // 阶段卡
+  const box = document.getElementById("phases");
+  box.innerHTML = PHASES.map(p => {
+    const start = WEEKS.find(w => w.w === p.range[0]);
+    const end = WEEKS.find(w => w.w === p.range[1]);
+    return `<div class="card phase-card">
+      <span class="wk">W${p.range[0]} – W${p.range[1]} · ${App.fmtDate(start.d)} → ${App.fmtDate(end.d)}</span>
+      <h3 style="margin-top:6px">${p.id} ${p.name}</h3>
+      <p style="margin:8px 0 12px">${p.goal}</p>
+      <div style="border-top:1px solid var(--rule);padding-top:10px">
+        <span class="tag ${p.color}">退出标准</span>
+        <p class="small" style="margin-top:6px">${p.out}</p>
+      </div>
+    </div>`;
+  }).join("");
+
+  // 等级分布
+  const counts = [];
+  for (let i = 1; i <= 10; i++) counts.push(SYLLABUS.points.filter(p => p[2] === i).length);
+  const max = Math.max.apply(null, counts);
+  document.getElementById("lv-bars").innerHTML = counts.map((c, i) => {
+    const lv = i + 1;
+    const band = lv <= 5 ? "j" : (lv <= 8 ? "s" : "n");
+    const name = lv <= 5 ? "J" : (lv <= 8 ? "S" : "N");
+    return `<div style="display:flex;align-items:center;gap:10px;padding:5px 0">
+      <span class="mono small" style="width:44px;color:var(--ink-3)">L${lv} ${name}</span>
+      <div class="bar" style="flex:1"><i style="width:${c / max * 100}%;background:var(--lv-${band})"></i></div>
+      <span class="mono small" style="width:34px;text-align:right;color:var(--ink-2)">${c}</span>
+    </div>`;
+  }).join("");
+
+  // 进度
+  const s = App.stats();
+  document.getElementById("m-prog").textContent = s.pctW + "%";
+});
+</script>
+</body>
+</html>

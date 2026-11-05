@@ -134,8 +134,9 @@
     document.getElementById("q").oninput = e => { q = e.target.value.trim(); render(); };
     render();
 
-    if (location.hash) {
-      const t = document.querySelector(location.hash.replace(/\./g, "\\."));
+    const seg = (location.hash || "").split("/").pop().replace(/^#/, "");
+    if (seg) {
+      const t = document.getElementById(seg);
       if (t) setTimeout(() => t.scrollIntoView({ behavior: "smooth", block: "center" }), 120);
     }
   });

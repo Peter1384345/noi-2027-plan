@@ -108,6 +108,14 @@
 <script src="assets/js/app.js"></script>
 <script>
 (function () {
+  // 兼容两种地址：独立页 kb.html#<id>，以及单页外壳 app.html#/kb/<id>
+  function hashId() {
+    const m = /^#\/kb\/(.+)$/.exec(location.hash || "");
+    if (m) { try { return decodeURIComponent(m[1]); } catch (e) { return m[1]; } }
+    return (location.hash || "").replace(/^#\/?/, "").split("/").pop() || "";
+  }
+  function hashTo(id) { location.hash = "#/kb/" + encodeURIComponent(id); }
+
   const ORDER = ["指南", "数学基础", "搜索", "动态规划", "数据结构", "图论", "字符串", "杂项", "文集", "初赛", "真题"];
   const LABEL = { "初赛": "初赛资料", "真题": "真题全文" };
   const LEVEL = { "指南": [1,8], "数学基础": [6,9], "搜索": [5,7], "动态规划": [4,9],
@@ -172,7 +180,7 @@
     side.querySelectorAll("a[data-id]").forEach(el => {
       el.onclick = function (e) {
         e.preventDefault();
-        location.hash = el.dataset.id;
+        hashTo(el.dataset.id);
       };
     });
   }
@@ -236,7 +244,7 @@
   // ---------- 检索 ----------
   function search(kw) {
     const host = document.getElementById("article");
-    if (!kw) { go(location.hash.slice(1) || ALL[0].id); return; }
+    if (!kw) { go(hashId() || ALL[0].id); return; }
     const hits = [];
     INDEX.forEach(function (doc) {
       const pos = doc.text.toLowerCase().indexOf(kw.toLowerCase());
@@ -253,7 +261,7 @@
       ${hits.length ? hits.map(h => `<div class="hit" data-go="${h.id}">
         <b>${esc(h.title)}</b> <span class="tag ghost" style="font-size:10px">${h.cat} · ${h.n} 处</span>
         <p>…${esc(h.snippet)}…</p></div>`).join("") : `<div class="kb-empty">没有匹配内容</div>`}`;
-    host.querySelectorAll("[data-go]").forEach(el => el.onclick = () => { location.hash = el.dataset.go; });
+    host.querySelectorAll("[data-go]").forEach(el => el.onclick = () => { hashTo(el.dataset.go); });
   }
 
   // ---------- 路由 ----------
@@ -270,7 +278,7 @@
   }
 
   window.addEventListener("hashchange", function () {
-    const id = location.hash.slice(1);
+    const id = hashId();
     if (id) go(id);
   });
 
@@ -279,7 +287,7 @@
     renderSide();
     const kw = new URLSearchParams(location.search).get("q");
     if (kw) { document.getElementById("q").value = kw; search(kw); }
-    else go(location.hash.slice(1) || ALL[0].id);
+    else go(hashId() || ALL[0].id);
 
     let timer;
     document.getElementById("q").oninput = function (e) {

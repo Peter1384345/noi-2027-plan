@@ -163,9 +163,10 @@
     refreshStats();
     render();
 
-    // 定位到当前周
-    if (location.hash) {
-      const t = document.querySelector(location.hash);
+    // 定位到当前周（兼容独立页 #w20 与外壳 #/plan/w20）
+    const seg = (location.hash || "").split("/").pop().replace(/^#/, "");
+    if (seg) {
+      const t = document.getElementById(seg);
       if (t) t.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   });

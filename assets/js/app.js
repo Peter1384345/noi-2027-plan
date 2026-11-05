@@ -7,18 +7,21 @@
   "use strict";
 
   const NAV = [
-    { h: "index.html",     t: "总览",  s: "Overview" },
-    { h: "plan.html",      t: "56 周计划", s: "Plan" },
-    { h: "kb.html",        t: "知识库",  s: "Knowledge Base" },
-    { h: "papers.html",    t: "真题库",  s: "Papers" },
-    { h: "archive.html",   t: "资料仓库", s: "Repository" },
-    { h: "syllabus.html",  t: "大纲",   s: "Syllabus" },
-    { h: "problems.html",  t: "题单",   s: "Problems" },
-    { h: "templates.html", t: "模板",   s: "Templates" },
-    { h: "books.html",     t: "书单",   s: "Reading" },
-    { h: "contests.html",  t: "赛历",   s: "Contests" },
-    { h: "assess.html",    t: "评估",   s: "Assessment" }
+    { id: "overview", f: "views/overview.html", t: "总览",  s: "Overview" },
+    { id: "plan",     f: "plan.html",     t: "56 周计划", s: "Plan" },
+    { id: "kb",       f: "kb.html",       t: "知识库",  s: "Knowledge Base" },
+    { id: "papers",   f: "papers.html",   t: "真题库",  s: "Papers" },
+    { id: "repo",     f: "archive.html",  t: "资料仓库", s: "Repository" },
+    { id: "syllabus", f: "syllabus.html", t: "大纲",   s: "Syllabus" },
+    { id: "problems", f: "problems.html", t: "题单",   s: "Problems" },
+    { id: "templates",f: "templates.html",t: "模板",   s: "Templates" },
+    { id: "books",    f: "books.html",    t: "书单",   s: "Reading" },
+    { id: "contests", f: "contests.html", t: "赛历",   s: "Contests" },
+    { id: "assess",   f: "assess.html",   t: "评估",   s: "Assessment" },
+    { id: "resources",f: "resources.html",t: "本地资产", s: "Assets" },
+    { id: "method",   f: "method.html",   t: "方法论",  s: "Method" }
   ];
+  const APP = "app.html";
 
   const STORE = "noi2027.progress.v1";
 
@@ -54,6 +57,17 @@
       b.title = dark ? "切换到浅色" : "切换到深色";
     },
 
+    /* ---------- 路由辅助 ---------- */
+    // 统一入口：所有内部导航都走 app.html 的视图切换，不再整页跳转
+    href(id, anchor) { return APP + "#/" + id + (anchor ? "/" + anchor : ""); },
+    activeId() {
+      const m = /^#\/([a-z]+)/.exec(location.hash || "");
+      if (m) return m[1];
+      const p = document.body.getAttribute("data-page") || "index.html";
+      const n = NAV.find(x => x.f === p);
+      return n ? n.id : "overview";
+    },
+
     /* ---------- 布局注入 ---------- */
     mount(active) {
       const el = document.getElementById("site-head");
@@ -61,17 +75,17 @@
         el.className = "site-head";
         el.innerHTML = `
           <div class="site-head-inner">
-            <a class="brand" href="index.html">
+            <a class="brand" href="${this.href("overview")}">
               <span class="brand-seal">N</span>
               <span class="brand-txt"><b>NOI 2027 一年计划</b><span>Zero to NOI</span></span>
             </a>
             <nav class="nav">
-              ${NAV.map(n => `<a href="${n.h}" class="${n.h === active ? "on" : ""}">${n.t}</a>`).join("")}
+              ${NAV.map(n => `<a href="${this.href(n.id)}" data-nav="${n.id}" class="${n.id === active ? "on" : ""}">${n.t}</a>`).join("")}
             </nav>
             <div class="head-tools">
               <button class="icon-btn" id="search-btn" title="搜索全站 (/)">⌕</button>
               <button class="icon-btn" id="theme-btn" onclick="App.toggleTheme()" title="切换主题"></button>
-              <button class="icon-btn menu-btn" id="menu-btn" title="菜单">☰</button>
+              <button class="icon-btn menu-btn" id="menu-btn" title="全部板块">☰</button>
             </div>
           </div>`;
         document.getElementById("search-btn").onclick = () => App.openSearch();
@@ -94,19 +108,19 @@
               </div>
               <div>
                 <h5>学习路径</h5>
-                <a href="plan.html">56 周计划</a>
-                <a href="kb.html">知识库（73 篇）</a>
-                <a href="archive.html">资料仓库（1133 个文件）</a>
-                <a href="papers.html">真题库</a>
-                <a href="syllabus.html">大纲全解</a>
+                <a href="${this.href("plan")}">56 周计划</a>
+                <a href="${this.href("kb")}">知识库（73 篇）</a>
+                <a href="${this.href("repo")}">资料仓库（1133 个文件）</a>
+                <a href="${this.href("papers")}">真题库</a>
+                <a href="${this.href("syllabus")}">大纲全解</a>
               </div>
               <div>
                 <h5>训练与资料</h5>
-                <a href="problems.html">题单训练</a>
-                <a href="templates.html">模板库（56）</a>
-                <a href="books.html">书单资料</a>
-                <a href="resources.html">本地资产</a>
-                <a href="method.html">方法论</a>
+                <a href="${this.href("problems")}">题单训练</a>
+                <a href="${this.href("templates")}">模板库（56）</a>
+                <a href="${this.href("books")}">书单资料</a>
+                <a href="${this.href("resources")}">本地资产</a>
+                <a href="${this.href("method")}">方法论</a>
               </div>
               <div>
                 <h5>官方来源</h5>
@@ -136,34 +150,35 @@
           <b style="font-family:var(--serif)">目录</b>
           <button class="icon-btn" onclick="document.getElementById('drawer').classList.remove('open')">✕</button>
         </div>
-        ${NAV.map(n => `<a href="${n.h}">${n.t}<small>${n.s}</small></a>`).join("")}`;
+        ${NAV.map(n => `<a href="${this.href(n.id)}">${n.t}<small>${n.s}</small></a>`).join("")}`;
       d.classList.add("open");
     },
 
     /* ---------- 搜索 ---------- */
     buildIndex() {
       const idx = [];
-      idx.push({ t: "资料仓库 · 全部文件实体", s: "1,133 个文件 / 770 MB 已入库 · PDF/Word/Excel/代码在线预览", h: "archive.html", k: "仓库" });
+      const H = (id, a) => this.href(id, a);
+      idx.push({ t: "资料仓库 · 全部文件实体", s: "1,133 个文件 / 770 MB 已入库 · PDF/Word/Excel/代码在线预览", h: H("repo"), k: "仓库" });
       if (window.WEEKS) WEEKS.forEach(w => idx.push({
-        t: `第 ${w.w} 周 · ${w.t}`, s: w.kg, h: `plan.html#w${w.w}`, k: "计划"
+        t: `第 ${w.w} 周 · ${w.t}`, s: w.kg, h: H("plan", "w" + w.w), k: "计划"
       }));
       if (window.KB_CATALOG) KB_CATALOG.forEach(a => idx.push({
-        t: a.title, s: `${a.cat} · ${(a.chars / 1000).toFixed(1)}k 字`, h: `kb.html#${a.id}`, k: "知识库"
+        t: a.title, s: `${a.cat} · ${(a.chars / 1000).toFixed(1)}k 字`, h: H("kb", a.id), k: "知识库"
       }));
       if (window.PAPERS) PAPERS.forEach(p => idx.push({
-        t: `CSP-S ${p.year} 第一轮真题`, s: "在线作答 · 单选判分", h: "papers.html", k: "真题"
+        t: `CSP-S ${p.year} 第一轮真题`, s: "在线作答 · 单选判分", h: H("papers"), k: "真题"
       }));
       if (window.SYLLABUS) SYLLABUS.points.forEach(p => idx.push({
-        t: p[0], s: `${p[1]} · ${p[2]} 级`, h: `syllabus.html#lv${p[2]}`, k: "大纲"
+        t: p[0], s: `${p[1]} · ${p[2]} 级`, h: H("syllabus", "lv" + p[2]), k: "大纲"
       }));
       if (window.BOOKS) {
-        BOOKS.official.forEach(b => idx.push({ t: b.t, s: `${b.tag} · ${b.a}`, h: "books.html", k: "官方" }));
-        BOOKS.classic.forEach(b => idx.push({ t: b.t, s: `${b.tag} · ${b.a}`, h: "books.html", k: "教材" }));
+        BOOKS.official.forEach(b => idx.push({ t: b.t, s: `${b.tag} · ${b.a}`, h: H("books"), k: "官方" }));
+        BOOKS.classic.forEach(b => idx.push({ t: b.t, s: `${b.tag} · ${b.a}`, h: H("books"), k: "教材" }));
       }
       if (window.TEMPLATES) TEMPLATES.forEach(t => idx.push({
-        t: t.n, s: `${t.c} · ${t.lv} 级 · ${t.cx}`, h: `templates.html#tpl-${encodeURIComponent(t.n)}`, k: "模板"
+        t: t.n, s: `${t.c} · ${t.lv} 级 · ${t.cx}`, h: H("templates", "tpl-" + encodeURIComponent(t.n)), k: "模板"
       }));
-      if (window.LADDER) LADDER.forEach(l => idx.push({ t: l.s, s: l.f, h: "contests.html", k: "赛事" }));
+      if (window.LADDER) LADDER.forEach(l => idx.push({ t: l.s, s: l.f, h: H("contests"), k: "赛事" }));
       return idx;
     },
     openSearch() {
@@ -179,6 +194,10 @@
         document.body.appendChild(layer);
         layer.addEventListener("click", e => { if (e.target === layer) layer.classList.remove("open"); });
         document.getElementById("search-input").addEventListener("input", e => App.runSearch(e.target.value));
+        // 点中结果后收起检索层，跳转交给外壳的路由
+        document.getElementById("search-results").addEventListener("click", e => {
+          if (e.target.closest && e.target.closest(".sr-item")) layer.classList.remove("open");
+        });
       }
       layer.classList.add("open");
       const inp = document.getElementById("search-input");
@@ -277,27 +296,43 @@
     },
     esc(s) {
       return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-    }
+    },
+
+    /* ---------- 视图切换（SPA 外壳调用） ---------- */
+    setActive(id) {
+      document.querySelectorAll(".nav a[data-nav]").forEach(a => {
+        a.classList.toggle("on", a.dataset.nav === id);
+      });
+      document.body.setAttribute("data-page", (NAV.find(n => n.id === id) || NAV[0]).f);
+    },
+
   };
 
   window.App = App;
 
-  document.addEventListener("DOMContentLoaded", () => {
-    App.initTheme();
-    const active = document.body.getAttribute("data-page") || "index.html";
-    App.mount(active);
-    App._idx = App.buildIndex();
+  function onKey(e) {
+    if (e.key === "Escape") {
+      const l = document.getElementById("search-layer");
+      if (l) l.classList.remove("open");
+      const d = document.getElementById("drawer");
+      if (d) d.classList.remove("open");
+    }
+    if (e.key === "/" && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
+      e.preventDefault(); App.openSearch();
+    }
+  }
 
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape") {
-        const l = document.getElementById("search-layer");
-        if (l) l.classList.remove("open");
-        const d = document.getElementById("drawer");
-        if (d) d.classList.remove("open");
-      }
-      if (e.key === "/" && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
-        e.preventDefault(); App.openSearch();
-      }
-    });
-  });
+  function boot() {
+    App.initTheme();
+    if (!App._booted) {
+      App.mount(App.activeId());
+      App._booted = true;
+      document.addEventListener("keydown", onKey);
+    }
+    App.setActive(App.activeId());
+    App._idx = null;            // 视图可能刚刚按需加载了新数据，索引需重建
+  }
+
+  App.boot = boot;
+  document.addEventListener("DOMContentLoaded", boot);
 })();
