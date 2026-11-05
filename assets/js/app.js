@@ -16,6 +16,7 @@
     { id: "problems", f: "problems.html", t: "题单",   s: "Problems" },
     { id: "templates",f: "templates.html",t: "模板",   s: "Templates" },
     { id: "books",    f: "books.html",    t: "书单",   s: "Reading" },
+    { id: "catalog",  f: "views/catalog.html", t: "全书", s: "Catalog" },
     { id: "contests", f: "contests.html", t: "赛历",   s: "Contests" },
     { id: "assess",   f: "assess.html",   t: "评估",   s: "Assessment" },
     { id: "resources",f: "resources.html",t: "本地资产", s: "Assets" },

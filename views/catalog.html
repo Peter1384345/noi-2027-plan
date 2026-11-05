@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<base href="../">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>资料全书 · NOI 2027</title>
+<meta name="description" content="307 份信息学竞赛资料的完整分类目录：按竞赛类别、任务需求、作用效果三重维度检索，配套可打印 PDF 全书。">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a8322a'/><text x='50' y='70' font-size='56' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23fff'>N</text></svg>">
+</head>
+<body data-page="catalog.html">
+<header id="site-head"></header>
+
+<style>
+  .bk-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 6px; }
+  .bk-btn {
+    display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px;
+    border: 1px solid var(--rule-2); border-radius: 3px; background: var(--surface);
+    font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; transition: .16s;
+  }
+  .bk-btn:hover { border-color: var(--ink-3); box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+  .bk-btn.primary { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+  .bk-btn.primary:hover { background: var(--seal-d); border-color: var(--seal-d); }
+  .bk-stats { display: flex; flex-wrap: wrap; gap: 26px; margin: 18px 0 6px; }
+  .bk-stat b { display: block; font-family: var(--serif, serif); font-size: 26px; line-height: 1.1; }
+  .bk-stat span { font-size: 11.5px; color: var(--ink-3); letter-spacing: .04em; }
+
+  .bk-tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 6px 0 14px; }
+  .bk-search {
+    flex: 1 1 240px; min-width: 200px; padding: 9px 13px; font-size: 13.5px;
+    border: 1px solid var(--rule-2); border-radius: 3px; background: var(--surface); color: var(--ink);
+    font-family: inherit;
+  }
+  .bk-search:focus { outline: none; border-color: var(--azure); box-shadow: 0 0 0 3px var(--azure-t); }
+  .bk-group { margin-bottom: 12px; }
+  .bk-group-t { font-size: 11px; letter-spacing: .12em; color: var(--ink-4); margin-bottom: 7px; text-transform: uppercase; }
+  .bk-count { font-size: 12.5px; color: var(--ink-3); margin-left: auto; align-self: center; }
+
+  .bk-list { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--rule); }
+  @media (min-width: 900px) { .bk-list { grid-template-columns: 1fr 1fr; column-gap: 34px; } }
+  .bk-item { padding: 14px 0 13px; border-bottom: 1px solid var(--rule); break-inside: avoid; }
+  .bk-h { display: flex; gap: 9px; align-items: baseline; flex-wrap: wrap; }
+  .bk-no {
+    font-family: ui-monospace, Consolas, monospace; font-size: 11px; font-weight: 700;
+    color: var(--paper); background: var(--gold); padding: 1px 5px; border-radius: 2px; letter-spacing: .04em;
+  }
+  .bk-t { font-size: 14.2px; font-weight: 600; font-family: var(--sans); }
+  .bk-kind { margin-left: auto; font-size: 11px; color: var(--gold); border: 1px solid var(--gold-t); padding: 0 5px; border-radius: 2px; }
+  .bk-meta { font-size: 11.8px; color: var(--ink-3); margin: 5px 0 7px; }
+  .bk-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 7px; }
+  .bk-tg { font-size: 10.8px; line-height: 1.7; padding: 0 6px; border-radius: 2px; background: var(--paper-2); color: var(--ink-2); }
+  .bk-tg.lv { background: var(--azure-t); color: var(--azure-d); }
+  .bk-tg.fx { background: var(--gold-t); color: var(--gold); }
+  .bk-note { font-size: 12.8px; line-height: 1.72; color: var(--ink-2); }
+  .bk-url { font-size: 11px; color: var(--ink-4); margin-top: 6px; word-break: break-all; }
+  .bk-url a { color: var(--azure); text-decoration: none; }
+  .bk-url a:hover { text-decoration: underline; }
+  .bk-empty { padding: 40px 0; text-align: center; color: var(--ink-3); font-size: 13.5px; }
+</style>
+
+<section class="section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">THE BOOK / 307 SOURCES</span>
+      <h2>资料全书</h2>
+    </div>
+    <p class="sec-lead">
+      把散落在互联网上的信息学竞赛资料收拢、分类、标注，编成一本可以打印的案头工具书。
+      每一条都标了<b>适用竞赛类别</b>、<b>任务需求</b>、<b>作用效果</b>与<b>获取途径</b>——
+      你可以从任何一个维度切进去，而不是从第一页读到最后一页。
+    </p>
+
+    <div class="bk-stats" id="bk-stats"></div>
+
+    <div class="bk-actions">
+      <a class="bk-btn primary" href="assets/book/informatics-book-v1.pdf" target="_blank" rel="noopener">打开全书 PDF · 105 页</a>
+      <a class="bk-btn" href="book.html" target="_blank" rel="noopener">在线阅读 / 打印版</a>
+      <a class="bk-btn" href="assets/data/book_index.json" target="_blank" rel="noopener">索引数据 JSON</a>
+    </div>
+    <p class="small muted" style="margin-top:10px">
+      PDF 为 A4 版式，含封面、版权页、自动目录（带页码）、页眉页脚、三重索引与编号速查表。可直接双面打印装订。
+    </p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>检索</h2></div>
+    <p class="sec-lead">三组筛选可叠加，结果实时更新。搜索匹配名称、作者、出版方与评述正文。</p>
+
+    <div class="bk-tools">
+      <input class="bk-search" id="bk-q" type="search" placeholder="搜索：线段树 / 洛谷 / 集训队论文 / 对拍…" autocomplete="off">
+      <span class="bk-count" id="bk-count">—</span>
+      <button class="chip" id="bk-reset">重置</button>
+    </div>
+
+    <div class="bk-group"><div class="bk-group-t">竞赛类别</div><div class="filters" id="bk-lv"></div></div>
+    <div class="bk-group"><div class="bk-group-t">任务需求</div><div class="filters" id="bk-use"></div></div>
+    <div class="bk-group"><div class="bk-group-t">作用效果</div><div class="filters" id="bk-fx"></div></div>
+
+    <div class="bk-list" id="bk-list"></div>
+    <div class="bk-empty" id="bk-empty" style="display:none">没有匹配的资料，试试减少筛选条件。</div>
+  </div>
+</section>
+
+<script src="assets/js/data/book_index.js"></script>
+<script>
+(function () {
+  const D = window.BOOK_INDEX;
+  if (!D) return;
+  const S = { q: "", lv: "", use: "", fx: "" };
+
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  function stats() {
+    const el = document.getElementById("bk-stats");
+    if (!el) return;
+    const kinds = {};
+    D.items.forEach(i => { kinds[i.kind] = (kinds[i.kind] || 0) + 1; });
+    const top = Object.keys(kinds).sort((a, b) => kinds[b] - kinds[a]).slice(0, 3)
+      .map(k => k + " " + kinds[k]).join(" · ");
+    el.innerHTML = `
+      <div class="bk-stat"><b>${D.total}</b><span>收录条目</span></div>
+      <div class="bk-stat"><b>${D.chapters.length}</b><span>分类章节</span></div>
+      <div class="bk-stat"><b>${D.levels.length}</b><span>竞赛层级</span></div>
+      <div class="bk-stat"><b>${D.uses.length}</b><span>任务需求</span></div>
+      <div class="bk-stat"><b>${D.effects.length}</b><span>作用效果</span></div>
+      <div class="bk-stat"><b>${D.items.filter(i => i.url).length}</b><span>可直达链接</span></div>`;
+  }
+
+  function buildChips() {
+    const sets = [
+      ["bk-lv", D.levels, "lv"],
+      ["bk-use", D.uses, "use"],
+      ["bk-fx", D.effects, "fx"]
+    ];
+    sets.forEach(([id, vals, key]) => {
+      const box = document.getElementById(id);
+      if (!box) return;
+      const cnt = v => D.items.filter(i => i[key].indexOf(v) >= 0).length;
+      box.innerHTML = `<button class="chip on" data-k="${key}" data-v="">全部<span class="ct">${D.total}</span></button>` +
+        vals.map(v => `<button class="chip" data-k="${key}" data-v="${esc(v)}">${esc(v)}<span class="ct">${cnt(v)}</span></button>`).join("");
+    });
+  }
+
+  function match(it) {
+    if (S.lv && it.lv.indexOf(S.lv) < 0) return false;
+    if (S.use && it.use.indexOf(S.use) < 0) return false;
+    if (S.fx && it.fx.indexOf(S.fx) < 0) return false;
+    if (S.q) {
+      const hay = (it.t + " " + it.sub + " " + it.auth + " " + it.pub + " " + it.note + " " + it.kind + " " + it.year).toLowerCase();
+      if (hay.indexOf(S.q.toLowerCase()) < 0) return false;
+    }
+    return true;
+  }
+
+  function render() {
+    const list = document.getElementById("bk-list");
+    const empty = document.getElementById("bk-empty");
+    const cnt = document.getElementById("bk-count");
+    if (!list) return;
+    const res = D.items.filter(match);
+    cnt.textContent = res.length + " / " + D.total + " 条";
+    if (!res.length) { list.innerHTML = ""; empty.style.display = "block"; return; }
+    empty.style.display = "none";
+
+    list.innerHTML = res.map(it => {
+      const meta = [it.auth, it.pub, it.year].filter(Boolean).join(" · ");
+      const tags = it.lv.map(v => `<span class="bk-tg lv">${esc(v)}</span>`).join("") +
+                   it.use.map(v => `<span class="bk-tg">${esc(v)}</span>`).join("") +
+                   it.fx.map(v => `<span class="bk-tg fx">${esc(v)}</span>`).join("") +
+                   (it.how ? `<span class="bk-tg">${esc(it.how)}</span>` : "");
+      const url = it.url
+        ? `<div class="bk-url"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.url)}</a></div>`
+        : `<div class="bk-url" style="opacity:.7">无公开链接 · ${esc(it.how || "见评述")}</div>`;
+      return `<div class="bk-item">
+        <div class="bk-h"><span class="bk-no">${String(it.no).padStart(3, "0")}</span>
+          <span class="bk-t">${esc(it.t)}</span>
+          ${it.sub ? `<span class="small muted">${esc(it.sub)}</span>` : ""}
+          <span class="bk-kind">${esc(it.kind)}</span></div>
+        <div class="bk-meta">${esc(meta)}</div>
+        <div class="bk-tags">${tags}</div>
+        <div class="bk-note">${esc(it.note)}</div>
+        ${url}
+      </div>`;
+    }).join("");
+  }
+
+  document.addEventListener("click", function (e) {
+    const chip = e.target.closest(".chip[data-k]");
+    if (!chip) return;
+    const k = chip.dataset.k, v = chip.dataset.v;
+    S[k] = v;
+    chip.parentNode.querySelectorAll(".chip").forEach(c => c.classList.remove("on"));
+    chip.classList.add("on");
+    render();
+  });
+
+  const q = document.getElementById("bk-q");
+  if (q) {
+    q.addEventListener("input", function () { S.q = q.value.trim(); render(); });
+  }
+  const rs = document.getElementById("bk-reset");
+  if (rs) {
+    rs.addEventListener("click", function () {
+      S.q = ""; S.lv = ""; S.use = ""; S.fx = "";
+      if (q) q.value = "";
+      document.querySelectorAll(".chip[data-k]").forEach(c => c.classList.toggle("on", c.dataset.v === ""));
+      render();
+    });
+  }
+
+  stats();
+  buildChips();
+  render();
+})();
+</script>
+</body>
+</html>
