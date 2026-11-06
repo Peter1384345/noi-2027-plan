@@ -5001,10 +5001,10 @@ ull mix(ull x) {                        // splitmix64：把输入彻底打散
 const ull B = 0x9e3779b97f4a7c15ULL;    // 乘数取奇数即可
 
 int n; vector&lt;int&gt; g[MAXN];
-int par[MAXN], dep[MAXN]; ull h[MAXN];
+int par[MAXN]; ull h[MAXN];
 
 // 迭代剥叶求重心：剩下的 1 或 2 个点就是重心
-vector&lt;int&gt; centers(int root) {
+vector&lt;int&gt; centers() {
     vector&lt;int&gt; d(n + 1), q, nxt;
     for (int u = 1; u &lt;= n; u++) { d[u] = (int)g[u].size(); if (d[u] &lt;= 1) q.push_back(u); }
     int rest = n;
@@ -5040,7 +5040,7 @@ ull hash_rooted(int root) {
 }
 
 ull tree_hash() {
-    vector&lt;int&gt; c = centers(1);
+    vector&lt;int&gt; c = centers();
     ull r = hash_rooted(c[0]);
     if (c.size() == 2) r = min(r, hash_rooted(c[1]));   // 双重心必须都算
     return r;
@@ -5048,7 +5048,17 @@ ull tree_hash() {
 
 <p><b>做法二：换根求「每个点为根」的哈希</b>。把折叠换成与顺序无关的加法合并 <code>h(u) = mix(1 + Σ mix(h_child))</code>，并约定 <code>mix(0) = 0</code> 表示空。这样剔除一个子树只需减去它的贡献，两遍 DFS 即可得到全部 n 个答案，同时天然支持「以 u 为根时某棵子树是否与给定树同构」。</p>
 <pre class="code">ull down[MAXN], up[MAXN], sum[MAXN], H[MAXN];
-ull f(ull x) { return x ? mix(x) : 0ULL; }   // 空子树贡献 0
+ull f(ull x) { return x ? mix(x) : 0ULL; }   // 约定：空子树贡献 0
+
+// 任取 1 为根，先得到拓扑序 order 与父指针 par
+vector&lt;int&gt; order;
+void build_order(int root) {
+    order.clear(); order.push_back(root); par[root] = 0;
+    for (size_t i = 0; i &lt; order.size(); i++) {
+        int u = order[i];
+        for (int v : g[u]) if (v != par[u]) { par[v] = u; order.push_back(v); }
+    }
+}
 
 void dfs_down(const vector&lt;int&gt;&amp; order) {
     for (int i = (int)order.size() - 1; i &gt;= 0; i--) {
