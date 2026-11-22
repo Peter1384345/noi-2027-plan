@@ -400,15 +400,15 @@ pre.code{
 <div class="toc-row"><span class="toc-t">第 24 章　基础算法</span><span class="toc-d"></span><span class="toc-p">200</span></div>
 <div class="toc-row"><span class="toc-t">第 25 章　搜索</span><span class="toc-d"></span><span class="toc-p">215</span></div>
 <div class="toc-row"><span class="toc-t">第 26 章　动态规划</span><span class="toc-d"></span><span class="toc-p">234</span></div>
-<div class="toc-row"><span class="toc-t">第 27 章　数据结构</span><span class="toc-d"></span><span class="toc-p">262</span></div>
-<div class="toc-row"><span class="toc-t">第 28 章　图论</span><span class="toc-d"></span><span class="toc-p">314</span></div>
-<div class="toc-row"><span class="toc-t">第 29 章　数学</span><span class="toc-d"></span><span class="toc-p">364</span></div>
-<div class="toc-row"><span class="toc-t">第 30 章　字符串</span><span class="toc-d"></span><span class="toc-p">408</span></div>
-<div class="toc-row"><span class="toc-t">第 31 章　计算几何与杂项</span><span class="toc-d"></span><span class="toc-p">434</span></div>
+<div class="toc-row"><span class="toc-t">第 27 章　数据结构</span><span class="toc-d"></span><span class="toc-p">265</span></div>
+<div class="toc-row"><span class="toc-t">第 28 章　图论</span><span class="toc-d"></span><span class="toc-p">322</span></div>
+<div class="toc-row"><span class="toc-t">第 29 章　数学</span><span class="toc-d"></span><span class="toc-p">372</span></div>
+<div class="toc-row"><span class="toc-t">第 30 章　字符串</span><span class="toc-d"></span><span class="toc-p">416</span></div>
+<div class="toc-row"><span class="toc-t">第 31 章　计算几何与杂项</span><span class="toc-d"></span><span class="toc-p">442</span></div>
 <div class="toc-h">附录</div>
-<div class="toc-row"><span class="toc-t">附录 A　资料分布统计</span><span class="toc-d"></span><span class="toc-p">459</span></div>
-<div class="toc-row"><span class="toc-t">附录 B　编号速查表</span><span class="toc-d"></span><span class="toc-p">460</span></div>
-<div class="toc-row"><span class="toc-t">附录 C　版本记录与致谢</span><span class="toc-d"></span><span class="toc-p">468</span></div></div>
+<div class="toc-row"><span class="toc-t">附录 A　资料分布统计</span><span class="toc-d"></span><span class="toc-p">467</span></div>
+<div class="toc-row"><span class="toc-t">附录 B　编号速查表</span><span class="toc-d"></span><span class="toc-p">468</span></div>
+<div class="toc-row"><span class="toc-t">附录 C　版本记录与致谢</span><span class="toc-d"></span><span class="toc-p">476</span></div></div>
 <div class="page part" data-n="I"><div class="part-mark">I</div><div class="part-no">PART I &nbsp;·&nbsp; 第一编</div><h2 class="part-t" style="border:0;break-before:auto;">竞赛体系与备考路线</h2><div class="part-en">THE SYSTEM & THE ROADMAP</div><div class="part-d">先看清赛道，再谈资料。本编四章回答四个问题：这条赛道分几段、每段考什么、大纲怎么读、一年怎么排。</div></div>
 <div class="page">
 <h2 id="ch1">第 1 章　信息学竞赛全景地图</h2>
@@ -4793,7 +4793,7 @@ void solve(int l, int r, int ql, int qr) {
 
 <p><b>自查</b>：本节把模板 A、B 逐行译成 Python，与暴力（对子区间排序取第 k 个）对拍：静态 400 组（n ≤ 12、值域 ≤ 10、每组 1—8 个询问）全对；带修 300 组（随机混合修改与询问，共 940 个询问）全对；边界用例「10 个元素全等于 7、V = 1」「单点区间」均通过。三条错法在同一批数据上的错误率分别是 117/400、341/400、105/300，数字已写进上面的易错点。选型建议只有一句：<b>能离线就别上树套树</b>——27.10 已算过 n = m = 10<sup>5</sup> 时树套树要 350 MB，而同一题的离线整体二分只要十几 MB。</p>
 <h2 id="ch25"><span class="chk">25</span>第 25 章　搜索</h2>
-<div class="ch-intro">搜索是「没有更好办法时」的通用解法，也是暴力分的来源。本章给出 DFS/BFS 的标准骨架、四类剪枝、迭代加深与双向搜索、状压搜索的位运算技巧，以及 25.6 的 A* 与 IDA*——后者把「估价函数」讲成一门可以论证的手艺：可采纳与一致各保证什么、h 的三档强度怎么选、阈值迭代为什么必须取最小超限值；25.7 再把「折半搜索」补成独立一节，把 n ≤ 44 这一类「2<sup>n</sup> 不可能、2<sup>n/2</sup> 刚好」的题拆开讲：两半怎么枚举、合并的三种写法（二分计数、相等段计数、邻近两点）、以及为什么「去重」在合并阶段是错的；25.8 收在舞蹈链（DLX）上——它把「每列恰好一个 1」的精确覆盖问题压成十字链表上的 O(1) 摘除与恢复，数独、n 皇后、骨牌铺砌共用同一份模板，配套的「最小列优先」启发式与「空列即死路」剪枝是能不能几千次递归跑完一盘数独的关键；25.9 转向两人对抗：零和博弈为什么必须用 minimax、NegaMax 为什么比交替写 max/min 少一半错、Alpha-Beta 的窗口语义与「被剪分支不影响根值」的不变式、胜负分为什么要扣步数才能快胜优先，以及置换表必须同时带「轮到谁」与「深度 + 边界类型」——最后落到一个在棋类上永远测不出来的 bug：带每步收益的博弈，子窗口要跟着收益平移。</div>
+<div class="ch-intro">搜索是「没有更好办法时」的通用解法，也是暴力分的来源。本章给出 DFS/BFS 的标准骨架、四类剪枝、迭代加深与双向搜索、状压搜索的位运算技巧，以及 25.6 的 A* 与 IDA*——后者把「估价函数」讲成一门可以论证的手艺：可采纳与一致各保证什么、h 的三档强度怎么选、阈值迭代为什么必须取最小超限值；25.7 再把「折半搜索」补成独立一节，把 n ≤ 44 这一类「2<sup>n</sup> 不可能、2<sup>n/2</sup> 刚好」的题拆开讲：两半怎么枚举、合并的三种写法（二分计数、相等段计数、邻近两点）、以及为什么「去重」在合并阶段是错的；25.8 收在舞蹈链（DLX）上——它把「每列恰好一个 1」的精确覆盖问题压成十字链表上的 O(1) 摘除与恢复，数独、n 皇后、骨牌铺砌共用同一份模板，配套的「最小列优先」启发式与「空列即死路」剪枝是能不能几千次递归跑完一盘数独的关键；25.9 转向两人对抗：零和博弈为什么必须用 minimax、NegaMax 为什么比交替写 max/min 少一半错、Alpha-Beta 的窗口语义与「被剪分支不影响根值」的不变式、胜负分为什么要扣步数才能快胜优先，以及置换表必须同时带「轮到谁」与「深度 + 边界类型」——最后落到一个在棋类上永远测不出来的 bug：带每步收益的博弈，子窗口要跟着收益平移。26.15 收在斜率优化的兜底工具上：当插入斜率与查询 <code>x</code> 都不单调时，凸壳与单调队列全部失效，李超线段树改用「标记永久化 + 每层比中点」的办法，把一条线段的插入压到 <code>O(log<sup>2</sup> n)</code>、单点查询 <code>O(log n)</code>；本节给出离散化定义域的完整模板，并记下两处实测——查询只取叶子错 387/400、用斜率代替中点函数值错 15/400。</div>
 <h3 class="kb-h">25.1 DFS 与回溯的通用框架</h3>
 <p>DFS 解决的是「枚举所有合法方案」或「在状态图上走到终点」。写成三件事：<b>边界、选择、撤销</b>。</p>
 <pre class="code">void dfs(int dep) {
@@ -6197,8 +6197,110 @@ int main() {
 <p><b>自查</b>：本轮把模板逐行译成 Python（同样的 <code>plug[]</code> 数组、同样的 7 类转移、同样的行末左移），与「枚举全部边子集 + 判每格度数 2 + 判所有边连通」的暴力对拍：2×2、2×3、3×2、3×3、3×4、4×3、2×4、4×2 共 40 组（含随机障碍）<b>全对</b>；四个已知值也对：2×2 = 1、2×4 = 1、3×4 = 2、4×4 = 6、6×6 = 1072（6×6 全 1 的哈密顿回路数，可作整份模板的最终验收）。四类错法的实测错误率写在第 1—5 条里（30 组样本）。另有<b>对拍脚本自己的坑</b>记一笔：暴力第一版用并查集「一发现同根就判非法」，于是把「闭合最后一条边」的合法环也判掉了，2×2 全 1 报 0 而正确答案是 1——对拍前先确认暴力对，这节又验证一次。</p>
 
 <p><b>与相邻几节的分工</b>：26.6 状压 DP 处理「每行选哪些」的<b>无连通约束</b>问题（铺砖、放车、炮兵阵地）；26.7 数位 DP 处理十进制/二进制上的逐位计数；本节处理<b>带连通性</b>的网格覆盖，状态里必须出现「配对关系」而不只是「有没有」。若题目只是「1×2 骨牌铺满 m ≤ 12 的网格」，用 26.6 的逐格轮廓线写法（只记一格的状态、不记连通块）即可，O(n·m·2<sup>m</sup>) 比本节轻得多——<b>先判断需不需要连通性，再决定用哪一节</b>。</p>
+<h3 class="kb-h">26.15 李超线段树：直线集合的区间插入与单点最值</h3>
+<p>李超树回答一类很窄却极常见的问题：<b>往一个区间里插入一条直线，查询某个点的最大（最小）值</b>。它不维护凸壳、不要求插入斜率单调、也不要求查询点单调——代价是把「谁更优」交给线段树的每一层去裁决：单条<b>线段</b>插入 <code>O(log<sup>2</sup> n)</code>，单点查询 <code>O(log n)</code>。26.10 的斜率优化在「插入斜率与查询 <code>x</code> 都单调」时是 <code>O(n)</code>，一旦这两条前提有一条破了，凸壳与单调队列全部失效，李超树就是默认兜底方案。</p>
+
+<p><b>判定条件与核心结论</b>：</p>
+<ul>
+<li><b>适用</b>：函数是直线（或分段一次），询问是<b>单点</b>。若询问是「区间最值」或函数是二次，李超树不直接适用（前者要「线段树套李超」或改用分治，后者要走动态凸壳）。</li>
+<li><b>关键性质</b>：两条直线最多交于一点。于是在任意区间 <code>[l,r]</code> 上，「在中点 <code>mid</code> 处更优」的那条，至少在<b>一侧</b>半边是全程更优的。所以每层只需把「相对劣势」的那条往它可能翻盘的一侧下放；两端都不优就直接丢弃。</li>
+<li><b>标记永久化</b>：插入时<b>不</b>把已有标记下传，而是让每个节点长期持有「一条直线」；查询时把根到叶路径上所有节点的直线都算一遍、取 <code>max</code>。这与普通线段树「查询只看叶子」的习惯相反，也是最容易写错的地方。</li>
+<li><b>区间插入</b>：把 <code>[ql,qr]</code> 拆成 <code>O(log n)</code> 个整段节点，每个节点跑一次 <code>O(log n)</code> 的「整区间插入直线」，合计 <code>O(log<sup>2</sup> n)</code>；若插入的是「整个定义域上的直线」，退化为 <code>O(log n)</code>。</li>
+</ul>
+
+<p><b>复杂度</b>：单直线插入 <code>O(log n)</code>；单线段插入 <code>O(log<sup>2</sup> n)</code>；单点查询 <code>O(log n)</code>；空间 <code>O(4M)</code>（<code>M</code> 为离散化后 <code>x</code> 的个数）。落在 DP 上，就把「斜率不单调 + 查询不单调」的转移从 <code>O(n<sup>2</sup>)</code> 压到 <code>O(n log<sup>2</sup> n)</code>。<b>三条路线的分工</b>：斜率单调 + <code>x</code> 单调 → 单调队列凸壳 <code>O(n)</code>（26.10 模板 A）；斜率单调 + <code>x</code> 任意 → 凸壳上二分 <code>O(n log n)</code>（模板 B）；两者都不单调 → 本节李超树 <code>O(n log<sup>2</sup> n)</code>，或 24.8 的 CDQ 分治。</p>
+
+<p><b>模板</b>（离散化定义域 + 区间插入 + 单点最大值；求最小值把 <code>k,b</code> 同时取反、答案再取反）：</p>
+<pre class="code">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int MX = 200005;
+const ll NEG = (ll)-4e18;
+
+int M;                          // 不同的 x 值个数
+ll X[MX];                       // 排序去重后的 x 值（真实坐标）
+struct Line { ll k, b; };       // y = kx + b
+Line L[MX];                     // 1-based，0 号留空
+int id[MX &lt;&lt; 2];                // 节点持有的直线编号，0 表示空
+
+// 注意：xi 是「下标」，取值必须回到 X[xi]，不能直接拿下标当坐标
+inline ll f(int i, int xi) { return L[i].k * X[xi] + L[i].b; }
+
+void build(int o, int l, int r) {
+    id[o] = 0;
+    if (l == r) return;
+    int mid = (l + r) &gt;&gt; 1;
+    build(o &lt;&lt; 1, l, mid); build(o &lt;&lt; 1 | 1, mid + 1, r);
+}
+
+void insLine(int o, int l, int r, int nid) {      // 往覆盖整段 [l,r] 的节点插一条直线
+    int mid = (l + r) &gt;&gt; 1;
+    if (id[o] == 0) { id[o] = nid; return; }
+    if (f(nid, mid) &gt; f(id[o], mid)) swap(nid, id[o]);   // 中点更优者留在本节点
+    if (l == r) return;
+    if (f(nid, l) &gt; f(id[o], l))      insLine(o &lt;&lt; 1, l, mid, nid);        // 左侧可能翻盘
+    else if (f(nid, r) &gt; f(id[o], r)) insLine(o &lt;&lt; 1 | 1, mid + 1, r, nid); // 右侧可能翻盘
+    // 两端都不优：这条线在本区间永远赢不了，直接丢弃
+}
+
+void addSeg(int o, int l, int r, int ql, int qr, int nid) {   // 把线段 [ql,qr] 拆成整段
+    if (ql &lt;= l &amp;&amp; r &lt;= qr) { insLine(o, l, r, nid); return; }
+    int mid = (l + r) &gt;&gt; 1;
+    if (ql &lt;= mid) addSeg(o &lt;&lt; 1, l, mid, ql, qr, nid);
+    if (qr &gt; mid)  addSeg(o &lt;&lt; 1 | 1, mid + 1, r, ql, qr, nid);
+}
+
+ll query(int o, int l, int r, int xi) {           // 路径上所有直线取 max（标记永久化）
+    ll res = id[o] ? f(id[o], xi) : NEG;
+    if (l == r) return res;
+    int mid = (l + r) &gt;&gt; 1;
+    ll t = (xi &lt;= mid) ? query(o &lt;&lt; 1, l, mid, xi) : query(o &lt;&lt; 1 | 1, mid + 1, r, xi);
+    return max(res, t);
+}
+
+int main() {
+    int n, q; scanf("%d%d", &amp;n, &amp;q);
+    vector&lt;array&lt;ll, 4&gt;&gt; segs;                    // k, b, 左端点真实坐标, 右端点真实坐标
+    vector&lt;ll&gt; xs;
+    for (int i = 0; i &lt; n; ++i) {
+        ll k, b, l, r; scanf("%lld%lld%lld%lld", &amp;k, &amp;b, &amp;l, &amp;r);
+        segs.push_back({k, b, l, r});
+        xs.push_back(l); xs.push_back(r);
+    }
+    vector&lt;ll&gt; qs(q);
+    for (int i = 0; i &lt; q; ++i) { scanf("%lld", &amp;qs[i]); xs.push_back(qs[i]); }
+    sort(xs.begin(), xs.end()); xs.erase(unique(xs.begin(), xs.end()), xs.end());
+    M = (int)xs.size();
+    for (int i = 0; i &lt; M; ++i) X[i] = xs[i];
+    build(1, 0, M - 1);
+    for (int i = 0; i &lt; (int)segs.size(); ++i) {
+        L[i + 1] = {segs[i][0], segs[i][1]};
+        int l = lower_bound(xs.begin(), xs.end(), segs[i][2]) - xs.begin();
+        int r = lower_bound(xs.begin(), xs.end(), segs[i][3]) - xs.begin();
+        addSeg(1, 0, M - 1, l, r, i + 1);
+    }
+    for (int i = 0; i &lt; q; ++i) {
+        int xi = lower_bound(xs.begin(), xs.end(), qs[i]) - xs.begin();
+        printf("%lld\n", query(1, 0, M - 1, xi));
+    }
+    return 0;
+}</pre>
+
+<p><b>易错点</b>（前两条是本节实测口径）：</p>
+<ol>
+<li><b>查询只取叶节点</b>。标记永久化意味着父节点那条直线可能正是最优，不下传又不取路径 <code>max</code>，结果系统性偏小——实测 400 组里错 387 组。正确写法是「边下降边取 <code>max</code>」，模板 <code>query</code> 里 <code>res = id[o] ? ... : NEG</code> 那一行不能省。</li>
+<li><b>用斜率大小代替中点函数值判断谁留</b>。斜率大不等于在这段区间上更优；实测 400 组错 15 组，而且后面还会用端点值兜一次，错得零散、极难定位。判据只能是 <code>f(mid)</code>。</li>
+<li><b>区间插入不拆段</b>，直接对整条定义域调用 <code>insLine</code>。这等于把线段当整条直线，区间外也生效，答案偏大；而样例往往恰好落在区间内，本地测不出来。</li>
+<li><b>离散化后拿下标当坐标</b>。若 <code>X</code> 不连续（例如 <code>{1, 100, 1000000}</code>），<code>k·下标 + b</code> 与真实值差一个仿射变换，插入顺序与比较结论全乱。模板里 <code>f</code> 用 <code>X[xi]</code> 就是为了堵这一条。</li>
+<li><b>空节点判据用「直线编号 = 0」</b>，于是第 0 条直线永远插不进去。编号从 1 开始，0 专门表示空。</li>
+<li><b>乘法溢出</b>。<code>k</code> 与 <code>x</code> 都在 <code>10<sup>9</sup></code> 量级时 <code>k·x</code> 已到 <code>10<sup>18</sup></code>，再加 <code>b</code> 或两条相减就溢出；此时要么换 <code>__int128</code> 比较，要么换 <code>long double</code>（比较精度够，但别让它的结果参与取模）。</li>
+<li><b>最小值版另写一套 <code>&lt;</code> 判据</b>。改成「<code>k,b</code> 取反求 <code>max</code> 再取反」几乎不会错（实测 200 组 0 错），另写一套则要同时改 <code>insLine</code> 的三处比较与 <code>query</code> 的初值，漏改一处就是静默错误。</li>
+<li><b>把 <code>NEG</code> 设成 <code>-1</code> 或 <code>0</code></b>。答案本身可以是负数，用 −1 当「没有直线」会与真实答案混淆；用 <code>−4e18</code> 这种量级。</li>
+<li><b>定义域没覆盖全部查询点</b>。模板把所有插入端点与查询点一起离散化，就是为保证这一点；少了边界点，该点会返回 <code>NEG</code>，表现为「个别询问莫名其妙极小」而不是算错。</li>
+<li><b>担心同斜率重复插入</b>。不必特判：<code>y=3x</code>、<code>3x+5</code>、<code>3x−7</code> 依次插入后在 <code>[0,40]</code> 上查询全对（<code>f(mid)</code> 比较会把低的那条直接丢弃）。真正要小心的是<b>同一条直线的区间不连续</b>——那必须拆成多条线段插入，不能合并。</li>
+</ol>
 <h2 id="ch27"><span class="chk">27</span>第 27 章　数据结构</h2>
-<div class="ch-intro">从栈队列到线段树、平衡树、可持久化线段树、线性基、树套树、LCT、莫队，本章按「使用频率 × 实现成本」排序。每个结构都给出完整可编译的模板，以及「什么时候别用它」的判断依据——尤其是 27.10 的树套树与 27.11 的 LCT，都会明确告诉你什么情况下该放弃它改用离线做法；27.12 讲 KD-Tree，把「剪枝暴力」这一路线讲清：平方根级复杂度从哪里来，又会在什么数据上失效；27.13 的重链剖分与 27.14 的树上启发式合并共用同一个「重儿子」概念——前者用它把树上路径摊成 O(log n) 段序列区间，后者用它把子树统计压到 O(n log n)，两节合起来就是树上数据结构最常用的两条主线；27.15 的线段树合并与分裂再补一类「把 n 棵权值线段树并成一棵」的操作，均摊 O(1) 一个节点的代价使它成为子树统计与连通块合并里最轻的结构；27.16 的树上莫队把 27.7 只写了一句的「欧拉序转区间」展开成完整模板，用「统计区间内出现奇数次的点」这一条结论，把树上路径询问压到 O(n√m)；27.17 补上虚树——q 次询问、每次只给 k 个关键点时，把点集压成「关键点 + 相邻两项的 LCA」，用单调栈在 O(k) 内连边，使单次询问从 O(n) 降到 O(k log n)，「为什么只取相邻两项的 LCA 就够」的证明与消耗战式 DP 一并给出。27.18 回到 27.7 的莫队，补上两种「普通莫队写不了」的改造——删除不可逆时用回滚莫队把左移增量整体快照撤销，单次 add 代价太高时用二次离线莫队把 (n+q)√n 次询问摊到一次离线扫描。27.19 收在唯一需要「历史版本」的并查集上：把 <code>fa</code> 换成可持久化数组、并因此必须放弃路径压缩，单次操作变成 O(log² n)，代价是空间 O((n+m log n))——本节把「什么时候该用它、什么时候该换 28.17 的线段树分治」列成对照表，并记下两个实测数字：原地改数组的错法是 32838 次查询错 4935 次，按序号合并的树高是 820（按大小合并只要 6）。27.20 27.20 补上「可并堆」这块空白：左偏树只用一条「沿右儿子走的链长不超过 log n」的不变量，就把两个堆的合并从 O(n) 压到 O(log n)，并给出可持久化（沿右链复制）与可删任意元素（懒删除 + 并查集维护根）两种变形；与 27.14 的启发式合并、27.15 的线段树合并一起，构成「子树信息合并」的三条路线与它们各自的分工；27.21 再把「以谁为最小值」这件事固化成父子关系：单调栈 O(n) 建出笛卡尔树，子树大小、区间最小值位置、直方图最大矩形三条结论一次给出，同时记下三处实测——返回 <code>stk[top]</code> 错 278/300、子树大小的左右比较符写反错 354/400、多测不清 <code>lc/rc</code> 会把树接成环（299/300）、以及递增序列的树高就是 <code>n</code>（10<sup>5</sup> 层）所以只能迭代遍历。</div>
+<div class="ch-intro">从栈队列到线段树、平衡树、可持久化线段树、线性基、树套树、LCT、莫队，本章按「使用频率 × 实现成本」排序。每个结构都给出完整可编译的模板，以及「什么时候别用它」的判断依据——尤其是 27.10 的树套树与 27.11 的 LCT，都会明确告诉你什么情况下该放弃它改用离线做法；27.12 讲 KD-Tree，把「剪枝暴力」这一路线讲清：平方根级复杂度从哪里来，又会在什么数据上失效；27.13 的重链剖分与 27.14 的树上启发式合并共用同一个「重儿子」概念——前者用它把树上路径摊成 O(log n) 段序列区间，后者用它把子树统计压到 O(n log n)，两节合起来就是树上数据结构最常用的两条主线；27.15 的线段树合并与分裂再补一类「把 n 棵权值线段树并成一棵」的操作，均摊 O(1) 一个节点的代价使它成为子树统计与连通块合并里最轻的结构；27.16 的树上莫队把 27.7 只写了一句的「欧拉序转区间」展开成完整模板，用「统计区间内出现奇数次的点」这一条结论，把树上路径询问压到 O(n√m)；27.17 补上虚树——q 次询问、每次只给 k 个关键点时，把点集压成「关键点 + 相邻两项的 LCA」，用单调栈在 O(k) 内连边，使单次询问从 O(n) 降到 O(k log n)，「为什么只取相邻两项的 LCA 就够」的证明与消耗战式 DP 一并给出。27.18 回到 27.7 的莫队，补上两种「普通莫队写不了」的改造——删除不可逆时用回滚莫队把左移增量整体快照撤销，单次 add 代价太高时用二次离线莫队把 (n+q)√n 次询问摊到一次离线扫描。27.19 收在唯一需要「历史版本」的并查集上：把 <code>fa</code> 换成可持久化数组、并因此必须放弃路径压缩，单次操作变成 O(log² n)，代价是空间 O((n+m log n))——本节把「什么时候该用它、什么时候该换 28.17 的线段树分治」列成对照表，并记下两个实测数字：原地改数组的错法是 32838 次查询错 4935 次，按序号合并的树高是 820（按大小合并只要 6）。27.20 27.20 补上「可并堆」这块空白：左偏树只用一条「沿右儿子走的链长不超过 log n」的不变量，就把两个堆的合并从 O(n) 压到 O(log n)，并给出可持久化（沿右链复制）与可删任意元素（懒删除 + 并查集维护根）两种变形；与 27.14 的启发式合并、27.15 的线段树合并一起，构成「子树信息合并」的三条路线与它们各自的分工；27.21 再把「以谁为最小值」这件事固化成父子关系：单调栈 O(n) 建出笛卡尔树，子树大小、区间最小值位置、直方图最大矩形三条结论一次给出，同时记下三处实测——返回 <code>stk[top]</code> 错 278/300、子树大小的左右比较符写反错 354/400、多测不清 <code>lc/rc</code> 会把树接成环（299/300）、以及递增序列的树高就是 <code>n</code>（10<sup>5</sup> 层）所以只能迭代遍历。27.22 回到二维几何最常用的一类离线技巧——扫描线：面积并只需一遍，周长并必须两向各扫一遍（单遍用 <code>|Δlen|</code> 求竖边，在 300 组随机小矩形上错 44 组，阶梯相接反例给 12 而真值 14），模板把覆盖次数、有效长度、覆盖段数与两端标记四件量一次维护好，并顺带说清「覆盖 ≥ k 层面积」为什么必须换一套维护量。</div>
 <h3 class="kb-h">27.1 栈、队列与单调结构</h3>
 <p>STL 的 <code>stack / queue / deque / priority_queue</code> 直接可用，但竞赛里更常考的是它们的<b>变体</b>——单调栈与单调队列，用来在 O(n) 内求「每个元素左边/右边第一个更大值」和「滑动窗口最值」。</p>
 <pre class="code">// 单调栈：求每个位置右侧第一个更大的元素下标
@@ -7866,6 +7968,141 @@ long long maxRectangle(int n) {          // 直方图最大矩形，要求 a[i] 
 <li><b>把 <code>a</code> 设成 1-based 却让 <code>stk</code> 从 0 号位参与比较</b>。<code>stk[0]</code> 恒为 0，若忘记 <code>while (top &amp;&amp; …)</code> 里的 <code>top</code> 判断，会拿 <code>a[0] = 0</code> 当哨兵去比较，值域含负数时立刻错。</li>
 </ul>
 <p><b>自查</b>：本轮把模板逐行译成 Python 后做了六组对拍。① <b>结构</b>：600 组随机序列（<code>n ≤ 30</code>，值域 −5—8）中序遍历与原序列<b>完全一致</b>、堆序违例 <b>0</b>；② <b>子树大小</b>：与「左 <code>&gt;</code>、右 <code>&gt;=</code>」的暴力宽度逐点比对，600 组零错；口径写反的版本 400 组错 354 组；③ <b>最大矩形</b>：与「枚举所有区间取 <code>min×len</code>」的 O(n<sup>2</sup>) 暴力比对，非负值域 800 组零错；<code>n = 10<sup>5</sup></code> 随机高度（≤10<sup>6</sup>）算得 11737096，无溢出（<code>long long</code>）；④ <b>LCA = RMQ</b>：4000 次随机查询与「区间内最左最小值位置」零错；⑤ <b>退化</b>：递增/递减 <code>n = 10<sup>5</sup></code> 树高 100000，随机 <code>n = 20000</code> 二十次树高 30—39（均值 33.6）；⑥ <b>错法</b>：返回 <code>stk[top]</code> 错 278/300，复用不清空 <code>lc</code>/<code>rc</code> 造成中序非法或成环 299/300。C++ 侧本机无 <code>g++</code>，只做语法与上界自查（<code>N = 10<sup>6</sup>+5</code>、<code>sz</code> 用 <code>int</code>、面积用 <code>long long</code>、全程迭代）。</p>
+<h3 class="kb-h">27.22 扫描线：矩形面积并、周长并与覆盖段数</h3>
+<p>扫描线把「二维静态」压成「一维动态」：按 <code>x</code> 排序事件，用线段树维护 <code>y</code> 方向被覆盖的总长度 <code>len</code>，每一步把 <code>len × Δx</code> 累加。真正的难点不在排序，而在那个 <code>pushup</code>——<b>被整段覆盖的节点不能再去看儿子</b>，否则它的长度会被「儿子没被覆盖」吃成 0。</p>
+
+<p><b>结论（可直接背）</b>：</p>
+<ul>
+<li><b>面积并</b> = <code>Σ len × Δx</code>。<code>len</code> 是「当前被至少一个矩形覆盖的 <code>y</code> 总长」；同一 <code>x</code> 的事件要<b>先结算面积、再统一更新</b>，反过来会把最后一条零宽带漏掉。</li>
+<li><b>周长并</b> = <b>两次</b>扫描之和。沿 <code>x</code> 扫描时累加 <code>2 × seg × Δx</code>——每个连通覆盖段在该条带内贡献上下两条<b>水平</b>边，长度都是 <code>Δx</code>；然后把坐标交换（<code>(x,y) → (y,x)</code>）再扫一遍，得到<b>竖直</b>边。两次都只用 <code>seg</code>，不用 <code>len</code> 的差分。</li>
+<li><b>被覆盖 ≥ k 层的面积</b>要换维护量：线段树存「区间最小覆盖次数 + 取到最小值的长度」，答案 = 总长 − 最小值出现长度（<code>min ≥ k</code> 的部分）。本节这套 <code>cnt/len</code> 只能回答「≥ 1 层」。</li>
+</ul>
+
+<p><b>为什么单遍求周长是错的</b>（本节实测过，值得单独记一笔）：常见写法把竖边取成「本次事件前后 <code>len</code> 的差」，这一步只在「同一 <code>x</code> 上的变化互相包含或互不相交」时成立。<b>反例</b>：阶梯相接的 <code>[0,2]×[0,2]</code> 与 <code>[2,4]×[1,3]</code>，真周长 14；按同 <code>x</code> 分组算 <code>|Δlen|</code> 得 12（少 2：<code>x=2</code> 处上下各暴露 1，而 <code>len</code> 前后都是 2，差为 0），逐条边处理得 16（多 2：中间那个「先删后加」的假空态被计了一次）。随机 300 组小矩形上，分组法错 44 组、逐条法错 29 组，两向扫描 0 错（另跑 400 组复核）。<b>结论：面积并可以单遍，周长并必须两遍。</b></p>
+
+<p><b>复杂度</b>：离散化 <code>O(n log n)</code>；每次更新 <code>O(log n)</code>，共 <code>2n</code> 个事件，故面积并与周长并均为 <code>O(n log n)</code>（周长常数 ×2）。空间 <code>O(n)</code>：线段树建在 <code>m−1</code> 个基本区间上（<code>m</code> 为不同的 <code>y</code> 坐标数），节点数需 <code>8n</code>。答案必须 <code>long long</code>：坐标 <code>10<sup>9</sup></code>、<code>n = 10<sup>5</sup></code> 时面积可达 <code>10<sup>23</sup></code>，<code>double</code> 在这个量级的最小间隔已是 <code>10<sup>7</sup></code>，存不下整数。</p>
+
+<p><b>模板</b>（面积并 + 周长并共用一棵线段树，单文件可编译；<code>n ≤ 10<sup>5</sup></code> 个矩形）：</p>
+<pre class="code">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int MAXN = 100005;            // 矩形个数上限
+
+ll ys[MAXN * 2];                    // 离散化后的 y 坐标
+int cnt[MAXN * 8];                  // 覆盖次数
+ll len[MAXN * 8];                   // 被覆盖的总长
+int segn[MAXN * 8];                 // 覆盖段数（连通块个数）
+bool lt[MAXN * 8], rt[MAXN * 8];    // 左/右端点是否被覆盖
+int m;                              // 不同的 y 坐标个数
+
+void build(int o, int l, int r) {
+    cnt[o] = 0; len[o] = 0; segn[o] = 0; lt[o] = rt[o] = false;
+    if (l == r) return;
+    int mid = (l + r) &gt;&gt; 1;
+    build(o &lt;&lt; 1, l, mid); build(o &lt;&lt; 1 | 1, mid + 1, r);
+}
+
+void pushup(int o, int l, int r) {
+    if (cnt[o] &gt; 0) {                        // 整段被覆盖：长度取满，段数 1，两端都算覆盖
+        len[o] = ys[r + 1] - ys[l];
+        segn[o] = 1;
+        lt[o] = rt[o] = true;
+    } else if (l == r) {                     // 叶子且未覆盖
+        len[o] = 0; segn[o] = 0; lt[o] = rt[o] = false;
+    } else {
+        int a = o &lt;&lt; 1, b = o &lt;&lt; 1 | 1;
+        len[o] = len[a] + len[b];
+        lt[o] = lt[a]; rt[o] = rt[b];
+        segn[o] = segn[a] + segn[b] - ((rt[a] &amp;&amp; lt[b]) ? 1 : 0);   // 中间接上就少一段
+    }
+}
+
+void update(int o, int l, int r, int ql, int qr, int d) {
+    if (ql &lt;= l &amp;&amp; r &lt;= qr) { cnt[o] += d; pushup(o, l, r); return; }
+    int mid = (l + r) &gt;&gt; 1;
+    if (ql &lt;= mid) update(o &lt;&lt; 1, l, mid, ql, qr, d);
+    if (qr &gt; mid)  update(o &lt;&lt; 1 | 1, mid + 1, r, ql, qr, d);
+    pushup(o, l, r);                          // 这里不会清掉 cnt[o]
+}
+
+struct Rect { ll x1, y1, x2, y2; };
+struct Event { ll x; int l, r, d; };
+
+void prepare(const vector&lt;Rect&gt; &amp;R, vector&lt;ll&gt; &amp;v, vector&lt;Event&gt; &amp;ev) {
+    v.clear(); ev.clear();
+    for (auto &amp;r : R) { v.push_back(r.y1); v.push_back(r.y2); }
+    sort(v.begin(), v.end()); v.erase(unique(v.begin(), v.end()), v.end());
+    m = (int)v.size();
+    for (int i = 0; i &lt; m; ++i) ys[i] = v[i];
+    for (auto &amp;r : R) {
+        if (r.x1 == r.x2 || r.y1 == r.y2) continue;          // 退化矩形直接跳过
+        int l  = lower_bound(v.begin(), v.end(), r.y1) - v.begin();
+        int rr = lower_bound(v.begin(), v.end(), r.y2) - v.begin() - 1;   // 基本区间下标
+        ev.push_back({r.x1, l, rr, 1});
+        ev.push_back({r.x2, l, rr, -1});
+    }
+    sort(ev.begin(), ev.end(), [](const Event &amp;a, const Event &amp;b) { return a.x &lt; b.x; });
+}
+
+ll areaUnion(const vector&lt;Rect&gt; &amp;R) {
+    vector&lt;ll&gt; v; vector&lt;Event&gt; ev;
+    prepare(R, v, ev);
+    if (ev.empty()) return 0;
+    build(1, 0, m - 2);
+    ll res = 0, prev = ev[0].x;
+    for (size_t i = 0; i &lt; ev.size(); ) {
+        ll x = ev[i].x;
+        res += len[1] * (x - prev);                       // 先用旧长度结算 [prev, x)
+        while (i &lt; ev.size() &amp;&amp; ev[i].x == x) { update(1, 0, m - 2, ev[i].l, ev[i].r, ev[i].d); ++i; }
+        prev = x;
+    }
+    return res;
+}
+
+ll sweepSeg(const vector&lt;Rect&gt; &amp;R) {                     // Σ 2·seg·Δx：与 x 垂直的那一族边
+    vector&lt;ll&gt; v; vector&lt;Event&gt; ev;
+    prepare(R, v, ev);
+    if (ev.empty()) return 0;
+    build(1, 0, m - 2);
+    ll res = 0, prev = ev[0].x;
+    for (size_t i = 0; i &lt; ev.size(); ) {
+        ll x = ev[i].x;
+        res += 2LL * segn[1] * (x - prev);
+        while (i &lt; ev.size() &amp;&amp; ev[i].x == x) { update(1, 0, m - 2, ev[i].l, ev[i].r, ev[i].d); ++i; }
+        prev = x;
+    }
+    return res;
+}
+
+ll perimUnion(vector&lt;Rect&gt; R) {                          // 传值，允许内部换轴
+    ll a = sweepSeg(R);
+    for (auto &amp;r : R) { swap(r.x1, r.y1); swap(r.x2, r.y2); }   // 两个端点都要换
+    return a + sweepSeg(R);
+}
+
+int main() {
+    int n; scanf("%d", &amp;n);
+    vector&lt;Rect&gt; R(n);
+    for (int i = 0; i &lt; n; ++i) scanf("%lld%lld%lld%lld", &amp;R[i].x1, &amp;R[i].y1, &amp;R[i].x2, &amp;R[i].y2);
+    printf("%lld\n%lld\n", areaUnion(R), perimUnion(R));
+    return 0;
+}</pre>
+
+<p><b>易错点</b>（前三条是本节实测口径）：</p>
+<ol>
+<li><b><code>pushup</code> 忽略 <code>cnt</code></b>，直接由儿子合并长度。被整段覆盖的节点一旦去看儿子，长度立刻被「儿子未覆盖」吃成 0——实测 300 组里错 250 组，且错法隐蔽：只有一个矩形时还对。</li>
+<li><b>周长并只扫一遍、竖边取 <code>|Δlen|</code></b>。300 组错 44 组；阶梯反例给 12 而非 14。逐条边不分组更差（错 29 组，给 16）。必须两向扫，且两向都只用 <code>segn</code>。</li>
+<li><b>基本区间下标写成 <code>r</code> 而不是 <code>r−1</code></b>。<code>y</code> 的区间 <code>[l, r]</code> 对应基本区间 <code>[l, r−1]</code>，写成 <code>r</code> 会越界（<code>ys[r+1]</code> 读脏）或把最上一段多算一倍。</li>
+<li><b>同一 <code>x</code> 的事件不分组</b>。面积里逐条更新会让中间的假空态参与结算（多数数据侥幸对），周长里必然错；模板用 <code>while (ev[i].x == x)</code> 一次性吃掉。</li>
+<li><b>换轴只换一半</b>。<code>perimUnion</code> 里 <code>x1/y1</code> 与 <code>x2/y2</code> 都要 <code>swap</code>，漏一个就产生 <code>x1 &gt; x2</code> 的退化矩形，<code>lower_bound</code> 出来的区间直接为空。</li>
+<li><b><code>int</code> 溢出</b>。<code>cnt</code> 可以是 <code>int</code>，但 <code>len</code>、面积、<code>2·seg·Δx</code> 都必须 <code>long long</code>；<code>2 * segn[1] * (x - prev)</code> 写成 <code>2</code> 会让 <code>int</code> 先乘，<code>n</code> 大时静默回绕，模板里写作 <code>2LL</code>。</li>
+<li><b>先更新后结算</b>。面积必须在更新<b>之前</b>用旧 <code>len</code> 乘 <code>[prev, x)</code>，否则最后一条带永远少算。</li>
+<li><b>想去重再算</b>。完全重合的两个矩形，面积并靠 <code>cnt</code> 自然去重；周长并也正确（实测 <code>[0,5]²</code> 两个 → 20，与单个相同）。手工去重反而要额外维护「出现次数」，容易把「覆盖 2 层」误删成 1 层。</li>
+<li><b>线段树开小</b>。基本区间最多 <code>2n−1</code> 个，四倍空间要按 <code>8n</code> 开，不是 <code>4n</code>。</li>
+<li><b>把「覆盖 ≥ k 层面积」套进这套 <code>cnt</code></b>。它只回答「有没有被覆盖」，<code>cnt &gt; 0</code> 与 <code>cnt ≥ k</code> 不是一回事，k 层必须换「最小值 + 最小值长度」那一套维护量。</li>
+</ol>
+
+<p><b>与 31.3 的分工</b>：31.3 只给了扫描线的思想与三维偏序、离线三板斧的骨架；本节补的是<b>二维矩形族的整份实现</b>与「周长并为什么必须两遍」这个具体结论。若题目只是「矩形面积并」，直接抄本节；若把矩形换成点、把面积换成计数，那是 24.8 的 CDQ 与 31.3 的离线排序更合适。</p>
 <h2 id="ch28"><span class="chk">28</span>第 28 章　图论</h2>
 <div class="ch-intro">图论题的难点在建模，不在模板。本章先讲存图与最短路的选择，再依次覆盖生成树、拓扑、连通性、二分图、网络流、树上的 LCA/树剖，最后是欧拉路、差分约束与 2-SAT——后两者正是「最短路」与「强连通分量」各自的一次建模应用；28.12 的点分治则把「树上路径统计」这一类问题的复杂度从 O(n²) 压到 O(n log² n)；28.13 把「两两之间必有一场」的竞赛图单独拆出来，得分序列的 Landau 判定、缩点成链、三元环计数与哈密顿路径构造四件事全都只靠出度序列完成，一次排序即可定论；28.14 收尾于 Dilworth 定理，把「偏序集的最小链覆盖 = 最长反链」这条结论落成一个拆点二分图上的最大匹配，顺带说清「闭包 / 不闭包」这一步之差为什么会让答案从链覆盖变成路径覆盖；28.15 把 28.7 只用一段话带过的费用流补全，SSP、势能 Dijkstra 与上下界可行流三套模板连同建模清单一次写清；28.16 收尾于匹配的两块硬骨头——KM 用可行顶标与相等子图解决二分图带权完美匹配，带花树用奇环缩点解决一般图最大匹配，两节模板与「什么情况下别硬套」的判断一并给出；28.17 补上「边有存活时间」这一类动态连通性问题，用线段树分治把时间轴摊平、用可撤销并查集吃掉「删除」，把 O(m log T log n) 的离线做法讲成可直接套用的模板，并说清路径压缩为什么必须去掉。28.18 收尾于最小树形图：28.3 只用一句话带过的朱刘算法在此展开成完整模板——最小入边、缩环、以及「边权为何改成 w − inw[v]」的差额论证；顺带记下一个反直觉的实测结论：虚拟根法在有解图上从不出错，却在无解图上必然给出一个错误数值（88/88），因为多条虚拟边会把图拼成森林。28.19 最后回到 28.15 的费用流，但换一条路走：当网络结构足够规整（链、环、树）时，不必建图，用「取最小 + 把撤销写成一个新候选值」的贪心循环就能模拟 k 次增广，代价从 O(k·m log n) 降到 O((n+k) log n)——模板只有堆、双向链表与一个反悔公式 <code>a<sub>l</sub>+a<sub>r</sub>−a<sub>x</sub></code>，配链与环两套完整代码，以及两个实测错误率（不写反悔点 224/400、只删邻居不重连 50/400）。28.20 收尾于最小割树（Gomory–Hu）：它把 n(n−1)/2 个点对最小割压成 n−1 条树边，任意两点的答案就是树上路径的最小边权——建树只需 n−1 次最大流（实测 n=5/8/12 恰好 4/7/11 次），每次切分靠的是「残量网络里 s 的可达集」而不是原图，这一步写错整棵树就不成立；本节同时记下三条实测口径：有向图上正反向最大流可以不等（1035 组点对）、无向边的反向容量写成 0 会让答案偏小、复用上一层的残量网络会污染后续的 λ。</div>
 <h3 class="kb-h">28.1 存图的三种方式</h3>
