@@ -402,13 +402,13 @@ pre.code{
 <div class="toc-row"><span class="toc-t">第 26 章　动态规划</span><span class="toc-d"></span><span class="toc-p">234</span></div>
 <div class="toc-row"><span class="toc-t">第 27 章　数据结构</span><span class="toc-d"></span><span class="toc-p">262</span></div>
 <div class="toc-row"><span class="toc-t">第 28 章　图论</span><span class="toc-d"></span><span class="toc-p">314</span></div>
-<div class="toc-row"><span class="toc-t">第 29 章　数学</span><span class="toc-d"></span><span class="toc-p">360</span></div>
-<div class="toc-row"><span class="toc-t">第 30 章　字符串</span><span class="toc-d"></span><span class="toc-p">400</span></div>
-<div class="toc-row"><span class="toc-t">第 31 章　计算几何与杂项</span><span class="toc-d"></span><span class="toc-p">426</span></div>
+<div class="toc-row"><span class="toc-t">第 29 章　数学</span><span class="toc-d"></span><span class="toc-p">364</span></div>
+<div class="toc-row"><span class="toc-t">第 30 章　字符串</span><span class="toc-d"></span><span class="toc-p">408</span></div>
+<div class="toc-row"><span class="toc-t">第 31 章　计算几何与杂项</span><span class="toc-d"></span><span class="toc-p">434</span></div>
 <div class="toc-h">附录</div>
-<div class="toc-row"><span class="toc-t">附录 A　资料分布统计</span><span class="toc-d"></span><span class="toc-p">451</span></div>
-<div class="toc-row"><span class="toc-t">附录 B　编号速查表</span><span class="toc-d"></span><span class="toc-p">452</span></div>
-<div class="toc-row"><span class="toc-t">附录 C　版本记录与致谢</span><span class="toc-d"></span><span class="toc-p">460</span></div></div>
+<div class="toc-row"><span class="toc-t">附录 A　资料分布统计</span><span class="toc-d"></span><span class="toc-p">459</span></div>
+<div class="toc-row"><span class="toc-t">附录 B　编号速查表</span><span class="toc-d"></span><span class="toc-p">460</span></div>
+<div class="toc-row"><span class="toc-t">附录 C　版本记录与致谢</span><span class="toc-d"></span><span class="toc-p">468</span></div></div>
 <div class="page part" data-n="I"><div class="part-mark">I</div><div class="part-no">PART I &nbsp;·&nbsp; 第一编</div><h2 class="part-t" style="border:0;break-before:auto;">竞赛体系与备考路线</h2><div class="part-en">THE SYSTEM & THE ROADMAP</div><div class="part-d">先看清赛道，再谈资料。本编四章回答四个问题：这条赛道分几段、每段考什么、大纲怎么读、一年怎么排。</div></div>
 <div class="page">
 <h2 id="ch1">第 1 章　信息学竞赛全景地图</h2>
@@ -7867,7 +7867,7 @@ long long maxRectangle(int n) {          // 直方图最大矩形，要求 a[i] 
 </ul>
 <p><b>自查</b>：本轮把模板逐行译成 Python 后做了六组对拍。① <b>结构</b>：600 组随机序列（<code>n ≤ 30</code>，值域 −5—8）中序遍历与原序列<b>完全一致</b>、堆序违例 <b>0</b>；② <b>子树大小</b>：与「左 <code>&gt;</code>、右 <code>&gt;=</code>」的暴力宽度逐点比对，600 组零错；口径写反的版本 400 组错 354 组；③ <b>最大矩形</b>：与「枚举所有区间取 <code>min×len</code>」的 O(n<sup>2</sup>) 暴力比对，非负值域 800 组零错；<code>n = 10<sup>5</sup></code> 随机高度（≤10<sup>6</sup>）算得 11737096，无溢出（<code>long long</code>）；④ <b>LCA = RMQ</b>：4000 次随机查询与「区间内最左最小值位置」零错；⑤ <b>退化</b>：递增/递减 <code>n = 10<sup>5</sup></code> 树高 100000，随机 <code>n = 20000</code> 二十次树高 30—39（均值 33.6）；⑥ <b>错法</b>：返回 <code>stk[top]</code> 错 278/300，复用不清空 <code>lc</code>/<code>rc</code> 造成中序非法或成环 299/300。C++ 侧本机无 <code>g++</code>，只做语法与上界自查（<code>N = 10<sup>6</sup>+5</code>、<code>sz</code> 用 <code>int</code>、面积用 <code>long long</code>、全程迭代）。</p>
 <h2 id="ch28"><span class="chk">28</span>第 28 章　图论</h2>
-<div class="ch-intro">图论题的难点在建模，不在模板。本章先讲存图与最短路的选择，再依次覆盖生成树、拓扑、连通性、二分图、网络流、树上的 LCA/树剖，最后是欧拉路、差分约束与 2-SAT——后两者正是「最短路」与「强连通分量」各自的一次建模应用；28.12 的点分治则把「树上路径统计」这一类问题的复杂度从 O(n²) 压到 O(n log² n)；28.13 把「两两之间必有一场」的竞赛图单独拆出来，得分序列的 Landau 判定、缩点成链、三元环计数与哈密顿路径构造四件事全都只靠出度序列完成，一次排序即可定论；28.14 收尾于 Dilworth 定理，把「偏序集的最小链覆盖 = 最长反链」这条结论落成一个拆点二分图上的最大匹配，顺带说清「闭包 / 不闭包」这一步之差为什么会让答案从链覆盖变成路径覆盖；28.15 把 28.7 只用一段话带过的费用流补全，SSP、势能 Dijkstra 与上下界可行流三套模板连同建模清单一次写清；28.16 收尾于匹配的两块硬骨头——KM 用可行顶标与相等子图解决二分图带权完美匹配，带花树用奇环缩点解决一般图最大匹配，两节模板与「什么情况下别硬套」的判断一并给出；28.17 补上「边有存活时间」这一类动态连通性问题，用线段树分治把时间轴摊平、用可撤销并查集吃掉「删除」，把 O(m log T log n) 的离线做法讲成可直接套用的模板，并说清路径压缩为什么必须去掉。28.18 收尾于最小树形图：28.3 只用一句话带过的朱刘算法在此展开成完整模板——最小入边、缩环、以及「边权为何改成 w − inw[v]」的差额论证；顺带记下一个反直觉的实测结论：虚拟根法在有解图上从不出错，却在无解图上必然给出一个错误数值（88/88），因为多条虚拟边会把图拼成森林。28.19 最后回到 28.15 的费用流，但换一条路走：当网络结构足够规整（链、环、树）时，不必建图，用「取最小 + 把撤销写成一个新候选值」的贪心循环就能模拟 k 次增广，代价从 O(k·m log n) 降到 O((n+k) log n)——模板只有堆、双向链表与一个反悔公式 <code>a<sub>l</sub>+a<sub>r</sub>−a<sub>x</sub></code>，配链与环两套完整代码，以及两个实测错误率（不写反悔点 224/400、只删邻居不重连 50/400）。</div>
+<div class="ch-intro">图论题的难点在建模，不在模板。本章先讲存图与最短路的选择，再依次覆盖生成树、拓扑、连通性、二分图、网络流、树上的 LCA/树剖，最后是欧拉路、差分约束与 2-SAT——后两者正是「最短路」与「强连通分量」各自的一次建模应用；28.12 的点分治则把「树上路径统计」这一类问题的复杂度从 O(n²) 压到 O(n log² n)；28.13 把「两两之间必有一场」的竞赛图单独拆出来，得分序列的 Landau 判定、缩点成链、三元环计数与哈密顿路径构造四件事全都只靠出度序列完成，一次排序即可定论；28.14 收尾于 Dilworth 定理，把「偏序集的最小链覆盖 = 最长反链」这条结论落成一个拆点二分图上的最大匹配，顺带说清「闭包 / 不闭包」这一步之差为什么会让答案从链覆盖变成路径覆盖；28.15 把 28.7 只用一段话带过的费用流补全，SSP、势能 Dijkstra 与上下界可行流三套模板连同建模清单一次写清；28.16 收尾于匹配的两块硬骨头——KM 用可行顶标与相等子图解决二分图带权完美匹配，带花树用奇环缩点解决一般图最大匹配，两节模板与「什么情况下别硬套」的判断一并给出；28.17 补上「边有存活时间」这一类动态连通性问题，用线段树分治把时间轴摊平、用可撤销并查集吃掉「删除」，把 O(m log T log n) 的离线做法讲成可直接套用的模板，并说清路径压缩为什么必须去掉。28.18 收尾于最小树形图：28.3 只用一句话带过的朱刘算法在此展开成完整模板——最小入边、缩环、以及「边权为何改成 w − inw[v]」的差额论证；顺带记下一个反直觉的实测结论：虚拟根法在有解图上从不出错，却在无解图上必然给出一个错误数值（88/88），因为多条虚拟边会把图拼成森林。28.19 最后回到 28.15 的费用流，但换一条路走：当网络结构足够规整（链、环、树）时，不必建图，用「取最小 + 把撤销写成一个新候选值」的贪心循环就能模拟 k 次增广，代价从 O(k·m log n) 降到 O((n+k) log n)——模板只有堆、双向链表与一个反悔公式 <code>a<sub>l</sub>+a<sub>r</sub>−a<sub>x</sub></code>，配链与环两套完整代码，以及两个实测错误率（不写反悔点 224/400、只删邻居不重连 50/400）。28.20 收尾于最小割树（Gomory–Hu）：它把 n(n−1)/2 个点对最小割压成 n−1 条树边，任意两点的答案就是树上路径的最小边权——建树只需 n−1 次最大流（实测 n=5/8/12 恰好 4/7/11 次），每次切分靠的是「残量网络里 s 的可达集」而不是原图，这一步写错整棵树就不成立；本节同时记下三条实测口径：有向图上正反向最大流可以不等（1035 组点对）、无向边的反向容量写成 0 会让答案偏小、复用上一层的残量网络会污染后续的 λ。</div>
 <h3 class="kb-h">28.1 存图的三种方式</h3>
 <p>存图方式决定了后续算法的常数，选错会让正解超时。</p>
 <table class="tbl"><thead><tr><th style="width:22%">方式</th><th style="width:26%">空间</th><th>适用场景</th></tr></thead><tbody>
@@ -9247,8 +9247,137 @@ ll solveChain(vector&lt;ll&gt; a, int k) {
 <li><b>以为它对「不选满 k 个更优」也成立</b>。模板强制取满 k 个；若题意是「至多 k 个」，可以在每次取到负增量时提前终止（最小化时取到 ≥ 0 的值就停），但这已经不是同一道题，必须先确认题意。</li>
 </ul>
 <p><b>自查</b>：模板 A、B 逐行译成 Python，与「枚举所有 k 元子集、筛掉相邻项」的暴力对拍：链 400 组（n ≤ 12、值 −5—9、k ≤ ⌈n/2⌉）全对；环 400 组（n ≥ 3、k ≤ n/2）全对；最小版（<code>maximize=false</code>，哨兵换向）400 组全对；边界 <code>k = 0</code> 返回 0、<code>k</code> 超上界返回「无解」。同一批数据上两个错法的错误率是「不写反悔点 224/400」「不重连链表 50/400」。样例核对：<code>[1,9,1]</code>、k=1 得 9、k=2 得 2（1+1）；环 <code>[1,9,1]</code>、k=1 得 9；<code>[4,1,7,2]</code>、k=2 的最小值得 3（1+2）。C++ 侧因本机无 <code>g++</code> 只做语法与上界自查（<code>val/pre/nxt/ver</code> 按 <code>n+2</code> 开、堆元素为 <code>pair&lt;ll,pair&lt;int,int&gt;&gt;</code>、哨兵 <code>4e18</code> 不参与相加）。</p>
+<h3 class="kb-h">28.20 最小割树（Gomory–Hu 树）：用 n−1 次最大流换一张全对的点对最小割表</h3>
+<p><b>结论</b>：任意<b>无向</b>带权图 <code>G=(V,E)</code> 都存在一棵同点集的树 <code>T</code>，使对任意 <code>u,v</code>，<b><code>u,v</code> 在 <code>G</code> 上的最小割 = <code>T</code> 上 <code>u–v</code> 路径的最小边权</b>。这棵树叫 Gomory–Hu 树（最小割树）。于是 <code>n(n−1)/2</code> 个点对答案被压缩成 <code>n−1</code> 个数：建树跑 <code>n−1</code> 次最大流，之后每次询问只剩一次路径最小值。</p>
+
+<p><b>判定条件</b>：① 图必须<b>无向</b>——有向图上这样的树根本不存在，最直接的证据是同一条弧两个方向的最大流可以不等（随机有向图上 1035 组点对里两向不相等）；② 边权非负；③ 它只保「答案的值」，不保「哪几条边构成这个割」，要输出割集请回到最大流后自己找可达集。</p>
+
+<p><b>构造（分治）</b>：对点集 <code>S</code> 递归做四步——</p>
+<ol>
+<li><code>|S| ≤ 1</code> 时结束；</li>
+<li>在 <code>S</code> 中任取 <code>s,t</code>，在<b>原图</b>上求 <code>s–t</code> 最大流，值记为 <code>λ</code>；</li>
+<li>在 <code>T</code> 中连一条边 <code>(s,t,λ)</code>；</li>
+<li>在<b>残量网络</b>里从 <code>s</code> 出发沿容量 &gt; 0 的边走一遍，把 <code>S</code> 切成「可达」与「不可达」两半，各自递归。</li>
+</ol>
+<p>正确性的直觉：<code>λ</code> 就是「把 <code>s</code> 与 <code>t</code> 分开」的最小代价，而残量网络的可达集恰是某个最小割的 <code>s</code> 侧，所以这一刀把点集切成两块：跨块的点对答案不超过 <code>λ</code>，块内的继续递归。调用次数恒为 <code>n−1</code> 而不是 <code>n log n</code>（实测 <code>n=5/8/12</code> 分别调用 4/7/11 次），因为 <code>t</code> 一定落在「不可达」那一侧，每次切分都严格变小。</p>
+
+<p><b>复杂度</b>：<code>n−1</code> 次最大流，加 <code>n−1</code> 次 <code>O(V+E)</code> 的可达性扫描；用 Dinic 时整体约 <code>O(n · maxflow)</code>，常见可接受区间是 <code>n ≤ 500</code>、<code>m ≤ 1500</code>。查询：单次 <code>O(n)</code> 深搜，或预处理倍增后 <code>O(log n)</code>。空间 <code>O(n+m)</code>。</p>
+
+<p><b>三个直接可用的推论</b>：全局最小割 = 树上最小边权；「最小割有几种取值」= 树边权去重后的个数（答案只可能取 <code>n−1</code> 条树边之一，而每条树边权都能由它两个端点取到）；「<code>u</code> 到所有点的最小割」= 从 <code>u</code> 出发一次 DFS 的路径最小值。</p>
+
+<p><b>模板</b>（Dinic + 建树 + 查询，单文件可编译）：</p>
+<pre class="code">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int MAXN = 505;
+const ll INF = (ll)4e18;
+
+struct Dinic {
+    struct E { int to, rev; ll cap; };
+    vector&lt;E&gt; g[MAXN];
+    int level[MAXN], it[MAXN], n;
+    void init(int n_) { n = n_; for (int i = 0; i &lt;= n; ++i) g[i].clear(); }
+    // 无向边：正反两条弧的初始容量都必须是 c；写成 0 就退化成单向边
+    void addUndirected(int u, int v, ll c) {
+        g[u].push_back({v, (int)g[v].size(), c});
+        g[v].push_back({u, (int)g[u].size() - 1, c});
+    }
+    bool bfs(int s, int t) {
+        for (int i = 0; i &lt;= n; ++i) level[i] = -1;
+        queue&lt;int&gt; q; q.push(s); level[s] = 0;
+        while (!q.empty()) {
+            int u = q.front(); q.pop();
+            for (auto &amp;e : g[u]) if (e.cap &gt; 0 &amp;&amp; level[e.to] &lt; 0) {
+                level[e.to] = level[u] + 1; q.push(e.to);
+            }
+        }
+        return level[t] &gt;= 0;
+    }
+    ll dfs(int u, int t, ll f) {
+        if (u == t) return f;
+        for (int &amp;i = it[u]; i &lt; (int)g[u].size(); ++i) {
+            E &amp;e = g[u][i];
+            if (e.cap &gt; 0 &amp;&amp; level[e.to] == level[u] + 1) {
+                ll d = dfs(e.to, t, min(f, e.cap));
+                if (d &gt; 0) { e.cap -= d; g[e.to][e.rev].cap += d; return d; }
+            }
+        }
+        return 0;
+    }
+    ll maxflow(int s, int t) {
+        ll flow = 0;
+        while (bfs(s, t)) {
+            for (int i = 0; i &lt;= n; ++i) it[i] = 0;
+            ll f;
+            while ((f = dfs(s, t, INF)) &gt; 0) flow += f;
+        }
+        return flow;
+    }
+    void reach(int s, vector&lt;char&gt; &amp;vis) {           // 残量网络里 s 可达的点
+        vis.assign(n + 1, 0);
+        queue&lt;int&gt; q; q.push(s); vis[s] = 1;
+        while (!q.empty()) {
+            int u = q.front(); q.pop();
+            for (auto &amp;e : g[u]) if (e.cap &gt; 0 &amp;&amp; !vis[e.to]) { vis[e.to] = 1; q.push(e.to); }
+        }
+    }
+};
+
+Dinic base;                                  // 原图：容量永不被改动
+vector&lt;pair&lt;int,ll&gt;&gt; tree_[MAXN];            // 最小割树
+int N;
+
+void buildGH(const vector&lt;int&gt; &amp;S) {
+    if (S.size() &lt;= 1) return;
+    int s = S[0], t = S[1];
+    Dinic d = base;                          // 关键：每层拷一份原图重跑，绝不复用残量网络
+    ll w = d.maxflow(s, t);
+    tree_[s].push_back({t, w}); tree_[t].push_back({s, w});
+    vector&lt;char&gt; vis; d.reach(s, vis);        // 按残量网络切分，不是按原图
+    vector&lt;int&gt; A, B;
+    for (int x : S) (vis[x] ? A : B).push_back(x);
+    buildGH(A); buildGH(B);
+}
+
+ll queryCut(int u, int v) {                  // 树上路径最小边权 = 点对最小割
+    vector&lt;char&gt; vis(N + 1, 0);
+    vector&lt;pair&lt;int,ll&gt;&gt; st; st.push_back({u, INF}); vis[u] = 1;
+    while (!st.empty()) {
+        int x = st.back().first; ll m = st.back().second; st.pop_back();
+        if (x == v) return m;
+        for (auto &amp;e : tree_[x]) if (!vis[e.first]) {
+            vis[e.first] = 1; st.push_back({e.first, min(m, e.second)});
+        }
+    }
+    return -1;
+}
+
+int main() {
+    int m; scanf("%d%d", &amp;N, &amp;m);
+    base.init(N);
+    for (int i = 0, u, v; i &lt; m; ++i) { ll c; scanf("%d%d%lld", &amp;u, &amp;v, &amp;c); base.addUndirected(u, v, c); }
+    vector&lt;int&gt; all(N); for (int i = 0; i &lt; N; ++i) all[i] = i + 1;
+    buildGH(all);
+    int q; scanf("%d", &amp;q);
+    while (q--) { int u, v; scanf("%d%d", &amp;u, &amp;v); printf("%lld\n", queryCut(u, v)); }
+    return 0;
+}</pre>
+
+<p><b>易错点</b>（前四条都是本节的实测口径）：</p>
+<ol>
+<li><b>拿有向图套这棵树</b>：有向图连「最大流对称」都没有（1035 组点对里正反向不等），照搬构造得到的树对不上任何一个方向。</li>
+<li><b>无向边的反向容量写成 0</b>：这变成了单向边，割会把回边算进去，答案系统性偏小。</li>
+<li><b>复用上一层的残量网络</b>：必须每层从原图重建（模板用 <code>Dinic d = base;</code> 拷贝），否则 <code>λ</code> 会被上一层流量污染。</li>
+<li><b>按原图判可达</b>：切分必须在残量网络上做（<code>cap &gt; 0</code> 才算通），按原图切会把本该连着的点分开，树直接不成立。</li>
+<li><code>s,t</code> 必须取自当前点集 <code>S</code>；取集合外的点会让「切分」不再是划分。</li>
+<li>查询取的是路径<b>最小</b>边权，写成最大、求和、乘积都会错——这是「路径最值」而不是「路径和」。</li>
+<li>重边不必合并，两条 <code>addUndirected</code> 即可（实测 <code>(0,1,3)+(0,1,4)</code> 得 7，与暴力一致）。</li>
+<li>图不连通时最小割为 0，树边会出现 0；这不是「无解」，不要特判成 −1。</li>
+<li>递归靠 <code>|S| ≤ 1</code> 终止；只要切分严格变小就不会死循环，但若为了「省一次流」而让 <code>A</code> 包含 <code>t</code>，就会原地打转。</li>
+<li>开销是 <code>n</code> 次最大流：<code>n = 10<sup>4</sup></code>、<code>m = 10<sup>5</sup></code> 时不要指望它，这类题通常 <code>n ≤ 500</code>；真要更大规模，先问自己是不是只需要「全局最小割」（那用 Stoer–Wagner 一次就够）。</li>
+</ol>
 <h2 id="ch29"><span class="chk">29</span>第 29 章　数学</h2>
-<div class="ch-intro">数论、组合、概率、矩阵、博弈、多项式——数学是省选之后拉开差距的地方。本章只保留考场上真正会用到的结论与模板，推导从简，用法从详；末两节分别补上 n 到 10<sup>10</sup> 量级的亚线性求和（杜教筛与 min25 筛），以及把计数问题整体化成多项式运算的生成函数方法，这两块是省选以上数论与计数题的最后一公里；29.11 再把 29.2 的筛法接到 64 位整数上——Miller-Rabin 判素与 Pollard-Rho 分解，是 n 到 10<sup>18</sup> 时唯一还能用的手段；29.12 又把线性代数搬回图论，矩阵树定理用一个行列式数出全部生成树，是「生成树计数」「最小生成树计数」「按边数分层计数」的唯一通法，也是本章唯一需要「有向图两个度数矩阵方向搞反」的细活；29.13 再把三条反演串起来——二项式反演管「恰好/钦定」、子集反演（FMT）管「子集求和」、单位根反演管「下标整除」，凡是题面出现「恰好 k 个」「每个元素至少一次」「下标是 k 的倍数」这三类措辞，都在这一节里找对应的逆式。29.14 收在「反解指数」上——BSGS 用 √m 的哈希表把离散对数拆成大步小步，exBSGS 逐轮约 gcd 处理不互质，再由原根把乘法变成指标加法，Cipolla 在扩域里开平方，四件事共用一套快速幂与逆元。29.15 再补上「只有多项式的值、不需要多项式本身」这条捷径——拉格朗日插值用 n+1 个点定住 n 次多项式，连续点上前后缀积把单次求值压到 O(n)，于是自然数幂和（k+1 次多项式）只需 k+2 个点、O(k) 出答案，不必再写 k+2 阶矩阵快速幂。末节 29.16 把 29.13 的 FMT 从「反演工具」升级成「卷积工具」：或/与/异或三种卷积用同一族蝴蝶 O(n2<sup>n</sup>) 完成，子集卷积再加一维 popcount 分层压到 O(n<sup>2</sup>2<sup>n</sup>)，替掉 3<sup>n</sup> 的枚举——集合划分计数、按位合并的方案数、集合幂级数 exp 都靠这一节；29.17 最后收在「解方程」上——高斯消元把实数方程组、模质数方程组、异或方程组与期望方程统一成同一张增广矩阵，列主元、乘逆元、整行 XOR 三种「除法」对应三类题型，判据只有一条：消元后的秩与增广秩是否相等；本节同时给出「树上期望不必消元、有环期望必须消元」的分界线，以及不选主元、eps 取太大、自由元取 0 当唯一解这三类实测错误率。</div>
+<div class="ch-intro">数论、组合、概率、矩阵、博弈、多项式——数学是省选之后拉开差距的地方。本章只保留考场上真正会用到的结论与模板，推导从简，用法从详；末两节分别补上 n 到 10<sup>10</sup> 量级的亚线性求和（杜教筛与 min25 筛），以及把计数问题整体化成多项式运算的生成函数方法，这两块是省选以上数论与计数题的最后一公里；29.11 再把 29.2 的筛法接到 64 位整数上——Miller-Rabin 判素与 Pollard-Rho 分解，是 n 到 10<sup>18</sup> 时唯一还能用的手段；29.12 又把线性代数搬回图论，矩阵树定理用一个行列式数出全部生成树，是「生成树计数」「最小生成树计数」「按边数分层计数」的唯一通法，也是本章唯一需要「有向图两个度数矩阵方向搞反」的细活；29.13 再把三条反演串起来——二项式反演管「恰好/钦定」、子集反演（FMT）管「子集求和」、单位根反演管「下标整除」，凡是题面出现「恰好 k 个」「每个元素至少一次」「下标是 k 的倍数」这三类措辞，都在这一节里找对应的逆式。29.14 收在「反解指数」上——BSGS 用 √m 的哈希表把离散对数拆成大步小步，exBSGS 逐轮约 gcd 处理不互质，再由原根把乘法变成指标加法，Cipolla 在扩域里开平方，四件事共用一套快速幂与逆元。29.15 再补上「只有多项式的值、不需要多项式本身」这条捷径——拉格朗日插值用 n+1 个点定住 n 次多项式，连续点上前后缀积把单次求值压到 O(n)，于是自然数幂和（k+1 次多项式）只需 k+2 个点、O(k) 出答案，不必再写 k+2 阶矩阵快速幂。末节 29.16 把 29.13 的 FMT 从「反演工具」升级成「卷积工具」：或/与/异或三种卷积用同一族蝴蝶 O(n2<sup>n</sup>) 完成，子集卷积再加一维 popcount 分层压到 O(n<sup>2</sup>2<sup>n</sup>)，替掉 3<sup>n</sup> 的枚举——集合划分计数、按位合并的方案数、集合幂级数 exp 都靠这一节；29.17 最后收在「解方程」上——高斯消元把实数方程组、模质数方程组、异或方程组与期望方程统一成同一张增广矩阵，列主元、乘逆元、整行 XOR 三种「除法」对应三类题型，判据只有一条：消元后的秩与增广秩是否相等；本节同时给出「树上期望不必消元、有环期望必须消元」的分界线，以及不选主元、eps 取太大、自由元取 0 当唯一解这三类实测错误率。29.18 收尾于「从一列数反推规律」：Berlekamp–Massey 用前 2k 项求出最短线性递推式，Kitamasa 再把求第 n 项压到 O(k² log n)——它替掉 29.5 矩阵幂的 O(k³ log n)，也补上「递推式写不出来」这一缺口（打表 → 猜式 → 跳项）；两条实测结论写在易错点前两条：只喂 k 项预测 a_2k 错 200/200，特征多项式符号写反也是 200/200。</div>
 <h3 class="kb-h">29.1 数论四件套：gcd、exgcd、逆元、CRT</h3>
 <p>这四个工具覆盖了竞赛中 80% 的数论题。</p>
 <pre class="code">int gcd(int a, int b) { return b ? gcd(b, a % b) : a; }
@@ -10531,6 +10660,110 @@ int gaussXor(int m, int n, bitset&lt;MAXN + 1&gt; &amp;sol) {
 <li><b>多测不清</b>。<code>where</code>、<code>x</code>、以及被原地改写的 <code>a/b</code> 都要每组重建；<code>where</code> 忘了清会让上一组的自由元位置污染这一组的取解。</li>
 </ul>
 <p><b>自查</b>：三份模板都按「逐行译成 Python 再对拍」验证（本机无 <code>g++</code>）。① <b>实数版</b>：500 组随机整数矩阵（2—8 阶，已知整数解），解全部一致，最大绝对误差 2.36×10<sup>−13</sup>；其中 1 组本身奇异，被正确判为不能唯一求解（用 <code>Fraction</code> 精确判秩复核）。② <b>判定</b>：秩亏但相容（重复行）判「无穷多」200/200；重复行但常数不一致判「无解」200/200；补一行全零系数 + 非零常数判「无解」200/200；补一行全零 + 零常数判「无穷多」200/200。③ <b>病态</b>：<code>[[1e−18,1],[1,1]]</code> 列主元误差 0、不选主元误差 1.0；<code>EPS</code> 取 1e−6 时对角 1e−8 的方程组被误判为「无穷多解」，取 1e−10 正常。④ <b>异或版</b>：600 组随机（n ≤ 9、m ≤ 12）与 2<sup>n</sup> 全枚举比对，存在性判断全对，282 组有解时给出的解<b>全部合法</b>；<code>n = 8</code>、秩 2 时自由元取 0 得到一个合法解，总解数 64 = 2<sup>6</sup>，与枚举一致。⑤ <b>模版</b>：300 组随机（模 998244353），非奇异 299 组全部恢复原解，奇异 1 组正确判为「无穷多」。⑥ <b>期望</b>：路径图随机游走（两端吸收）解出 <code>E[i] = i(n−i)</code>，n = 12 时最大偏差 3.55×10<sup>−15</sup>；8 点带环随机图（设 <code>E[0] = 0</code>）与 20000 轮值迭代的最大偏差 5.06×10<sup>−14</sup>。</p>
+<h3 class="kb-h">29.18 Berlekamp–Massey 与 Kitamasa：从一列数反推递推式，再一步跳到第 n 项</h3>
+<p><b>结论</b>：若数列满足 <code>k</code> 阶常系数齐次线性递推 <code>a<sub>n</sub> = c<sub>1</sub>a<sub>n−1</sub> + … + c<sub>k</sub>a<sub>n−k</sub></code>，则 ① 前 <b><code>2k</code></b> 项就足以用 Berlekamp–Massey（BM）求出<b>最短</b>的那条递推式；② 拿到递推式后，用 Kitamasa（把 <code>x<sup>n</sup></code> 对特征多项式取模）可在 <code>O(k<sup>2</sup> log n)</code> 内算出 <code>a<sub>n</sub></code>，全程不出现 <code>k×k</code> 矩阵。这套流程把「写不出通项、只会 <code>O(nk)</code> 递推」的计数题变成三步：打表 → 猜式 → 跳项。</p>
+
+<p><b>与 29.5 的分工</b>：29.5 的矩阵快速幂是 <code>O(k<sup>3</sup> log n)</code>，而且要求<b>递推式已知</b>。本节补的正是它的两个短板——<code>k</code> 到 1000 以上时矩阵乘法已经不可行，而「式子里带 (−1) 的幂、带组合数」的题往往根本写不出递推，只能靠打表反推。三种做法对照：</p>
+<table class="tbl"><thead><tr><th style="width:26%">做法</th><th style="width:24%">复杂度</th><th style="width:26%">前提</th><th>适用</th></tr></thead><tbody>
+<tr><td>矩阵快速幂（29.5）</td><td><code>O(k<sup>3</sup> log n)</code></td><td>递推式已知</td><td><code>k ≤ 100</code>，写法最不容易错</td></tr>
+<tr><td>Kitamasa（本节）</td><td><code>O(k<sup>2</sup> log n)</code></td><td>递推式已知或已反推</td><td><code>k ≤ 2000</code>，考场首选</td></tr>
+<tr><td>多项式取模 + NTT</td><td><code>O(k log k log n)</code></td><td>同上，需要多项式全家桶</td><td><code>k ≥ 10<sup>4</sup></code>，见 29.7、29.10</td></tr>
+</tbody></table>
+
+<p><b>BM 在做什么</b>：维护当前递推式 <code>C</code>（约定 <code>C(x) = 1 − c<sub>1</sub>x − …</code>）、上一次「更新成功」时的快照 <code>B</code>、位移 <code>m</code> 与那次偏差 <code>b</code>。逐项计算偏差 <code>d = Σ<sub>i=0</sub><sup>L</sup> C<sub>i</sub> · s<sub>n−i</sub></code>：</p>
+<p><code>d = 0</code> 说明当前式仍解释得通，继续；<code>d ≠ 0</code> 时必须修正，令 <code>C ← C − (d/b)·x<sup>m</sup>·B</code>；若 <code>2L ≤ n</code> 说明旧式阶数不够，把 <code>L</code> 更新为 <code>n+1−L</code>，并把 <code>B、b</code> 换成修正前的快照。总复杂度 <code>O(k<sup>2</sup>)</code>（只喂 <code>2k</code> 项）。</p>
+
+<p><b>Kitamasa 在做什么</b>：<code>a<sub>n</sub> = Σ res<sub>i</sub> a<sub>i</sub></code>，其中 <code>res</code> 是 <code>x<sup>n</sup> mod P(x)</code> 的系数，<code>P(x) = x<sup>k</sup> − c<sub>1</sub>x<sup>k−1</sup> − … − c<sub>k</sub></code>。理由只有一句：在模 <code>P</code> 的意义下 <code>x<sup>k</sup> ≡ c<sub>1</sub>x<sup>k−1</sup> + … + c<sub>k</sub></code>，于是任何高次项都能一路降阶，最终落到 <code>a<sub>0</sub>…a<sub>k−1</sub></code> 的线性组合上。求 <code>x<sup>n</sup> mod P</code> 用二进制幂，每次乘法 <code>O(k<sup>2</sup>)</code>、降阶 <code>O(k<sup>2</sup>)</code>，共 <code>O(log n)</code> 次。</p>
+
+<p><b>典型用法（计数题三步走）</b>：① 先写 <code>O(nk)</code> 或 <code>O(2<sup>n</sup>)</code> 的暴力，打出前 30—60 项；② 把这些项喂给 BM 得到递推式；③ 用 Kitamasa 求 <code>n = 10<sup>18</sup></code> 的那一项。<b>但必须验算</b>：让暴力多打 20 项，检查 BM 的式子能全部对上——只对上前 <code>2k</code> 项不算数（见易错点 1）。</p>
+
+<p><b>模板</b>（BM + Kitamasa，模 <code>10<sup>9</sup>+7</code>）：</p>
+<pre class="code">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const ll MOD = 1000000007LL;
+
+ll pw(ll a, ll b) {
+    ll r = 1; a %= MOD;
+    while (b) { if (b &amp; 1) r = r * a % MOD; a = a * a % MOD; b &gt;&gt;= 1; }
+    return r;
+}
+
+// 输入前若干项 s，返回 rec，含义 a[n] = sum(rec[i] * a[n-1-i])，i = 0..L-1
+vector&lt;ll&gt; BerlekampMassey(const vector&lt;ll&gt; &amp;s) {
+    vector&lt;ll&gt; C(1, 1), B(1, 1);          // C(x) = 1 - c1 x - c2 x^2 - ...
+    int L = 0, m = 1; ll b = 1;
+    for (int n = 0; n &lt; (int)s.size(); ++n) {
+        ll d = s[n] % MOD;
+        for (int i = 1; i &lt;= L; ++i) d = (d + C[i] * s[n - i]) % MOD;
+        if (d == 0) { ++m; continue; }
+        vector&lt;ll&gt; T = C;
+        ll coef = d * pw(b, MOD - 2) % MOD;
+        if ((int)C.size() &lt; (int)B.size() + m) C.resize(B.size() + m, 0);
+        for (int j = 0; j &lt; (int)B.size(); ++j)
+            C[j + m] = (C[j + m] - coef * B[j] % MOD + MOD) % MOD;
+        if (2 * L &lt;= n) { L = n + 1 - L; B = T; b = d; m = 1; }
+        else ++m;
+    }
+    vector&lt;ll&gt; rec(L);
+    for (int i = 0; i &lt; L; ++i) rec[i] = (MOD - C[i + 1] % MOD) % MOD;
+    return rec;
+}
+
+// init 为 a[0..k-1]，rec 长度 k；返回 a[n]
+ll kthTerm(vector&lt;ll&gt; init, const vector&lt;ll&gt; &amp;rec, ll n) {
+    int k = (int)rec.size();
+    if (k == 0) return n &lt; (ll)init.size() ? init[n] % MOD : 0;   // 常数序列
+    if (n &lt; (ll)init.size()) return init[n] % MOD;               // n 落在初值里，直接返回
+    auto mul = [&amp;](const vector&lt;ll&gt; &amp;a, const vector&lt;ll&gt; &amp;b) {
+        vector&lt;ll&gt; t(2 * k - 1, 0);
+        for (int i = 0; i &lt; k; ++i) if (a[i])
+            for (int j = 0; j &lt; k; ++j)
+                t[i + j] = (t[i + j] + a[i] * b[j]) % MOD;
+        for (int i = 2 * k - 2; i &gt;= k; --i) if (t[i])     // 从高次往低次降，顺序不能反
+            for (int j = 0; j &lt; k; ++j)
+                t[i - 1 - j] = (t[i - 1 - j] + t[i] * rec[j]) % MOD;
+        t.resize(k);
+        return t;
+    };
+    vector&lt;ll&gt; res(k, 0), base(k, 0);
+    res[0] = 1;                                        // res = 1
+    if (k == 1) base[0] = rec[0]; else base[1] = 1;     // base = x（k=1 要特判）
+    ll e = n;
+    while (e) {
+        if (e &amp; 1) res = mul(res, base);
+        base = mul(base, base);
+        e &gt;&gt;= 1;
+    }
+    ll ans = 0;
+    for (int i = 0; i &lt; k; ++i) ans = (ans + res[i] * init[i]) % MOD;
+    return ans;
+}
+
+int main() {
+    int n; scanf("%d", &amp;n);
+    vector&lt;ll&gt; s(n);
+    for (int i = 0; i &lt; n; ++i) scanf("%lld", &amp;s[i]);
+    vector&lt;ll&gt; rec = BerlekampMassey(s);
+    printf("L = %d\n", (int)rec.size());
+    for (size_t i = 0; i &lt; rec.size(); ++i) printf("%lld%c", rec[i], i + 1 == rec.size() ? '\n' : ' ');
+    ll q; if (scanf("%lld", &amp;q) == 1) printf("%lld\n", kthTerm(s, rec, q));
+    return 0;
+}</pre>
+
+<p><b>易错点</b>（前两条为实测）：</p>
+<ol>
+<li><b>只喂 <code>k</code> 项</b>：BM 会给出一个能解释这 <code>k</code> 项的<b>更短</b>递推，外推全错——200 组随机 4 阶以内序列里，仅用 <code>k</code> 项预测 <code>a<sub>2k</sub></code> 错 200/200。判据是「至少 <code>2k</code> 项」，稳妥做法喂 <code>4k</code> 项。</li>
+<li><b>特征多项式符号写反</b>（把 <code>x<sup>k</sup> − Σc<sub>i</sub>x<sup>k−i</sup></code> 写成 <code>+</code>）：200/200 全错，而且错得很有迷惑性——小 <code>n</code> 时答案还对，<code>n</code> 一大就飞。</li>
+<li><b>模数不是质数</b>：BM 要算 <code>b</code> 的逆元，<code>pw(b, MOD−2)</code> 只在质数模下成立；模合数时整条链失效（正确做法是换质数模，或改用不要求域的做法）。</li>
+<li><code>rec</code> 的方向：<code>rec[i]</code> 乘的是 <code>a<sub>n−1−i</sub></code>。把 <code>rec</code> 当「正序」用，等于把递推式倒着写。</li>
+<li><code>n &lt; k</code> 时要直接返回 <code>init[n]</code>，不能进二进制幂——否则会把 <code>x<sup>n</sup></code> 降到不该降的阶。</li>
+<li><code>k = 1</code> 时 <code>base</code> 必须置 <code>base[0] = rec[0]</code>，写成 <code>base[1] = 1</code> 直接越界（等比数列是最容易被忽略的边界）。</li>
+<li>常数序列 / 前导零：BM 给出 <code>L = 0</code>，此时答案恒为 <code>s[0]</code>，模板要能返回它而不是崩在空 <code>rec</code> 上。</li>
+<li>所有减法都要 <code>+MOD</code> 再取模；<code>C</code> 与 <code>res</code> 里出现负值会让后续乘法溢出语义。</li>
+<li>降阶方向必须<b>从高次往低次</b>（<code>i</code> 从 <code>2k−2</code> 递减到 <code>k</code>），反了会让刚降下来的项又被更高次项污染。</li>
+<li>序列真实阶数超过「给定项数的一半」时，BM 给的是「能解释已见数据的最短式」，对新项没有保证——这是算法性质而非实现 bug，也是必须拿暴力多验几项的原因。</li>
+</ol>
 <h2 id="ch30"><span class="chk">30</span>第 30 章　字符串</h2>
 <div class="ch-intro">哈希能解决九成字符串题，剩下的用 KMP、Trie、AC 自动机；再往上才是 SA 与 SAM。本章按这个梯度排列，每个结构都给出可编译模板与典型问法；中段把哈希从序列推广到树（树同构与换根判定），并用回文自动机把「所有本质不同回文」压成一棵树、配 series link 做回文划分；30.10 转向「循环移位」这一类问题——最小表示法与 Lyndon 分解共用一条失配即整段排除的双指针，O(n) 解决循环同构与最小标号；30.11 补上 30.6 概览留下的空白，把 SAM 读成 endpos 等价类加 link 树，给出出现次数、第 k 小子串、最长公共子串与多串广义 SAM 的完整写法；30.12 从同一处空白出发走另一条路，把「任意两后缀 LCP = height 区间最小值」这条恒等式讲到能用：倍增构建、ST 表、二分分组、字典序第 k 子串与单调栈求和五套代码；30.13 回到 30.4 留下的那句「AC 自动机 + DP」，把它拆成四种问法：不含禁用词的计数、<code>n</code> 极大时的矩阵快速幂、关键词必须全部出现的状压、以及在 fail 树上自底向上汇总的出现次数——四种问法共用同一个前提：终止标记必须沿 fail 下传。</div>
 <h3 class="kb-h">30.1 字符串哈希</h3>
