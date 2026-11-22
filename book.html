@@ -13,12 +13,12 @@
 html,body{margin:0;padding:0;}
 body{
   font-family:"Source Han Serif SC","Noto Serif CJK SC","Songti SC",STSong,SimSun,serif;
-  color:var(--ink); background:#8b8b8b; font-size:10.5pt; line-height:1.78;
+  color:var(--ink); background:#8b8b8b; font-size:10.5pt; line-height:1.72;
   -webkit-font-smoothing:antialiased;
 }
 .page{
   width:210mm; min-height:297mm; margin:0 auto; background:var(--paper);
-  padding:20mm 18mm 22mm; box-shadow:0 0 12px rgba(0,0,0,.25);
+  padding:19mm 17mm 19mm; box-shadow:0 0 12px rgba(0,0,0,.25);
 }
 /* ---------- 封面 ---------- */
 .cover{
@@ -102,42 +102,51 @@ h2{
 }
 h3{
   font-family:"Source Han Sans SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
-  font-size:12.5pt; font-weight:700; margin:8mm 0 3mm; color:#242424;
+  font-size:12.5pt; font-weight:700; margin:6mm 0 2mm; color:#242424; break-after:avoid;
 }
 .chk{
   display:inline-block; font-family:Consolas,monospace; font-size:9.5pt; font-weight:700;
   color:#fff; background:var(--accent); padding:.9mm 2.4mm; margin-right:4.5mm;
   letter-spacing:.12em; vertical-align:middle; position:relative; top:-3px;
 }
-p{margin:0 0 3.2mm; text-align:justify; text-justify:inter-ideograph;}
-ul,ol{margin:0 0 4mm; padding-left:7mm;}
-li{margin-bottom:1.6mm;}
+p{margin:0 0 2.4mm; text-align:justify; text-justify:inter-ideograph; orphans:2; widows:2;}
+ul,ol{margin:0 0 3.2mm; padding-left:6.5mm;}
+li{margin-bottom:1.1mm;}
 code{font-family:Consolas,"Courier New",monospace; font-size:9pt; background:var(--soft); padding:0 1.2mm; border-radius:2px;}
-.note{font-size:9pt; color:var(--sub); background:var(--soft); border-left:3px solid var(--line); padding:3mm 4mm; margin:4mm 0;}
-.ch-intro{font-size:10pt; color:#333; background:var(--soft); padding:4mm 5mm; border-left:3px solid var(--accent); margin-bottom:4mm; text-align:justify;}
+.note{font-size:9pt; color:var(--sub); background:var(--soft); border-left:3px solid var(--line); padding:2.6mm 3.6mm; margin:3mm 0;}
+.ch-intro{font-size:9.8pt; color:#333; background:var(--soft); padding:3.4mm 4.4mm; border-left:3px solid var(--accent); margin-bottom:3.2mm; text-align:justify; line-height:1.78;}
 .ch-count{font-size:9pt; color:var(--sub); margin-bottom:6mm;}
 .sign{text-align:right; color:var(--sub); font-size:9.5pt; margin-top:8mm;}
 /* ---------- 知识正文 ---------- */
 .kb-h{
-  font-size:12.5pt; margin:7mm 0 2.5mm; padding-left:3mm; border-left:3px solid var(--accent);
+  font-size:12.5pt; margin:5mm 0 2mm; padding-left:3mm; border-left:3px solid var(--accent);
   break-after:avoid;
 }
 pre.code{
-  font-family:Consolas,"Courier New",monospace; font-size:7.5pt; line-height:1.55;
+  font-family:Consolas,"Courier New",monospace; font-size:7.3pt; line-height:1.5;
   background:#f8f5ec; border:1px solid #e6dfcc; border-left:2.5px solid #c9b784;
-  padding:2.6mm 3.2mm; margin:2.5mm 0 4mm; color:#2b2b2b;
+  padding:2.2mm 3mm; margin:2.2mm 0 3.4mm; color:#2b2b2b;
   white-space:pre-wrap; word-break:break-word; tab-size:4; break-inside:avoid;
 }
+pre.code.code-long{break-inside:auto;}
 .kb-h + p{margin-top:0;}
+/* ---------- 插图 ---------- */
+.fig{margin:2.5mm 0 4.5mm; break-inside:avoid; page-break-inside:avoid;}
+.fig svg{display:block; width:100%; height:auto;}
+.fig .cap{
+  font-size:8.4pt; color:var(--sub); text-align:center; margin-top:1.6mm;
+  letter-spacing:.02em; line-height:1.6;
+}
+.fig .cap b{color:var(--accent); font-weight:700; margin-right:1.6mm;}
 /* ---------- 表格 ---------- */
-.tbl{width:100%; border-collapse:collapse; margin:3mm 0 5mm; font-size:9pt; break-inside:avoid;}
-.tbl th,.tbl td{border:1px solid var(--line); padding:2.2mm 2.5mm; text-align:left; vertical-align:top; line-height:1.6;}
+.tbl{width:100%; border-collapse:collapse; margin:2.6mm 0 4mm; font-size:8.8pt; break-inside:avoid;}
+.tbl th,.tbl td{border:1px solid var(--line); padding:1.9mm 2.2mm; text-align:left; vertical-align:top; line-height:1.55;}
 .tbl th{background:var(--soft); font-weight:700; font-family:"Source Han Sans SC","Microsoft YaHei",sans-serif; font-size:8.8pt;}
 .tbl tr:nth-child(even) td{background:#fbf9f3;}
 /* ---------- 条目 ---------- */
 .ent{
   break-inside:avoid; display:grid; grid-template-columns:10.5mm 1fr; column-gap:3.6mm;
-  padding:2.3mm 0 2.1mm; border-bottom:.4pt solid #e9e3d4;
+  padding:1.9mm 0 1.7mm; border-bottom:.4pt solid #e9e3d4;
 }
 .ent-no{
   font-family:Consolas,monospace; font-size:9.2pt; font-weight:700; color:var(--accent);
@@ -155,7 +164,7 @@ pre.code{
 .tg-use{background:#eef3e8; color:#3c5a2c;}
 .tg-fx{background:#f7efe2; color:#7a5423;}
 .tg-how{background:#f1f1f1; color:#555;}
-.ent-note{font-size:9.6pt; line-height:1.72; text-align:justify;}
+.ent-note{font-size:9.5pt; line-height:1.66; text-align:justify;}
 .ent-url{font-family:Consolas,monospace; font-size:8pt; color:#7a7a7a; margin-top:1.2mm; word-break:break-all;}
 /* ---------- 编 扉页 ---------- */
 .part{
@@ -342,7 +351,7 @@ pre.code{
 <p>这三重分类不是装饰。同一本书，对初三刚入门的学生是"体系学习"，对省队选手可能只是"速查"；同一份题库，对教练是"备课素材"，对选手是"实战训练"。所以本书没有给出唯一正确的读法，而是给了三套交叉索引（第三编），你可以从任何一个维度切进去。</p>
 
 <p>最后提醒一句：<strong>目录的价值在于被使用，而不是被收藏。</strong>如果你读完这本书只记住了一件事，我希望是——先选定一条路线，把它走完，再回来看下一段。资料永远读不完，但一条路是可以走完的。</p>
-</div>
+<figure class="fig"><svg viewBox="0 0 700 204" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="76.0" y1="92.0" x2="642.0" y2="92.0" stroke="#b9ae94" stroke-width="1.4"/><circle cx="76.0" cy="92.0" r="7.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.4"/><text x="76.0" y="66.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="11" text-anchor="middle" fill="#1b1b1b" font-weight="700">CSP-J/S</text><text x="76.0" y="114.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">9—10 月</text><line x1="76.0" y1="122.0" x2="76.0" y2="140.0" stroke="#b9ae94" stroke-width="0.9" stroke-dasharray="2 3"/><text x="76.0" y="156.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#8a6d2f" font-weight="400">大纲 · 教材</text><circle cx="190.0" cy="92.0" r="7.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.4"/><text x="190.0" y="66.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="11" text-anchor="middle" fill="#1b1b1b" font-weight="700">NOIP</text><text x="190.0" y="114.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">11 月</text><line x1="190.0" y1="122.0" x2="190.0" y2="140.0" stroke="#b9ae94" stroke-width="0.9" stroke-dasharray="2 3"/><text x="190.0" y="156.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#8a6d2f" font-weight="400">真题 · 题解</text><circle cx="304.0" cy="92.0" r="7.0" fill="#efe0bd" stroke="#8a6d2f" stroke-width="1.4"/><text x="304.0" y="66.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="11" text-anchor="middle" fill="#1b1b1b" font-weight="700">省选</text><text x="304.0" y="114.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">1—4 月</text><line x1="304.0" y1="122.0" x2="304.0" y2="140.0" stroke="#b9ae94" stroke-width="0.9" stroke-dasharray="2 3"/><text x="304.0" y="156.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#8a6d2f" font-weight="400">论文 · 讲义</text><circle cx="418.0" cy="92.0" r="7.0" fill="#efe0bd" stroke="#8a6d2f" stroke-width="1.4"/><text x="418.0" y="66.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="11" text-anchor="middle" fill="#1b1b1b" font-weight="700">NOI</text><text x="418.0" y="114.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">7 月</text><line x1="418.0" y1="122.0" x2="418.0" y2="140.0" stroke="#b9ae94" stroke-width="0.9" stroke-dasharray="2 3"/><text x="418.0" y="156.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#8a6d2f" font-weight="400">专题 · 讲义</text><circle cx="532.0" cy="92.0" r="7.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.4"/><text x="532.0" y="66.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="11" text-anchor="middle" fill="#1b1b1b" font-weight="700">集训队</text><text x="532.0" y="114.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">12 月起</text><line x1="532.0" y1="122.0" x2="532.0" y2="140.0" stroke="#b9ae94" stroke-width="0.9" stroke-dasharray="2 3"/><text x="532.0" y="156.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#8a6d2f" font-weight="400">课程 · 论文</text><circle cx="642.0" cy="92.0" r="7.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.4"/><text x="642.0" y="66.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="11" text-anchor="middle" fill="#1b1b1b" font-weight="700">IOI</text><text x="642.0" y="114.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">次年 8 月</text><line x1="642.0" y1="122.0" x2="642.0" y2="140.0" stroke="#b9ae94" stroke-width="0.9" stroke-dasharray="2 3"/><text x="642.0" y="156.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#8a6d2f" font-weight="400">国际题源</text><text x="30.0" y="192.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">前两关决定「有没有材料」，后四关决定「材料对不对路」——同一批书，用法完全不同</text></svg><figcaption class="cap"><b>图 0-1</b>从 CSP-J/S 到 IOI：一条链上的六道关，以及每关该用哪类资料</figcaption></figure></div>
 
 <div class="page">
 <h2 id="howto">使用说明 · 三种读法</h2>
@@ -3818,6 +3827,7 @@ int main() {<br>
 <div class="page part" data-n="VI"><div class="part-mark">VI</div><div class="part-no">PART VI &nbsp;·&nbsp; 第六编</div><h2 class="part-t" style="border:0;break-before:auto;">知识正编</h2><div class="part-en">THE KNOWLEDGE</div><div class="part-d">前五编解决「读什么、去哪找、怎么考」，本编解决「知识本身」。十章的正文按「语言—复杂度—基础—搜索—DP—数据结构—图论—数学—字符串—几何」排列，每节给出结论、复杂度、可编译模板与易错点，用于直接查阅与赛前复盘。</div></div>
 <div class="page"><h2 id="ch22"><span class="chk">22</span>第 22 章　语言与代码规范</h2>
 <div class="ch-intro">算法之外，决定分数的是代码本身。本章把竞赛 C++ 收敛成一套够用的子集，讲清类型、内存、STL 与调试习惯——这些内容不产生思路，但能避免 30% 的无谓失分。末节 22.7 补上唯一必须手写的基础设施：压 9 位的高精度四则，含加、减、乘、除低精、除高精与符号处理的完整模板，以及压位乘法在 <code>long long</code> 下只够累加 9 个块积这条实测结论。</div>
+<figure class="fig"><svg viewBox="0 0 700 226" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="34.0" y="30.0" width="92.0" height="34.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="80.0" y="45.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">源文件</text><text x="80.0" y="58.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">.cpp</text><rect x="142.0" y="30.0" width="92.0" height="34.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="188.0" y="45.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">预处理</text><text x="188.0" y="58.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">g++ -E</text><line x1="128.0" y1="47.0" x2="134.5" y2="47.0" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="139.0,47.0 134.5,48.9 134.5,45.1" fill="#8a6d2f"/><rect x="250.0" y="30.0" width="92.0" height="34.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="296.0" y="45.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">编译</text><text x="296.0" y="58.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">g++ -S</text><line x1="236.0" y1="47.0" x2="242.5" y2="47.0" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="247.0,47.0 242.5,48.9 242.5,45.1" fill="#8a6d2f"/><rect x="358.0" y="30.0" width="92.0" height="34.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="404.0" y="45.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">汇编</text><text x="404.0" y="58.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">g++ -c</text><line x1="344.0" y1="47.0" x2="350.5" y2="47.0" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="355.0,47.0 350.5,48.9 350.5,45.1" fill="#8a6d2f"/><rect x="466.0" y="30.0" width="92.0" height="34.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="512.0" y="45.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">链接</text><text x="512.0" y="58.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">ld</text><line x1="452.0" y1="47.0" x2="458.5" y2="47.0" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="463.0,47.0 458.5,48.9 458.5,45.1" fill="#8a6d2f"/><rect x="574.0" y="30.0" width="92.0" height="34.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="620.0" y="45.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">可执行</text><text x="620.0" y="58.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">a.out</text><line x1="560.0" y1="47.0" x2="566.5" y2="47.0" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="571.0,47.0 566.5,48.9 566.5,45.1" fill="#8a6d2f"/><text x="350.0" y="82.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">语法错误停在「编译」，符号未定义停在「链接」</text><text x="70.0" y="112.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#8a6d2f" font-weight="400">进程地址空间</text><rect x="70.0" y="120.0" width="88.0" height="38.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="114.0" y="144.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#1b1b1b" font-weight="400">代码段</text><rect x="158.0" y="120.0" width="88.0" height="38.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="202.0" y="144.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#1b1b1b" font-weight="400">只读常量</text><rect x="246.0" y="120.0" width="112.0" height="38.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="302.0" y="144.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#1b1b1b" font-weight="400">全局 / 静态</text><rect x="358.0" y="120.0" width="116.0" height="38.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="416.0" y="144.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#1b1b1b" font-weight="400">堆 ↑</text><rect x="474.0" y="120.0" width="56.0" height="38.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="502.0" y="144.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#1b1b1b" font-weight="400">空闲</text><rect x="530.0" y="120.0" width="100.0" height="38.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="580.0" y="144.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#1b1b1b" font-weight="400">栈 ↓</text><line x1="70.0" y1="174.0" x2="651.5" y2="174.0" stroke="#b9ae94" stroke-width="1.0"/><polygon points="656.0,174.0 651.5,175.9 651.5,172.1" fill="#b9ae94"/><text x="70.0" y="190.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#7c7566" font-weight="400">低地址</text><text x="656.0" y="190.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">高地址</text><text x="350.0" y="212.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">深递归先撞「栈」，全局大数组先撞「堆与静态区」——两类 RE / MLE 的成因完全不同</text></svg><figcaption class="cap"><b>图 22-1</b>从源文件到进程：编译流水线与进程地址空间</figcaption></figure>
 <h3 class="kb-h">22.1 一套够用的 C++ 子集</h3>
 <p>竞赛代码不需要掌握 C++ 的全部。把下面这套子集用熟，覆盖 99% 的题目：<code>int / long long / double / char / bool</code> 五种基本类型，<code>vector / string / pair / map / set / priority_queue / queue / stack</code> 八个容器，<code>sort / lower_bound / unique / reverse / max_element</code> 五个算法，加上结构体、引用、函数重载。剩下的（类继承、模板元编程、异常）在考场上只会增加出错面。</p>
 <p><b>头文件</b>：早期常用 <code>&lt;bits/stdc++.h&gt;</code>，NOI Linux 2.0 的 GCC 9.3 支持，但部分省选/校赛的评测机用 MSVC 或不完整 MinGW，会编译失败。稳妥写法是显式包含：</p>
@@ -3920,7 +3930,7 @@ sort(v.begin(), v.end(), [](const Node&amp; a, const Node&amp; b){ return a.x &l
 <tr><td>除低精度</td><td>O(n/p)</td><td>从高位到低位「余数 ×10<sup>9</sup> + 当前块」再除</td></tr>
 <tr><td>除高精度</td><td>O((n/p)<sup>2</sup> log 10<sup>9</sup>)</td><td>逐块二分试商，每块 ≤ 30 次块乘法；n,m ≤ 10<sup>3</sup> 时够用</td></tr>
 </tbody></table>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;cstring&gt;
 #include &lt;cstdlib&gt;
 #include &lt;string&gt;
@@ -4093,6 +4103,7 @@ int main() {
 <p><b>校验方式</b>：本机没有 g++ 时，把模板逐行译成 Python（<code>Big</code> 类 + <code>addAbs / subAbs / mulAbs / divSmall / divModAbs</code>），与 Python 原生大整数对拍：四则 3000 组（含 ±10<sup>30</sup>）、字符串往返 2000 组、边界串（<code>"-0" / "000123" / "1000000000"</code>）、<code>divSmall</code> 1000 组、<code>divModAbs</code> 400 组加 6 组边界（商为 0、被除数小于除数、除数 1、恰好整除）、块结构 500 组（每块 &lt; BASE 且最高块非零）全部一致。这套对拍值得保留在本地：任何一次改动后重跑，几十秒就能确认没有把进位或借位写错。</p>
 <h2 id="ch23"><span class="chk">23</span>第 23 章　复杂度与常数优化</h2>
 <div class="ch-intro">看到数据范围就该知道用什么算法，也知道自己的程序到底能不能过。本章给出「n 到复杂度」的对照表与常数经验值、把程序压进时限的七种手段、空间与 MLE 的算法，以及两个决定实际得分却最常被跳过的环节：用对拍与造数据把「我觉得对」变成「我知道对」，和按子任务分档交付把部分分拿满。23.6 补上第三条腿：当单次代价波动极大时（并查集、线段树合并、Splay），用聚合、记账、势能三套证法证明<b>总代价</b>有界，并给出十种常用结构的均摊界与势函数对照表。</div>
+<figure class="fig"><svg viewBox="0 0 700 258" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="86.0" y1="200.0" x2="622.0" y2="200.0" stroke="#1b1b1b" stroke-width="1.2"/><line x1="86.0" y1="200.0" x2="86.0" y2="30.0" stroke="#1b1b1b" stroke-width="1.2"/><line x1="86.0" y1="200.0" x2="86.0" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="86.0" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10⁰</text><line x1="192.4" y1="200.0" x2="192.4" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="192.4" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10¹</text><line x1="298.8" y1="200.0" x2="298.8" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="298.8" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10²</text><line x1="405.2" y1="200.0" x2="405.2" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="405.2" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10³</text><line x1="511.6" y1="200.0" x2="511.6" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="511.6" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10⁴</text><line x1="618.0" y1="200.0" x2="618.0" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="618.0" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10⁵</text><line x1="82.0" y1="200.0" x2="86.0" y2="200.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="203.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁰</text><line x1="82.0" y1="166.8" x2="86.0" y2="166.8" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="169.8" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10²</text><line x1="82.0" y1="133.6" x2="86.0" y2="133.6" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="136.6" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁴</text><line x1="82.0" y1="100.4" x2="86.0" y2="100.4" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="103.4" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁶</text><line x1="82.0" y1="67.2" x2="86.0" y2="67.2" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="70.2" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁸</text><line x1="82.0" y1="34.0" x2="86.0" y2="34.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="37.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10¹⁰</text><polyline points="86.0,200.0 89.6,200.0 93.1,200.0 96.7,200.0 100.2,200.0 103.8,200.0 107.3,200.0 110.9,200.0 114.5,200.0 118.0,200.0 121.6,200.0 125.1,200.0 128.7,200.0 132.2,200.0 135.8,200.0 139.3,200.0 142.9,200.0 146.5,200.0 150.0,200.0 153.6,200.0 157.1,200.0 160.7,200.0 164.2,200.0 167.8,200.0 171.4,200.0 174.9,200.0 178.5,200.0 182.0,200.0 185.6,200.0 189.1,200.0 192.7,200.0 196.2,200.0 199.8,200.0 203.4,200.0 206.9,200.0 210.5,200.0 214.0,200.0 217.6,200.0 221.1,200.0 224.7,200.0 228.3,200.0 231.8,200.0 235.4,200.0 238.9,200.0 242.5,200.0 246.0,200.0 249.6,200.0 253.1,200.0 256.7,200.0 260.3,200.0 263.8,200.0 267.4,200.0 270.9,200.0 274.5,200.0 278.0,200.0 281.6,200.0 285.2,200.0 288.7,200.0 292.3,200.0 295.8,200.0 299.4,200.0 302.9,200.0 306.5,200.0 310.0,200.0 313.6,200.0 317.2,200.0 320.7,200.0 324.3,200.0 327.8,200.0 331.4,200.0 334.9,200.0 338.5,200.0 342.1,200.0 345.6,200.0 349.2,200.0 352.7,200.0 356.3,200.0 359.8,200.0 363.4,200.0 366.9,200.0 370.5,200.0 374.1,200.0 377.6,200.0 381.2,200.0 384.7,200.0 388.3,200.0 391.8,200.0 395.4,200.0 399.0,200.0 402.5,200.0 406.1,200.0 409.6,200.0 413.2,200.0 416.7,200.0 420.3,200.0 423.8,200.0 427.4,200.0 431.0,200.0 434.5,200.0 438.1,200.0 441.6,200.0 445.2,200.0 448.7,200.0 452.3,200.0 455.9,200.0 459.4,200.0 463.0,200.0 466.5,200.0 470.1,200.0 473.6,200.0 477.2,200.0 480.7,200.0 484.3,200.0 487.9,200.0 491.4,200.0 495.0,200.0 498.5,200.0 502.1,200.0 505.6,200.0 509.2,200.0 512.8,200.0 516.3,200.0 519.9,200.0 523.4,200.0 527.0,200.0 530.5,200.0 534.1,200.0 537.6,200.0 541.2,200.0 544.8,200.0 548.3,200.0 551.9,200.0 555.4,200.0 559.0,200.0 562.5,200.0 566.1,200.0 569.7,200.0 573.2,200.0 576.8,200.0 580.3,200.0 583.9,200.0 587.4,200.0 591.0,200.0 594.5,200.0 598.1,200.0 601.7,200.0 605.2,200.0 608.8,200.0 612.3,200.0 615.9,200.0" fill="none" stroke="#b9ae94" stroke-width="1.2" stroke-dasharray="4 3"/><polyline points="86.0,349.4 89.6,215.8 93.1,210.8 96.7,207.9 100.2,205.9 103.8,204.2 107.3,202.9 110.9,201.8 114.5,200.9 118.0,200.0 121.6,199.2 125.1,198.6 128.7,197.9 132.2,197.4 135.8,196.8 139.3,196.3 142.9,195.9 146.5,195.4 150.0,195.0 153.6,194.6 157.1,194.2 160.7,193.9 164.2,193.6 167.8,193.2 171.4,192.9 174.9,192.6 178.5,192.4 182.0,192.1 185.6,191.8 189.1,191.6 192.7,191.3 196.2,191.1 199.8,190.9 203.4,190.6 206.9,190.4 210.5,190.2 214.0,190.0 217.6,189.8 221.1,189.6 224.7,189.4 228.3,189.3 231.8,189.1 235.4,188.9 238.9,188.7 242.5,188.6 246.0,188.4 249.6,188.2 253.1,188.1 256.7,187.9 260.3,187.8 263.8,187.6 267.4,187.5 270.9,187.4 274.5,187.2 278.0,187.1 281.6,187.0 285.2,186.8 288.7,186.7 292.3,186.6 295.8,186.4 299.4,186.3 302.9,186.2 306.5,186.1 310.0,186.0 313.6,185.9 317.2,185.8 320.7,185.6 324.3,185.5 327.8,185.4 331.4,185.3 334.9,185.2 338.5,185.1 342.1,185.0 345.6,184.9 349.2,184.8 352.7,184.7 356.3,184.6 359.8,184.5 363.4,184.4 366.9,184.3 370.5,184.3 374.1,184.2 377.6,184.1 381.2,184.0 384.7,183.9 388.3,183.8 391.8,183.7 395.4,183.6 399.0,183.6 402.5,183.5 406.1,183.4 409.6,183.3 413.2,183.2 416.7,183.2 420.3,183.1 423.8,183.0 427.4,182.9 431.0,182.9 434.5,182.8 438.1,182.7 441.6,182.6 445.2,182.6 448.7,182.5 452.3,182.4 455.9,182.4 459.4,182.3 463.0,182.2 466.5,182.2 470.1,182.1 473.6,182.0 477.2,182.0 480.7,181.9 484.3,181.8 487.9,181.8 491.4,181.7 495.0,181.6 498.5,181.6 502.1,181.5 505.6,181.5 509.2,181.4 512.8,181.3 516.3,181.3 519.9,181.2 523.4,181.2 527.0,181.1 530.5,181.0 534.1,181.0 537.6,180.9 541.2,180.9 544.8,180.8 548.3,180.8 551.9,180.7 555.4,180.6 559.0,180.6 562.5,180.5 566.1,180.5 569.7,180.4 573.2,180.4 576.8,180.3 580.3,180.3 583.9,180.2 587.4,180.2 591.0,180.1 594.5,180.1 598.1,180.0 601.7,180.0 605.2,179.9 608.8,179.9 612.3,179.8 615.9,179.8" fill="none" stroke="#7c7566" stroke-width="1.2" stroke-dasharray="4 3"/><polyline points="86.0,200.0 89.6,199.4 93.1,198.9 96.7,198.3 100.2,197.8 103.8,197.2 107.3,196.7 110.9,196.1 114.5,195.6 118.0,195.0 121.6,194.5 125.1,193.9 128.7,193.3 132.2,192.8 135.8,192.2 139.3,191.7 142.9,191.1 146.5,190.6 150.0,190.0 153.6,189.5 157.1,188.9 160.7,188.3 164.2,187.8 167.8,187.2 171.4,186.7 174.9,186.1 178.5,185.6 182.0,185.0 185.6,184.5 189.1,183.9 192.7,183.4 196.2,182.8 199.8,182.2 203.4,181.7 206.9,181.1 210.5,180.6 214.0,180.0 217.6,179.5 221.1,178.9 224.7,178.4 228.3,177.8 231.8,177.3 235.4,176.7 238.9,176.1 242.5,175.6 246.0,175.0 249.6,174.5 253.1,173.9 256.7,173.4 260.3,172.8 263.8,172.3 267.4,171.7 270.9,171.1 274.5,170.6 278.0,170.0 281.6,169.5 285.2,168.9 288.7,168.4 292.3,167.8 295.8,167.3 299.4,166.7 302.9,166.2 306.5,165.6 310.0,165.0 313.6,164.5 317.2,163.9 320.7,163.4 324.3,162.8 327.8,162.3 331.4,161.7 334.9,161.2 338.5,160.6 342.1,160.1 345.6,159.5 349.2,158.9 352.7,158.4 356.3,157.8 359.8,157.3 363.4,156.7 366.9,156.2 370.5,155.6 374.1,155.1 377.6,154.5 381.2,153.9 384.7,153.4 388.3,152.8 391.8,152.3 395.4,151.7 399.0,151.2 402.5,150.6 406.1,150.1 409.6,149.5 413.2,149.0 416.7,148.4 420.3,147.8 423.8,147.3 427.4,146.7 431.0,146.2 434.5,145.6 438.1,145.1 441.6,144.5 445.2,144.0 448.7,143.4 452.3,142.9 455.9,142.3 459.4,141.7 463.0,141.2 466.5,140.6 470.1,140.1 473.6,139.5 477.2,139.0 480.7,138.4 484.3,137.9 487.9,137.3 491.4,136.7 495.0,136.2 498.5,135.6 502.1,135.1 505.6,134.5 509.2,134.0 512.8,133.4 516.3,132.9 519.9,132.3 523.4,131.8 527.0,131.2 530.5,130.6 534.1,130.1 537.6,129.5 541.2,129.0 544.8,128.4 548.3,127.9 551.9,127.3 555.4,126.8 559.0,126.2 562.5,125.7 566.1,125.1 569.7,124.5 573.2,124.0 576.8,123.4 580.3,122.9 583.9,122.3 587.4,121.8 591.0,121.2 594.5,120.7 598.1,120.1 601.7,119.5 605.2,119.0 608.8,118.4 612.3,117.9 615.9,117.3" fill="none" stroke="#6b7d8c" stroke-width="1.4"/><polyline points="86.0,200.0 89.6,215.3 93.1,209.7 96.7,206.3 100.2,203.6 103.8,201.5 107.3,199.6 110.9,197.9 114.5,196.4 118.0,195.0 121.6,193.7 125.1,192.5 128.7,191.3 132.2,190.1 135.8,189.1 139.3,188.0 142.9,187.0 146.5,186.0 150.0,185.0 153.6,184.1 157.1,183.2 160.7,182.2 164.2,181.4 167.8,180.5 171.4,179.6 174.9,178.8 178.5,177.9 182.0,177.1 185.6,176.3 189.1,175.5 192.7,174.7 196.2,173.9 199.8,173.1 203.4,172.3 206.9,171.6 210.5,170.8 214.0,170.0 217.6,169.3 221.1,168.5 224.7,167.8 228.3,167.1 231.8,166.3 235.4,165.6 238.9,164.9 242.5,164.2 246.0,163.4 249.6,162.7 253.1,162.0 256.7,161.3 260.3,160.6 263.8,159.9 267.4,159.2 270.9,158.5 274.5,157.8 278.0,157.1 281.6,156.4 285.2,155.8 288.7,155.1 292.3,154.4 295.8,153.7 299.4,153.0 302.9,152.4 306.5,151.7 310.0,151.0 313.6,150.4 317.2,149.7 320.7,149.0 324.3,148.4 327.8,147.7 331.4,147.0 334.9,146.4 338.5,145.7 342.1,145.1 345.6,144.4 349.2,143.8 352.7,143.1 356.3,142.5 359.8,141.8 363.4,141.2 366.9,140.5 370.5,139.9 374.1,139.2 377.6,138.6 381.2,137.9 384.7,137.3 388.3,136.7 391.8,136.0 395.4,135.4 399.0,134.7 402.5,134.1 406.1,133.5 409.6,132.8 413.2,132.2 416.7,131.6 420.3,130.9 423.8,130.3 427.4,129.7 431.0,129.0 434.5,128.4 438.1,127.8 441.6,127.2 445.2,126.5 448.7,125.9 452.3,125.3 455.9,124.7 459.4,124.0 463.0,123.4 466.5,122.8 470.1,122.2 473.6,121.5 477.2,120.9 480.7,120.3 484.3,119.7 487.9,119.1 491.4,118.4 495.0,117.8 498.5,117.2 502.1,116.6 505.6,116.0 509.2,115.4 512.8,114.8 516.3,114.1 519.9,113.5 523.4,112.9 527.0,112.3 530.5,111.7 534.1,111.1 537.6,110.5 541.2,109.8 544.8,109.2 548.3,108.6 551.9,108.0 555.4,107.4 559.0,106.8 562.5,106.2 566.1,105.6 569.7,105.0 573.2,104.4 576.8,103.8 580.3,103.1 583.9,102.5 587.4,101.9 591.0,101.3 594.5,100.7 598.1,100.1 601.7,99.5 605.2,98.9 608.8,98.3 612.3,97.7 615.9,97.1" fill="none" stroke="#8a6d2f" stroke-width="1.8"/><polyline points="86.0,200.0 89.6,198.9 93.1,197.8 96.7,196.7 100.2,195.6 103.8,194.5 107.3,193.3 110.9,192.2 114.5,191.1 118.0,190.0 121.6,188.9 125.1,187.8 128.7,186.7 132.2,185.6 135.8,184.5 139.3,183.4 142.9,182.2 146.5,181.1 150.0,180.0 153.6,178.9 157.1,177.8 160.7,176.7 164.2,175.6 167.8,174.5 171.4,173.4 174.9,172.3 178.5,171.1 182.0,170.0 185.6,168.9 189.1,167.8 192.7,166.7 196.2,165.6 199.8,164.5 203.4,163.4 206.9,162.3 210.5,161.2 214.0,160.1 217.6,158.9 221.1,157.8 224.7,156.7 228.3,155.6 231.8,154.5 235.4,153.4 238.9,152.3 242.5,151.2 246.0,150.1 249.6,149.0 253.1,147.8 256.7,146.7 260.3,145.6 263.8,144.5 267.4,143.4 270.9,142.3 274.5,141.2 278.0,140.1 281.6,139.0 285.2,137.9 288.7,136.7 292.3,135.6 295.8,134.5 299.4,133.4 302.9,132.3 306.5,131.2 310.0,130.1 313.6,129.0 317.2,127.9 320.7,126.8 324.3,125.7 327.8,124.5 331.4,123.4 334.9,122.3 338.5,121.2 342.1,120.1 345.6,119.0 349.2,117.9 352.7,116.8 356.3,115.7 359.8,114.6 363.4,113.4 366.9,112.3 370.5,111.2 374.1,110.1 377.6,109.0 381.2,107.9 384.7,106.8 388.3,105.7 391.8,104.6 395.4,103.5 399.0,102.3 402.5,101.2 406.1,100.1 409.6,99.0 413.2,97.9 416.7,96.8 420.3,95.7 423.8,94.6 427.4,93.5 431.0,92.4 434.5,91.3 438.1,90.1 441.6,89.0 445.2,87.9 448.7,86.8 452.3,85.7 455.9,84.6 459.4,83.5 463.0,82.4 466.5,81.3 470.1,80.2 473.6,79.0 477.2,77.9 480.7,76.8 484.3,75.7 487.9,74.6 491.4,73.5 495.0,72.4 498.5,71.3 502.1,70.2 505.6,69.1 509.2,67.9 512.8,66.8 516.3,65.7 519.9,64.6 523.4,63.5 527.0,62.4 530.5,61.3 534.1,60.2 537.6,59.1 541.2,58.0 544.8,56.9 548.3,55.7 551.9,54.6 555.4,53.5 559.0,52.4 562.5,51.3 566.1,50.2 569.7,49.1 573.2,48.0 576.8,46.9 580.3,45.8 583.9,44.6 587.4,43.5 591.0,42.4 594.5,41.3 598.1,40.2 601.7,39.1 605.2,38.0 608.8,36.9 612.3,35.8 615.9,34.7" fill="none" stroke="#9a5a3c" stroke-width="1.5"/><polyline points="86.0,195.0 89.6,194.6 93.1,194.2 96.7,193.7 100.2,193.2 103.8,192.7 107.3,192.1 110.9,191.4 114.5,190.8 118.0,190.0 121.6,189.2 125.1,188.3 128.7,187.4 132.2,186.4 135.8,185.3 139.3,184.1 142.9,182.9 146.5,181.5 150.0,180.0 153.6,178.4 157.1,176.7 160.7,174.8 164.2,172.8 167.8,170.7 171.4,168.3 174.9,165.8 178.5,163.0 182.0,160.1 185.6,156.9 189.1,153.4 192.7,149.7 196.2,145.7 199.8,141.3 203.4,136.7 206.9,131.6 210.5,126.1 214.0,120.2 217.6,113.8 221.1,106.9 224.7,99.5 228.3,91.4 231.8,82.8 235.4,73.4 238.9,63.2 242.5,52.3 246.0,40.5" fill="none" stroke="#9a5a3c" stroke-width="1.5" stroke-dasharray="5 3"/><line x1="86.0" y1="83.8" x2="618.0" y2="83.8" stroke="#b0a898" stroke-width="0.9" stroke-dasharray="3 4"/><text x="616.0" y="78.8" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁷ 次 ≈ 1 秒</text><line x1="511.6" y1="200.0" x2="511.6" y2="34.0" stroke="#b0a898" stroke-width="0.9" stroke-dasharray="3 4"/><text x="507.6" y="45.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">n = 10⁴</text><text x="613.7" y="203.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">1</text><text x="613.7" y="182.9" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">log n</text><text x="613.7" y="121.6" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">n</text><text x="613.7" y="101.5" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">n log n</text><text x="613.7" y="40.2" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">n²</text><text x="252.9" y="33.1" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">2ⁿ</text><text x="30.0" y="246.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">把 n 代进去之前先看曲线陡到什么程度：n log n 在 10⁶ 也只要几秒，n² 在 10⁵ 就已超时</text></svg><figcaption class="cap"><b>图 23-1</b>常见复杂度的增长速度与「一秒能跑多少」的分界线</figcaption></figure>
 <h3 class="kb-h">23.1 复杂度怎么估才准</h3>
 <p>复杂度估算是选题的第一步，也是最重要的一步。方法固定：<b>看数据范围，反推可接受的复杂度</b>。</p>
 <table class="tbl"><thead><tr><th style="width:22%">n 的范围</th><th style="width:30%">可接受复杂度</th><th>典型算法</th></tr></thead><tbody>
@@ -4135,7 +4146,7 @@ int main() {
 </tbody></table>
 <p><b>它到底有多有效</b>？拿一个真实的小 bug 试：求 <code>a[i]+a[j]=k</code> 的 <code>(i,j)</code> 对数，把 <code>i &lt; j</code> 误写成 <code>i &lt;= j</code>（同一个元素被算两次）。用 <code>n ∈ [1,8]</code> 的随机数据对拍，<b>第 11 组</b>就暴露（<code>a=[6,2,8,7,1,10,4,9]</code>，<code>k=8</code>，正解 2、错解 3）。有意思的是按规模统计 400 组随机数据的暴露率：<code>n=2</code> 只有 <b>11%</b>，<code>n=8</code> 达 <b>30%</b>，<code>n=50</code> 为 <b>48%</b>——<b>数据越小越难撞上错误</b>。反过来，同一 bug 用四组随手手造样例（<code>[3,3],k=6</code>；<code>[1,2,3],k=3</code>；<code>[0,0,0],k=0</code>；<code>[5],k=10</code>）已经抓到 3 组。所以两者是互补而非替代：显式边界（单元素、全相同）手造最省事；对拍的价值在于「不用设计」——它替你造出三十种你根本想不到的 n=8。</p>
 <p><b>生成器模板</b>。三条纪律：用 <code>mt19937_64</code> 而不是 <code>rand()</code>；用「模式参数」把几类形状分开跑（极小值、贴边界、极值、特殊结构）；随机数上下界一律走 <code>rnd(l, r)</code>，不要手写取模。</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
@@ -4289,7 +4300,7 @@ fprintf(stderr, "time %.1f ms, rss %ld KB\n", ms, ru.ru_maxrss);</pre>
 </tbody></table>
 <p><b>空间预算</b>：256 MB = 2.68×10<sup>8</sup> 字节 ≈ 6.7×10<sup>7</sup> 个 <code>int</code> ≈ 3.3×10<sup>7</sup> 个 <code>long long</code> ≈ 2.1×10<sup>9</sup> 个 <code>bitset</code> 位。注意 <code>vector</code> 的 <code>capacity</code> 通常是 1.5—2 倍 <code>size</code>，按 <code>size</code> 估算会低估一半。</p>
 <p><b>分派模板</b>。写法固定：读入 → 判性质 → 按规模分支 → 各档用<b>各自的数组与函数</b>。<b>顺序不能反</b>：性质档的数据规模往往也是满的，所以性质判定必须排在规模判定之前。</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int N = 200005;
 
@@ -4378,7 +4389,7 @@ int main() {
 </tbody></table>
 
 <p><b>模板：把上界写成断言，数据一换就知道界还成不成立</b>。下面这份程序不需要输入，直接打印「实测 / 理论上界」，是本节所有数字的来源，也可以当作赛前自检工具：</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 
@@ -4449,6 +4460,7 @@ int main() {
 <p><b>与 23.1、23.2 的分工</b>：23.1 给「n → 复杂度」的对照与常数经验值，23.2 讲怎么把常数压下去，本节补的是<b>第三条腿</b>——当单次代价波动巨大时，怎么证明总代价。三节合起来才能回答「我的程序到底能不能过」。若题目只要求「总复杂度」，用本节的表估上界；若要求「每步都必须快」，回 23.2 换数据结构。</p>
 <h2 id="ch24"><span class="chk">24</span>第 24 章　基础算法</h2>
 <div class="ch-intro">枚举、排序、二分、前缀和、双指针、贪心、分治——这八件工具构成了绝大多数题目的骨架。本章每节都给出可直接抄的模板与失效边界；末节把 24.7 里一段带过的 CDQ 分治展开成完整模板，因为三维偏序、动态逆序对、二维数点、LIS 计数在省选与 NOI 里反复出现，而它的正确性依赖三条容易被跳过的不变量（有序性、只跨半统计、用完撤销）。末节 24.9 把「比值最大」这类目标收进同一个二分框架：二分答案 λ 后把比值换成可加权重 <code>a−λb</code>，再按可行集的结构选判定（恰选 k 个用背包 DP、生成树用最大生成树、环用负环、点导出子图用最小割），并写清一个常被忽略的前提——<b>可行集不耦合时分数规划直接退化为取最大单项</b>。末节 24.10 补上全书反复提到、却一直没有模板的整体二分：把 q 个询问的二分过程合并成一棵值域分治树，逐层的「按值加点」只做一次，代价从 O(q·log V·n log n) 降到 O((n+q)·log V·log n)，并给出静态与带修两套完整代码——这两套代码是 27.10 与 27.8 在内存吃紧时的替代方案。</div>
+<figure class="fig"><svg viewBox="0 0 700 228" xmlns="http://www.w3.org/2000/svg" role="img"><text x="62.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="11" text-anchor="end" fill="#8a6d2f" font-weight="700">a</text><rect x="70.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="89.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><rect x="110.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="129.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">1</text><rect x="150.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="169.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><rect x="190.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="209.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">1</text><rect x="230.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="249.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">5</text><rect x="270.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="289.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">9</text><rect x="310.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="329.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">2</text><rect x="350.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="369.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">6</text><text x="62.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="11" text-anchor="end" fill="#8a6d2f" font-weight="700">D</text><rect x="70.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="89.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><rect x="110.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="129.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">-2</text><rect x="150.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="169.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><rect x="190.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="209.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">-3</text><rect x="230.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="249.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><rect x="270.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="289.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><rect x="310.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="329.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">-7</text><rect x="350.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="369.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><text x="22.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="11" text-anchor="end" fill="#8a6d2f" font-weight="700">S</text><rect x="30.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="49.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">0</text><rect x="70.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="89.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><rect x="110.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="129.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><rect x="150.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="169.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">8</text><rect x="190.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="209.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">9</text><rect x="230.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="249.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">14</text><rect x="270.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="289.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">23</text><rect x="310.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="329.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">25</text><rect x="350.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="369.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">31</text><text x="392.0" y="60.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">a 逐项改：区间加要扫 O(len)</text><text x="392.0" y="122.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">D：区间加变两点改</text><text x="392.0" y="184.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">S：区间和 = S[r] − S[l−1]</text><line x1="150.0" y1="76.0" x2="150.0" y2="91.5" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="150.0,96.0 148.1,91.5 151.9,91.5" fill="#8a6d2f"/><text x="158.0" y="90.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#8a6d2f" font-weight="400">做一次差分</text><line x1="150.0" y1="136.0" x2="150.0" y2="151.5" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="150.0,156.0 148.1,151.5 151.9,151.5" fill="#8a6d2f"/><text x="158.0" y="150.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#8a6d2f" font-weight="400">做一次前缀和</text><text x="350.0" y="214.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">同一张表的两个方向：差分把「区间」变成「两点」，前缀和把「两点」还原成「区间」</text></svg><figcaption class="cap"><b>图 24-1</b>前缀和与差分是同一张表的两个方向</figcaption></figure>
 <h3 class="kb-h">24.1 枚举与模拟：先把暴力写对</h3>
 <p>省选和 NOI 的很多题，正解想不出来时，暴力分是保底的 30—60 分。暴力写不对，是因为边界没处理干净。</p>
 <p><b>枚举的三种形态</b>：单层枚举（枚举答案或枚举位置）、双重枚举（枚举点对、区间端点）、搜索式枚举（枚举子集、排列）。写之前先确定<b>枚举对象</b>与<b>判定函数</b>，把判定单独写成函数，便于对拍。</p>
@@ -4589,7 +4601,7 @@ if (strict) {
 
 <p>顺带把 f 的定义说清：本节模板算的是 <code>f<sub>i</sub> = #{ j : a<sub>j</sub> ≤ a<sub>i</sub>, b<sub>j</sub> ≤ b<sub>i</sub>, c<sub>j</sub> ≤ c<sub>i</sub> }</code>，<b>包含 j = i 自己</b>（所以最小值为 1）。严格版本算的是「三维都严格更小的个数」，不含自己（最小值为 0）。两种口径都常用，混淆的后果是整体差 1，样例恰好只有一个点时看不出来。</p>
 
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int MAXN = 100005;
 
@@ -4787,7 +4799,7 @@ bool feasible(int n, int m, double mid) {
 <p><b>分治结构</b>：<code>solve(l, r, ql, qr)</code> 表示「事件区间 <code>e[ql..qr]</code> 中所有询问的答案都落在值域 <code>[l, r]</code> 内」。取 <code>mid = (l+r)/2</code>，把值 ≤ mid 的加点事件真正加进树状数组，然后逐个询问统计「区间内 ≤ mid 的个数 c」：<code>k ≤ c</code> 的询问答案在左半，<code>k &gt; c</code> 的答案在右半且<b>要把 k 减去 c</b>（左半的 c 个元素已经确定排在它前面）。分完再把本层加进去的全部撤销，递归两侧。到 <code>l == r</code> 时该区间内所有询问的答案就是 l。</p>
 
 <p><b>模板 A：静态区间第 k 小</b>（n, q ≤ 10<sup>5</sup>，值域 1..V）</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int MAXN = 100005, MAXQ = 100005, MAXE = MAXN + MAXQ;
 int n, qn, V, bit[MAXN], ans[MAXQ];
@@ -4849,7 +4861,7 @@ int main() {
 }</pre>
 
 <p><b>模板 B：带修区间第 k 小</b>（单点修改 + 询问，n, m, q ≤ 10<sup>5</sup>）。与模板 A 只差三处：加点事件多一个增量 <code>d</code>；树状数组的加/撤销都带 <code>d</code>；一次修改拆成「删旧值」与「加新值」两条事件。事件数组按<b>时间顺序</b>排列，初始的 n 条加点排在最前，之后每条操作依次追加。</p>
-<pre class="code">struct Ev {
+<pre class="code code-long">struct Ev {
     int op;              // 0 = 加点(l=位置, k=值, d=增量)，1 = 询问(l, r, k, id)
     int l, r, k, id, d;
 } e[MAXE], buf[MAXE];
@@ -4927,6 +4939,7 @@ void solve(int l, int r, int ql, int qr) {
 <p><b>自查</b>：本节把模板 A、B 逐行译成 Python，与暴力（对子区间排序取第 k 个）对拍：静态 400 组（n ≤ 12、值域 ≤ 10、每组 1—8 个询问）全对；带修 300 组（随机混合修改与询问，共 940 个询问）全对；边界用例「10 个元素全等于 7、V = 1」「单点区间」均通过。三条错法在同一批数据上的错误率分别是 117/400、341/400、105/300，数字已写进上面的易错点。选型建议只有一句：<b>能离线就别上树套树</b>——27.10 已算过 n = m = 10<sup>5</sup> 时树套树要 350 MB，而同一题的离线整体二分只要十几 MB。</p>
 <h2 id="ch25"><span class="chk">25</span>第 25 章　搜索</h2>
 <div class="ch-intro">搜索是「没有更好办法时」的通用解法，也是暴力分的来源。本章给出 DFS/BFS 的标准骨架、四类剪枝、迭代加深与双向搜索、状压搜索的位运算技巧，以及 25.6 的 A* 与 IDA*——后者把「估价函数」讲成一门可以论证的手艺：可采纳与一致各保证什么、h 的三档强度怎么选、阈值迭代为什么必须取最小超限值；25.7 再把「折半搜索」补成独立一节，把 n ≤ 44 这一类「2<sup>n</sup> 不可能、2<sup>n/2</sup> 刚好」的题拆开讲：两半怎么枚举、合并的三种写法（二分计数、相等段计数、邻近两点）、以及为什么「去重」在合并阶段是错的；25.8 收在舞蹈链（DLX）上——它把「每列恰好一个 1」的精确覆盖问题压成十字链表上的 O(1) 摘除与恢复，数独、n 皇后、骨牌铺砌共用同一份模板，配套的「最小列优先」启发式与「空列即死路」剪枝是能不能几千次递归跑完一盘数独的关键；25.9 转向两人对抗：零和博弈为什么必须用 minimax、NegaMax 为什么比交替写 max/min 少一半错、Alpha-Beta 的窗口语义与「被剪分支不影响根值」的不变式、胜负分为什么要扣步数才能快胜优先，以及置换表必须同时带「轮到谁」与「深度 + 边界类型」——最后落到一个在棋类上永远测不出来的 bug：带每步收益的博弈，子窗口要跟着收益平移。26.15 收在斜率优化的兜底工具上：当插入斜率与查询 <code>x</code> 都不单调时，凸壳与单调队列全部失效，李超线段树改用「标记永久化 + 每层比中点」的办法，把一条线段的插入压到 <code>O(log<sup>2</sup> n)</code>、单点查询 <code>O(log n)</code>；本节给出离散化定义域的完整模板，并记下两处实测——查询只取叶子错 387/400、用斜率代替中点函数值错 15/400。</div>
+<figure class="fig"><svg viewBox="0 0 700 224" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="350.0" y1="59.0" x2="212.0" y2="95.0" stroke="#8a6d2f" stroke-width="1.4"/><line x1="350.0" y1="59.0" x2="488.0" y2="95.0" stroke="#8a6d2f" stroke-width="1.4"/><line x1="212.0" y1="121.0" x2="140.0" y2="159.0" stroke="#8a6d2f" stroke-width="1.4"/><line x1="212.0" y1="121.0" x2="284.0" y2="159.0" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="4 3"/><line x1="488.0" y1="121.0" x2="416.0" y2="159.0" stroke="#8a6d2f" stroke-width="1.4"/><line x1="488.0" y1="121.0" x2="560.0" y2="159.0" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="4 3"/><circle cx="350.0" cy="46.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="350.0" y="50.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">1</text><circle cx="212.0" cy="108.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="212.0" y="112.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">2</text><circle cx="488.0" cy="108.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="488.0" y="112.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><circle cx="140.0" cy="172.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="140.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><circle cx="284.0" cy="172.0" r="13.0" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.2"/><text x="284.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#7c7566" font-weight="400">5</text><line x1="274.0" y1="182.0" x2="294.0" y2="162.0" stroke="#9a5a3c" stroke-width="1.5"/><circle cx="416.0" cy="172.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="416.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">6</text><circle cx="560.0" cy="172.0" r="13.0" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.2"/><text x="560.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#7c7566" font-weight="400">7</text><line x1="550.0" y1="182.0" x2="570.0" y2="162.0" stroke="#9a5a3c" stroke-width="1.5"/><text x="284.0" y="134.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#9a5a3c" font-weight="400">上界剪枝</text><text x="560.0" y="134.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#9a5a3c" font-weight="400">可行性剪枝</text><text x="350.0" y="210.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">剪枝不是「少搜一点」，而是用已证明的上下界排除整棵子树：被剪掉的必须能证明不可能更优</text></svg><figcaption class="cap"><b>图 25-1</b>搜索树上的两类剪枝：上界剪枝与可行性剪枝</figcaption></figure>
 <h3 class="kb-h">25.1 DFS 与回溯的通用框架</h3>
 <p>DFS 解决的是「枚举所有合法方案」或「在状态图上走到终点」。写成三件事：<b>边界、选择、撤销</b>。</p>
 <pre class="code">void dfs(int dep) {
@@ -5016,7 +5029,7 @@ for (int mask = 0; mask &lt; (1 &lt;&lt; n); ++mask) {
 </tbody></table>
 
 <p><b>模板 A：A* 解八数码</b>。用 9 进制编码（9<sup>9</sup> ≈ 3.87×10<sup>8</sup>，落在 <code>int</code> 内），<code>best</code> 表存「到达该状态的最优 g」，弹出时用 <code>cur.g &gt; best[code]</code> 过滤陈旧条目（惰性删除）。</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int P9[9] = {1,9,81,729,6561,59049,531441,4782969,43046721};
 
@@ -5133,7 +5146,7 @@ int ida(int *st) {
 <tr><td>「选出的个数也有约束」</td><td>按个数分桶后再合并，桶内仍排序</td><td>O(2<sup>n/2</sup> log)，常数翻倍</td></tr>
 </tbody></table>
 <p>下面这份模板求「子集和不超过 T 的子集个数」（含空集），读入 <code>n T</code> 与 n 个整数，输出方案数，可直接编译运行。生成子集和用 <b>lowbit 递推</b>而不是 DFS：<code>sum[m] = sum[m 去掉最低位] + a[最低位]</code>，一趟 <code>O(2<sup>k</sup>)</code> 无递归、无栈、缓存友好。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 
@@ -5215,7 +5228,7 @@ for (int i = 0; i &lt; ca; ++i) {
 <p><b>为什么叫舞蹈链</b>：把矩阵的每个 1 看成一个节点，同一列上下串成环形链表、同一行左右串成环形链表，再给每列加一个<b>列头</b>哨兵、所有列头串成一圈总表头（编号 0）。递归时「选一列 → 删掉该列 → 对每个候选行删掉它覆盖的其余列」，回溯时严格逆序恢复。摘除与恢复都是 O(1) 指针操作，所以单步代价只和「被删掉的节点数」成正比，而不是和矩阵大小成正比。</p>
 <p><b>复杂度</b>：最坏是指数的（精确覆盖本身是 NP 完全问题），但<b>选 size 最小的列</b>这个启发式把搜索树压得极扁——它的含义是「先处理选择最少的约束」，等价于约束传播里的 fail-first。实测数独（324 列、729 行）从空盘到满盘只需几千次递归。工程上记 <code>O(搜索树节点数 × 行平均长度)</code> 即可，不要试图写大 O。</p>
 <p><b>模板（精确覆盖，可编译）</b>：</p>
-<pre class="code">const int MAXN = 400000;          // 节点数 = 1 + 列数 + 矩阵中 1 的个数
+<pre class="code code-long">const int MAXN = 400000;          // 节点数 = 1 + 列数 + 矩阵中 1 的个数
 int L[MAXN], R[MAXN], U[MAXN], D[MAXN];
 int colOf[MAXN], rowOf[MAXN], sz[MAXN];
 int tot;                          // 节点计数，0 号是总表头
@@ -5363,7 +5376,7 @@ V(s) = max over 走法 m of ( gain(m) - V(s') )   其余情况，s' 是走完 m 
 <p>键必须包含「轮到谁走」——在走子类游戏（黑白棋、象棋）里同一个盘面可能轮到任意一方，只按盘面做键会把两个不同的博弈节点混成一个。另外条目要带<b>深度</b>：浅层搜索得到的值不能拿来替代深层搜索（迭代加深时尤其明显，表里全是上一步的浅层值）。</p>
 <p><b>结论四：带每步收益的博弈，子窗口要平移 <code>gain</code></b>。这是本节最容易错、且最难自查的一处。当 <code>V(s) = max(gain(m) − V(s'))</code> 而 <code>gain</code> 随走法变化时，父节点关心的是 <code>gain(m) − V(s')</code> 落在 <code>(alpha, beta)</code> 内，等价于 <code>V(s')</code> 落在 <code>(gain − beta, gain − alpha)</code> 内。所以子调用的窗口必须是 <code>(gain - beta, gain - alpha)</code>；照抄无收益棋类的 <code>(-beta, -alpha)</code>，剪枝给出的界就和真实值对不上。实测在「每次从某堆取 k 个得 k 分」的三堆博弈上：窗口不平移时 26 个局面错 15 个、60 个局面错 41 个（输出恒偏大，因为失败高返回的下界被当成真值参与 <code>gain − v</code>）；平移后两组共 86 个局面<b>全对</b>。无收益棋类（<code>gain = 0</code>）平移与不平移等价，所以这个 bug 在井字棋上永远测不出来。</p>
 <p><b>模板 A：NegaMax + Alpha-Beta + 置换表 + 迭代加深（井字棋为具体局面，可编译）</b>：</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 const int INF = 1000000000;
@@ -5474,6 +5487,7 @@ int V(int *p, int alpha, int beta) {
 <p><b>自查</b>：把两份模板逐行译成 Python 与暴力对拍。(1) 井字棋：随机生成 355 个未终局的合法局面，Alpha-Beta 的胜负平判定与「无剪枝全量 minimax」<b>逐个一致，0 处不符</b>。(2) 随机博弈树（分支 3、深度 5，共 400 棵，叶子值随机取自 −9..9）：剪枝后的值与全量值<b>全部相同</b>，节点数 9050 对 11778，只省下 23.2%——说明「随机走法顺序」下剪枝收益很小，与上表 <code>b^(3d/4)</code> 的结论吻合。(3) 得分制博弈：窗口不平移时 26 个局面错 15 个、60 个局面错 41 个，平移后 86 个局面全对。(4) 胜负分是否扣步数：3673 个局面中 320 个（8.7%）着法不同。本机无 <code>g++</code>，C++ 侧只做了语法自查与上界估算（井字棋状态数 3^9×2 = 39366，置换表用 <code>unordered_map</code> 足够）。</p>
 <h2 id="ch26"><span class="chk">26</span>第 26 章　动态规划</h2>
 <div class="ch-intro">DP 是竞赛的分水岭。本章按「线性—背包—区间—树形—状压—数位—优化」的顺序展开，每类给出状态设计套路与转移模板，最后三节专讲优化：26.8 给全景对照表，26.9 把决策单调性单独讲全——二分栈（在线）、分治（分层）、Knuth（区间 DP）三套可编译模板，配四边形不等式的判定与打表验证法；26.10 讲斜率优化（凸壳维护、方向配对、查询不单调时二分）与 WQS 二分（用「每段收税」把恰好 k 段的硬约束降到 O(n log V)），并给出凸性打表这一唯一可靠的自查手段；26.11 收尾讲动态 DP——把树形 DP 的重儿子贡献写成 (max,+) 矩阵，重链剖分后用线段树维护链积，使「单点改权 + 查询全局答案」从 O(n) 降到 O(log²n)；26.12 收在换根 DP 上——把「每个点都当一次根」的 n 道题用两遍扫描压成 O(n)：先自底向上算子树信息，再自顶向下把父的答案「减去本子树、补上子树外」，并说清可减信息（和、计数）与不可减信息（max、次大）为什么必须用两套写法；26.13 补上最后一类——状态带「深度」这一维时（子树内按层统计、按层计方案数），普通合并会退化成 O(n²)，长链剖分改用「子树最大深度」选长儿子，把长儿子的整张表直接嵌进父亲数组并后移一位，搬运退化成一次指针加法，总合并次数恒等于 n，顺带还能做到 O(1) 的 k 级祖先查询；26.14 收在网格连通性这一类上——轮廓线 DP 只记「有没有插头」不够，还要记「哪些插头属于同一条链」，用括号表示法把配对关系压进两位状态，7 类转移、括号配对修正、行末左移三件事写全，并以 6×6 全 1 网格的 1072 作为整份模板的验收值。</div>
+<figure class="fig"><svg viewBox="0 0 700 232" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="96.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="96.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="96.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="96.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="96.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><line x1="111.0" y1="65.0" x2="143.0" y2="65.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="143.0" y1="65.0" x2="175.0" y2="65.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="175.0" y1="65.0" x2="175.0" y2="97.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="175.0" y1="97.0" x2="175.0" y2="129.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="175.0" y1="129.0" x2="207.0" y2="129.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="207.0" y1="129.0" x2="207.0" y2="161.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="207.0" y1="161.0" x2="207.0" y2="193.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="207.0" y1="193.0" x2="239.0" y2="193.0" stroke="#8a6d2f" stroke-width="2.2"/><circle cx="111.0" cy="65.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="143.0" cy="65.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="175.0" cy="65.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="175.0" cy="97.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="175.0" cy="129.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="207.0" cy="129.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="207.0" cy="161.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="207.0" cy="193.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="239.0" cy="193.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><text x="86.0" y="68.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="end" fill="#7c7566" font-weight="400">i</text><text x="110.0" y="42.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">j</text><text x="300.0" y="62.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="start" fill="#1b1b1b" font-weight="400">f[i][j] = f[i−1][j] + f[i][j−1]</text><text x="300.0" y="86.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">两条转移只依赖「上一行」与「本行左侧」</text><text x="300.0" y="108.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#8a6d2f" font-weight="400">→ 一行数组 f[0..n] 就够</text><rect x="300.0" y="122.0" width="360.0" height="52.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="310.0" y="143.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">for j: f[j] = max(f[j], f[j−1]) + a[j]</text><text x="310.0" y="163.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#9a5a3c" font-weight="400">遍历方向由「依赖谁」决定，写反就用到新值</text><text x="350.0" y="218.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">画表格是验 DP 的第一步：转移式、边界、遍历顺序，三者都能在格子上看出来</text></svg><figcaption class="cap"><b>图 26-1</b>把 DP 画成表格：转移式、边界与遍历顺序都在格子上</figcaption></figure>
 <h3 class="kb-h">26.1 DP 的四个要素</h3>
 <p>写 DP 前先回答四个问题，答不上来就说明状态没想清：</p>
 <ol>
@@ -5625,7 +5639,7 @@ long long solve(long long n) {
 <tr><td>决策矩阵完全单调（每行最小值位置单调）</td><td>SMAWK</td><td>O(n)</td><td>理论工具，考场极少手写</td></tr>
 </tbody></table>
 <p><b>模板 A：二分栈（在线 1D1D，最常用）</b>。队列里存若干三元组 <code>(j, l, r)</code>，含义是「位置区间 <code>[l,r]</code> 的最优决策是 j」，这些区间首尾相接覆盖 <code>[1,n]</code>。求 <code>f[i]</code> 时取队首即可；随后把 <code>i</code> 作为新决策插入：若它在某段左端点就已更优，整段作废并弹掉；否则二分出切换点，把队尾截断。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 typedef long long ll;
@@ -5728,7 +5742,7 @@ for (int len = 2; len &lt;= n; ++len)
 <p>方向正好是「斜率递减 + 查询递增」，可以直接用下面的模板。</p>
 
 <p><b>模板 A：单调队列维护下凸壳（斜率递减、查询递增）</b>，O(n)。<code>dead</code> 判断中间那条直线是否永远不最优：三条直线斜率递减时，若前两条的交点横坐标不早于后两条的交点，中间那条就只可能在一点上并列，可以删掉。交叉相乘用 <code>__int128</code>，避免 10<sup>9</sup> 级坐标的乘积溢出。</p>
-<pre class="code">typedef long long ll;
+<pre class="code code-long">typedef long long ll;
 struct Line { ll k, b; ll get(ll x) const { return k * x + b; } };
 
 Line q[MAXN]; int hd = 0, tl = -1;
@@ -5868,7 +5882,7 @@ f[u][1] = g[u][1] + f[son][0]</pre>
 </tbody></table>
 
 <p><b>模板（重链剖分 + 线段树维护 (max,+) 矩阵）</b></p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const int MAXN = 100005;
@@ -6005,7 +6019,7 @@ void modify(int u, ll val) {
 <tr><td>合计</td><td>O(n) 时间 / O(n) 空间</td><td>对比「每个点各跑一次 DFS」的 O(n²)</td></tr>
 </tbody></table>
 <p><b>模板一（可减信息：每个点到其余点的距离和）</b>：<code>down[u]</code> 是「u 的子树内所有点到 u 的距离和」，<code>down[u] = Σ(down[v] + sz[v])</code>；换根时直接用上面那一行公式。模板用 <b>BFS 定序 + 两个 for 循环</b>，不写递归，链形数据也不会爆栈。</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int N = 200005;
 int n, head[N], nxt[N &lt;&lt; 1], to[N &lt;&lt; 1], ecnt;
@@ -6119,7 +6133,7 @@ void dfs2(int u, int f) {                        // ② 自顶向下
 </tbody></table>
 
 <p><b>模板一：长链剖分 + 深度维 DP</b>。以「求每棵子树内出现次数最多的深度，并列取最小」为例：<code>f[u][d]</code> 为 u 的子树中距 u 恰为 d 的节点数，答案取 <code>f[u][0..len[u]−1]</code> 中最大者的最小下标。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 const int MAXN = 1000005, MAXE = MAXN &lt;&lt; 1;
@@ -6222,7 +6236,7 @@ int kthAncestor(int u, int k) {
 
 <p><b>模板：单回路计数</b>（每个可走格度数恰为 2，全局只有一个环）。哈希表按格滚动，每格处理完 <code>swap</code>。</p>
 
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int MAXM = 12;
 int n, m;
@@ -6344,7 +6358,7 @@ int main() {
 <p><b>复杂度</b>：单直线插入 <code>O(log n)</code>；单线段插入 <code>O(log<sup>2</sup> n)</code>；单点查询 <code>O(log n)</code>；空间 <code>O(4M)</code>（<code>M</code> 为离散化后 <code>x</code> 的个数）。落在 DP 上，就把「斜率不单调 + 查询不单调」的转移从 <code>O(n<sup>2</sup>)</code> 压到 <code>O(n log<sup>2</sup> n)</code>。<b>三条路线的分工</b>：斜率单调 + <code>x</code> 单调 → 单调队列凸壳 <code>O(n)</code>（26.10 模板 A）；斜率单调 + <code>x</code> 任意 → 凸壳上二分 <code>O(n log n)</code>（模板 B）；两者都不单调 → 本节李超树 <code>O(n log<sup>2</sup> n)</code>，或 24.8 的 CDQ 分治。</p>
 
 <p><b>模板</b>（离散化定义域 + 区间插入 + 单点最大值；求最小值把 <code>k,b</code> 同时取反、答案再取反）：</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const int MX = 200005;
@@ -6434,6 +6448,7 @@ int main() {
 </ol>
 <h2 id="ch27"><span class="chk">27</span>第 27 章　数据结构</h2>
 <div class="ch-intro">从栈队列到线段树、平衡树、可持久化线段树、线性基、树套树、LCT、莫队，本章按「使用频率 × 实现成本」排序。每个结构都给出完整可编译的模板，以及「什么时候别用它」的判断依据——尤其是 27.10 的树套树与 27.11 的 LCT，都会明确告诉你什么情况下该放弃它改用离线做法；27.12 讲 KD-Tree，把「剪枝暴力」这一路线讲清：平方根级复杂度从哪里来，又会在什么数据上失效；27.13 的重链剖分与 27.14 的树上启发式合并共用同一个「重儿子」概念——前者用它把树上路径摊成 O(log n) 段序列区间，后者用它把子树统计压到 O(n log n)，两节合起来就是树上数据结构最常用的两条主线；27.15 的线段树合并与分裂再补一类「把 n 棵权值线段树并成一棵」的操作，均摊 O(1) 一个节点的代价使它成为子树统计与连通块合并里最轻的结构；27.16 的树上莫队把 27.7 只写了一句的「欧拉序转区间」展开成完整模板，用「统计区间内出现奇数次的点」这一条结论，把树上路径询问压到 O(n√m)；27.17 补上虚树——q 次询问、每次只给 k 个关键点时，把点集压成「关键点 + 相邻两项的 LCA」，用单调栈在 O(k) 内连边，使单次询问从 O(n) 降到 O(k log n)，「为什么只取相邻两项的 LCA 就够」的证明与消耗战式 DP 一并给出。27.18 回到 27.7 的莫队，补上两种「普通莫队写不了」的改造——删除不可逆时用回滚莫队把左移增量整体快照撤销，单次 add 代价太高时用二次离线莫队把 (n+q)√n 次询问摊到一次离线扫描。27.19 收在唯一需要「历史版本」的并查集上：把 <code>fa</code> 换成可持久化数组、并因此必须放弃路径压缩，单次操作变成 O(log² n)，代价是空间 O((n+m log n))——本节把「什么时候该用它、什么时候该换 28.17 的线段树分治」列成对照表，并记下两个实测数字：原地改数组的错法是 32838 次查询错 4935 次，按序号合并的树高是 820（按大小合并只要 6）。27.20 27.20 补上「可并堆」这块空白：左偏树只用一条「沿右儿子走的链长不超过 log n」的不变量，就把两个堆的合并从 O(n) 压到 O(log n)，并给出可持久化（沿右链复制）与可删任意元素（懒删除 + 并查集维护根）两种变形；与 27.14 的启发式合并、27.15 的线段树合并一起，构成「子树信息合并」的三条路线与它们各自的分工；27.21 再把「以谁为最小值」这件事固化成父子关系：单调栈 O(n) 建出笛卡尔树，子树大小、区间最小值位置、直方图最大矩形三条结论一次给出，同时记下三处实测——返回 <code>stk[top]</code> 错 278/300、子树大小的左右比较符写反错 354/400、多测不清 <code>lc/rc</code> 会把树接成环（299/300）、以及递增序列的树高就是 <code>n</code>（10<sup>5</sup> 层）所以只能迭代遍历。27.22 回到二维几何最常用的一类离线技巧——扫描线：面积并只需一遍，周长并必须两向各扫一遍（单遍用 <code>|Δlen|</code> 求竖边，在 300 组随机小矩形上错 44 组，阶梯相接反例给 12 而真值 14），模板把覆盖次数、有效长度、覆盖段数与两端标记四件量一次维护好，并顺带说清「覆盖 ≥ k 层面积」为什么必须换一套维护量。</div>
+<figure class="fig"><svg viewBox="0 0 700 252" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="350.0" y1="56.0" x2="206.0" y2="82.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="350.0" y1="56.0" x2="494.0" y2="82.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="206.0" y1="110.0" x2="134.0" y2="136.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="206.0" y1="110.0" x2="278.0" y2="136.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="494.0" y1="110.0" x2="422.0" y2="136.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="494.0" y1="110.0" x2="566.0" y2="136.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="134.0" y1="164.0" x2="52.0" y2="190.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="134.0" y1="164.0" x2="118.0" y2="190.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="278.0" y1="164.0" x2="196.0" y2="190.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="278.0" y1="164.0" x2="260.0" y2="190.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="422.0" y1="164.0" x2="344.0" y2="190.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="422.0" y1="164.0" x2="408.0" y2="190.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="566.0" y1="164.0" x2="490.0" y2="190.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="566.0" y1="164.0" x2="554.0" y2="190.0" stroke="#b9ae94" stroke-width="1.0"/><rect x="327.0" y="29.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="350.0" y="46.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[1,8]</text><rect x="183.0" y="83.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="206.0" y="100.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[1,4]</text><rect x="471.0" y="83.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="494.0" y="100.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[5,8]</text><rect x="111.0" y="137.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="134.0" y="154.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[1,2]</text><rect x="255.0" y="137.0" width="46.0" height="26.0" rx="2" fill="#efe0bd" stroke="#8a6d2f" stroke-width="1.4"/><text x="278.0" y="154.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="700">[3,4]</text><rect x="399.0" y="137.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="422.0" y="154.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[5,6]</text><rect x="543.0" y="137.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="566.0" y="154.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[7,8]</text><rect x="29.0" y="191.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="52.0" y="208.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[1]</text><rect x="95.0" y="191.0" width="46.0" height="26.0" rx="2" fill="#efe0bd" stroke="#8a6d2f" stroke-width="1.4"/><text x="118.0" y="208.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="700">[2]</text><rect x="173.0" y="191.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="196.0" y="208.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[3]</text><rect x="237.0" y="191.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="260.0" y="208.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[4]</text><rect x="321.0" y="191.0" width="46.0" height="26.0" rx="2" fill="#efe0bd" stroke="#8a6d2f" stroke-width="1.4"/><text x="344.0" y="208.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="700">[5]</text><rect x="385.0" y="191.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="408.0" y="208.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[6]</text><rect x="467.0" y="191.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="490.0" y="208.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[7]</text><rect x="531.0" y="191.0" width="46.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="554.0" y="208.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#1b1b1b" font-weight="400">[8]</text><text x="350.0" y="240.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">查询 a[2..5]：只需 [2]、[3,4]、[5] 三个不交节点，代价 O(log n)，与区间长度无关</text></svg><figcaption class="cap"><b>图 27-1</b>线段树的区间分解：任意区间只需 O(log n) 个不交节点</figcaption></figure>
 <h3 class="kb-h">27.1 栈、队列与单调结构</h3>
 <p>STL 的 <code>stack / queue / deque / priority_queue</code> 直接可用，但竞赛里更常考的是它们的<b>变体</b>——单调栈与单调队列，用来在 O(n) 内求「每个元素左边/右边第一个更大值」和「滑动窗口最值」。</p>
 <pre class="code">// 单调栈：求每个位置右侧第一个更大的元素下标
@@ -6570,7 +6585,7 @@ sort(qs.begin(), qs.end(), [&amp;](const Q&amp;a, const Q&amp;b) {
 });</pre>
 <p><b>莫队的三个变体</b>：带修莫队（加时间维，块大小 n<sup>2/3</sup>）、树上莫队（欧拉序转区间，模板见 27.16）、回滚莫队（只加不删的操作，如维护最大值）。</p>
 <h3 class="kb-h">27.8 可持久化线段树（主席树）</h3>
-<p><b>一句话判定</b>：题目出现「历史版本」「区间第 k 小 / 第 k 大」「区间内某值出现次数」「在某个前缀上查询」且强制在线，就该想到可持久化线段树。核心思想只有一条——<b>只复制被修改的那条链</b>：每次单点修改新建 O(log n) 个节点，其余儿子指针指回旧版本，于是 n 个版本共享大部分结构。</p>
+<p><b>一句话判定</b>：题目出现「历史版本」「区间第 k 小 / 第 k 大」「区间内某值出现次数」「在某个前缀上查询」且强制在线，就该想到可持久化线段树。核心思想只有一条——<b>只复制被修改的那条链</b>：每次单点修改新建 O(log n) 个节点，其余儿子指针指回旧版本，于是 n 个版本共享大部分结构。</p><figure class="fig"><svg viewBox="0 0 700 258" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="170.0" y1="67.0" x2="112.0" y2="99.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="170.0" y1="67.0" x2="228.0" y2="99.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="112.0" y1="125.0" x2="82.0" y2="157.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="112.0" y1="125.0" x2="140.0" y2="157.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="228.0" y1="125.0" x2="200.0" y2="157.0" stroke="#b9ae94" stroke-width="1.0"/><line x1="228.0" y1="125.0" x2="258.0" y2="157.0" stroke="#b9ae94" stroke-width="1.0"/><rect x="150.0" y="41.0" width="40.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="170.0" y="58.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[]</text><rect x="92.0" y="99.0" width="40.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="112.0" y="116.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[1,4]</text><rect x="208.0" y="99.0" width="40.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="228.0" y="116.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[5,8]</text><rect x="62.0" y="157.0" width="40.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="82.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[1]</text><rect x="120.0" y="157.0" width="40.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="140.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[2]</text><rect x="180.0" y="157.0" width="40.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="200.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[5]</text><rect x="238.0" y="157.0" width="40.0" height="26.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.0"/><text x="258.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[6]</text><text x="170.0" y="200.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">v₁：整棵树新建</text><line x1="470.0" y1="67.0" x2="412.0" y2="99.0" stroke="#8a6d2f" stroke-width="1.5"/><line x1="470.0" y1="67.0" x2="528.0" y2="99.0" stroke="#d8d2c4" stroke-width="1.0" stroke-dasharray="3 4"/><line x1="412.0" y1="125.0" x2="382.0" y2="157.0" stroke="#d8d2c4" stroke-width="1.0" stroke-dasharray="3 4"/><line x1="412.0" y1="125.0" x2="440.0" y2="157.0" stroke="#8a6d2f" stroke-width="1.5"/><line x1="528.0" y1="125.0" x2="500.0" y2="157.0" stroke="#d8d2c4" stroke-width="1.0" stroke-dasharray="3 4"/><line x1="528.0" y1="125.0" x2="558.0" y2="157.0" stroke="#d8d2c4" stroke-width="1.0" stroke-dasharray="3 4"/><rect x="450.0" y="41.0" width="40.0" height="26.0" rx="2" fill="#efe0bd" stroke="#8a6d2f" stroke-width="1.5"/><text x="470.0" y="58.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[]</text><rect x="392.0" y="99.0" width="40.0" height="26.0" rx="2" fill="#efe0bd" stroke="#8a6d2f" stroke-width="1.5"/><text x="412.0" y="116.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[1,4]</text><rect x="508.0" y="99.0" width="40.0" height="26.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="3 4"/><text x="528.0" y="116.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[5,8]</text><rect x="362.0" y="157.0" width="40.0" height="26.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="3 4"/><text x="382.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[1]</text><rect x="420.0" y="157.0" width="40.0" height="26.0" rx="2" fill="#efe0bd" stroke="#8a6d2f" stroke-width="1.5"/><text x="440.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[2]</text><rect x="480.0" y="157.0" width="40.0" height="26.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="3 4"/><text x="500.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[5]</text><rect x="538.0" y="157.0" width="40.0" height="26.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="3 4"/><text x="558.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="7" text-anchor="middle" fill="#1b1b1b" font-weight="400">[6]</text><text x="470.0" y="200.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#9a5a3c" font-weight="400">v₂：只复制「根 → 叶」这条路径</text><text x="470.0" y="218.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">虚线框 = 整棵复用，不再复制</text><text x="30.0" y="246.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">版本号只是一个根指针：一次修改新建 O(log n) 个节点，其余子树原样指向旧版本</text></svg><figcaption class="cap"><b>图 27-2</b>可持久化线段树的版本共享：每次只新建一条路径</figcaption></figure>
 <p><b>两个前提，缺一不可</b>：① 信息可减。区间 <code>[l,r]</code> 的答案由「版本 r 减去版本 l−1」得到，所以维护的必须是计数、和这类可减量，<code>max</code> 不满足可减性，区间最大值不能这么做；② 修改可拆成单点。区间修改要配合标记永久化，节点常数与出错率都翻倍，考场上优先换做法（如树套树或离线）。</p>
 <table class="tbl"><thead><tr><th style="width:30%">操作</th><th style="width:26%">时间</th><th>说明</th></tr></thead><tbody>
 <tr><td>建初始版本</td><td>O(n log V)</td><td>空树可用 0 号节点表示，省掉一次建树</td></tr>
@@ -6579,7 +6594,7 @@ sort(qs.begin(), qs.end(), [&amp;](const Q&amp;a, const Q&amp;b) {
 <tr><td>总空间</td><td>O((n+m) log V)</td><td>m 为修改次数，V 为离散化后的值域</td></tr>
 </tbody></table>
 <p><b>四个高频变形</b>：区间第 k 小（前缀版本差，见下模板）；区间内 ≤ x 的个数（同一结构上二分值域，不必另建）；树上路径第 k 小（每个点继承父亲的版本，查询时四个版本 <code>u+v−lca−fa[lca]</code> 同层相减）；可持久化数组 / 并查集（叶子存值，并查集用可持久化数组存 <code>fa</code>，按秩合并且<b>不做</b>路径压缩）。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 const int MAXN = 200005, LOG = 20;
@@ -6635,7 +6650,7 @@ int main() {
 <li>能表示出的不同异或值恰有 2<sup>cnt</sup> 个（含 0）。若 cnt &lt; n，说明原集合存在非空子集异或为 0。</li>
 </ul>
 <p><b>插入</b>：从高位往低位消。第 i 位为 1 而 <code>d[i]</code> 为空就占位，否则异或掉 <code>d[i]</code> 继续降位；消到 0 说明该数已可由现有基表示（线性相关）。<code>d[i]</code> 的含义统一为「最高位恰为 i 的基向量」，这是所有查询写法正确的前提。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 typedef long long ll;
@@ -6749,7 +6764,7 @@ int main() {
 <tr><td>空间</td><td>O(n log n log V)</td><td>真正的瓶颈，见下一段</td></tr>
 </tbody></table>
 <p><b>空间必须先算再写</b>：每个元素插入时被 O(log n) 个树状数组节点收录，每次收录新建 O(log V) 个节点，故总节点数 ≈ <code>n · log n · log V</code>。n = V = 10<sup>5</sup> 时约 2.9×10<sup>7</sup> 个节点，三个 int（左右儿子 + 计数）就要 350 MB。这个数字决定两件事：① 数组上界必须按公式算，不能凭感觉写 <code>MAXN*20</code>；② 若内存只给 256 MB，这道题的<b>正确选择是离线整体二分</b>，而不是硬压树套树——后者在考场上十次有八次死在 MLE 上。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 
@@ -6854,7 +6869,7 @@ int main() {
 <tr><td><code>cut(x,y)</code></td><td>断边（要求这条边存在）</td><td><code>makeroot(x);</code> 后必须同时满足 <code>findroot(y)==x</code>、<code>fa[y]==x</code>、<code>ch[y][0]==0</code></td></tr>
 </tbody></table>
 <p><b>复杂度</b>：单次操作均摊 O(log n)，m 次操作共 O((n+m) log n)，空间 O(n)。「均摊」来自 splay 的势能分析，不是严格最坏；出题人无法构造出让单次退化的数据，但常数确实大，n = 10<sup>5</sup> 时要有 2 秒以上的心理预期。</p>
-<pre class="code">// 维护：路径点权和 + 单点修改（求路径异或和只需把 sum 换成 xr、+ 换成 ^）
+<pre class="code code-long">// 维护：路径点权和 + 单点修改（求路径异或和只需把 sum 换成 xr、+ 换成 ^）
 const int N = 100005;
 int ch[N][2], fa[N], sum[N], val[N];
 bool rev[N];
@@ -6947,7 +6962,7 @@ int query(int x, int y) { split(x, y); return sum[y]; }</pre>
 <tr><td>插入（含重构）</td><td>O(log n) 均摊</td><td>单次重构 O(n)</td></tr>
 </tbody></table>
 <p>为什么二维是 √n：把平面切成 n 个近似等大的格子，一次矩形查询真正需要访问的，只有「完全落在查询框内」和「与框边界相交」的那些格子；格子边长约 n<sup>−1/2</sup>，边界穿过的格子数约 O(n<sup>1/2</sup>)。这个论证依赖「点分布均匀」——数据集中在一条斜线上时包围盒大面积重叠，剪枝几乎失效，实测会退到 O(n)，这是 KD-Tree 最实际的风险。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 typedef long long ll;
@@ -7074,7 +7089,7 @@ void nearest(int u, int x, int y) {
 <p><b>复杂度</b>：预处理 O(n)；路径查询/修改 O(log<sup>2</sup> n)（O(log n) 段 × 每段 O(log n)）；子树查询/修改 O(log n)；LCA O(log n)；空间 O(n)。</p>
 <p><b>为什么只有 O(log n) 段</b>：从任一点往上走，每经过一条轻边，所在子树的规模至少减半（否则那条边就该是重边），所以到根至多经过 ⌊log<sub>2</sub> n⌋ 条轻边；一条路径由「u 到 LCA」与「v 到 LCA」两段组成，故段数不超过 2⌊log<sub>2</sub> n⌋ + 1。这条证明顺手解释了为什么剖分要按 <code>sz</code> 选重儿子，而不是按儿子个数。</p>
 
-<pre class="code">const int MAXN = 200005;
+<pre class="code code-long">const int MAXN = 200005;
 const int INF  = 0x3f3f3f3f;
 int n, m, root, tim;
 vector&lt;int&gt; g[MAXN];
@@ -7203,7 +7218,7 @@ int subMaxRoot(int u) {
 <p><b>结论</b>：只问子树、不问路径的统计类问题（子树内不同颜色数、子树众数、子树内某深度的点数……），只要统计量能 O(1) 加入与撤销，就可以用「保留重儿子的桶、暴力重加轻子树」的做法，把朴素 O(n<sup>2</sup>) 压到 <b>O(n log n)</b>。它不需要线段树、不需要离散化，代码二十来行，是子树统计题里性价比最高的做法。</p>
 <p><b>为什么是 O(n log n)</b>：每个点被「暴力加入」的次数 = 从它到根的路径上经过的轻边数 + 1。每走一条轻边子树规模至少减半，故次数不超过 ⌊log<sub>2</sub> n⌋ + 1，全树总代价 O(n log n)。这与 27.13 的剖分用的是同一条不等式——「重儿子」在两节里含义完全一致，只是用法不同：剖分拿它切区间，启发式合并拿它省重算。</p>
 
-<pre class="code">const int MAXN = 200005, MAXC = 1000005;
+<pre class="code code-long">const int MAXN = 200005, MAXC = 1000005;
 int n, col[MAXN];
 vector&lt;int&gt; g[MAXN];
 int sz[MAXN], son[MAXN];
@@ -7287,7 +7302,7 @@ void dfs(int u, int f, bool keep) {
 <tr><td>树上合并整棵树</td><td>O(n log V)</td><td>后序遍历，每个点把自己的单点树 merge 进父亲</td></tr>
 </tbody></table>
 <p>下面这份模板把「单点插入 + 合并 + 按值分裂 + 第 k 小 + 前缀计数」写全，最后附一段<b>树上合并</b>的完整主程序（每个点问自己子树内的第 k 小），可以直接编译运行。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 
@@ -7422,7 +7437,7 @@ int main() {
 <tr><td>带修树上莫队</td><td>O(n<sup>5/3</sup>)</td><td>加时间维，块大小改 <code>n<sup>2/3</sup></code>；改动点在点集内时才真正影响答案</td></tr>
 </tbody></table>
 <p>下面这份模板求「路径上不同权值个数」，读入 <code>n m</code>、n 个点权、n−1 条边、m 组 <code>u v</code>，输出每组询问的答案，可直接编译运行。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 #include &lt;cmath&gt;
 using namespace std;
@@ -7554,7 +7569,7 @@ int main() {
 <p><b>模板（经典应用：切断全部关键点与根的最小代价，即「消耗战」模型）</b>：设 <code>mn[u]</code> 为「根到 u 路径上的最小边权」，即切断这条路径最便宜的一刀。虚树上做一次 DP：</p>
 <p style="text-align:center"><code>f[u] = mn[u]</code>（u 是关键点）　；　<code>f[u] = min(mn[u], Σ f[儿子])</code>（u 不是关键点）</p>
 <p>含义很清楚：要么在 u 及其上方一刀切断（代价 <code>mn[u]</code>），要么把每个儿子各自切断（代价是儿子们之和），两者取小。根没有入边，所以 <code>mn[1] = +∞</code>。</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const int N = 250005, LOG = 19;
@@ -7687,7 +7702,7 @@ int main() {
 </tbody></table>
 <p><b>关键约束：add 必须与加入顺序无关</b>。左移是<b>按位置递减</b>加入的，任何依赖「第一次/最后一次出现位置」的写法都会在这里失效（本轮实测见易错点第 5 条）。下面用「区间众数频次」作模板题：<code>cnt[v]</code> 与 <code>mx</code> 只依赖当前集合，与加入顺序无关，且 <code>mx</code> 单调取最大、删除不可逆，正好是回滚莫队的标准用例。</p>
 
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int MAXN = 100000 + 5, MAXV = 100000 + 5;   // 值域须离散化到 1..MAXV
 int n, q, B, a[MAXN], cnt[MAXV], tmp[MAXV], mx;
@@ -7752,7 +7767,7 @@ void solve() {
 </tbody></table>
 <p><b>适用判定</b>：贡献必须能写成 <code>G(x,r)−G(x,l−1)</code> 的前缀差。若依赖「当前区间里有多少个元素」这类非线性量，或 P 与当前集合有关，二次离线不成立，应改回滚莫队或线段树分治（28.17）。</p>
 
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 using ll = long long;
 int n, q, B, V, K;                 // a[] 离散化到 1..V
@@ -7850,7 +7865,7 @@ void solve() {
 <p><b>为什么不能路径压缩</b>：路径压缩把 <code>find</code> 从「只读」变成「写入若干位置」——一次 <code>find</code> 平均要改写 O(log n) 个父亲指针，在可持久化数组里每个位置是 O(log n) 个新结点，单次 <code>find</code> 的<b>空间</b>代价就直接变成 O(log² n)，为省一点时间付这样的空间毫无意义；更根本的是，压缩把「谁合并到谁」的历史抹掉了，回退到旧版本时无法还原。所以可持久化并查集一律按大小（或按秩）合并，不压缩。反过来，正因为不能压缩，<b>合并策略成了唯一的树高保证</b>——按序号合并时树高会退化到 O(n)，这一条在下面的实测里代价极大。</p>
 
 <p><b>模板：可持久化数组 + 按大小合并</b>。根上存<b>负的集合大小</b>：<code>v[p] &gt; 0</code> 表示父亲编号，<code>v[p] &lt; 0</code> 表示自己是根且集合大小为 <code>−v[p]</code>。</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int MAXN = 200005;      // 点数
 const int LOGN = 19;          // ceil(log2(MAXN))
@@ -8037,7 +8052,7 @@ int topOf(int a) {                             // 取堆顶，顺手清掉墓碑
 <p><b>它解决什么问题</b>。给定一个<b>静态</b>序列 <code>a[1..n]</code>，题面里凡是出现下面这些措辞，背后都是同一棵树：区间最小值在哪个位置、以某个点为最小值的极大区间有多长、直方图里的最大矩形、分治式 DP 的候选决策点集合、以及 RMQ 与 LCA 的互转。把这五件事分开写，是五份代码；写成笛卡尔树，是一份代码加五个结论。</p>
 <p><b>定义与三条不变量</b>。笛卡尔树是一棵二叉树，每个结点对应一个下标 <code>i</code>，并满足：① <b>中序遍历恰为原序列</b> <code>1, 2, …, n</code>；② <b>堆序</b>——父结点的 <code>a</code> 值不大于儿子（本节一律用小根，最大矩形改成大根只换一个比较符）；③ 同时满足 ①② 的树对给定序列<b>唯一</b>（序列里有重复值时，谁在上由建树时的比较符决定，见易错点 2）。第 ① 条把「位置」和「结构」锁死，于是任何子树都对应一段<b>连续</b>区间；第 ② 条把「最小值」翻译成「根」，于是「区间最小值在哪」就变成了「这两个点的 LCA 是谁」。这两句就是全部内容的来源。</p>
 <p><b>建树：单调栈，O(n)</b>。做法是边扫边维护<b>右链</b>——从根出发一路向右走的那条链，它的 <code>a</code> 值单调不降。来了新元素 <code>i</code> 时，把右链上所有比它大的点弹出（它们都比 <code>a[i]</code> 大，只能挂在 <code>i</code> 的左边），最后一个被弹出的点成为 <code>i</code> 的左儿子，而新的栈顶（比 <code>a[i]</code> 小的那个）的右儿子改成 <code>i</code>。全程不进递归，一句 <code>while</code> 搞定。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 const int N = 1000005;
@@ -8116,7 +8131,7 @@ long long maxRectangle(int n) {          // 直方图最大矩形，要求 a[i] 
 <p><b>复杂度</b>：离散化 <code>O(n log n)</code>；每次更新 <code>O(log n)</code>，共 <code>2n</code> 个事件，故面积并与周长并均为 <code>O(n log n)</code>（周长常数 ×2）。空间 <code>O(n)</code>：线段树建在 <code>m−1</code> 个基本区间上（<code>m</code> 为不同的 <code>y</code> 坐标数），节点数需 <code>8n</code>。答案必须 <code>long long</code>：坐标 <code>10<sup>9</sup></code>、<code>n = 10<sup>5</sup></code> 时面积可达 <code>10<sup>23</sup></code>，<code>double</code> 在这个量级的最小间隔已是 <code>10<sup>7</sup></code>，存不下整数。</p>
 
 <p><b>模板</b>（面积并 + 周长并共用一棵线段树，单文件可编译；<code>n ≤ 10<sup>5</sup></code> 个矩形）：</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const int MAXN = 100005;            // 矩形个数上限
@@ -8238,6 +8253,7 @@ int main() {
 <p><b>与 31.3 的分工</b>：31.3 只给了扫描线的思想与三维偏序、离线三板斧的骨架；本节补的是<b>二维矩形族的整份实现</b>与「周长并为什么必须两遍」这个具体结论。若题目只是「矩形面积并」，直接抄本节；若把矩形换成点、把面积换成计数，那是 24.8 的 CDQ 与 31.3 的离线排序更合适。</p>
 <h2 id="ch28"><span class="chk">28</span>第 28 章　图论</h2>
 <div class="ch-intro">图论题的难点在建模，不在模板。本章先讲存图与最短路的选择，再依次覆盖生成树、拓扑、连通性、二分图、网络流、树上的 LCA/树剖，最后是欧拉路、差分约束与 2-SAT——后两者正是「最短路」与「强连通分量」各自的一次建模应用；28.12 的点分治则把「树上路径统计」这一类问题的复杂度从 O(n²) 压到 O(n log² n)；28.13 把「两两之间必有一场」的竞赛图单独拆出来，得分序列的 Landau 判定、缩点成链、三元环计数与哈密顿路径构造四件事全都只靠出度序列完成，一次排序即可定论；28.14 收尾于 Dilworth 定理，把「偏序集的最小链覆盖 = 最长反链」这条结论落成一个拆点二分图上的最大匹配，顺带说清「闭包 / 不闭包」这一步之差为什么会让答案从链覆盖变成路径覆盖；28.15 把 28.7 只用一段话带过的费用流补全，SSP、势能 Dijkstra 与上下界可行流三套模板连同建模清单一次写清；28.16 收尾于匹配的两块硬骨头——KM 用可行顶标与相等子图解决二分图带权完美匹配，带花树用奇环缩点解决一般图最大匹配，两节模板与「什么情况下别硬套」的判断一并给出；28.17 补上「边有存活时间」这一类动态连通性问题，用线段树分治把时间轴摊平、用可撤销并查集吃掉「删除」，把 O(m log T log n) 的离线做法讲成可直接套用的模板，并说清路径压缩为什么必须去掉。28.18 收尾于最小树形图：28.3 只用一句话带过的朱刘算法在此展开成完整模板——最小入边、缩环、以及「边权为何改成 w − inw[v]」的差额论证；顺带记下一个反直觉的实测结论：虚拟根法在有解图上从不出错，却在无解图上必然给出一个错误数值（88/88），因为多条虚拟边会把图拼成森林。28.19 最后回到 28.15 的费用流，但换一条路走：当网络结构足够规整（链、环、树）时，不必建图，用「取最小 + 把撤销写成一个新候选值」的贪心循环就能模拟 k 次增广，代价从 O(k·m log n) 降到 O((n+k) log n)——模板只有堆、双向链表与一个反悔公式 <code>a<sub>l</sub>+a<sub>r</sub>−a<sub>x</sub></code>，配链与环两套完整代码，以及两个实测错误率（不写反悔点 224/400、只删邻居不重连 50/400）。28.20 收尾于最小割树（Gomory–Hu）：它把 n(n−1)/2 个点对最小割压成 n−1 条树边，任意两点的答案就是树上路径的最小边权——建树只需 n−1 次最大流（实测 n=5/8/12 恰好 4/7/11 次），每次切分靠的是「残量网络里 s 的可达集」而不是原图，这一步写错整棵树就不成立；本节同时记下三条实测口径：有向图上正反向最大流可以不等（1035 组点对）、无向边的反向容量写成 0 会让答案偏小、复用上一层的残量网络会污染后续的 λ。28.21 收尾于二分图博弈：在「点不可重复」的游走博弈里，先手必败当且仅当起点不被某个最大匹配覆盖——一趟 Hopcroft–Karp 加两次交错路标记，之后任意起点 O(1) 回答，配网格式的完整模板与三个实测错误率。28.22 收在另一种「边太多」的形态上：当边的端点不是点而是一段区间（<code>u → [l,r]</code>、<code>[l,r] → v</code>），朴素展开是 O(nq) 条边，而把区间本身变成线段树节点、给每个点配上「入点/出点」两个角色、再加一条 0 权桥边，就能把点压到 4n、边压到 O((n+q) log n)——本节给出四种边的接法、正确性的三条依据，以及四条实测错误率（漏桥边 234/300、桥边反向 234/300、两棵树方向写反 244/300、起点只取入点导致 300 组全错）。</div>
+<figure class="fig"><svg viewBox="0 0 700 256" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="72.0" y1="112.0" x2="180.0" y2="56.0" stroke="#b9ae94" stroke-width="1.1"/><rect x="117.0" y="76.0" width="18.0" height="15.0" rx="0" fill="#fffdf8" stroke="none" stroke-width="1.1"/><text x="126.0" y="88.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#8a6d2f" font-weight="400">4</text><line x1="72.0" y1="112.0" x2="180.0" y2="172.0" stroke="#b9ae94" stroke-width="1.1"/><rect x="117.0" y="134.0" width="18.0" height="15.0" rx="0" fill="#fffdf8" stroke="none" stroke-width="1.1"/><text x="126.0" y="146.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#8a6d2f" font-weight="400">2</text><line x1="180.0" y1="56.0" x2="296.0" y2="56.0" stroke="#b9ae94" stroke-width="1.1"/><rect x="229.0" y="48.0" width="18.0" height="15.0" rx="0" fill="#fffdf8" stroke="none" stroke-width="1.1"/><text x="238.0" y="60.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#8a6d2f" font-weight="400">5</text><line x1="180.0" y1="172.0" x2="296.0" y2="172.0" stroke="#b9ae94" stroke-width="1.1"/><rect x="229.0" y="164.0" width="18.0" height="15.0" rx="0" fill="#fffdf8" stroke="none" stroke-width="1.1"/><text x="238.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#8a6d2f" font-weight="400">3</text><line x1="180.0" y1="56.0" x2="180.0" y2="172.0" stroke="#b9ae94" stroke-width="1.1"/><rect x="171.0" y="106.0" width="18.0" height="15.0" rx="0" fill="#fffdf8" stroke="none" stroke-width="1.1"/><text x="180.0" y="118.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#8a6d2f" font-weight="400">7</text><line x1="296.0" y1="56.0" x2="412.0" y2="112.0" stroke="#b9ae94" stroke-width="1.1"/><rect x="345.0" y="76.0" width="18.0" height="15.0" rx="0" fill="#fffdf8" stroke="none" stroke-width="1.1"/><text x="354.0" y="88.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#8a6d2f" font-weight="400">6</text><line x1="296.0" y1="172.0" x2="412.0" y2="112.0" stroke="#b9ae94" stroke-width="1.1"/><rect x="345.0" y="134.0" width="18.0" height="15.0" rx="0" fill="#fffdf8" stroke="none" stroke-width="1.1"/><text x="354.0" y="146.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#8a6d2f" font-weight="400">8</text><line x1="296.0" y1="56.0" x2="296.0" y2="172.0" stroke="#b9ae94" stroke-width="1.1"/><rect x="287.0" y="106.0" width="18.0" height="15.0" rx="0" fill="#fffdf8" stroke="none" stroke-width="1.1"/><text x="296.0" y="118.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#8a6d2f" font-weight="400">1</text><circle cx="72.0" cy="112.0" r="13.0" fill="#f6f2e8" stroke="#8a6d2f" stroke-width="1.2"/><text x="72.0" y="116.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">S</text><circle cx="180.0" cy="56.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="180.0" y="60.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">A</text><circle cx="180.0" cy="172.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="180.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">B</text><circle cx="296.0" cy="56.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="296.0" y="60.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">C</text><circle cx="296.0" cy="172.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="296.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">D</text><circle cx="412.0" cy="112.0" r="13.0" fill="#f6f2e8" stroke="#8a6d2f" stroke-width="1.2"/><text x="412.0" y="116.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="700">T</text><text x="505.0" y="34.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#8a6d2f" font-weight="700">分层图（Dinic）</text><rect x="499.0" y="68.0" width="26.0" height="116.0" rx="2" fill="none" stroke="#b9ae94" stroke-width="1.1" stroke-dasharray="3 3"/><text x="512.0" y="60.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">s</text><rect x="543.0" y="68.0" width="26.0" height="116.0" rx="2" fill="none" stroke="#b9ae94" stroke-width="1.1" stroke-dasharray="3 3"/><text x="556.0" y="60.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">v₁</text><rect x="587.0" y="68.0" width="26.0" height="116.0" rx="2" fill="none" stroke="#b9ae94" stroke-width="1.1" stroke-dasharray="3 3"/><text x="600.0" y="60.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">v₂</text><rect x="631.0" y="68.0" width="26.0" height="116.0" rx="2" fill="none" stroke="#b9ae94" stroke-width="1.1" stroke-dasharray="3 3"/><text x="644.0" y="60.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">t</text><line x1="527.0" y1="92.0" x2="537.6" y2="101.1" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="541.0,104.0 536.4,102.5 538.8,99.6" fill="#8a6d2f"/><line x1="571.0" y1="106.0" x2="581.6" y2="115.1" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="585.0,118.0 580.4,116.5 582.8,113.6" fill="#8a6d2f"/><line x1="615.0" y1="120.0" x2="625.6" y2="129.1" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="629.0,132.0 624.4,130.5 626.8,127.6" fill="#8a6d2f"/><line x1="527.0" y1="154.0" x2="537.6" y2="144.9" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="3 3"/><polygon points="541.0,142.0 538.8,146.4 536.4,143.5" fill="#b9ae94"/><line x1="571.0" y1="168.0" x2="581.6" y2="158.9" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="3 3"/><polygon points="585.0,156.0 582.8,160.4 580.4,157.5" fill="#b9ae94"/><text x="505.0" y="200.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#7c7566" font-weight="400">实线：层号 +1 的正向边</text><text x="505.0" y="214.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#7c7566" font-weight="400">虚线：逆层边，可走即反悔</text><text x="350.0" y="244.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">同一张图，两种读法：边上给权就是最短路，给容量就是最大流</text></svg><figcaption class="cap"><b>图 28-1</b>同一张图，两种读法：边权求最短路，容量求最大流</figcaption></figure>
 <h3 class="kb-h">28.1 存图的三种方式</h3>
 <p>存图方式决定了后续算法的常数，选错会让正解超时。</p>
 <table class="tbl"><thead><tr><th style="width:22%">方式</th><th style="width:26%">空间</th><th>适用场景</th></tr></thead><tbody>
@@ -8352,7 +8368,7 @@ int hungary() {
 <p><b>规模选择</b>：n ≤ 500 用匈牙利；n ≤ 10<sup>4</sup> 且边稀疏用 Hopcroft-Karp（O(E√V)）；带权最大匹配用 KM 算法（O(n<sup>3</sup>)，模板与顶标不变量见 28.16）或费用流。</p>
 <h3 class="kb-h">28.7 网络流：Dinic 模板</h3>
 <p>网络流解决「带容量约束的分配问题」：最大流、最小割、费用流。考场上 90% 的题用 Dinic 就够。</p>
-<pre class="code">struct Dinic {
+<pre class="code code-long">struct Dinic {
     struct E { int to, nxt; long long cap; };
     vector&lt;E&gt; e; vector&lt;int&gt; head, cur, lev;
     int n, s, t;
@@ -8434,7 +8450,7 @@ int lca(int u, int v) {
 <p><b>为什么是「最大解」</b>：源点到 <code>i</code> 的最短路是满足所有上界约束的最小上界，也就是 <code>x<sub>i</sub></code> 能取到的最大值；想让每个变量尽量小，就对同一个图求最长路。两种解只差一个整体平移，若题目要求非负，把整组解同时加上一个常数即可（差值不变，约束仍成立）。</p>
 <p><b>有解判定</b>：存在负环 ⇔ 无解。因为负环意味着沿环累加得到 <code>x<sub>i</sub> ≤ x<sub>i</sub> − k</code>（k &gt; 0），自相矛盾。所以判负环与判可行性是同一件事。</p>
 <p><b>复杂度</b>：SPFA 最坏 O(nm)，随机图上接近 O(m)。n、m 在 5×10<sup>3</sup> 量级可以放心用；到 10<sup>5</sup> 要先看约束有没有特殊结构（区间、前缀），多数情况下应改用线段树优化建图或直接贪心求解。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;cstring&gt;
 #include &lt;queue&gt;
 using namespace std;
@@ -8495,7 +8511,7 @@ int main() {
 <li>若题目直接给出蕴含 <code>a → b</code>，同样要补逆否边 <code>¬b → ¬a</code>。</li>
 </ul>
 <p><b>判定条件</b>：对蕴含图求强连通分量。对每个变量 x，若「x 为真」与「x 为假」两个点在同一个 SCC 内，则 x 既蕴含自己为真又蕴含自己为假，必然矛盾，整体无解。<b>赋值</b>：Tarjan 的出栈编号是按拓扑序<b>逆序</b>给的（汇点先编号、编号更小），取编号更小的那一侧为真即可，即 <code>scc[真] &lt; scc[假]</code> 时该变量为真。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
 using namespace std;
@@ -8598,7 +8614,7 @@ void rollback(int save) {             // 撤销到快照 save
 <tr><td>递归各子树</td><td>—</td><td>深度 O(log n)，各层 size 之和 O(n log n)</td></tr>
 </tbody></table>
 <p><b>必须理解的一步：容斥</b>。我们先把「重心到所有点的距离」放进同一个数组排序统计，得到的点对里混进了「两点在同一子树内」的情形。它们的真实路径并不经过重心（实际更短），却被按 <code>d<sub>x</sub> + d<sub>y</sub></code> 计了一次，所以要逐个子树<b>减去</b>「只在该子树内部」的点对数。不减也能跑出结果，只是每对点会在它所属的每一层被重复计一次——小数据下答案偏大而看不出错，这是本节最高频的失分点。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 typedef long long ll;
@@ -8722,7 +8738,7 @@ int main() {
 <p><b>三元环公式为什么成立</b>：任取三点，要么成环（每点出度 1，对 <code>ΣC(d<sub>i</sub>,2)</code> 贡献 0），要么是传递的（有唯一一个「中心」点出度 2，恰好被 <code>C(d<sub>i</sub>,2)</code> 数到一次）。所以「选了某个点的两条出边」与「一个传递三角形」一一对应，环数 = 总数 − 传递数。这个公式把 O(n<sup>3</sup>) 的三重循环压成 O(n) 的一次求和，是竞赛图题最高频的一步。</p>
 
 <p><b>可编译模板</b></p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 
@@ -8849,7 +8865,7 @@ int main() {
 </ol>
 
 <p><b>可编译模板</b></p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 struct Dilworth {
@@ -8969,7 +8985,7 @@ int main() {
 <tr><td>ZKW / 原始对偶 + 多路增广</td><td>与流量无关，O(n·m log n) 级</td><td>费用范围小、增广路多时明显更快，但难调，考场上非必要不用</td></tr>
 </tbody></table>
 <p><b>模板 A：SPFA 版 SSP（可直接编译，含建图与主程序）</b></p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;cstring&gt;
 #include &lt;queue&gt;
 #include &lt;algorithm&gt;
@@ -9029,7 +9045,7 @@ int main() {
     return 0;
 }</pre>
 <p><b>模板 B：换成势能 Dijkstra（把模板 A 的 <code>spfa()</code> 与主循环整体替换成下面这段）</b>。核心是「折算费用」<code>w' = w + h[u] − h[v] ≥ 0</code>：<code>h</code> 是上一轮的真实最短路距离，减去它之后所有边权非负，Dijkstra 才成立；每轮结束把 <code>h[v] += dist[v]</code> 更新回去，累计的 <code>h[T]</code> 就是这一轮的真实最短路费用。</p>
-<pre class="code">// 需要额外 #include &lt;vector&gt; 与 &lt;functional&gt;；pre[] 沿用模板 A 的定义
+<pre class="code code-long">// 需要额外 #include &lt;vector&gt; 与 &lt;functional&gt;；pre[] 沿用模板 A 的定义
 ll h[MAXN], dist[MAXN];
 
 void initPot() {                            // 初始势能：允许负权边的 Bellman-Ford（队列版）
@@ -9145,7 +9161,7 @@ bool lowerBoundFlow(int N, int s, int t, ll &amp;ans) {
 <tr><td>一般图最大权匹配</td><td>带权带花树</td><td>O(n<sup>3</sup>)</td><td>本节不覆盖：<code>lca</code>/<code>shrink</code> 要带对偶变量，改写风险高</td></tr>
 </tbody></table>
 <p>先看 KM。下面这份程序读入 <code>n</code> 与 n×n 的权值矩阵（要求 <code>w ≥ 0</code>），输出最大权完美匹配的总权值与每个左点的配对，可直接编译运行。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 typedef long long ll;
@@ -9209,7 +9225,7 @@ int main() {
 }</pre>
 <p><b>带花树为什么需要缩点</b>：匈牙利依赖「交替路长度为奇数、两端分属不同侧」这一层级假设，而一般图里的<b>奇环</b>会让绕行一圈后回到同一侧，BFS 的层级被破坏。带花树的处理是：一旦在当前外点 u 与同为外点的邻点 v 之间发现奇环，就把整朵「花」用并查集缩成一个点（<code>fa[]</code> 维护归属），在缩点后的图上继续 BFS；找到增广路后按 <code>pre[]</code> 回溯，缩点内部的点自然被还原。颜色只有两种：<code>base[u] = 1</code> 为<b>外点</b>（偶层，可继续扩展），<code>base[u] = 2</code> 为<b>内点</b>（奇层，不再扩展）。</p>
 <p>对当前外点 u 的每条邻边 (u, v)，只有三种情况：① <code>find(u) == find(v)</code> 或 <code>base[v] == 2</code> → 无用，跳过；② <code>base[v] == 1</code> → 构成奇环，求 <code>lca(u,v)</code> 后从两侧各 <code>shrink</code> 一次；③ v 未访问过 → 记 <code>pre[v] = u</code>，若 v 空闲则沿 pre 回溯增广成功，否则把 v 标内点、<code>match[v]</code> 标外点并入队。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
 #include &lt;vector&gt;
 using namespace std;
@@ -9318,7 +9334,7 @@ int main() {
 <tr><td>对比：可持久化并查集（在线）</td><td>单次 O(log<sup>2</sup> n)</td><td>按秩合并 + 主席树维护 <code>fa</code>，能在线、能查历史版本，但常数与空间都更大</td></tr>
 </tbody></table>
 <p>下面这份模板解决「边在一段时刻内存在、求每个时刻的连通块数」，读入 <code>n m T</code>、m 组 <code>u v l r</code>，输出 T 行、每行时刻 1..T 的连通块数，可直接编译运行。要回答「时刻 t 时 u 与 v 是否连通」，只需在叶子处 <code>find(u) == find(v)</code>；把询问按时刻挂到叶子上的 <code>vector</code> 里即可，<b>不要</b>在 DFS 里对所有询问做一遍线性扫描。</p>
-<pre class="code">#include &lt;cstdio&gt;
+<pre class="code code-long">#include &lt;cstdio&gt;
 #include &lt;vector&gt;
 using namespace std;
 
@@ -9434,7 +9450,7 @@ int main() {
 <p><b>为什么是 <code>w − inw[v]</code></b>。环上的每个点都已经按 <code>inw[v]</code> 付过代价了；如果最终方案要改用另一条边 <code>(u,v,w)</code> 进入 v，等价于「退掉环内那条入边、换上这条」，净增 <code>w − inw[v]</code>。这正是差额（增量）建模：把「替换」写成「补差价」，从而把「必须选、且只能选一条」的约束压进边权里。它与 28.15 费用流残量网络里「反向边权为负」是同一个思想——已选的要能被退掉。理解这一点，才明白为什么缩点后边权可能变成 0 甚至继续缩小，而答案仍然单调正确。</p>
 
 <p><b>模板</b>（n ≤ 100、m ≤ 10<sup>4</sup>，答案用 long long）</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int MAXN = 105, MAXM = 10005;
 const long long INF = (long long)4e18;   // 必须远大于任何可能答案
@@ -9536,7 +9552,7 @@ int main() {
 <p>实现上把这三步做成一次「合并」：<code>val[x] ← val[l] + val[r] − val[x]</code>；从链表里删掉 <code>l、r</code>；让 <code>x</code> 接上 <code>l</code> 的前驱与 <code>r</code> 的后继；把 <code>x</code> 的新值重新入堆。下一轮若又取到 <code>x</code>，等价于「撤销 x、改选 l 与 r」。</p>
 
 <p><b>模板 A：链上选 k 个两两不相邻，最小和</b>（数据备份 / 种树）。<code>k</code> 与 <code>n</code> 同阶，复杂度 O((n+k) log n)，空间 O(n)。</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const ll INF = (ll)4e18;         // 哨兵：比任何合法答案都大，永不被选
@@ -9636,7 +9652,7 @@ ll solveChain(vector&lt;ll&gt; a, int k) {
 <p><b>三个直接可用的推论</b>：全局最小割 = 树上最小边权；「最小割有几种取值」= 树边权去重后的个数（答案只可能取 <code>n−1</code> 条树边之一，而每条树边权都能由它两个端点取到）；「<code>u</code> 到所有点的最小割」= 从 <code>u</code> 出发一次 DFS 的路径最小值。</p>
 
 <p><b>模板</b>（Dinic + 建树 + 查询，单文件可编译）：</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const int MAXN = 505;
@@ -9774,7 +9790,7 @@ int main() {
 <p>总复杂度 O(E√V)，瓶颈就是一次最大匹配。</p>
 
 <p><b>模板</b>（1 为起始下标，0 表示空；<code>g</code> 只存 L→R 的有向边，无向边拆成两条后按染色结果归位）：</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int MAXN = 200005;
 int nl, nr;                        // L 侧点数、R 侧点数
@@ -9895,7 +9911,7 @@ void markLose() {                  // 两侧分别标记，千万别合成一次
 <p><b>规模与复杂度</b>：点数 = 两棵线段树的节点总数 = 4n（实测 n = 1000 时 3998 个点，n = 10<sup>5</sup> 时 399,998 个点，正好 4.00n）；边数 = 树边 2·(2n−1) + 桥边 n + q·2log₂n，实测 n = q = 10<sup>5</sup> 时 3,283,730 条，约 1.0·(n+q)log₂n。Dijkstra 的复杂度从 O((n+q) log n) 变成 O((n + q log n) log n)。空间要比原来的「点图」多算 4 倍点、17 倍边，这是它唯一的代价。</p>
 
 <p><b>模板</b>（1 起编号，四种边全覆盖；<code>MAXE</code> 按 4n + n + 2q log n 开）：</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int MAXN = 100005;        // 原图点数
 const int MAXV = MAXN * 4 + 5;  // 辅助点：两棵线段树共 4n
@@ -9988,6 +10004,7 @@ int main() {
 <p><b>与相邻节的分工</b>：27.4 是线段树本身，27.10 的树套树解决「带修区间第 k 小」，本节只借线段树的<b>区间分解</b>能力，树上不维护任何信息、连 <code>pushup</code> 都不需要；28.17 的线段树分治是「把时间维摊成 log T 段」再配合可撤销并查集，处理的是<b>边会消失</b>；本节处理的是<b>边的端点太多</b>。两者的共同点是「用一个 log 换掉一个 n」，判断依据很简单：区间出现在<b>边的端点</b>上就是本节，出现在<b>边的存活时间</b>上就是 28.17。网络流题里同样能套（把汇点换成一个区间的入口），此时注意 Dinic 的边数也要按 3.3×10<sup>6</sup> 量级估。</p>
 <h2 id="ch29"><span class="chk">29</span>第 29 章　数学</h2>
 <div class="ch-intro">数论、组合、概率、矩阵、博弈、多项式——数学是省选之后拉开差距的地方。本章只保留考场上真正会用到的结论与模板，推导从简，用法从详；末两节分别补上 n 到 10<sup>10</sup> 量级的亚线性求和（杜教筛与 min25 筛），以及把计数问题整体化成多项式运算的生成函数方法，这两块是省选以上数论与计数题的最后一公里；29.11 再把 29.2 的筛法接到 64 位整数上——Miller-Rabin 判素与 Pollard-Rho 分解，是 n 到 10<sup>18</sup> 时唯一还能用的手段；29.12 又把线性代数搬回图论，矩阵树定理用一个行列式数出全部生成树，是「生成树计数」「最小生成树计数」「按边数分层计数」的唯一通法，也是本章唯一需要「有向图两个度数矩阵方向搞反」的细活；29.13 再把三条反演串起来——二项式反演管「恰好/钦定」、子集反演（FMT）管「子集求和」、单位根反演管「下标整除」，凡是题面出现「恰好 k 个」「每个元素至少一次」「下标是 k 的倍数」这三类措辞，都在这一节里找对应的逆式。29.14 收在「反解指数」上——BSGS 用 √m 的哈希表把离散对数拆成大步小步，exBSGS 逐轮约 gcd 处理不互质，再由原根把乘法变成指标加法，Cipolla 在扩域里开平方，四件事共用一套快速幂与逆元。29.15 再补上「只有多项式的值、不需要多项式本身」这条捷径——拉格朗日插值用 n+1 个点定住 n 次多项式，连续点上前后缀积把单次求值压到 O(n)，于是自然数幂和（k+1 次多项式）只需 k+2 个点、O(k) 出答案，不必再写 k+2 阶矩阵快速幂。末节 29.16 把 29.13 的 FMT 从「反演工具」升级成「卷积工具」：或/与/异或三种卷积用同一族蝴蝶 O(n2<sup>n</sup>) 完成，子集卷积再加一维 popcount 分层压到 O(n<sup>2</sup>2<sup>n</sup>)，替掉 3<sup>n</sup> 的枚举——集合划分计数、按位合并的方案数、集合幂级数 exp 都靠这一节；29.17 最后收在「解方程」上——高斯消元把实数方程组、模质数方程组、异或方程组与期望方程统一成同一张增广矩阵，列主元、乘逆元、整行 XOR 三种「除法」对应三类题型，判据只有一条：消元后的秩与增广秩是否相等；本节同时给出「树上期望不必消元、有环期望必须消元」的分界线，以及不选主元、eps 取太大、自由元取 0 当唯一解这三类实测错误率。29.18 收尾于「从一列数反推规律」：Berlekamp–Massey 用前 2k 项求出最短线性递推式，Kitamasa 再把求第 n 项压到 O(k² log n)——它替掉 29.5 矩阵幂的 O(k³ log n)，也补上「递推式写不出来」这一缺口（打表 → 猜式 → 跳项）；两条实测结论写在易错点前两条：只喂 k 项预测 a_2k 错 200/200，特征多项式符号写反也是 200/200。</div>
+<figure class="fig"><svg viewBox="0 0 700 264" xmlns="http://www.w3.org/2000/svg" role="img"><circle cx="140.0" cy="62.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="370.0" cy="62.0" r="13.0" fill="#f6f2e8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="600.0" cy="62.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="140.0" cy="116.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="370.0" cy="116.0" r="13.0" fill="#f6f2e8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="600.0" cy="116.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="140.0" cy="170.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="370.0" cy="170.0" r="13.0" fill="#f6f2e8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="600.0" cy="170.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="140.0" cy="224.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="370.0" cy="224.0" r="13.0" fill="#f6f2e8" stroke="#8a6d2f" stroke-width="1.2"/><circle cx="600.0" cy="224.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="140.0" y="66.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">a₀</text><text x="140.0" y="120.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">a₁</text><text x="140.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">a₂</text><text x="140.0" y="228.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">a₃</text><text x="600.0" y="66.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">A₀</text><text x="600.0" y="120.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">A₁</text><text x="600.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">A₂</text><text x="600.0" y="228.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">A₃</text><text x="370.0" y="66.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">b₀</text><text x="370.0" y="120.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">b₁</text><text x="370.0" y="174.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">b₂</text><text x="370.0" y="228.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">b₃</text><line x1="155.0" y1="62.0" x2="349.0" y2="164.9" stroke="#b9ae94" stroke-width="1.1"/><polygon points="353.0,167.0 348.1,166.6 349.9,163.2" fill="#b9ae94"/><line x1="155.0" y1="170.0" x2="349.0" y2="67.1" stroke="#b9ae94" stroke-width="1.1"/><polygon points="353.0,65.0 349.9,68.8 348.1,65.4" fill="#b9ae94"/><line x1="155.0" y1="116.0" x2="349.0" y2="218.9" stroke="#b9ae94" stroke-width="1.1"/><polygon points="353.0,221.0 348.1,220.6 349.9,217.2" fill="#b9ae94"/><line x1="155.0" y1="224.0" x2="349.0" y2="121.1" stroke="#b9ae94" stroke-width="1.1"/><polygon points="353.0,119.0 349.9,122.8 348.1,119.4" fill="#b9ae94"/><line x1="385.0" y1="62.0" x2="578.6" y2="111.9" stroke="#8a6d2f" stroke-width="1.3"/><polygon points="583.0,113.0 578.2,113.7 579.1,110.0" fill="#8a6d2f"/><line x1="385.0" y1="116.0" x2="578.6" y2="66.1" stroke="#8a6d2f" stroke-width="1.3"/><polygon points="583.0,65.0 579.1,68.0 578.2,64.3" fill="#8a6d2f"/><line x1="385.0" y1="170.0" x2="578.6" y2="219.9" stroke="#8a6d2f" stroke-width="1.3"/><polygon points="583.0,221.0 578.2,221.7 579.1,218.0" fill="#8a6d2f"/><line x1="385.0" y1="224.0" x2="578.6" y2="174.1" stroke="#8a6d2f" stroke-width="1.3"/><polygon points="583.0,173.0 579.1,176.0 578.2,172.3" fill="#8a6d2f"/><text x="255.0" y="34.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">第 1 层：跨度 2，乘 ω²</text><text x="485.0" y="34.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">第 2 层：跨度 1，乘 ω¹</text><text x="350.0" y="252.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">log n 层 × 每层 n/2 个蝶形 = O(n log n) 次乘加；逆变换把 ω 换成 ω⁻¹，最后除 n</text></svg><figcaption class="cap"><b>图 29-1</b>4 点 NTT 的蝶形结构：O(n log n) 从哪来</figcaption></figure>
 <h3 class="kb-h">29.1 数论四件套：gcd、exgcd、逆元、CRT</h3>
 <p>这四个工具覆盖了竞赛中 80% 的数论题。</p>
 <pre class="code">int gcd(int a, int b) { return b ? gcd(b, a % b) : a; }
@@ -10204,7 +10221,7 @@ long long S(long long n) {
 }</pre>
 
 <p><b>min25 筛</b>不需要配 g，分三步。① 只用 ≤ √n 的素数跑「扩展埃氏筛」，把 <code>g(x) = Σ_{2≤i≤x} f<sub>poly</sub>(i)</code> 逐步修正为 <code>G(x) = Σ_{p≤x} f(p)</code>（φ 的 f(p) = p − 1 是两项：Σp 与 Σ1，所以开两个数组 g1、g0，最后相减）。② 递归 <code>S(x, j)</code> = 「≤ x 且最小质因子 ≥ p<sub>j</sub> 的所有数的 f 之和」，枚举最小质因子 p<sub>k</sub> 与它的幂次，累加 <code>f(p<sup>e</sup>)·S(x/p<sup>e</sup>, k+1) + f(p<sup>e+1</sup>)</code>。③ 答案为 <code>S(n,1) + f(1)</code>。</p>
-<pre class="code">const int MAXS = 1000005;           // ≥ √n，n ≤ 1e12 够用
+<pre class="code code-long">const int MAXS = 1000005;           // ≥ √n，n ≤ 1e12 够用
 const long long MOD = 1000000007;
 long long n, sq, w[MAXS];
 int id1[MAXS], id2[MAXS], m;        // x ≤ sq 用 id1[x]，否则用 id2[n/x]
@@ -10287,7 +10304,7 @@ int main() {
 <tr><td><code>(1−√(1−4x))/(2x) = Σ Cat<sub>n</sub>x<sup>n</sup></code></td><td>卡特兰数；来自 <code>C = 1 + xC<sup>2</sup></code> 解二次方程</td></tr>
 </tbody></table>
 <p><b>建模三步</b>：① 定「基本对象」是什么（一个点、一个连通块、一个字符、一个括号对）；② 定整体与基本对象的结构关系是 SEQ（有序）、SET（无序）还是 CYC（循环）；③ 判对象是否带标号——带标号用 EGF，不带用 OGF。三步定完，式子基本就写出来了。</p>
-<pre class="code">// 多项式全家桶：inv / ln / exp，模 998244353，总复杂度 O(n log^2 n)
+<pre class="code code-long">// 多项式全家桶：inv / ln / exp，模 998244353，总复杂度 O(n log^2 n)
 const int MOD = 998244353, G = 3;
 int qp(long long a, long long b) {
     long long r = 1;
@@ -10531,7 +10548,7 @@ void factor(ull n, vector&lt;ull&gt;&amp; fac) {
 <tr><td>答案是精确值（不取模）</td><td>同上 + 高精度/BigInteger</td><td><code>O(n<sup>3</sup>)</code> 次大数运算</td><td>n ≤ 60 左右</td></tr></table>
 
 <p><b>可编译模板</b></p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const int MAXN = 505;
@@ -10675,7 +10692,7 @@ ll countArb(int n, const vector&lt;pair&lt;int,int&gt;&gt;&amp; e, int root, int
 <p>于是只要能在 <code>k</code> 个单位根处求值，就能一次抽出所有整除项。求「<code>i ≡ r (mod k)</code>」的项同理，把 <code>ω<sup>ji</sup></code> 换成 <code>ω<sup>j(i−r)</sup></code> 即可。它和 NTT 的关系：NTT 在 <code>ω<sub>n</sub></code> 的全部 n 个幂上求值，单位根反演是它的「部分求值」版本；循环卷积（长度 n 卷成长度 n）也靠它把溢出部分折回来。</p>
 
 <p><b>可编译模板</b></p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const int MOD = 998244353, G = 3;
@@ -10812,7 +10829,7 @@ int main() {
 
 <p><b>④ Cipolla</b>。找一个 a 使 <code>W = a²−n</code> 是二次<b>非</b>剩余（用 Euler 准则判，期望两次命中），在扩域里取 <code>w² = W</code>，则 <code>(a+w)<sup>(p+1)/2</sup></code> 的虚部必为 0、实部是 <code>√n</code>。复数乘法只需二维 <code>(x,y)</code>，所有运算模 p。</p>
 
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 using ll = long long;
 using i128 = __int128_t;
@@ -11035,7 +11052,7 @@ ll powerSum(ll n, int k) {
 <tr><td>子集卷积</td><td><code>c[S] = Σ<sub>A⊆S</sub> a[A]b[S\A]</code>（<code>A&amp;B=∅</code>）</td><td>按 <code>popcount</code> 分层 + FMT</td><td>O(n<sup>2</sup>2<sup>n</sup>)</td></tr>
 </tbody></table>
 <p><b>结论一（三种变换的写法）</b>。三种变换都是「按块长 <code>len</code> 从 1 倍增，把相邻两块合并」，差别只有合并公式与方向：</p>
-<pre class="code">static const int MOD = 998244353;
+<pre class="code code-long">static const int MOD = 998244353;
 int qpow(long long b, long long e) {
     long long r = 1; b %= MOD;
     while (e) { if (e &amp; 1) r = r * b % MOD; b = b * b % MOD; e &gt;&gt;= 1; }
@@ -11080,7 +11097,7 @@ void fwtXor(vector&lt;int&gt; &amp;a, int n, bool inv) {
 <p><b>结论二（子集卷积必须分层）</b>。<code>c[S] = Σ<sub>A⊆S</sub> a[A]b[S\A]</code> 与或卷积的差别只有一条：<code>A、B</code> 不许重叠。直接对整体做 FMT 再点乘得到的是或卷积，<b>重叠部分被重复计入</b>。正确做法是按集合大小给下标多加一维：<code>f[i][S] = a[S]</code> 当 <code>popcount(S)=i</code>，否则为 0；同理 <code>g[j][S]</code>；然后</p>
 <p style="text-align:center"><code>h[k][S] = Σ<sub>i+j=k</sub> FMT(f[i])[S] · FMT(g[j])[S]</code>，再逆变换，取 <code>c[S] = h[popcount(S)][S]</code>。</p>
 <p>为什么这样能剔除重叠：<code>FMT(f[i])[S]</code> 是「<code>S</code> 的所有 <code>i</code> 元子集上的 <code>a</code> 之和」，两条这样的和相乘，<code>i+j</code> 元并中的元素被数了「分配方案数」次；限定 <code>i+j = |S|</code> 后，唯一的分配方式就是「<code>S</code> 被切成互不相交的 <code>i</code> 元块与 <code>j</code> 元块」，重叠项因总大小超过 <code>|S|</code> 被排除。代价是 O(n<sup>2</sup>2<sup>n</sup>)——比 3<sup>n</sup> 的枚举省一个数量级：n=20 时 3<sup>n</sup> 是 3.5×10<sup>9</sup>，分层法是 4×10<sup>8</sup>。</p>
-<pre class="code">// 子集卷积：c[S] = Σ_{A⊆S} a[A]·b[S\A]；n 为位数，数组长 2^n
+<pre class="code code-long">// 子集卷积：c[S] = Σ_{A⊆S} a[A]·b[S\A]；n 为位数，数组长 2^n
 vector&lt;int&gt; subsetConv(const vector&lt;int&gt; &amp;a, const vector&lt;int&gt; &amp;b, int n) {
     int N = 1 &lt;&lt; n;
     vector&lt;vector&lt;int&gt;&gt; f(n + 1, vector&lt;int&gt;(N, 0)), g = f, h = f;
@@ -11148,7 +11165,7 @@ vector&lt;int&gt; subsetExp(const vector&lt;int&gt; &amp;g, int n) {
 <p>竞赛里九成的错都出在后两条的区分上。落地写法只有一句：<b>消元结束后，把「没有主元的那些行」的常数项扫一遍</b>——只要有一个非零就是无解，全零才轮到「<code>r &lt; n</code> 则无穷多」。顺序反了（先判 <code>r &lt; n</code>）就会把无解报成无穷多解，而这两者在很多题里对应完全不同的输出。</p>
 <p><b>结论二（实数版必须选主元，而且不是「为了稳一点」而是「不选就错」）</b>。若某一列的主元很小（比如 10<sup>−18</sup>），不交换行直接拿它去除，后面的减法会把有效数字全吃掉。实测例：<code>A = [[1e−18, 1], [1, 1]]，b = [1, 2]</code>，精确解是 <code>(1, 1)</code>；列主元版给出 <code>(1.000000, 1.000000)</code>（误差 0），不选主元版给出 <code>(0.000000, 1.000000)</code>——第一个分量<b>整位丢失</b>，误差 1.0。主元选择规则就是「本列绝对值最大的那一行换上来」，代价 O(n)，换来的是误差从「不可用」变成 10<sup>−13</sup> 量级（500 组随机整数矩阵实测最大绝对误差 2.36×10<sup>−13</sup>）。</p>
 <p><b>结论三（Gauss-Jordan 与「上三角 + 回代」二选一，别混）</b>。下面模板走的是 Gauss-Jordan：主元行归一化后，用它对<b>所有</b>行（包括上方已处理的行）消元，最终左侧是单位阵，解直接读常数项。好处是不用写回代、自由元处理干净；代价是常数约为上三角版的 1.5—2 倍。若改写成上三角版，就必须自己写回代——此时再用 <code>x[col] = b[where[col]]</code> 去取解是错的（那只在 Jordan 版成立），因为上方行的右侧还残留着未消去的系数。</p>
-<pre class="code">// 实数版：n 个未知数、m 行（m ≥ n，也允许 m &lt; n）
+<pre class="code code-long">// 实数版：n 个未知数、m 行（m ≥ n，也允许 m &lt; n）
 // 返回 0 = 唯一解（x 有效），1 = 无穷多解，2 = 无解
 // a、b 会被原地破坏
 const double EPS = 1e-10;          // 主元阈值
@@ -11184,7 +11201,7 @@ int gauss(vector&lt;vector&lt;double&gt;&gt; &amp;a, vector&lt;double&gt; &amp;b
     return 0;
 }</pre>
 <p><b>模质数版</b>与实数版逐行同构，只改三处：主元判据从 <code>fabs(...) &gt; EPS</code> 变成 <code>!= 0</code>；除法换成乘 <code>a<sup>p−2</sup></code>；减法后要 <code>% p</code> 归位。模质数下没有精度问题，因此「无解」判定是精确的（常数项非零即无解），不需要 <code>EPSB</code>。</p>
-<pre class="code">const int MOD = 998244353;
+<pre class="code code-long">const int MOD = 998244353;
 long long qpow(long long b, long long e) {
     long long r = 1; b %= MOD;
     while (e) { if (e &amp; 1) r = r * b % MOD; b = b * b % MOD; e &gt;&gt;= 1; }
@@ -11288,7 +11305,7 @@ int gaussXor(int m, int n, bitset&lt;MAXN + 1&gt; &amp;sol) {
 <p><b>典型用法（计数题三步走）</b>：① 先写 <code>O(nk)</code> 或 <code>O(2<sup>n</sup>)</code> 的暴力，打出前 30—60 项；② 把这些项喂给 BM 得到递推式；③ 用 Kitamasa 求 <code>n = 10<sup>18</sup></code> 的那一项。<b>但必须验算</b>：让暴力多打 20 项，检查 BM 的式子能全部对上——只对上前 <code>2k</code> 项不算数（见易错点 1）。</p>
 
 <p><b>模板</b>（BM + Kitamasa，模 <code>10<sup>9</sup>+7</code>）：</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const ll MOD = 1000000007LL;
@@ -11376,6 +11393,7 @@ int main() {
 </ol>
 <h2 id="ch30"><span class="chk">30</span>第 30 章　字符串</h2>
 <div class="ch-intro">哈希能解决九成字符串题，剩下的用 KMP、Trie、AC 自动机；再往上才是 SA 与 SAM。本章按这个梯度排列，每个结构都给出可编译模板与典型问法；中段把哈希从序列推广到树（树同构与换根判定），并用回文自动机把「所有本质不同回文」压成一棵树、配 series link 做回文划分；30.10 转向「循环移位」这一类问题——最小表示法与 Lyndon 分解共用一条失配即整段排除的双指针，O(n) 解决循环同构与最小标号；30.11 补上 30.6 概览留下的空白，把 SAM 读成 endpos 等价类加 link 树，给出出现次数、第 k 小子串、最长公共子串与多串广义 SAM 的完整写法；30.12 从同一处空白出发走另一条路，把「任意两后缀 LCP = height 区间最小值」这条恒等式讲到能用：倍增构建、ST 表、二分分组、字典序第 k 子串与单调栈求和五套代码；30.13 回到 30.4 留下的那句「AC 自动机 + DP」，把它拆成四种问法：不含禁用词的计数、<code>n</code> 极大时的矩阵快速幂、关键词必须全部出现的状压、以及在 fail 树上自底向上汇总的出现次数——四种问法共用同一个前提：终止标记必须沿 fail 下传。</div>
+<figure class="fig"><svg viewBox="0 0 700 222" xmlns="http://www.w3.org/2000/svg" role="img"><text x="136.0" y="36.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">1</text><rect x="112.0" y="42.0" width="48.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="136.0" y="61.0" font-family="Consolas, Courier New, monospace" font-size="12" text-anchor="middle" fill="#1b1b1b" font-weight="400">a</text><rect x="112.0" y="92.0" width="48.0" height="24.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="136.0" y="109.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">0</text><text x="186.0" y="36.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">2</text><rect x="162.0" y="42.0" width="48.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="186.0" y="61.0" font-family="Consolas, Courier New, monospace" font-size="12" text-anchor="middle" fill="#1b1b1b" font-weight="400">b</text><rect x="162.0" y="92.0" width="48.0" height="24.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="186.0" y="109.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">0</text><text x="236.0" y="36.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">3</text><rect x="212.0" y="42.0" width="48.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="236.0" y="61.0" font-family="Consolas, Courier New, monospace" font-size="12" text-anchor="middle" fill="#1b1b1b" font-weight="400">a</text><rect x="212.0" y="92.0" width="48.0" height="24.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="236.0" y="109.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">1</text><text x="286.0" y="36.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">4</text><rect x="262.0" y="42.0" width="48.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="286.0" y="61.0" font-family="Consolas, Courier New, monospace" font-size="12" text-anchor="middle" fill="#1b1b1b" font-weight="400">b</text><rect x="262.0" y="92.0" width="48.0" height="24.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="286.0" y="109.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">2</text><text x="336.0" y="36.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">5</text><rect x="312.0" y="42.0" width="48.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="336.0" y="61.0" font-family="Consolas, Courier New, monospace" font-size="12" text-anchor="middle" fill="#1b1b1b" font-weight="400">a</text><rect x="312.0" y="92.0" width="48.0" height="24.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="336.0" y="109.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><text x="386.0" y="36.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">6</text><rect x="362.0" y="42.0" width="48.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="386.0" y="61.0" font-family="Consolas, Courier New, monospace" font-size="12" text-anchor="middle" fill="#1b1b1b" font-weight="400">c</text><rect x="362.0" y="92.0" width="48.0" height="24.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="386.0" y="109.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">0</text><text x="436.0" y="36.0" font-family="Consolas, Courier New, monospace" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">7</text><rect x="412.0" y="42.0" width="48.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="436.0" y="61.0" font-family="Consolas, Courier New, monospace" font-size="12" text-anchor="middle" fill="#1b1b1b" font-weight="400">a</text><rect x="412.0" y="92.0" width="48.0" height="24.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="436.0" y="109.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">1</text><text x="80.0" y="61.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="end" fill="#8a6d2f" font-weight="700">P</text><text x="80.0" y="109.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="end" fill="#8a6d2f" font-weight="700">π</text><path d="M386.0,118.0 Q261.0,152.0 140.8,119.3" fill="none" stroke="#9a5a3c" stroke-width="1.2"/><polygon points="136.0,118.0 141.4,117.3 140.3,121.3" fill="#9a5a3c"/><text x="261.0" y="168.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#9a5a3c" font-weight="400">失配：j ← π[j−1]，直接从第 6 位退到第 1 位</text><text x="350.0" y="192.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">π[i] = 「前缀 = 后缀」的最长长度，把「还有没有可能匹配」压缩成一个数</text><text x="350.0" y="210.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">同一张表还能求最小循环节：n − π[n−1] 若能整除 n，它就是周期</text></svg><figcaption class="cap"><b>图 30-1</b>KMP 的 π 数组与失配链</figcaption></figure>
 <h3 class="kb-h">30.1 字符串哈希</h3>
 <p>哈希把字符串映射成整数，使「判断两个子串是否相等」从 O(len) 降到 O(1)。竞赛中 90% 的字符串题可以用哈希水过。</p>
 <pre class="code">typedef unsigned long long ull;
@@ -11522,7 +11540,7 @@ void allPeriods(int n, vector&lt;int&gt;&amp; out) {
 <p><b>复杂度</b>：单棵树 O(n log n)（每个点对子节点的哈希排序）；求全部 n 个点为根的哈希，排序版 O(n log<sup>2</sup> n)，加法合并版 O(n)。</p>
 
 <p><b>做法一：排序折叠（推荐，碰撞率最低）</b>。先 splitmix64 把值打散，避免乘法折叠的结构被构造数据利用；子节点哈希排序后按 <code>h = h·B + x + 1</code> 折叠。求和那两个 +1 很关键：它让「空子树」与「哈希恰为 0 的子树」区分开。</p>
-<pre class="code">typedef unsigned long long ull;
+<pre class="code code-long">typedef unsigned long long ull;
 ull mix(ull x) {                        // splitmix64：把输入彻底打散
     x += 0x9e3779b97f4a7c15ULL;
     x = (x ^ (x &gt;&gt; 30)) * 0xbf58476d1ce4e5b9ULL;
@@ -11617,7 +11635,7 @@ void dfs_up(const vector&lt;int&gt;&amp; order) {
 <p><b>什么时候该上 PAM</b>：题目出现「本质不同的回文子串个数」「每个回文串出现了几次」「把串划分成若干回文串的方案数」「以某位置结尾的最长回文」「两个串的公共回文串」，且 n 到 10<sup>5</sup>—10<sup>6</sup>。只问最长回文子串时用 Manacher 就够，不必背 PAM。</p>
 <p><b>两个根的作用</b>：0 号节点 <code>len = -1</code> 是奇根，1 号节点 <code>len = 0</code> 是偶根，二者 fail 都指向 0。奇根的 -1 让「单字符回文」在 getfail 时一次就成功（下标 i - (-1) - 1 = i，正好与自己比较），这一行是全模板最容易写错的地方。</p>
 <p><b>三条关键性质</b>：① 节点数 = 本质不同回文串数 + 2，且 ≤ n + 2（每加一个字符最多新建一个节点）；② <code>cnt[v]</code> 表示「以某个位置结尾的最长回文」的出现次数，沿 fail 树自底向上累加即得该回文串在原串中的总出现次数；③ 把 <code>len[v] - len[fail[v]]</code> 记作 <code>diff</code>，若 <code>diff[v] == diff[fail[v]]</code>，则 v 与 fail[v] 属于同一<b>等差数列</b>，用 <code>slink</code> 一步跳到该数列的下一个代表——这是回文划分能做到 O(n log n) 的原因。</p>
-<pre class="code">const int MAXN = 1000006, SIG = 26, MOD = 1000000007;
+<pre class="code code-long">const int MAXN = 1000006, SIG = 26, MOD = 1000000007;
 int nxt[MAXN][SIG], fail[MAXN], len[MAXN], cnt[MAXN];
 int diff[MAXN], slink[MAXN];
 long long f[MAXN], g[MAXN];          // 回文划分用
@@ -11762,7 +11780,7 @@ vector&lt;pair&lt;int,int&gt;&gt; duval(const string&amp; s) {
 <p><b>状态到底是什么</b>：SAM 的一个状态 v 代表一组子串，它们的<b>结束位置集合</b>（endpos）完全相同。这一组子串恰好是「长度从 <code>len[link[v]] + 1</code> 到 <code>len[v]</code>」的那些后缀，因此个数为 <code>len[v] - len[link[v]]</code>，把它们全加起来就是本质不同子串总数。这条等式是 SAM 上一切计数的起点，比「节点数不超过 2n-1」更值得记。</p>
 <p><b>link 树</b>：把 <code>link[v]</code> 当父亲，得到一棵以 0 为根的树（有的资料叫 parent 树 / 后缀链接树）。它有两层含义：从串的角度，v 的父亲是「v 的最长真后缀所在的状态」；从集合的角度，<code>endpos(v) ⊊ endpos(link[v])</code>，即 v 的 endpos 是父亲的真子集。于是「v 的子树大小（按前缀终止点计数）＝ |endpos(v)| ＝ v 所代表子串在原串中的出现次数」，这是 SAM 最常用的性质，几乎所有「出现次数」「出现在哪些位置」的题都归结为在 link 树上做一次自底向上的累加。</p>
 <p><b>四条可背的结论</b>：① 状态数 ≤ 2n-1，转移数 ≤ 3n-4（n ≥ 2）；② 每个前缀在插入结束时对应一个状态（<code>cur</code>），把这些状态的计数置 1，其余置 0，按 len 降序在 link 树上累加，得到每个状态的出现次数；③ 从根出发沿任意路径走，读出的字符串都是原串的子串，且同一状态内的所有串「走到的终点相同、出现次数相同」；④ 两个串的最长公共子串可以在 A 的 SAM 上跑 B：能走就走，走不动沿 link 跳并令当前匹配长度 = <code>len[link]</code>，均摊 O(|B|)。</p>
-<pre class="code">struct SAM {
+<pre class="code code-long">struct SAM {
     static const int MAXN = 2000005;              // 状态数 ≤ 2n-1
     int nxt[MAXN][26], link[MAXN], len[MAXN], cnt[MAXN];
     int sz, last;
@@ -11842,7 +11860,7 @@ string kth(int k, const int* f) {                 // f 已按 len 降序算好
     }
 }</pre>
 <p><b>广义 SAM</b>：多个串共用一个自动机时，<code>init</code> 只做一次，每条新串的 <code>last</code> 重置为 0。麻烦在于「转移已经存在」的情形——若直接照上面的 <code>extend</code> 跑，会为一条已经走过的路径新建 cur，导致 len 偏大、本质不同子串数重复计数。正确做法是把「已存在转移」单独处理：</p>
-<pre class="code">// 广义 SAM 的插入：last 由调用方给出（每串从 0 开始）
+<pre class="code code-long">// 广义 SAM 的插入：last 由调用方给出（每串从 0 开始）
 int gextend(int last, int c) {
     if (nxt[last][c]) {                            // 转移已存在，不能新建 cur
         int q = nxt[last][c];
@@ -11897,7 +11915,7 @@ int gextend(int last, int c) {
 <p><b>复杂度</b>：倍增 + 基数排序构建 SA 是 O(n log n)（n = 10<sup>6</sup> 时约 0.4 s）；Kasai 求 ht 是 O(n)；ST 表 O(n log n) 建、O(1) 查；二分分组是 O(n log n)；单调栈 O(n)。空间主要是 <code>st[20][n]</code>，n = 10<sup>6</sup> 时 80 MB，再大改用线段树或分块。</p>
 
 <p><b>模板 A：构建 SA 与 height</b>。倍增 + 计数排序的写法，第二关键字由「sa 平移 k 位，越界者排最前」直接得到，不必真的排序。判终止的条件是「不同排名数 ≥ n」，不是循环 log n 次。</p>
-<pre class="code">int sa[MAXN], rk[MAXN], oldrk[MAXN], ht[MAXN], tmp[MAXN], cnt[MAXN];
+<pre class="code code-long">int sa[MAXN], rk[MAXN], oldrk[MAXN], ht[MAXN], tmp[MAXN], cnt[MAXN];
 
 void buildSA(const char* s, int n) {          // s 下标 0..n-1
     int m = 256;
@@ -12072,7 +12090,7 @@ bool okMulti(int L, int n, int m) {
 <p><b>结论三：关键词「全部出现」用位掩码，且掩码要挂在节点上而不是走法上</b>。<code>term[u]</code> 本身就是一个位掩码（第 <code>i</code> 位表示「第 <code>i</code> 个关键词在该节点结束」），DP 时 <code>mask' = mask | term[v]</code> 即可，代价是状态数乘 <code>2^k</code>。若关键词更多（<code>k &gt; 12</code>），这条路走不通，只能改用容斥（29.13 的子集反演）把「全部出现」拆成「至少避开某几个」。</p>
 <p><b>结论四：出现次数 = fail 树上的子树和</b>。扫描文本时每到一个节点给计数 +1，然后把计数按 BFS 逆序（等价于按 fail 深度从大到小）累加到 <code>fail[u]</code>，每个模式串的出现次数就是它终点节点的子树和。这一步与「在自动机上 DP」是同一棵树的两种用法：前者自底向上汇总，后者自顶向下计数。</p>
 <p><b>模板 A：AC 自动机 + 计数 DP（不含任何模式串，<code>n</code> 可达 10<sup>7</sup>）</b>：</p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const int MAXS = 105, AL = 26;
 const long long MOD = 1000000007LL;
@@ -12125,7 +12143,7 @@ long long countAvoid(AC &amp;ac, long long n) {
     return r;
 }</pre>
 <p><b>模板 B：<code>n</code> 极大时改矩阵幂</b>。<code>S</code> 不超过 100 时，直接做矩阵乘法 <code>O(S³ log n)</code> 已经能过；若常数吃紧，只预处理 <code>M^(2^k)</code>，再把初始向量逐个乘过去，省掉「矩阵乘向量」的重复构造：</p>
-<pre class="code">struct Mat {
+<pre class="code code-long">struct Mat {
     int n; long long a[MAXS][MAXS];
     Mat(int n_ = 0) : n(n_) { memset(a, 0, sizeof a); }
     Mat operator*(const Mat &amp;b) const {
@@ -12205,6 +12223,7 @@ long long countAll(AC &amp;ac, int n, int k) {
 <p><b>自查</b>：把三份模板逐行译成 Python（同样的 <code>go</code> 补全、同样的 <code>term</code> 下传、同样的按位或），与「枚举字母表 {a,b,c} 上全部长度 <code>n</code> 的串」暴力对拍：(1) 不含模式串计数，840 组（模式串 1—3 个、长度 1—3，<code>n = 1..7</code>）<b>0 处不符</b>；(2) 矩阵幂与迭代 DP 对拍 40 组（<code>n ≤ 25</code>，取模 10<sup>9</sup>+7）<b>0 处不符</b>，其中修掉的那处差异正是「求和忘记取模」；(3) 状压「关键词全部出现」200 组 <b>0 处不符</b>；(4) fail 树子树和求出现次数，200 组随机文本与朴素 <code>find</code> 全等，<b>0 处不符</b>；(5) 错法实测：不下传终止标记 840 组错 18 组，矩阵建图把 <code>+= 1</code> 改成 <code>= 1</code> 时，模式串 <code>{"ab"}</code>、26 字母的答案从 675 / 17524 掉到 4 / 8（与枚举全串的 675 / 17524 对照）。本机无 <code>g++</code>，C++ 侧只做了语法与数组上界自查（<code>MAXS = 105</code> 对应「总长 ≤ 104」）。</p>
 <h2 id="ch31"><span class="chk">31</span>第 31 章　计算几何与杂项</h2>
 <div class="ch-intro">几何题的分值高、失分也高，多数败在精度与退化情况。本章给出向量、凸包、扫描线的标准写法，另附随机化、bitset、根号分治三类「非主流但好用」的技巧；随后补上凸包的加法——闵可夫斯基和，它是凸包相交判定与凹序列 (max,+) 卷积的统一工具；末节是最小圆覆盖，随机增量法用期望 O(n) 解决「最多由三点确定」的经典问题，也是本章精度处理的反面教材集中地；31.9 收在半平面交上——把「每条约束都是一个半平面」的几何题统一成一个 O(n log n) 的单调队列算法，凸多边形交、二维线性规划、二分求最大内切圆都归它管；31.10 收在旋转卡壳上——凸包上最远点对、最小宽度与最小面积外接矩形共用同一条「对踵点单调」的双指针，求包 O(n log n) 之后本体只需 O(n)；31.11 离开几何，收在 min-max 容斥上——它把「全部条件都达成」的 max 拆成「至少一个达成」的 min 的加权和，按位期望、集齐问题、随机游走访问所有点都归它管，且不要求随机变量独立；31.12 最后把「距离」这门账算清——曼哈顿与切比雪夫只差一次 45° 旋转，同一条恒等式同时给出 O(n) 点集直径、O(1) 单次最远查询、菱形计数转方形计数与网格上的两遍距离变换，并且明确区分「直径只需 2 组符号、查询必须 4 组」这个最易混的细节。末节 31.13 离开「算法本身」，回到「程序怎么与评测器对话」：交互题与通信题的判分不看一次性输出，而看询问次数、每次询问的合法性与消息比特数——<code>fflush(stdout)</code> 这一行在本地永远测不出问题、在评测机上却直接死锁，testlib 的 interactor 则是本地唯一能把双向问答跑起来的办法，本节给出三份骨架与十类实测过的踩坑点。31.14 补上本章唯一一个「放弃精确」的工具——自适应辛普森积分：把 <code>∫ f(x)dx</code> 当成对黑箱函数的三点抛物线逼近，用 <code>|L+R−W| ≤ 15ε</code> 决定是否继续二分，接受时补上 <code>(L+R−W)/15</code> 的修正项；模板之外给出圆的面积并这一典型用法（竖线区间必须真的合并，写成 <code>min(顶)−max(底)</code> 会把 4.6978 算成 1.5853），以及五组实测求值次数（同一精度下端点不光滑要多花约 10 倍，端点奇异 <code>x<sup>−1/2</sup></code> 退让到 1e-12 仍需 8 万次求值且只到 2e-6）。</div>
+<figure class="fig"><svg viewBox="0 0 700 228" xmlns="http://www.w3.org/2000/svg" role="img"><polygon points="96,76 386,70 488,92 520,176 232,190 146,168" fill="#efe0bd" fill-opacity="0.6" stroke="#8a6d2f" stroke-width="1.6"/><circle cx="96.0" cy="76.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="146.0" cy="168.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="188.0" cy="118.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="232.0" cy="190.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="292.0" cy="98.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="340.0" cy="164.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="386.0" cy="70.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="438.0" cy="144.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="488.0" cy="92.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="520.0" cy="176.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="96.0" cy="76.0" r="5.6" fill="none" stroke="#8a6d2f" stroke-width="1.3"/><circle cx="386.0" cy="70.0" r="5.6" fill="none" stroke="#8a6d2f" stroke-width="1.3"/><circle cx="488.0" cy="92.0" r="5.6" fill="none" stroke="#8a6d2f" stroke-width="1.3"/><circle cx="520.0" cy="176.0" r="5.6" fill="none" stroke="#8a6d2f" stroke-width="1.3"/><circle cx="232.0" cy="190.0" r="5.6" fill="none" stroke="#8a6d2f" stroke-width="1.3"/><circle cx="146.0" cy="168.0" r="5.6" fill="none" stroke="#8a6d2f" stroke-width="1.3"/><text x="116.0" y="60.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#7c7566" font-weight="400">上凸壳 →</text><text x="474.0" y="202.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">← 下凸壳</text><rect x="546.0" y="46.0" width="148.0" height="146.0" rx="3" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="556.0" y="64.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#8a6d2f" font-weight="400">叉积 > 0：左转，保留</text><text x="556.0" y="80.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#9a5a3c" font-weight="400">叉积 ≤ 0：右转，弹栈</text><circle cx="590.0" cy="168.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="644.0" cy="154.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><circle cx="616.0" cy="106.0" r="3.4" fill="#1b1b1b" stroke="#1b1b1b" stroke-width="0.4"/><line x1="590.0" y1="168.0" x2="644.0" y2="154.0" stroke="#1b1b1b" stroke-width="1.1"/><line x1="644.0" y1="154.0" x2="616.0" y2="106.0" stroke="#1b1b1b" stroke-width="1.1"/><text x="350.0" y="216.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">单调链：按 x 排序后上下各扫一遍，遇到「右转」就弹掉栈顶——凸包 = 一次排序 + 一次线性扫描</text></svg><figcaption class="cap"><b>图 31-1</b>凸包与叉积判定：左转保留、右转弹栈</figcaption></figure>
 <h3 class="kb-h">31.1 向量、叉积与基础判定</h3>
 <p>计算几何的一切建立在叉积上。二维向量 <code>(x,y)</code> 的叉积 <code>cross(a,b) = a.x*b.y - a.y*b.x</code>，其符号表示 b 在 a 的顺时针还是逆时针。</p>
 <pre class="code">struct Pt {
@@ -12238,7 +12257,7 @@ int sgn(double x) { return fabs(x) &lt; 1e-9 ? 0 : (x &gt; 0 ? 1 : -1); }</pre>
 <p><b>凸包的四个用途</b>：求最远点对（旋转卡壳，O(n)）、判断点是否在凸包内（二分 O(log n)）、半平面交（凸包的对偶问题）、闵可夫斯基和（两个凸包逐边合并）。</p>
 <p><b>易错</b>：判据 <code>&lt;= 0</code> 会删掉共线点（得到严格凸包），<code>&lt; 0</code> 保留共线点；点集退化（全部共线、只有 1—2 个点）要特判。</p>
 <h3 class="kb-h">31.3 扫描线与离线技巧</h3>
-<p>扫描线把「二维的静态问题」转成「一维的动态问题」：按某一维排序，用数据结构维护另一维。</p>
+<p>扫描线把「二维的静态问题」转成「一维的动态问题」：按某一维排序，用数据结构维护另一维。</p><figure class="fig"><svg viewBox="0 0 700 262" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="110.0" y="66.0" width="190.0" height="80.0" rx="0" fill="#f7f2e4" stroke="#b9ae94" stroke-width="1.1"/><rect x="230.0" y="104.0" width="180.0" height="74.0" rx="0" fill="#f7f2e4" stroke="#b9ae94" stroke-width="1.1"/><line x1="268.0" y1="44.0" x2="268.0" y2="188.0" stroke="#8a6d2f" stroke-width="1.0" stroke-dasharray="5 4"/><text x="274.0" y="50.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#8a6d2f" font-weight="400">扫描线</text><line x1="268.0" y1="66.0" x2="268.0" y2="178.0" stroke="#8a6d2f" stroke-width="7.0"/><text x="278.0" y="128.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#9a5a3c" font-weight="400">有效长度 = 112</text><line x1="96.0" y1="196.0" x2="452.0" y2="196.0" stroke="#1b1b1b" stroke-width="1.1"/><line x1="110.0" y1="196.0" x2="110.0" y2="202.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="110.0" y="214.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#3f6b3f" font-weight="400">+1</text><line x1="230.0" y1="196.0" x2="230.0" y2="202.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="230.0" y="214.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#3f6b3f" font-weight="400">+1</text><line x1="300.0" y1="196.0" x2="300.0" y2="202.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="300.0" y="214.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#9a5a3c" font-weight="400">−1</text><line x1="410.0" y1="196.0" x2="410.0" y2="202.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="410.0" y="214.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#9a5a3c" font-weight="400">−1</text><text x="96.0" y="232.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">面积 = Σ 有效长度 × Δx</text><text x="474.0" y="96.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">每个矩形贡献两个事件：</text><text x="474.0" y="112.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">进左边 +1，出右边 −1</text><text x="474.0" y="134.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#8a6d2f" font-weight="400">线段树维护「被覆盖长度」</text><text x="474.0" y="150.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#8a6d2f" font-weight="400">与「覆盖次数 ≥ 1」的段数</text><text x="350.0" y="250.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">扫描线把二维面积拆成一维区间并的累加：每一步只问「当前被盖住多长」</text></svg><figcaption class="cap"><b>图 31-2</b>扫描线求矩形面积并：边界事件与有效长度</figcaption></figure>
 <p><b>矩形面积并</b>：按 x 扫描，线段树维护 y 方向被覆盖的长度，面积 = <code>Σ 覆盖长度 × Δx</code>。线段树的节点维护「覆盖次数」与「有效长度」，<code>pushup</code> 时若 <code>cnt&gt;0</code> 则长度 = 区间全长，否则由儿子合并。</p>
 <p><b>矩形周长并</b>：面积并的变体，额外统计「覆盖段数」与「是否覆盖端点」，周长 = 竖边增量 + 横边增量。</p>
 <p><b>三维偏序</b>：CDQ 分治 + 树状数组，或排序 + CDQ + 归并，O(n log<sup>2</sup> n)。</p>
@@ -12279,7 +12298,7 @@ for (int i = 1; i &lt;= n; ++i) f |= (f &lt;&lt; w[i]);   // 子集和可行性�
 <p><b>定义与结论</b>：<code>A ⊕ B = { a + b | a ∈ A, b ∈ B }</code>。若 A、B 都是凸多边形，则 A⊕B 仍是凸多边形，且它的边序列<b>恰好是两条边序列按极角归并</b>——每一条边只出现一次、方向不变。于是顶点数 ≤ n + m，归并本身 O(n + m)，加上两次求凸包就是 O(n log n + m log m)。这是「凸包上做加法」唯一需要记住的一句话。</p>
 <p><b>两条可加性，一真一假</b>：周长可加，<code>per(A⊕B) = per(A) + per(B)</code>；面积<b>不</b>可加，<code>area(A⊕B) = area(A) + area(B) + 混合项</code>（混合项在归并过程中累计，不要试图写成闭式）。把面积写成两者相加是这套题最常见的失分点。</p>
 <p><b>什么时候用</b>：① 判定两个凸多边形是否相交；② 求两凸包上的最近/最远距离；③ 凹序列的 (max,+) 卷积；④ 半平面交的对偶形式（凸包边的法向集合相加）。只要题目里出现「两个凸的可行域」「各自取一个点，使某线性函数最优」，先想闵可夫斯基和。</p>
-<pre class="code">struct P { long long x, y; };
+<pre class="code code-long">struct P { long long x, y; };
 P operator+(P a, P b) { return {a.x + b.x, a.y + b.y}; }
 P operator-(P a, P b) { return {a.x - b.x, a.y - b.y}; }
 long long cross(P a, P b) { return a.x * b.y - a.y * b.x; }
@@ -12326,7 +12345,7 @@ vector&lt;P&gt; minkowski(vector&lt;P&gt; A, vector&lt;P&gt; B) {
 
 <p><b>随机增量</b>：先把点<b>随机打乱</b>，再按顺序处理。设已处理前 <code>i</code> 个点、得到最小圆 <code>C</code>；加入 <code>p<sub>i</sub></code> 时若它在 <code>C</code> 内则什么都不做，否则 <code>p<sub>i</sub></code> 必在新圆的边界上——于是把问题降一维：以 <code>p<sub>i</sub></code> 为边界点重算。第二层同理，若 <code>p<sub>j</sub></code> 不在圆内，则新圆以 <code>p<sub>i</sub>p<sub>j</sub></code> 为直径；第三层若 <code>p<sub>k</sub></code> 还在圆外，则新圆是 <code>p<sub>i</sub>p<sub>j</sub>p<sub>k</sub></code> 的外接圆。三层循环体量看起来是 <code>O(n<sup>3</sup>)</code>，但随机顺序下第 <code>i</code> 步「<code>p<sub>i</sub></code> 落在圆外」的概率不超过 <code>3/i</code>（最终圆只由 3 个点决定，随机的 <code>i</code> 个点里这 3 个点中最后出现的那个才触发关键更新），内层期望总代价 <code>Σ O(i)·(3/i) = O(n)</code>。</p>
 
-<pre class="code">struct Pt { long double x, y; };
+<pre class="code code-long">struct Pt { long double x, y; };
 long double dist2(Pt a, Pt b) {
     long double dx = a.x - b.x, dy = a.y - b.y;
     return dx * dx + dy * dy;
@@ -12398,7 +12417,7 @@ void minCircle(vector&lt;Pt&gt; p) {
 <p><b>复杂度</b>：排序 <code>O(n log n)</code> 是瓶颈，队列部分每条线最多进队一次、出队一次，均摊 <code>O(n)</code>；空间 <code>O(n)</code>。与逐条裁剪的 <code>O(n<sup>2</sup>)</code> 相比，n = 10<sup>5</sup> 时差三个数量级。</p>
 
 <p><b>可编译模板</b></p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const double EPS = 1e-9;
 
@@ -12513,7 +12532,7 @@ vector&lt;Line&gt; toHP(const vector&lt;Pt&gt;&amp; poly) {
 <p><b>复杂度</b>：求凸包 Andrew 单调链 <code>O(n log n)</code>（瓶颈在排序），卡壳本体 <code>O(n)</code>，空间 <code>O(n)</code>。粗看只比 O(n<sup>2</sup>) 的暴力少一个量级，但 n = 10<sup>5</sup> 时是 10<sup>10</sup> 与 10<sup>5</sup> 的差别。</p>
 
 <p><b>可编译模板</b></p>
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 const double EPS = 1e-9;
 
@@ -12646,7 +12665,7 @@ double minAreaRect(const vector&lt;Pt&gt;&amp; h) {
 <li><b>随机游走访问所有点</b>：把「访问到点 i 的时间」当随机变量，min(T) 是「首次进入 T 中任一点」的期望，用高斯消元或树上期望公式算出，再套容斥。</li>
 </ul>
 
-<pre class="code">#include &lt;bits/stdc++.h&gt;
+<pre class="code code-long">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 // 已知 g[mask] = E[ min_{i in mask} t_i ]（mask 非空，由题目给出）
@@ -12721,7 +12740,7 @@ double allBitsOn(int n, const vector&lt;double&gt; &amp;p) {
 </table>
 <p><b>为什么直径只要 2 组、查询要 4 组</b>——这是最容易记混的一处。直径是 <code>max<sub>p,r</sub> L<sub>1</sub>(p,r)</code>，展开后是 <code>max<sub>s</sub>(max<sub>p</sub> s·p − min<sub>r</sub> s·r)</code>；符号 <code>s</code> 与 <code>−s</code> 给出的差值完全相同（只是把 max 与 min 互换），所以 4 组里有一半是重复的。查询时被减数是固定的 <code>s·q</code>，<code>s</code> 与 <code>−s</code> 不再等价，四组必须都算。实测：直径只用 2 组符号跑 500 组随机点集零错误；把查询也压成 2 组，同样 500 组里错 <b>229</b> 组。</p>
 <p><b>模板一：直径与查询</b>（点坐标 <code>|x|,|y| ≤ 10<sup>9</sup></code> 必须先想溢出）</p>
-<pre class="code">struct Pt { long long x, y; };
+<pre class="code code-long">struct Pt { long long x, y; };
 
 // 曼哈顿直径：O(n)，只维护 u/v 的四个极值
 long long manhattanDiameter(const vector&lt;Pt&gt; &amp;p) {
@@ -12781,7 +12800,7 @@ vector&lt;vector&lt;int&gt;&gt; manhattanTransform(const vector&lt;vector&lt;int
 }</pre>
 <p>这是标准的二维「距离变换」：曼哈顿距离可以拆成「先横后纵」两段，每段都是个一维 DP，所以两遍扫描就够（第一遍处理来自左上方的源，第二遍处理来自右下方的源）。它是<b>精确</b>的，不是近似——因为任意一条最短路都能被拆成「先往左上走一部分、再往右下走一部分」，两遍分别覆盖这两种情况。八邻域版本只需把第二遍的 <code>+1</code> 换成对角线也能走（即 <code>min(d[i+1][j+1]+1, ...)</code>），此时算的是切比雪夫距离。</p>
 <p><b>模板三：曼哈顿球计数</b>（「到 <code>(qx,qy)</code> 距离 ≤ r 的点有多少个」，<code>n, q ≤ 2×10<sup>5</sup></code>）</p>
-<pre class="code">struct Pt { long long x, y; };
+<pre class="code code-long">struct Pt { long long x, y; };
 
 struct BIT {
     int n; vector&lt;int&gt; t;
