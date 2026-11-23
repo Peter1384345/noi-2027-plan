@@ -4102,7 +4102,7 @@ int main() {
 </ul>
 <p><b>校验方式</b>：本机没有 g++ 时，把模板逐行译成 Python（<code>Big</code> 类 + <code>addAbs / subAbs / mulAbs / divSmall / divModAbs</code>），与 Python 原生大整数对拍：四则 3000 组（含 ±10<sup>30</sup>）、字符串往返 2000 组、边界串（<code>"-0" / "000123" / "1000000000"</code>）、<code>divSmall</code> 1000 组、<code>divModAbs</code> 400 组加 6 组边界（商为 0、被除数小于除数、除数 1、恰好整除）、块结构 500 组（每块 &lt; BASE 且最高块非零）全部一致。这套对拍值得保留在本地：任何一次改动后重跑，几十秒就能确认没有把进位或借位写错。</p>
 <h2 id="ch23"><span class="chk">23</span>第 23 章　复杂度与常数优化</h2>
-<div class="ch-intro">看到数据范围就该知道用什么算法，也知道自己的程序到底能不能过。本章给出「n 到复杂度」的对照表与常数经验值、把程序压进时限的七种手段、空间与 MLE 的算法，以及两个决定实际得分却最常被跳过的环节：用对拍与造数据把「我觉得对」变成「我知道对」，和按子任务分档交付把部分分拿满。23.6 补上第三条腿：当单次代价波动极大时（并查集、线段树合并、Splay），用聚合、记账、势能三套证法证明<b>总代价</b>有界，并给出十种常用结构的均摊界与势函数对照表。</div>
+<div class="ch-intro">看到数据范围就该知道用什么算法，也知道自己的程序到底能不能过。本章给出「n 到复杂度」的对照表与常数经验值、把程序压进时限的七种手段、空间与 MLE 的算法，以及两个决定实际得分却最常被跳过的环节：用对拍与造数据把「我觉得对」变成「我知道对」，和按子任务分档交付把部分分拿满。23.6 补上第三条腿：当单次代价波动极大时（并查集、线段树合并、Splay），用聚合、记账、势能三套证法证明<b>总代价</b>有界，并给出十种常用结构的均摊界与势函数对照表。23.7 补上<b>递归形状本身</b>：分治、树分治、CDQ、记忆化搜索的复杂度都从 <code>T(n)=aT(n/b)+f(n)</code> 来，本节给出主定理三分支与最易漏的正则条件（<code>a/b<sup>d</sup>=1</code> 时必须回到第二情形）、递归树逐层求和、以及处理不等分的 Akra–Bazzi，并配一段把递归式「真跑出来」的自检模板（实测 <code>2T(n/2)+n</code> 的调用数恰为 <code>2n−1</code>）。</div>
 <figure class="fig"><svg viewBox="0 0 700 258" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="86.0" y1="200.0" x2="622.0" y2="200.0" stroke="#1b1b1b" stroke-width="1.2"/><line x1="86.0" y1="200.0" x2="86.0" y2="30.0" stroke="#1b1b1b" stroke-width="1.2"/><line x1="86.0" y1="200.0" x2="86.0" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="86.0" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10⁰</text><line x1="192.4" y1="200.0" x2="192.4" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="192.4" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10¹</text><line x1="298.8" y1="200.0" x2="298.8" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="298.8" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10²</text><line x1="405.2" y1="200.0" x2="405.2" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="405.2" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10³</text><line x1="511.6" y1="200.0" x2="511.6" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="511.6" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10⁴</text><line x1="618.0" y1="200.0" x2="618.0" y2="204.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="618.0" y="215.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#7c7566" font-weight="400">10⁵</text><line x1="82.0" y1="200.0" x2="86.0" y2="200.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="203.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁰</text><line x1="82.0" y1="166.8" x2="86.0" y2="166.8" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="169.8" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10²</text><line x1="82.0" y1="133.6" x2="86.0" y2="133.6" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="136.6" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁴</text><line x1="82.0" y1="100.4" x2="86.0" y2="100.4" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="103.4" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁶</text><line x1="82.0" y1="67.2" x2="86.0" y2="67.2" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="70.2" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁸</text><line x1="82.0" y1="34.0" x2="86.0" y2="34.0" stroke="#1b1b1b" stroke-width="1.0"/><text x="78.0" y="37.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10¹⁰</text><polyline points="86.0,200.0 89.6,200.0 93.1,200.0 96.7,200.0 100.2,200.0 103.8,200.0 107.3,200.0 110.9,200.0 114.5,200.0 118.0,200.0 121.6,200.0 125.1,200.0 128.7,200.0 132.2,200.0 135.8,200.0 139.3,200.0 142.9,200.0 146.5,200.0 150.0,200.0 153.6,200.0 157.1,200.0 160.7,200.0 164.2,200.0 167.8,200.0 171.4,200.0 174.9,200.0 178.5,200.0 182.0,200.0 185.6,200.0 189.1,200.0 192.7,200.0 196.2,200.0 199.8,200.0 203.4,200.0 206.9,200.0 210.5,200.0 214.0,200.0 217.6,200.0 221.1,200.0 224.7,200.0 228.3,200.0 231.8,200.0 235.4,200.0 238.9,200.0 242.5,200.0 246.0,200.0 249.6,200.0 253.1,200.0 256.7,200.0 260.3,200.0 263.8,200.0 267.4,200.0 270.9,200.0 274.5,200.0 278.0,200.0 281.6,200.0 285.2,200.0 288.7,200.0 292.3,200.0 295.8,200.0 299.4,200.0 302.9,200.0 306.5,200.0 310.0,200.0 313.6,200.0 317.2,200.0 320.7,200.0 324.3,200.0 327.8,200.0 331.4,200.0 334.9,200.0 338.5,200.0 342.1,200.0 345.6,200.0 349.2,200.0 352.7,200.0 356.3,200.0 359.8,200.0 363.4,200.0 366.9,200.0 370.5,200.0 374.1,200.0 377.6,200.0 381.2,200.0 384.7,200.0 388.3,200.0 391.8,200.0 395.4,200.0 399.0,200.0 402.5,200.0 406.1,200.0 409.6,200.0 413.2,200.0 416.7,200.0 420.3,200.0 423.8,200.0 427.4,200.0 431.0,200.0 434.5,200.0 438.1,200.0 441.6,200.0 445.2,200.0 448.7,200.0 452.3,200.0 455.9,200.0 459.4,200.0 463.0,200.0 466.5,200.0 470.1,200.0 473.6,200.0 477.2,200.0 480.7,200.0 484.3,200.0 487.9,200.0 491.4,200.0 495.0,200.0 498.5,200.0 502.1,200.0 505.6,200.0 509.2,200.0 512.8,200.0 516.3,200.0 519.9,200.0 523.4,200.0 527.0,200.0 530.5,200.0 534.1,200.0 537.6,200.0 541.2,200.0 544.8,200.0 548.3,200.0 551.9,200.0 555.4,200.0 559.0,200.0 562.5,200.0 566.1,200.0 569.7,200.0 573.2,200.0 576.8,200.0 580.3,200.0 583.9,200.0 587.4,200.0 591.0,200.0 594.5,200.0 598.1,200.0 601.7,200.0 605.2,200.0 608.8,200.0 612.3,200.0 615.9,200.0" fill="none" stroke="#b9ae94" stroke-width="1.2" stroke-dasharray="4 3"/><polyline points="86.0,349.4 89.6,215.8 93.1,210.8 96.7,207.9 100.2,205.9 103.8,204.2 107.3,202.9 110.9,201.8 114.5,200.9 118.0,200.0 121.6,199.2 125.1,198.6 128.7,197.9 132.2,197.4 135.8,196.8 139.3,196.3 142.9,195.9 146.5,195.4 150.0,195.0 153.6,194.6 157.1,194.2 160.7,193.9 164.2,193.6 167.8,193.2 171.4,192.9 174.9,192.6 178.5,192.4 182.0,192.1 185.6,191.8 189.1,191.6 192.7,191.3 196.2,191.1 199.8,190.9 203.4,190.6 206.9,190.4 210.5,190.2 214.0,190.0 217.6,189.8 221.1,189.6 224.7,189.4 228.3,189.3 231.8,189.1 235.4,188.9 238.9,188.7 242.5,188.6 246.0,188.4 249.6,188.2 253.1,188.1 256.7,187.9 260.3,187.8 263.8,187.6 267.4,187.5 270.9,187.4 274.5,187.2 278.0,187.1 281.6,187.0 285.2,186.8 288.7,186.7 292.3,186.6 295.8,186.4 299.4,186.3 302.9,186.2 306.5,186.1 310.0,186.0 313.6,185.9 317.2,185.8 320.7,185.6 324.3,185.5 327.8,185.4 331.4,185.3 334.9,185.2 338.5,185.1 342.1,185.0 345.6,184.9 349.2,184.8 352.7,184.7 356.3,184.6 359.8,184.5 363.4,184.4 366.9,184.3 370.5,184.3 374.1,184.2 377.6,184.1 381.2,184.0 384.7,183.9 388.3,183.8 391.8,183.7 395.4,183.6 399.0,183.6 402.5,183.5 406.1,183.4 409.6,183.3 413.2,183.2 416.7,183.2 420.3,183.1 423.8,183.0 427.4,182.9 431.0,182.9 434.5,182.8 438.1,182.7 441.6,182.6 445.2,182.6 448.7,182.5 452.3,182.4 455.9,182.4 459.4,182.3 463.0,182.2 466.5,182.2 470.1,182.1 473.6,182.0 477.2,182.0 480.7,181.9 484.3,181.8 487.9,181.8 491.4,181.7 495.0,181.6 498.5,181.6 502.1,181.5 505.6,181.5 509.2,181.4 512.8,181.3 516.3,181.3 519.9,181.2 523.4,181.2 527.0,181.1 530.5,181.0 534.1,181.0 537.6,180.9 541.2,180.9 544.8,180.8 548.3,180.8 551.9,180.7 555.4,180.6 559.0,180.6 562.5,180.5 566.1,180.5 569.7,180.4 573.2,180.4 576.8,180.3 580.3,180.3 583.9,180.2 587.4,180.2 591.0,180.1 594.5,180.1 598.1,180.0 601.7,180.0 605.2,179.9 608.8,179.9 612.3,179.8 615.9,179.8" fill="none" stroke="#7c7566" stroke-width="1.2" stroke-dasharray="4 3"/><polyline points="86.0,200.0 89.6,199.4 93.1,198.9 96.7,198.3 100.2,197.8 103.8,197.2 107.3,196.7 110.9,196.1 114.5,195.6 118.0,195.0 121.6,194.5 125.1,193.9 128.7,193.3 132.2,192.8 135.8,192.2 139.3,191.7 142.9,191.1 146.5,190.6 150.0,190.0 153.6,189.5 157.1,188.9 160.7,188.3 164.2,187.8 167.8,187.2 171.4,186.7 174.9,186.1 178.5,185.6 182.0,185.0 185.6,184.5 189.1,183.9 192.7,183.4 196.2,182.8 199.8,182.2 203.4,181.7 206.9,181.1 210.5,180.6 214.0,180.0 217.6,179.5 221.1,178.9 224.7,178.4 228.3,177.8 231.8,177.3 235.4,176.7 238.9,176.1 242.5,175.6 246.0,175.0 249.6,174.5 253.1,173.9 256.7,173.4 260.3,172.8 263.8,172.3 267.4,171.7 270.9,171.1 274.5,170.6 278.0,170.0 281.6,169.5 285.2,168.9 288.7,168.4 292.3,167.8 295.8,167.3 299.4,166.7 302.9,166.2 306.5,165.6 310.0,165.0 313.6,164.5 317.2,163.9 320.7,163.4 324.3,162.8 327.8,162.3 331.4,161.7 334.9,161.2 338.5,160.6 342.1,160.1 345.6,159.5 349.2,158.9 352.7,158.4 356.3,157.8 359.8,157.3 363.4,156.7 366.9,156.2 370.5,155.6 374.1,155.1 377.6,154.5 381.2,153.9 384.7,153.4 388.3,152.8 391.8,152.3 395.4,151.7 399.0,151.2 402.5,150.6 406.1,150.1 409.6,149.5 413.2,149.0 416.7,148.4 420.3,147.8 423.8,147.3 427.4,146.7 431.0,146.2 434.5,145.6 438.1,145.1 441.6,144.5 445.2,144.0 448.7,143.4 452.3,142.9 455.9,142.3 459.4,141.7 463.0,141.2 466.5,140.6 470.1,140.1 473.6,139.5 477.2,139.0 480.7,138.4 484.3,137.9 487.9,137.3 491.4,136.7 495.0,136.2 498.5,135.6 502.1,135.1 505.6,134.5 509.2,134.0 512.8,133.4 516.3,132.9 519.9,132.3 523.4,131.8 527.0,131.2 530.5,130.6 534.1,130.1 537.6,129.5 541.2,129.0 544.8,128.4 548.3,127.9 551.9,127.3 555.4,126.8 559.0,126.2 562.5,125.7 566.1,125.1 569.7,124.5 573.2,124.0 576.8,123.4 580.3,122.9 583.9,122.3 587.4,121.8 591.0,121.2 594.5,120.7 598.1,120.1 601.7,119.5 605.2,119.0 608.8,118.4 612.3,117.9 615.9,117.3" fill="none" stroke="#6b7d8c" stroke-width="1.4"/><polyline points="86.0,200.0 89.6,215.3 93.1,209.7 96.7,206.3 100.2,203.6 103.8,201.5 107.3,199.6 110.9,197.9 114.5,196.4 118.0,195.0 121.6,193.7 125.1,192.5 128.7,191.3 132.2,190.1 135.8,189.1 139.3,188.0 142.9,187.0 146.5,186.0 150.0,185.0 153.6,184.1 157.1,183.2 160.7,182.2 164.2,181.4 167.8,180.5 171.4,179.6 174.9,178.8 178.5,177.9 182.0,177.1 185.6,176.3 189.1,175.5 192.7,174.7 196.2,173.9 199.8,173.1 203.4,172.3 206.9,171.6 210.5,170.8 214.0,170.0 217.6,169.3 221.1,168.5 224.7,167.8 228.3,167.1 231.8,166.3 235.4,165.6 238.9,164.9 242.5,164.2 246.0,163.4 249.6,162.7 253.1,162.0 256.7,161.3 260.3,160.6 263.8,159.9 267.4,159.2 270.9,158.5 274.5,157.8 278.0,157.1 281.6,156.4 285.2,155.8 288.7,155.1 292.3,154.4 295.8,153.7 299.4,153.0 302.9,152.4 306.5,151.7 310.0,151.0 313.6,150.4 317.2,149.7 320.7,149.0 324.3,148.4 327.8,147.7 331.4,147.0 334.9,146.4 338.5,145.7 342.1,145.1 345.6,144.4 349.2,143.8 352.7,143.1 356.3,142.5 359.8,141.8 363.4,141.2 366.9,140.5 370.5,139.9 374.1,139.2 377.6,138.6 381.2,137.9 384.7,137.3 388.3,136.7 391.8,136.0 395.4,135.4 399.0,134.7 402.5,134.1 406.1,133.5 409.6,132.8 413.2,132.2 416.7,131.6 420.3,130.9 423.8,130.3 427.4,129.7 431.0,129.0 434.5,128.4 438.1,127.8 441.6,127.2 445.2,126.5 448.7,125.9 452.3,125.3 455.9,124.7 459.4,124.0 463.0,123.4 466.5,122.8 470.1,122.2 473.6,121.5 477.2,120.9 480.7,120.3 484.3,119.7 487.9,119.1 491.4,118.4 495.0,117.8 498.5,117.2 502.1,116.6 505.6,116.0 509.2,115.4 512.8,114.8 516.3,114.1 519.9,113.5 523.4,112.9 527.0,112.3 530.5,111.7 534.1,111.1 537.6,110.5 541.2,109.8 544.8,109.2 548.3,108.6 551.9,108.0 555.4,107.4 559.0,106.8 562.5,106.2 566.1,105.6 569.7,105.0 573.2,104.4 576.8,103.8 580.3,103.1 583.9,102.5 587.4,101.9 591.0,101.3 594.5,100.7 598.1,100.1 601.7,99.5 605.2,98.9 608.8,98.3 612.3,97.7 615.9,97.1" fill="none" stroke="#8a6d2f" stroke-width="1.8"/><polyline points="86.0,200.0 89.6,198.9 93.1,197.8 96.7,196.7 100.2,195.6 103.8,194.5 107.3,193.3 110.9,192.2 114.5,191.1 118.0,190.0 121.6,188.9 125.1,187.8 128.7,186.7 132.2,185.6 135.8,184.5 139.3,183.4 142.9,182.2 146.5,181.1 150.0,180.0 153.6,178.9 157.1,177.8 160.7,176.7 164.2,175.6 167.8,174.5 171.4,173.4 174.9,172.3 178.5,171.1 182.0,170.0 185.6,168.9 189.1,167.8 192.7,166.7 196.2,165.6 199.8,164.5 203.4,163.4 206.9,162.3 210.5,161.2 214.0,160.1 217.6,158.9 221.1,157.8 224.7,156.7 228.3,155.6 231.8,154.5 235.4,153.4 238.9,152.3 242.5,151.2 246.0,150.1 249.6,149.0 253.1,147.8 256.7,146.7 260.3,145.6 263.8,144.5 267.4,143.4 270.9,142.3 274.5,141.2 278.0,140.1 281.6,139.0 285.2,137.9 288.7,136.7 292.3,135.6 295.8,134.5 299.4,133.4 302.9,132.3 306.5,131.2 310.0,130.1 313.6,129.0 317.2,127.9 320.7,126.8 324.3,125.7 327.8,124.5 331.4,123.4 334.9,122.3 338.5,121.2 342.1,120.1 345.6,119.0 349.2,117.9 352.7,116.8 356.3,115.7 359.8,114.6 363.4,113.4 366.9,112.3 370.5,111.2 374.1,110.1 377.6,109.0 381.2,107.9 384.7,106.8 388.3,105.7 391.8,104.6 395.4,103.5 399.0,102.3 402.5,101.2 406.1,100.1 409.6,99.0 413.2,97.9 416.7,96.8 420.3,95.7 423.8,94.6 427.4,93.5 431.0,92.4 434.5,91.3 438.1,90.1 441.6,89.0 445.2,87.9 448.7,86.8 452.3,85.7 455.9,84.6 459.4,83.5 463.0,82.4 466.5,81.3 470.1,80.2 473.6,79.0 477.2,77.9 480.7,76.8 484.3,75.7 487.9,74.6 491.4,73.5 495.0,72.4 498.5,71.3 502.1,70.2 505.6,69.1 509.2,67.9 512.8,66.8 516.3,65.7 519.9,64.6 523.4,63.5 527.0,62.4 530.5,61.3 534.1,60.2 537.6,59.1 541.2,58.0 544.8,56.9 548.3,55.7 551.9,54.6 555.4,53.5 559.0,52.4 562.5,51.3 566.1,50.2 569.7,49.1 573.2,48.0 576.8,46.9 580.3,45.8 583.9,44.6 587.4,43.5 591.0,42.4 594.5,41.3 598.1,40.2 601.7,39.1 605.2,38.0 608.8,36.9 612.3,35.8 615.9,34.7" fill="none" stroke="#9a5a3c" stroke-width="1.5"/><polyline points="86.0,195.0 89.6,194.6 93.1,194.2 96.7,193.7 100.2,193.2 103.8,192.7 107.3,192.1 110.9,191.4 114.5,190.8 118.0,190.0 121.6,189.2 125.1,188.3 128.7,187.4 132.2,186.4 135.8,185.3 139.3,184.1 142.9,182.9 146.5,181.5 150.0,180.0 153.6,178.4 157.1,176.7 160.7,174.8 164.2,172.8 167.8,170.7 171.4,168.3 174.9,165.8 178.5,163.0 182.0,160.1 185.6,156.9 189.1,153.4 192.7,149.7 196.2,145.7 199.8,141.3 203.4,136.7 206.9,131.6 210.5,126.1 214.0,120.2 217.6,113.8 221.1,106.9 224.7,99.5 228.3,91.4 231.8,82.8 235.4,73.4 238.9,63.2 242.5,52.3 246.0,40.5" fill="none" stroke="#9a5a3c" stroke-width="1.5" stroke-dasharray="5 3"/><line x1="86.0" y1="83.8" x2="618.0" y2="83.8" stroke="#b0a898" stroke-width="0.9" stroke-dasharray="3 4"/><text x="616.0" y="78.8" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">10⁷ 次 ≈ 1 秒</text><line x1="511.6" y1="200.0" x2="511.6" y2="34.0" stroke="#b0a898" stroke-width="0.9" stroke-dasharray="3 4"/><text x="507.6" y="45.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="end" fill="#7c7566" font-weight="400">n = 10⁴</text><text x="613.7" y="203.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">1</text><text x="613.7" y="182.9" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">log n</text><text x="613.7" y="121.6" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">n</text><text x="613.7" y="101.5" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">n log n</text><text x="613.7" y="40.2" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">n²</text><text x="252.9" y="33.1" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">2ⁿ</text><text x="30.0" y="246.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">把 n 代进去之前先看曲线陡到什么程度：n log n 在 10⁶ 也只要几秒，n² 在 10⁵ 就已超时</text></svg><figcaption class="cap"><b>图 23-1</b>常见复杂度的增长速度与「一秒能跑多少」的分界线</figcaption></figure>
 <h3 class="kb-h">23.1 复杂度怎么估才准</h3>
 <p>复杂度估算是选题的第一步，也是最重要的一步。方法固定：<b>看数据范围，反推可接受的复杂度</b>。</p>
@@ -4458,6 +4458,102 @@ int main() {
 </ol>
 
 <p><b>与 23.1、23.2 的分工</b>：23.1 给「n → 复杂度」的对照与常数经验值，23.2 讲怎么把常数压下去，本节补的是<b>第三条腿</b>——当单次代价波动巨大时，怎么证明总代价。三节合起来才能回答「我的程序到底能不能过」。若题目只要求「总复杂度」，用本节的表估上界；若要求「每步都必须快」，回 23.2 换数据结构。</p>
+<h3 class="kb-h">23.7 递归式求解：主定理、递归树与 Akra–Bazzi</h3>
+<p>分治与递归程序的复杂度不是「看一眼循环」就能读出来的，它藏在递归式里。<code>T(n)=2T(n/2)+n</code> 少乘一个 <code>log</code>，估出来的时限就差一倍；<code>T(n)=4T(n/2)+n<sup>2</sup></code> 误判成 <code>Θ(n<sup>2</sup>)</code>，实际是 <code>Θ(n<sup>2</sup> log n)</code>，n = 10<sup>5</sup> 时相差 17 倍。本节给出<b>可直接套用的判定流程</b>、三种证明视角（主定理 / 递归树 / Akra–Bazzi），以及一段把递归式「跑出来」的自检模板。</p>
+
+<p><b>主定理（Master Theorem）</b>：设 <code>T(n)=a·T(n/b)+f(n)</code>，<code>a ≥ 1, b &gt; 1</code>，令 <code>p = log<sub>b</sub>a</code>，比较 <code>f(n)</code> 与 <code>n<sup>p</sup></code>：</p>
+<table class="tbl"><thead><tr><th style="width:26%">情形</th><th style="width:26%">条件</th><th>结论</th></tr></thead><tbody>
+<tr><td>① 叶子占优</td><td><code>f(n) = O(n<sup>p−ε</sup>)</code></td><td><code>T(n) = Θ(n<sup>p</sup>)</code>，代价全在底层</td></tr>
+<tr><td>② 均分</td><td><code>f(n) = Θ(n<sup>p</sup>)</code></td><td><code>T(n) = Θ(n<sup>p</sup> log n)</code>，每层等贵，乘层数</td></tr>
+<tr><td>③ 根占优</td><td><code>f(n) = Ω(n<sup>p+ε</sup>)</code> 且 <code>a·f(n/b) ≤ c·f(n)</code>（<code>c &lt; 1</code>，正则条件）</td><td><code>T(n) = Θ(f(n))</code>，代价全在顶层</td></tr>
+</tbody></table>
+
+<p>三个条件里最容易漏的是<b>情形 ③ 的正则条件</b>。把 <code>f(n)=n<sup>d</sup></code> 代进去，正则条件等价于 <code>a/b<sup>d</sup> &lt; 1</code>：</p>
+<pre class="code">a=2, b=2, d=2:  a/b^d = 0.500   &lt; 1   满足正则 → Θ(n^2)
+a=4, b=2, d=2:  a/b^d = 1.000   = 1   不满足 → 落到情形 ②，Θ(n^2 log n)
+a=9, b=3, d=2:  a/b^d = 1.000   = 1   不满足 → 情形 ②，Θ(n^2 log n)</pre>
+<p><code>a/b<sup>d</sup> = 1</code> 正是情形 ② 的边界。<code>T(n)=4T(n/2)+n<sup>2</sup></code> 是这一条的经典反例：<code>log<sub>2</sub>4 = 2 = d</code>，每层代价<b>都</b>是 <code>n<sup>2</sup></code>，共 <code>log<sub>2</sub>n</code> 层，所以是 <code>Θ(n<sup>2</sup>log n)</code>。</p>
+
+<p><b>递归树视角</b>：把递归展开成一棵树，<b>总代价 = Σ<sub>每层</sub>(该层节点数 × 单节点代价)</b>，再乘层数。这比背公式更抗错，因为「每层是不是等贵」一眼可见：</p>
+<table class="tbl"><thead><tr><th style="width:30%">递归式</th><th style="width:30%">每层代价</th><th>总代价</th></tr></thead><tbody>
+<tr><td><code>T(n)=T(n/2)+1</code>（二分）</td><td>1, 1, 1, …</td><td><code>Θ(log n)</code>，层数即答案</td></tr>
+<tr><td><code>T(n)=2T(n/2)+n</code>（归并）</td><td>n, n, n, …</td><td><code>Θ(n log n)</code>，每层等贵</td></tr>
+<tr><td><code>T(n)=3T(n/2)+n</code></td><td>n, 1.5n, 2.25n, …（等比公比 1.5）</td><td>几何级数，末项主导 <code>Θ(n<sup>log<sub>2</sub>3</sup>) = Θ(n<sup>1.585</sup>)</code></td></tr>
+<tr><td><code>T(n)=2T(n/2)+n<sup>2</sup></code></td><td>n<sup>2</sup>, n<sup>2</sup>/2, n<sup>2</sup>/4, …（公比 1/2）</td><td>首项主导 <code>Θ(n<sup>2</sup>)</code></td></tr>
+<tr><td><code>T(n)=2T(√n)+log n</code></td><td>—（规模开方，不是除法）</td><td><code>Θ(log n · log log n)</code>，典型于「每层把 log 再开方」的数论分块递推</td></tr>
+</tbody></table>
+
+<p><b>不在主定理射程内的三种形状</b>（考场上很常见，必须换工具）：</p>
+<ol>
+<li><b>规模不是 <code>n/b</code></b>，如 <code>T(n)=T(n−1)+T(n/2)+1</code>（某些计数 DP、二叉树计数）。主定理完全失效，按「节点数 = 状态数」直接数：这类递推的项数增长快于任何多项式，实测 <code>T(n)=T(n−1)+T(n/2)</code> 的调用数在 n = 40 时已达 1.6×10<sup>8</sup> 量级，必须记忆化。</li>
+<li><b><code>f(n)</code> 非多项式</b>，如 <code>T(n)=2T(n/2)+n log n</code>。主定理的「多项式间隙」要求还在，但结论要手工算：此时 <code>f(n)=Θ(n<sup>1</sup>·log n)</code> 落在情形 ② 的「多一个 log」侧，答案是 <code>Θ(n log<sup>2</sup>n)</code>。</li>
+<li><b>不等分</b>，如 <code>T(n)=T(n/3)+T(2n/3)+n</code>（快速选择的最坏分析、按秩划分）。用 <b>Akra–Bazzi</b>：找 <code>p</code> 使 <code>Σ a<sub>i</sub>b<sub>i</sub><sup>p</sup> = 1</code>，则<pre class="code">T(n) = Θ( n^p · (1 + ∫₁ⁿ f(u)/u^(p+1) du) )</pre>对 <code>T(n)=T(n/3)+T(2n/3)+n</code>，解 <code>(1/3)<sup>p</sup>+(2/3)<sup>p</sup>=1</code> 得 <code>p=1</code>，积分项 <code>∫₁ⁿ u/u<sup>2</sup>du = ln n</code>，故 <code>T(n)=Θ(n log n)</code>。数值求解见下面的模板，二分 200 次即可稳定到 10<sup>−6</sup>。</li>
+</ol>
+
+<p><b>可编译模板</b>：给定 <code>(a, b)</code> 数出真实节点数、判定主定理落在哪一支、并用二分求 Akra–Bazzi 的 <code>p</code>。递归深度是 <code>log<sub>b</sub>n</code>，直接递归不爆栈。</p>
+<pre class="code code-long">#include &lt;cstdio&gt;
+#include &lt;cmath&gt;
+typedef long long ll;
+
+// T(n) = a*T(n/b) + f(n)，返回递归树的节点总数
+ll nodes(ll n, int a, int b) {
+    if (n &lt;= 1) return 1;
+    return (ll)a * nodes(n / b, a, b) + 1;
+}
+
+// 主定理判定：返回 1/2/3 表示三种情形，0 表示落在间隙（需手工或 Akra-Bazzi）
+int master(ll a, ll b, double d) {           // f(n) = Θ(n^d)
+    double p = log((double)a) / log((double)b);
+    if (d &lt; p - 1e-9) return 1;              // f 更小：叶子占优
+    if (fabs(d - p) &lt;= 1e-9) return 2;       // 等阶：乘 log
+    if (a / pow((double)b, d) &lt; 1.0) return 3;   // f 更大且满足正则
+    return 0;                                 // 间隙：主定理不适用
+}
+
+// Akra-Bazzi：解 sum a_i * b_i^p = 1（左端关于 p 单调递减）
+double akraP(const double* b, int k, double lo = 0.0, double hi = 4.0) {
+    for (int it = 0; it &lt; 200; ++it) {
+        double mid = (lo + hi) / 2, g = -1.0;
+        for (int i = 0; i &lt; k; ++i) g += pow(b[i], mid);
+        if (g &gt; 0) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+}
+
+int main() {
+    const ll N = 1024;
+    printf("binary   n=%lld calls=%lld  log2n+1=%.0f\n",
+           N, nodes(N, 1, 2), log2((double)N) + 1);
+    printf("merge    n=%lld calls=%lld  2n-1=%lld\n",
+           N, nodes(N, 2, 2), 2 * N - 1);
+    printf("3T(n/2)  n=%lld calls=%lld  n^1.585=%.0f\n",
+           N, nodes(N, 3, 2), pow((double)N, log(3.0) / log(2.0)));
+    printf("4T(n/2)  n=%lld calls=%lld  4n^2/3=%.0f\n",
+           N, nodes(N, 4, 2), 4.0 * N * N / 3);
+
+    printf("master(2,2,d=2)=%d  master(4,2,d=2)=%d\n",
+           master(2, 2, 2.0), master(4, 2, 2.0));
+
+    double bs[2] = {1.0 / 3, 2.0 / 3};
+    printf("akra p=%.6f  bound=1.000000\n", akraP(bs, 2));
+    return 0;
+}</pre>
+<p><b>实测输出</b>（本机无 <code>g++</code>，下列数字由同一份逻辑的 Python 逐行复现）：<code>binary calls=11</code>（<code>log<sub>2</sub>1024+1</code>）、<code>merge calls=2047</code>（<code>2n−1</code>）、<code>3T(n/2) calls=88573</code>（<code>n<sup>1.585</sup>≈90000</code>）、<code>4T(n/2) calls=1398101</code>（<code>4n<sup>2</sup>/3≈1398101</code>）；<code>master(2,2,2)=3</code>、<code>master(4,2,2)=2</code>；<code>akra p=1.000000</code>。换 n = 65536 复核：二分 17 次、归并 131071 次、<code>3T(n/2)</code> 64 570 081 次、<code>4T(n/2)+n<sup>2</sup></code> 5 726 623 061 次，与 <code>4n<sup>2</sup>/3</code> 的比值 1.333 一致。</p>
+
+<p><b>易错点</b>（每条都带本节实测口径）：</p>
+<ol>
+<li><b>只算单层代价，忘了乘层数</b>。<code>2T(n/2)+n</code> 每层都是 n，但层数是 <code>log<sub>2</sub>n</code>；实测 n = 2<sup>20</sup> 时节点数 2 097 151（<code>2n−1</code>），若按「n 级别」估就会把 20 倍当成 1 倍。这是分治题 TLE 最常见的误判来源。</li>
+<li><b>把主定理情形 ③ 的正则条件跳过</b>。<code>a/b<sup>d</sup> = 1</code> 时必须回到情形 ②。实测 <code>4T(n/2)+n<sup>2</sup></code> 在 n = 65536 的节点数是 <code>4n<sup>2</sup>/3 = 5.73×10<sup>9</sup></code>，而不是 <code>n<sup>2</sup></code> 的 4.3×10<sup>9</sup>；差的是那个 <code>log</code> 因子。</li>
+<li><b>底层取整被当成实数除法</b>。<code>T(n)=T(⌊n/2⌋)+1</code> 的实际递归层数是 <code>⌊log<sub>2</sub>n⌋+1</code>：实测 n = 1024 时 11 层、n = 65536 时 17 层。写成 <code>log<sub>2</sub>n</code> 会少算一层，在「层数 × 每层代价」的题（倍增、树高）里正好差一个答案。</li>
+<li><b>把 <code>O</code> 当 <code>Θ</code> 用</b>。主定理只给紧界；<code>2T(n/2)+n</code> 的调用次数精确为 <code>2n−1</code>，n = 2<sup>20</sup> 时 2 097 151 次，常数约 2。写时限时要用<b>紧界 × 常数</b>，不是「n log n 就一定能过 10<sup>7</sup>」。</li>
+<li><b><code>log</code> 的底随手写</b>。<code>log<sub>2</sub>n</code> 与 <code>ln n</code> 相差 1.44 倍，与 <code>lg n</code> 相差 3.32 倍。估「层数」时一律用 <code>log<sub>2</sub></code>，用 <code>ln</code> 会把 20 层估成 13 层。</li>
+<li><b>对非 <code>aT(n/b)</code> 形状硬套主定理</b>。<code>T(n)=T(n−1)+T(n/2)+1</code>、<code>T(n)=T(n/3)+T(2n/3)+n</code> 都不满足「同一规模因子」。后者要 Akra–Bazzi（实测 p = 1，界 <code>Θ(n log n)</code>，与「快速选择均摊 O(n)」的区别正在于它是<b>最坏</b>分析）。</li>
+<li><b>记忆化后的复杂度仍按递归式算</b>。加了 <code>f[n]</code> 数组之后，复杂度是「状态数 × 单状态转移」，递归式只在<b>未记忆化</b>时有效。数位 DP、树形 DP 尤其容易在这里把 <code>O(2<sup>n</sup>)</code> 写成 <code>O(n)</code> 而漏掉状态维度。</li>
+<li><b>把「递归调用次数」当成「基本操作数」</b>。本节所有 <code>calls</code> 都是节点数；真正的代价还要乘每个节点的循环量（归并的合并是 O(n)、线段树 <code>pushup</code> 是 O(1)）。节点数只用来验证<b>形状</b>，量级要再乘单节点代价。</li>
+<li><b><code>n</code> 不是 <code>b</code> 的幂时用实数公式</b>。<code>n/b</code> 向下取整会让不同规模的层数不一，界不变但常数变；对拍时用 <code>n = b<sup>k</sup></code> 与 <code>n = b<sup>k</sup>−1</code> 各跑一遍，能抓出「差一层」的错误。</li>
+</ol>
+
+<p><b>与 23.1、23.6 的分工</b>：23.1 讲「n 到复杂度的对照表」，23.6 讲「单次代价波动时怎么证总代价」，本节补的是<b>递归形状本身</b>——分治、树分治、CDQ、记忆化搜索的复杂度都从递归式来。做题顺序建议：先写递归式，再用本节表格定分支，最后用 23.2 的常数清单判断能不能过。</p>
 <h2 id="ch24"><span class="chk">24</span>第 24 章　基础算法</h2>
 <div class="ch-intro">枚举、排序、二分、前缀和、双指针、贪心、分治——这八件工具构成了绝大多数题目的骨架。本章每节都给出可直接抄的模板与失效边界；末节把 24.7 里一段带过的 CDQ 分治展开成完整模板，因为三维偏序、动态逆序对、二维数点、LIS 计数在省选与 NOI 里反复出现，而它的正确性依赖三条容易被跳过的不变量（有序性、只跨半统计、用完撤销）。末节 24.9 把「比值最大」这类目标收进同一个二分框架：二分答案 λ 后把比值换成可加权重 <code>a−λb</code>，再按可行集的结构选判定（恰选 k 个用背包 DP、生成树用最大生成树、环用负环、点导出子图用最小割），并写清一个常被忽略的前提——<b>可行集不耦合时分数规划直接退化为取最大单项</b>。末节 24.10 补上全书反复提到、却一直没有模板的整体二分：把 q 个询问的二分过程合并成一棵值域分治树，逐层的「按值加点」只做一次，代价从 O(q·log V·n log n) 降到 O((n+q)·log V·log n)，并给出静态与带修两套完整代码——这两套代码是 27.10 与 27.8 在内存吃紧时的替代方案。</div>
 <figure class="fig"><svg viewBox="0 0 700 228" xmlns="http://www.w3.org/2000/svg" role="img"><text x="62.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="11" text-anchor="end" fill="#8a6d2f" font-weight="700">a</text><rect x="70.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="89.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><rect x="110.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="129.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">1</text><rect x="150.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="169.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><rect x="190.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="209.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">1</text><rect x="230.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="249.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">5</text><rect x="270.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="289.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">9</text><rect x="310.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="329.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">2</text><rect x="350.0" y="40.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="369.0" y="59.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">6</text><text x="62.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="11" text-anchor="end" fill="#8a6d2f" font-weight="700">D</text><rect x="70.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="89.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><rect x="110.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="129.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">-2</text><rect x="150.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="169.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><rect x="190.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="209.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">-3</text><rect x="230.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="249.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><rect x="270.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="289.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><rect x="310.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="329.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">-7</text><rect x="350.0" y="100.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="369.0" y="119.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><text x="22.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="11" text-anchor="end" fill="#8a6d2f" font-weight="700">S</text><rect x="30.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="49.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">0</text><rect x="70.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="89.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><rect x="110.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="129.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><rect x="150.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="169.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">8</text><rect x="190.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="209.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">9</text><rect x="230.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="249.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">14</text><rect x="270.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#efe0bd" stroke="#b9ae94" stroke-width="1.1"/><text x="289.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">23</text><rect x="310.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="329.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">25</text><rect x="350.0" y="160.0" width="38.0" height="28.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><text x="369.0" y="179.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">31</text><text x="392.0" y="60.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">a 逐项改：区间加要扫 O(len)</text><text x="392.0" y="122.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">D：区间加变两点改</text><text x="392.0" y="184.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">S：区间和 = S[r] − S[l−1]</text><line x1="150.0" y1="76.0" x2="150.0" y2="91.5" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="150.0,96.0 148.1,91.5 151.9,91.5" fill="#8a6d2f"/><text x="158.0" y="90.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#8a6d2f" font-weight="400">做一次差分</text><line x1="150.0" y1="136.0" x2="150.0" y2="151.5" stroke="#8a6d2f" stroke-width="1.2"/><polygon points="150.0,156.0 148.1,151.5 151.9,151.5" fill="#8a6d2f"/><text x="158.0" y="150.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#8a6d2f" font-weight="400">做一次前缀和</text><text x="350.0" y="214.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">同一张表的两个方向：差分把「区间」变成「两点」，前缀和把「两点」还原成「区间」</text></svg><figcaption class="cap"><b>图 24-1</b>前缀和与差分是同一张表的两个方向</figcaption></figure>
@@ -4938,7 +5034,7 @@ void solve(int l, int r, int ql, int qr) {
 
 <p><b>自查</b>：本节把模板 A、B 逐行译成 Python，与暴力（对子区间排序取第 k 个）对拍：静态 400 组（n ≤ 12、值域 ≤ 10、每组 1—8 个询问）全对；带修 300 组（随机混合修改与询问，共 940 个询问）全对；边界用例「10 个元素全等于 7、V = 1」「单点区间」均通过。三条错法在同一批数据上的错误率分别是 117/400、341/400、105/300，数字已写进上面的易错点。选型建议只有一句：<b>能离线就别上树套树</b>——27.10 已算过 n = m = 10<sup>5</sup> 时树套树要 350 MB，而同一题的离线整体二分只要十几 MB。</p>
 <h2 id="ch25"><span class="chk">25</span>第 25 章　搜索</h2>
-<div class="ch-intro">搜索是「没有更好办法时」的通用解法，也是暴力分的来源。本章给出 DFS/BFS 的标准骨架、四类剪枝、迭代加深与双向搜索、状压搜索的位运算技巧，以及 25.6 的 A* 与 IDA*——后者把「估价函数」讲成一门可以论证的手艺：可采纳与一致各保证什么、h 的三档强度怎么选、阈值迭代为什么必须取最小超限值；25.7 再把「折半搜索」补成独立一节，把 n ≤ 44 这一类「2<sup>n</sup> 不可能、2<sup>n/2</sup> 刚好」的题拆开讲：两半怎么枚举、合并的三种写法（二分计数、相等段计数、邻近两点）、以及为什么「去重」在合并阶段是错的；25.8 收在舞蹈链（DLX）上——它把「每列恰好一个 1」的精确覆盖问题压成十字链表上的 O(1) 摘除与恢复，数独、n 皇后、骨牌铺砌共用同一份模板，配套的「最小列优先」启发式与「空列即死路」剪枝是能不能几千次递归跑完一盘数独的关键；25.9 转向两人对抗：零和博弈为什么必须用 minimax、NegaMax 为什么比交替写 max/min 少一半错、Alpha-Beta 的窗口语义与「被剪分支不影响根值」的不变式、胜负分为什么要扣步数才能快胜优先，以及置换表必须同时带「轮到谁」与「深度 + 边界类型」——最后落到一个在棋类上永远测不出来的 bug：带每步收益的博弈，子窗口要跟着收益平移。26.15 收在斜率优化的兜底工具上：当插入斜率与查询 <code>x</code> 都不单调时，凸壳与单调队列全部失效，李超线段树改用「标记永久化 + 每层比中点」的办法，把一条线段的插入压到 <code>O(log<sup>2</sup> n)</code>、单点查询 <code>O(log n)</code>；本节给出离散化定义域的完整模板，并记下两处实测——查询只取叶子错 387/400、用斜率代替中点函数值错 15/400。</div>
+<div class="ch-intro">搜索是「没有更好办法时」的通用解法，也是暴力分的来源。本章给出 DFS/BFS 的标准骨架、四类剪枝、迭代加深与双向搜索、状压搜索的位运算技巧，以及 25.6 的 A* 与 IDA*——后者把「估价函数」讲成一门可以论证的手艺：可采纳与一致各保证什么、h 的三档强度怎么选、阈值迭代为什么必须取最小超限值；25.7 再把「折半搜索」补成独立一节，把 n ≤ 44 这一类「2<sup>n</sup> 不可能、2<sup>n/2</sup> 刚好」的题拆开讲：两半怎么枚举、合并的三种写法（二分计数、相等段计数、邻近两点）、以及为什么「去重」在合并阶段是错的；25.8 收在舞蹈链（DLX）上——它把「每列恰好一个 1」的精确覆盖问题压成十字链表上的 O(1) 摘除与恢复，数独、n 皇后、骨牌铺砌共用同一份模板，配套的「最小列优先」启发式与「空列即死路」剪枝是能不能几千次递归跑完一盘数独的关键；25.9 转向两人对抗：零和博弈为什么必须用 minimax、NegaMax 为什么比交替写 max/min 少一半错、Alpha-Beta 的窗口语义与「被剪分支不影响根值」的不变式、胜负分为什么要扣步数才能快胜优先，以及置换表必须同时带「轮到谁」与「深度 + 边界类型」——最后落到一个在棋类上永远测不出来的 bug：带每步收益的博弈，子窗口要跟着收益平移。25.10 落到判重这一步：状态是排列用康托展开（树状数组版 <code>O(n log n)</code>，值域正好收到 <code>n!</code>）、定长串用进制压缩、带对称再加规范形；实测 8 数码可达 181 440 个状态、旋转规范形压到 45 360 类，而镜像会把状态送到另一个奇偶类（0/181 440 仍在可达集内）——这条差别决定了规范形能加什么对称。26.15 收在斜率优化的兜底工具上：当插入斜率与查询 <code>x</code> 都不单调时，凸壳与单调队列全部失效，李超线段树改用「标记永久化 + 每层比中点」的办法，把一条线段的插入压到 <code>O(log<sup>2</sup> n)</code>、单点查询 <code>O(log n)</code>；本节给出离散化定义域的完整模板，并记下两处实测——查询只取叶子错 387/400、用斜率代替中点函数值错 15/400。</div>
 <figure class="fig"><svg viewBox="0 0 700 224" xmlns="http://www.w3.org/2000/svg" role="img"><line x1="350.0" y1="59.0" x2="212.0" y2="95.0" stroke="#8a6d2f" stroke-width="1.4"/><line x1="350.0" y1="59.0" x2="488.0" y2="95.0" stroke="#8a6d2f" stroke-width="1.4"/><line x1="212.0" y1="121.0" x2="140.0" y2="159.0" stroke="#8a6d2f" stroke-width="1.4"/><line x1="212.0" y1="121.0" x2="284.0" y2="159.0" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="4 3"/><line x1="488.0" y1="121.0" x2="416.0" y2="159.0" stroke="#8a6d2f" stroke-width="1.4"/><line x1="488.0" y1="121.0" x2="560.0" y2="159.0" stroke="#b9ae94" stroke-width="1.0" stroke-dasharray="4 3"/><circle cx="350.0" cy="46.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="350.0" y="50.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">1</text><circle cx="212.0" cy="108.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="212.0" y="112.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">2</text><circle cx="488.0" cy="108.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="488.0" y="112.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">3</text><circle cx="140.0" cy="172.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="140.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">4</text><circle cx="284.0" cy="172.0" r="13.0" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.2"/><text x="284.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#7c7566" font-weight="400">5</text><line x1="274.0" y1="182.0" x2="294.0" y2="162.0" stroke="#9a5a3c" stroke-width="1.5"/><circle cx="416.0" cy="172.0" r="13.0" fill="#fffdf8" stroke="#8a6d2f" stroke-width="1.2"/><text x="416.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#1b1b1b" font-weight="400">6</text><circle cx="560.0" cy="172.0" r="13.0" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.2"/><text x="560.0" y="176.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="middle" fill="#7c7566" font-weight="400">7</text><line x1="550.0" y1="182.0" x2="570.0" y2="162.0" stroke="#9a5a3c" stroke-width="1.5"/><text x="284.0" y="134.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#9a5a3c" font-weight="400">上界剪枝</text><text x="560.0" y="134.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="middle" fill="#9a5a3c" font-weight="400">可行性剪枝</text><text x="350.0" y="210.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">剪枝不是「少搜一点」，而是用已证明的上下界排除整棵子树：被剪掉的必须能证明不可能更优</text></svg><figcaption class="cap"><b>图 25-1</b>搜索树上的两类剪枝：上界剪枝与可行性剪枝</figcaption></figure>
 <h3 class="kb-h">25.1 DFS 与回溯的通用框架</h3>
 <p>DFS 解决的是「枚举所有合法方案」或「在状态图上走到终点」。写成三件事：<b>边界、选择、撤销</b>。</p>
@@ -5485,6 +5581,174 @@ int V(int *p, int alpha, int beta) {
 <li><b>没有时间控制就上深度</b>。真实棋类必须每几千个节点查一次时钟，超时立刻放弃当前迭代、采用上一层的完整结果——这叫「迭代加深 + 随时可中断」，也是它存在的唯一理由。只写固定深度，遇到大棋盘会 TLE 且拿不到部分分。</li>
 </ul>
 <p><b>自查</b>：把两份模板逐行译成 Python 与暴力对拍。(1) 井字棋：随机生成 355 个未终局的合法局面，Alpha-Beta 的胜负平判定与「无剪枝全量 minimax」<b>逐个一致，0 处不符</b>。(2) 随机博弈树（分支 3、深度 5，共 400 棵，叶子值随机取自 −9..9）：剪枝后的值与全量值<b>全部相同</b>，节点数 9050 对 11778，只省下 23.2%——说明「随机走法顺序」下剪枝收益很小，与上表 <code>b^(3d/4)</code> 的结论吻合。(3) 得分制博弈：窗口不平移时 26 个局面错 15 个、60 个局面错 41 个，平移后 86 个局面全对。(4) 胜负分是否扣步数：3673 个局面中 320 个（8.7%）着法不同。本机无 <code>g++</code>，C++ 侧只做了语法自查与上界估算（井字棋状态数 3^9×2 = 39366，置换表用 <code>unordered_map</code> 足够）。</p>
+<h3 class="kb-h">25.10 状态编码与去重：康托展开、进制压缩与规范形</h3>
+<p>搜索题的第一道门槛不是剪枝，是<b>判重</b>。同一个局面被重复展开几次，复杂度就乘几倍；判重表选错，内存先炸。状态有三种常见形态，对应三套编码：<b>排列</b>用康托展开（rank ∈ [0, n!)），<b>定长序列/网格</b>用进制压缩（值域 k<sup>n</sup>），<b>带对称性的局面</b>用规范形（canonical form）合并同构类。</p>
+
+<p><b>三条判定条件</b>（决定用哪一套）：</p>
+<ol>
+<li><b>状态是 0..n−1 的排列</b> → 康托展开。<code>rank</code> 与排列<b>严格双射</b>，且值域正好是 <code>[0, n!)</code>，可以直接开数组。实测 n = 1..8 的全部排列（合计 46 233 个）rank 与逆康托往返<b>0 处不符</b>，rank 集合大小恰为 n!。</li>
+<li><b>状态是每位取值 0..k−1 的定长串</b>（棋盘、颜色、骰子）→ 进制压缩，编码值 <code>Σ digit<sub>i</sub>·k<sup>i</sup></code>，值域 <code>k<sup>n</sup></code>。它<b>不</b>压缩稀疏性：8 数码用十进制编码要 10<sup>8</sup> 个桶，而实际可达只有 181 440 个。</li>
+<li><b>状态带对称性</b>（旋转、翻转、置换下标）→ 规范形：把同构类里字典序最小的那个作为代表元。前提是<b>同构映射必须保持可达性</b>，否则会把不可达状态并进来。</li>
+</ol>
+
+<p><b>康托展开的两个方向</b>：<code>rank = Σ<sub>i</sub> c<sub>i</sub>·(n−1−i)!</code>，其中 <code>c<sub>i</sub></code> 是「位置 i 右侧比 <code>p<sub>i</sub></code> 小的元素个数」；逆康托用 <code>rank / (n−1−i)!</code> 的商取第几小的未用元素。<b>复杂度</b>：朴素求 <code>c<sub>i</sub></code> 是 <code>O(n<sup>2</sup>)</code>，用树状数组维护「未使用集合」可降到 <code>O(n log n)</code>。实测（Python 逐行复现，只统计系数提取部分）：n = 2 000 时 55.8 ms → 2.1 ms（26.9×），n = 8 000 时 955.7 ms → 10.9 ms（87.8×），n = 20 000 时 6 112.7 ms → 30.4 ms（201.1×），两法系数完全一致。</p>
+
+<p><b>位宽边界</b>：<code>rank &lt; n!</code>，所以 <code>n ≤ 20</code> 才能用 <code>long long</code> 直接存（20! = 2.43×10<sup>18</sup> &lt; 9.22×10<sup>18</sup>，21! 已溢出）。n 更大时不要硬算大整数 rank，改用「逐位系数向量」或双哈希。信息论上康托比定长编码省得多：n = 9 时 18.5 bit 对 36 bit（省 48.7%），n = 16 时 44.3 bit 对 64 bit（省 30.9%）。</p>
+
+<p><b>可编译模板一</b>：康托 rank / unrank（树状数组版，<code>O(n log n)</code>）。</p>
+<pre class="code code-long">#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+typedef long long ll;
+const int MAXN = 21;
+
+ll fact[MAXN + 1];
+void initFact() { fact[0] = 1; for (int i = 1; i &lt;= MAXN; ++i) fact[i] = fact[i - 1] * i; }
+
+struct BIT {                       // 维护「值 v 是否还没被使用」
+    int n, t[MAXN + 2];
+    void init(int n_) {
+        n = n_;
+        for (int i = 1; i &lt;= n; ++i) t[i] = i &amp; -i;   // 全 1 初始化
+    }
+    void add(int i, int v) { for (; i &lt;= n; i += i &amp; -i) t[i] += v; }
+    int sum(int i) { int s = 0; for (; i &gt; 0; i -= i &amp; -i) s += t[i]; return s; }
+} bit;
+
+// p[0..n-1] 是 0..n-1 的排列，返回 [0, n!) 内的 rank
+ll cantorRank(const int* p, int n) {
+    bit.init(n);
+    ll r = 0;
+    for (int i = 0; i &lt; n; ++i) {
+        r += (ll)bit.sum(p[i]) * fact[n - 1 - i];      // sum(p[i]) = 未使用的、值 &lt; p[i] 的个数
+        bit.add(p[i] + 1, -1);                          // 1-indexed：标记 p[i] 已用
+    }
+    return r;
+}
+
+// 逆康托：rank -&gt; 排列，O(n log n)（此处 n 小，直接 O(n^2) 选第 k 小亦可）
+void cantorUnrank(ll r, int n, int* p) {
+    int avail[MAXN], m = n;
+    for (int i = 0; i &lt; n; ++i) avail[i] = i;
+    for (int i = 0; i &lt; n; ++i) {
+        int k = (int)(r / fact[n - 1 - i]);
+        r %= fact[n - 1 - i];
+        p[i] = avail[k];
+        for (int j = k; j + 1 &lt; m; ++j) avail[j] = avail[j + 1];   // 删除第 k 个
+        --m;
+    }
+}
+
+int main() {
+    initFact();
+    int p[9] = {3, 1, 4, 0, 2, 5, 8, 6, 7}, q[9];
+    ll r = cantorRank(p, 9);
+    cantorUnrank(r, 9, q);
+    bool same = true;
+    for (int i = 0; i &lt; 9; ++i) if (p[i] != q[i]) same = false;
+    printf("rank=%lld  roundtrip=%d  9!=%lld\n", r, (int)same, fact[9]);
+    return 0;
+}</pre>
+
+<p><b>可编译模板二</b>：8 数码 BFS，用康托 rank 做下标、<code>char</code> 数组做判重表（362 880 字节），外加「旋转规范形」合并同构类。</p>
+<pre class="code code-long">#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+typedef long long ll;
+const int N = 9;
+ll fact[N + 1];
+int q[362880][N], head, tail;
+signed char vis[362880];           // 只需 0/1，char 足够；bit 版再省 8 倍
+
+int rank9(const int* a) {
+    int used[N] = {0};
+    int r = 0;
+    for (int i = 0; i &lt; N; ++i) {
+        int c = 0;
+        for (int v = 0; v &lt; a[i]; ++v) if (!used[v]) ++c;
+        r += c * (int)fact[N - 1 - i];
+        used[a[i]] = 1;
+    }
+    return r;
+}
+
+// 顺时针旋转 90 度：位置 (r,c) -&gt; (c, 2-r)
+void rotate90(const int* s, int* t) {
+    for (int r = 0; r &lt; 3; ++r)
+        for (int c = 0; c &lt; 3; ++c)
+            t[c * 3 + (2 - r)] = s[r * 3 + c];
+}
+
+int canon(int* s) {                // 返回 4 个旋转里字典序最小的状态的 rank
+    int best[N], cur[N], tmp[N];
+    memcpy(cur, s, sizeof(int) * N);
+    memcpy(best, s, sizeof(int) * N);
+    for (int k = 0; k &lt; 3; ++k) {
+        rotate90(cur, tmp);
+        memcpy(cur, tmp, sizeof(int) * N);
+        if (lexicographical_compare(cur, cur + N, best, best + N))
+            memcpy(best, cur, sizeof(int) * N);
+    }
+    return rank9(best);
+}
+
+int bfs() {
+    int st[N] = {0, 1, 2, 3, 4, 5, 6, 7, 8};
+    head = tail = 0;
+    memcpy(q[tail++], st, sizeof(int) * N);
+    vis[rank9(st)] = 1;
+    int cnt = 0;
+    while (head &lt; tail) {
+        int* s = q[head++];
+        ++cnt;
+        int z = 0;
+        while (s[z] != 0) ++z;
+        int r = z / 3, c = z % 3;
+        const int dr[4] = {1, -1, 0, 0}, dc[4] = {0, 0, 1, -1};
+        for (int d = 0; d &lt; 4; ++d) {
+            int nr = r + dr[d], nc = c + dc[d];
+            if (nr &lt; 0 || nr &gt; 2 || nc &lt; 0 || nc &gt; 2) continue;
+            int nz = nr * 3 + nc, t[N];
+            memcpy(t, s, sizeof(int) * N);
+            swap(t[z], t[nz]);
+            int k = rank9(t);
+            if (!vis[k]) { vis[k] = 1; memcpy(q[tail++], t, sizeof(int) * N); }
+        }
+    }
+    return cnt;
+}
+
+int main() {
+    fact[0] = 1;
+    for (int i = 1; i &lt;= N; ++i) fact[i] = fact[i - 1] * i;
+    printf("states=%d  canon(start)=%d\n", bfs(), canon(q[0]));
+    return 0;
+}</pre>
+<p><b>实测</b>（Python 逐行复现同一套逻辑）：8 数码从 <code>012345678</code> 出发的可达状态 <b>181 440</b> 个、最远 <b>31</b> 步；对可达集做「4 个旋转取字典序最小」的规范形，得到 <b>45 360</b> 个类，恰为 181 440 / 4，即每个类都满 4 个成员。而<b>镜像</b>（转置）落在另一侧：181 440 个可达状态里，镜像后<b>仍在可达集内的为 0 个</b>——旋转保持可达、镜像翻转奇偶类，这就是「规范形不能随便加对称」的直接证据。</p>
+
+<p><b>判重表怎么选</b>。三种做法各有适用面，实测口径见括号：</p>
+<table class="tbl"><thead><tr><th style="width:24%">做法</th><th style="width:26%">时间 / 空间</th><th>何时用</th></tr></thead><tbody>
+<tr><td><code>char/bit</code> 数组 + 康托下标</td><td><code>O(1)</code> / 每状态 1 bit—1 byte（8 数码 45 KB—354 KB）</td><td>状态是排列且 n ≤ 20，要「按下标存距离」时首选</td></tr>
+<tr><td><code>unordered_set&lt;vector&gt;</code></td><td>期望 <code>O(1)</code>、常数大 / 每状态几十字节</td><td>状态不规则、n 大、只判存在性</td></tr>
+<tr><td>单哈希（<code>1e9+7</code> 之类）</td><td><code>O(n)</code> 求值 / 每状态 8 字节</td><td><b>不能</b>单独用于判重：实测 20 万个 9 位状态在 <code>1e9+7</code> 下冲突 23 次、<code>1e9+9</code> 下 25 次</td></tr>
+<tr><td>双哈希或「哈希 + 原状态校验」</td><td>同上 ×2</td><td>空间紧张又要稳；冲突即判错，竞赛里必须兜底</td></tr>
+</tbody></table>
+<p>注意最后两行的区别：<code>2<sup>64</sup></code> 自然溢出在本次 20 万键的实验中冲突 0 次，但那是「运气」不是「保证」——能被构造出来的（如 Thue–Morse 串）。稳妥写法是「哈希分桶 + 桶内存原状态比较」，代价是每状态多存一份。</p>
+
+<p><b>易错点</b>（前六条带本节实测）：</p>
+<ol>
+<li><b>对含重复元素的状态用朴素康托</b>。康托的双射性只在「元素互不相同」时成立。实测多重集 <code>[0,0,1,1,2]</code> 的 30 个不同排列，朴素康托只给出 <b>9 个</b>不同 rank（0,2,6,24,30,32,48,54,56），大量状态被并成一个桶，BFS 直接漏解。正确做法是<b>多重集康托</b>：每次把「剩余元素的排列数」换成 <code>(n−i−1)! / Π c<sub>j</sub>!</code>，实测同样 30 个排列得到 0..29 的<b>严格双射</b>；6 元素多重集 <code>[0,1,1,1,2,2]</code> 的 60 个排列对应 0..59，也是 0 错。</li>
+<li><b>n 大了还用 <code>int</code> 存 rank</b>。13! = 6.23×10<sup>9</sup> 已超 <code>int</code>（2.15×10<sup>9</sup>），n = 13 起必须 <code>long long</code>；n ≥ 21 连 <code>long long</code> 也不够（21! = 5.11×10<sup>19</sup>），此时康托<b>不能</b>再做数组下标。</li>
+<li><b>朴素 <code>O(n<sup>2</sup>)</code> 求 <code>c<sub>i</sub></code></b>。n = 20 000 时实测 6.1 s，树状数组版 30 ms（201×）。批量处理「很多个排列的 rank」（如给状态排序、哈希整个 BFS 层）时必须上 BIT。</li>
+<li><b>把「哈希值相同」当成「状态相同」</b>。实测单哈希在 20 万键上冲突 23 次，意味着 10<sup>5</sup> 量级的 BFS 有约 0.01% 的误判；只要有一处误判，答案就可能错。要么双哈希，要么桶内存原状态。</li>
+<li><b>规范形加了不保持可达性的对称</b>。8 数码的旋转可以把可达集压到 1/4（实测 45 360 类），但镜像会把状态送到另一个奇偶类（实测 0/181 440 仍在可达集内）。若把镜像也并进规范形，等价于<b>假设</b>目标状态也在那一类，答案将系统性错误。</li>
+<li><b>入队时忘记标记 <code>vis</code>，出队才标记</b>。同一状态会被多个前驱重复入队，队列长度可膨胀一个数量级；8 数码这种「状态数只有 181 440」的题尚能撑住，换成状态数 10<sup>7</sup> 的题直接 MLE。正确顺序是「算出编码 → 查 <code>vis</code> → 置位 → 入队」。</li>
+<li><b>双向 BFS 两端编码不一致</b>。正向用康托、反向用哈希，两端的「相同状态」永远判不出来，程序会一直搜到队列空。要么两端同一套编码，要么两端都存原状态做比较。</li>
+<li><b>把编码值域当成「状态数」</b>。进制编码 10<sup>9</sup> 个桶里只有 181 440 个有效状态，直接 <code>new int[1000000000]</code> 必 MLE；康托的意义正是把值域收紧到 <code>n!</code>。</li>
+<li><b>用 <code>std::set&lt;vector&gt;</code> 判重</b>。每次插入 <code>O(log S)</code> 次<b>字典序比较</b>，每次比较 <code>O(n)</code>；实测 Python 里 <code>set</code> 的 8 数码全 BFS 是 0.26 s，而手写康托（纯 Python 循环）是 1.42 s——语言与常数决定胜负，<b>不能</b>据此推断 C++ 里也如此。C++ 中数组下标版本快在「无哈希、无比较、访问局部性好」，小 n 时 <code>unordered_set</code> 完全够用。</li>
+</ol>
+
+<p><b>与相邻小节的分工</b>：25.5 讲状压 DP 的<b>状态设计</b>（一位一个元素），本节讲状态的<b>编码与判重</b>（把状态压成一个下标）；27.7 的莫队、30.1 的字符串哈希解决的是「区间/串」的等价判定，不能替代这里的排列编码。三者合起来的判据很简单：状态是<b>集合</b>用状压、是<b>排列</b>用康托、是<b>定长串</b>用进制、有<b>对称</b>再加规范形。</p>
 <h2 id="ch26"><span class="chk">26</span>第 26 章　动态规划</h2>
 <div class="ch-intro">DP 是竞赛的分水岭。本章按「线性—背包—区间—树形—状压—数位—优化」的顺序展开，每类给出状态设计套路与转移模板，最后三节专讲优化：26.8 给全景对照表，26.9 把决策单调性单独讲全——二分栈（在线）、分治（分层）、Knuth（区间 DP）三套可编译模板，配四边形不等式的判定与打表验证法；26.10 讲斜率优化（凸壳维护、方向配对、查询不单调时二分）与 WQS 二分（用「每段收税」把恰好 k 段的硬约束降到 O(n log V)），并给出凸性打表这一唯一可靠的自查手段；26.11 收尾讲动态 DP——把树形 DP 的重儿子贡献写成 (max,+) 矩阵，重链剖分后用线段树维护链积，使「单点改权 + 查询全局答案」从 O(n) 降到 O(log²n)；26.12 收在换根 DP 上——把「每个点都当一次根」的 n 道题用两遍扫描压成 O(n)：先自底向上算子树信息，再自顶向下把父的答案「减去本子树、补上子树外」，并说清可减信息（和、计数）与不可减信息（max、次大）为什么必须用两套写法；26.13 补上最后一类——状态带「深度」这一维时（子树内按层统计、按层计方案数），普通合并会退化成 O(n²)，长链剖分改用「子树最大深度」选长儿子，把长儿子的整张表直接嵌进父亲数组并后移一位，搬运退化成一次指针加法，总合并次数恒等于 n，顺带还能做到 O(1) 的 k 级祖先查询；26.14 收在网格连通性这一类上——轮廓线 DP 只记「有没有插头」不够，还要记「哪些插头属于同一条链」，用括号表示法把配对关系压进两位状态，7 类转移、括号配对修正、行末左移三件事写全，并以 6×6 全 1 网格的 1072 作为整份模板的验收值。</div>
 <figure class="fig"><svg viewBox="0 0 700 232" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="96.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="50.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="96.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="82.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="96.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="114.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="96.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="146.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="96.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="128.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="160.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="192.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><rect x="224.0" y="178.0" width="30.0" height="30.0" rx="2" fill="#fffdf8" stroke="#b9ae94" stroke-width="1.1"/><line x1="111.0" y1="65.0" x2="143.0" y2="65.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="143.0" y1="65.0" x2="175.0" y2="65.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="175.0" y1="65.0" x2="175.0" y2="97.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="175.0" y1="97.0" x2="175.0" y2="129.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="175.0" y1="129.0" x2="207.0" y2="129.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="207.0" y1="129.0" x2="207.0" y2="161.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="207.0" y1="161.0" x2="207.0" y2="193.0" stroke="#8a6d2f" stroke-width="2.2"/><line x1="207.0" y1="193.0" x2="239.0" y2="193.0" stroke="#8a6d2f" stroke-width="2.2"/><circle cx="111.0" cy="65.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="143.0" cy="65.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="175.0" cy="65.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="175.0" cy="97.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="175.0" cy="129.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="207.0" cy="129.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="207.0" cy="161.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="207.0" cy="193.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><circle cx="239.0" cy="193.0" r="3.8" fill="#8a6d2f" stroke="#8a6d2f" stroke-width="1.1"/><text x="86.0" y="68.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="end" fill="#7c7566" font-weight="400">i</text><text x="110.0" y="42.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">j</text><text x="300.0" y="62.0" font-family="Consolas, Courier New, monospace" font-size="10" text-anchor="start" fill="#1b1b1b" font-weight="400">f[i][j] = f[i−1][j] + f[i][j−1]</text><text x="300.0" y="86.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#7c7566" font-weight="400">两条转移只依赖「上一行」与「本行左侧」</text><text x="300.0" y="108.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="start" fill="#8a6d2f" font-weight="400">→ 一行数组 f[0..n] 就够</text><rect x="300.0" y="122.0" width="360.0" height="52.0" rx="2" fill="#f6f2e8" stroke="#b9ae94" stroke-width="1.1"/><text x="310.0" y="143.0" font-family="Consolas, Courier New, monospace" font-size="9" text-anchor="start" fill="#1b1b1b" font-weight="400">for j: f[j] = max(f[j], f[j−1]) + a[j]</text><text x="310.0" y="163.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="8" text-anchor="start" fill="#9a5a3c" font-weight="400">遍历方向由「依赖谁」决定，写反就用到新值</text><text x="350.0" y="218.0" font-family="Source Han Sans SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="9" text-anchor="middle" fill="#7c7566" font-weight="400">画表格是验 DP 的第一步：转移式、边界、遍历顺序，三者都能在格子上看出来</text></svg><figcaption class="cap"><b>图 26-1</b>把 DP 画成表格：转移式、边界与遍历顺序都在格子上</figcaption></figure>
